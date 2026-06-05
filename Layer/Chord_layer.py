@@ -1,0 +1,273 @@
+import json
+import heapq
+
+CUTING_RATIO = 0.5
+MODE_PENALTY = 0.3
+KEY_PENALTY = 0.3
+
+def dijkstra(graph, start, end):
+    ENHARMONIC = {
+        "C#": "Db",
+        "D#": "Eb",
+        "G#": "Ab",
+        "A#": "Bb"
+    }
+
+    start = ENHARMONIC.get(start, start)
+    end = ENHARMONIC.get(end, end)
+
+    # Tonnetz에 없는 코드면 비교 불가
+    if start not in graph or end not in graph:
+        return None
+
+    distances = {node: float("inf") for node in graph}
+    distances[start] = 0
+
+    pq = [(0, start)]
+
+    while pq:
+        current_distance, current_node = heapq.heappop(pq)
+
+        if current_node == end:
+            return current_distance
+
+        if current_distance > distances[current_node]:
+            continue
+
+        for neighbor in graph[current_node]:
+            neighbor = ENHARMONIC.get(neighbor, neighbor)
+
+            if neighbor not in distances:
+                continue
+
+            new_distance = current_distance + 1
+
+            if new_distance < distances[neighbor]:
+                distances[neighbor] = new_distance
+                heapq.heappush(pq, (new_distance, neighbor))
+
+    return None
+
+def Make_number_of_chord_cases(Progression, chord, mode):
+
+    number_of_chord_arr =[]
+    if(mode == "major"):
+        mode_progresion = Progression["major_progressions"]
+    else:
+        mode_progresion = Progression["minor_progressions"]
+
+    for case in mode_progresion:
+        chord_arr =[]
+        for alpabet in case:
+            chord_arr.append(chord[alpabet])
+        number_of_chord_arr.append(chord_arr)
+
+    return number_of_chord_arr
+
+def Compare_note_proximity(input_track, track):
+
+    return_arr =[]
+    
+    for input_track_chord in input_track:
+        for track_chord in track:
+            track_note_combination = []
+            for input_track_note, track_note in zip(input_track_chord, track_chord):
+                different_notes = []
+                if(input_track_note == track_note):
+                    continue
+                else:
+                    different_notes.append(input_track_note)
+                    different_notes.append(track_note)
+
+                track_note_combination.append(different_notes)
+            return_arr.append(track_note_combination)
+    
+    return return_arr
+            
+
+
+def Compare_key_Progression(Progression, chords, tonnetz, input_track, track):
+    input_track_mode = None
+    track_mode = None
+    KEY_MAP = {
+        0: "C",
+        1: "Db",
+        2: "D",
+        3: "Eb",
+        4: "E",
+        5: "F",
+        6: "F#",
+        7: "G",
+        8: "Ab",
+        9: "A",
+        10: "Bb",
+        11: "B"
+    }
+
+    if input_track["mode"] == 0:
+        input_track_mode = "minor"
+        input_track_key = KEY_MAP[input_track["key"]] + "m"
+    else:
+        input_track_mode = "major"
+        input_track_key = KEY_MAP[input_track["key"]]
+
+    if track["mode"] == 0:
+        track_mode = "minor"
+        track_key = KEY_MAP[track["key"]] + "m"
+    else:
+        track_mode = "major"
+        track_key = KEY_MAP[track["key"]]
+
+
+    all_posstibilty_input_track_chord = Make_number_of_chord_cases(Progression, chords[input_track_mode][input_track_key], input_track_mode) 
+    all_posstibilty_track_chord = Make_number_of_chord_cases(Progression, chords[track_mode][track_key], track_mode)
+
+    proximity_arr = Compare_note_proximity(all_posstibilty_input_track_chord, all_posstibilty_track_chord)
+    proximity_value = []
+    for track in proximity_arr:
+        if not track:
+            continue
+
+        len_arr = len(track)
+        total = 0
+
+        for notes in track:
+            if not notes:
+                proximity_value.append(0)
+                continue
+            else:
+                distance = dijkstra(tonnetz, notes[0], notes[1])
+
+                if distance is None:
+                    continue
+
+                total += distance
+
+        proximity = total / len_arr
+        proximity_value.append(proximity)
+    
+    return proximity_value
+
+    
+
+
+
+def proximity_analze(simularity_chord_value_arr):
+    
+    rank_simularity = []
+
+    for notes_arr in simularity_chord_value_arr:
+        if not notes_arr:
+            rank_simularity.append(float("inf"))
+            continue
+
+        notes_arr.sort()
+
+        k = int(len(notes_arr) * CUTING_RATIO)
+        if k < 1:
+            k = 1
+
+        useful_arr = notes_arr[:k]
+
+        rank_simularity.append(sum(useful_arr) / len(useful_arr))
+
+    return rank_simularity
+
+    
+        
+def Give_penalty(result, after_genre_layer, input_track):
+    return_result = []
+
+    for track_proximity in result:
+        track_idx = track_proximity[0]
+        score = track_proximity[1]
+        track = after_genre_layer[track_idx]
+
+        new_score = score
+
+        if input_track["mode"] == track["mode"]:
+            new_score -= MODE_PENALTY
+        else:
+            new_score += MODE_PENALTY
+
+        if input_track["key"] != track["key"]:
+            new_score += KEY_PENALTY
+
+        return_result.append(
+            (
+                track_idx,
+                new_score
+            )
+        )
+
+    return return_result
+
+
+
+      
+def Chord_Layer(input_track, after_genre_layer_track_arr, count, key_penalty, mode_penalty):
+    total_return_track_num = count
+    output_track = []
+    KEY_PENALTY = key_penalty
+    MODE_PENALTY = mode_penalty
+
+    with open("Data/Constant_data/Tonnetz_Graph.json", "r", encoding="utf-8") as t,\
+    open("Data/Constant_data/Representation_Progressions.json", "r", encoding="utf-8") as p,\
+    open("Data/Constant_data/Key_Chords.json", "r", encoding="utf-8") as k:
+            tonnetz = json.load(t)
+            progression = json.load(p)
+            chords = json.load(k)
+
+    simularity_chord_value_arr = []
+    for track in after_genre_layer_track_arr:
+        simulairty = Compare_key_Progression(progression, chords, tonnetz, input_track, track)
+        simularity_chord_value_arr.append(simulairty)
+
+    total_simularity= proximity_analze(simularity_chord_value_arr)
+
+
+
+    result = sorted(
+        enumerate(total_simularity),
+        key=lambda x: x[1]
+    )
+
+    result = Give_penalty(result, after_genre_layer_track_arr, input_track)
+
+    if len(result) < total_return_track_num:
+        for i in range(len(result)):
+            track_index_num = result[i][0]
+            print(track_index_num)
+            output_track.append(after_genre_layer_track_arr[track_index_num])
+            print(after_genre_layer_track_arr[track_index_num])
+    else:
+        for i in range(total_return_track_num):
+            track_index_num = result[i][0]
+            print(track_index_num)
+            output_track.append(after_genre_layer_track_arr[track_index_num])
+            print(after_genre_layer_track_arr[track_index_num])
+
+
+    print_tracks(output_track)
+    return output_track
+
+
+def print_tracks(output_track_arr):
+    if not output_track_arr:
+        print("empty")
+    else:
+        print("after filtering chord ->")
+        for metadata in output_track_arr:
+            print(metadata["artist"])
+            print(metadata["track"])
+            print(metadata["tempo"])
+            print("--------------------------------")
+            print()
+        print()
+        print()
+        print()
+        
+    
+
+if __name__ == "__main__":
+    Chord_Layer()

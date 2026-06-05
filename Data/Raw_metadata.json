@@ -1,0 +1,638 @@
+[
+    {
+        "spotify_id": "7Cd17G3oNQ34OWUwS8ZxfR",
+        "artist": "Kenshi Yonezu",
+        "track": "Lemon",
+        "tempo": 91.955,
+        "key": 8,
+        "mode": 1,
+        "genre": [
+            "jpop",
+            "theme",
+            "pop",
+            "indierock",
+            "stage&screen",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3khEEPRyBeOUabbmOPJzAG",
+        "artist": "Kenshi Yonezu",
+        "track": "KICK BACK",
+        "tempo": 129.939,
+        "key": 6,
+        "mode": 1,
+        "genre": [
+            "alternativerock",
+            "jpop",
+            "theme",
+            "anison",
+            "pop",
+            "jrock",
+            "stage&screen",
+            "funk/soul",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7AqUE5AY514dbzeOAfJRa0",
+        "artist": "Kenshi Yonezu",
+        "track": "LOSER",
+        "tempo": 149.92,
+        "key": 2,
+        "mode": 1,
+        "genre": [
+            "jpop",
+            "pop",
+            "poprock",
+            "indiepop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "45YBVp6zMwQZRbUDcPzmMB",
+        "artist": "Kenshi Yonezu",
+        "track": "アイネクライネ",
+        "tempo": 86.983,
+        "key": 11,
+        "mode": 1,
+        "genre": [
+            "jpop",
+            "indierock",
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "59hVbgr8rfYkDbHfr8RcGI",
+        "artist": "Kenshi Yonezu",
+        "track": "IRIS OUT",
+        "tempo": 150.094,
+        "key": 6,
+        "mode": 1,
+        "genre": [
+            "jpop",
+            "anison",
+            "theme",
+            "pop",
+            "jrock",
+            "stage&screen",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3ILWwi1JNj3NGuuf6DzYxN",
+        "artist": "Kenshi Yonezu",
+        "track": "Flamingo",
+        "tempo": 124.006,
+        "key": 5,
+        "mode": 0,
+        "genre": [
+            "jpop",
+            "indierock",
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1bIZxrSkbxatnTo8ObcIxX",
+        "artist": "Kenshi Yonezu",
+        "track": "orion",
+        "tempo": 134.165,
+        "key": 1,
+        "mode": 1,
+        "genre": [
+            "jpop",
+            "pop",
+            "poprock",
+            "indiepop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1u8c2t2Cy7UBoG4ArRcF5g",
+        "artist": "Taylor Swift",
+        "track": "Blank Space",
+        "tempo": 130.033,
+        "key": 0,
+        "mode": 0,
+        "genre": [
+            "electronic",
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "1BxfuPKGuaTgP7aM0Bbdwr",
+        "artist": "Taylor Swift",
+        "track": "Cruel Summer",
+        "tempo": 186.003,
+        "key": 7,
+        "mode": 1,
+        "genre": [
+            "electronic",
+            "pop",
+            "synthpop"
+        ]
+    },
+    {
+        "spotify_id": "0cqRj7pUJDkTCEsJkx8snD",
+        "artist": "Taylor Swift",
+        "track": "Shake It Off",
+        "tempo": 84.828,
+        "key": 8,
+        "mode": 1,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0ug5NqcwcFR2xrfTkc7k8e",
+        "artist": "Taylor Swift",
+        "track": "Style",
+        "tempo": 169.994,
+        "key": 9,
+        "mode": 1,
+        "genre": [
+            "bubblegum",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4R2kfaDFhslZEMJqAFNpdd",
+        "artist": "Taylor Swift",
+        "track": "cardigan",
+        "tempo": 113.003,
+        "key": 0,
+        "mode": 0,
+        "genre": [
+            "folk,world,&country",
+            "vocal",
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1D4PL9B8gOg78jiHg3FvBb",
+        "artist": "Taylor Swift",
+        "track": "Love Story",
+        "tempo": 171.001,
+        "key": 1,
+        "mode": 1,
+        "genre": [
+            "country",
+            "folk,world,&country",
+            "poprock",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1GEBsLDvJGw7kviySRI6GX",
+        "artist": "Taylor Swift",
+        "track": "You Belong With Me",
+        "tempo": 107.949,
+        "key": 9,
+        "mode": 0,
+        "genre": [
+            "pop",
+            "folk,world,&country",
+            "poprock",
+            "country",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3hUxzQpSfdDqwM3ZTFQY0K",
+        "artist": "Taylor Swift",
+        "track": "august",
+        "tempo": 118.984,
+        "key": 2,
+        "mode": 1,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1dGr1c8CrMLDpV6mPbImSI",
+        "artist": "Taylor Swift",
+        "track": "Lover",
+        "tempo": 94.933,
+        "key": 7,
+        "mode": 1,
+        "genre": [
+            "electronic",
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "0V3wPSX9ygBnCm8psDIegu",
+        "artist": "Taylor Swift",
+        "track": "Anti-Hero",
+        "tempo": 160.078,
+        "key": 7,
+        "mode": 1,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7MXVkk9YMctZqd1Srtv4MB",
+        "artist": "The Weeknd",
+        "track": "Starboy",
+        "tempo": 129.966,
+        "key": 6,
+        "mode": 1,
+        "genre": [
+            "electronic",
+            "tropicalhouse"
+        ]
+    },
+    {
+        "spotify_id": "0VjIjW4GlUZAMYd2vXMi3b",
+        "artist": "The Weeknd",
+        "track": "Blinding Lights",
+        "tempo": 68.534,
+        "key": 7,
+        "mode": 1,
+        "genre": [
+            "electronic",
+            "synthwave"
+        ]
+    },
+    {
+        "spotify_id": "7fBv7CLKzipRk6EC6TWHOB",
+        "artist": "The Weeknd",
+        "track": "The Hills",
+        "tempo": 95.997,
+        "key": 5,
+        "mode": 1,
+        "genre": [
+            "poprap",
+            "pop",
+            "hiphop",
+            "contemporaryr&b",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "2Ch7LmS7r2Gy2kc64wv3Bz",
+        "artist": "The Weeknd",
+        "track": "Die For You",
+        "tempo": 118.049,
+        "key": 0,
+        "mode": 1,
+        "genre": [
+            "contemporaryr&b",
+            "pop",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "22VdIZQfgXJea34mQxlt81",
+        "artist": "The Weeknd",
+        "track": "Can't Feel My Face",
+        "tempo": 89.937,
+        "key": 5,
+        "mode": 1,
+        "genre": [
+            "electronic",
+            "pop",
+            "disco",
+            "hiphop",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "5QO79kh1waicV47BqGRL3g",
+        "artist": "The Weeknd",
+        "track": "Save Your Tears",
+        "tempo": 99.128,
+        "key": 1,
+        "mode": 0,
+        "genre": [
+            "electronic",
+            "poprap",
+            "pop",
+            "hiphop",
+            "dancepop",
+            "synthpop",
+            "contemporaryr&b",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "4EDijkJdHBZZ0GwJ12iTAj",
+        "artist": "The Weeknd",
+        "track": "Stargirl Interlude",
+        "tempo": 129.948,
+        "key": 7,
+        "mode": 0,
+        "genre": [
+            "electronic",
+            "poprap",
+            "pop",
+            "hiphop",
+            "dancepop",
+            "synthpop",
+            "contemporaryr&b",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "09mEdoA6zrmBPgTEN5qXmN",
+        "artist": "The Weeknd",
+        "track": "Call Out My Name",
+        "tempo": 125.025,
+        "key": 8,
+        "mode": 1,
+        "genre": [
+            "electronic",
+            "poprap",
+            "pop",
+            "hiphop",
+            "contemporaryr&b",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "7CyPwkp0oE8Ro9Dd5CUDjW",
+        "artist": "The Weeknd",
+        "track": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+        "tempo": 110.056,
+        "key": 11,
+        "mode": 0,
+        "genre": [
+            "pop",
+            "sexy",
+            "synthpop",
+            "soundtrack",
+            "rnb",
+            "ethereal",
+            "canada"
+        ]
+    },
+    {
+        "spotify_id": "3dhjNA0jGA8vHBQ1VdD6vV",
+        "artist": "The Weeknd",
+        "track": "I Feel It Coming",
+        "tempo": 159.182,
+        "key": 6,
+        "mode": 0,
+        "genre": [
+            "electronic",
+            "house",
+            "pop",
+            "disco",
+            "dancepop",
+            "contemporaryr&b",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "3PfIrDoz19wz7qK7tYeu62",
+        "artist": "Dua Lipa",
+        "track": "Don't Start Now",
+        "tempo": 115.842,
+        "key": 5,
+        "mode": 1,
+        "genre": [
+            "europop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2ekn2ttSfGqwhhate0LSR0",
+        "artist": "Dua Lipa",
+        "track": "New Rules",
+        "tempo": 107.853,
+        "key": 9,
+        "mode": 1,
+        "genre": [
+            "house",
+            "electronic",
+            "pop",
+            "trap",
+            "dancepop",
+            "deephouse",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "5nujrmhLynf4yMoMtj8AQF",
+        "artist": "Dua Lipa",
+        "track": "Levitating (feat. DaBaby)",
+        "tempo": 134.049,
+        "key": 4,
+        "mode": 0,
+        "genre": [
+            "nudisco",
+            "pop",
+            "dancepop",
+            "disco"
+        ]
+    },
+    {
+        "spotify_id": "39LLxExYz6ewLAcYrzQQyP",
+        "artist": "Dua Lipa",
+        "track": "Levitating",
+        "tempo": 106.976,
+        "key": 1,
+        "mode": 1,
+        "genre": [
+            "house",
+            "electronic",
+            "pop",
+            "dancepop",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "017PF4Q3l4DBUiWoXk4OWT",
+        "artist": "Dua Lipa",
+        "track": "Break My Heart",
+        "tempo": 191.868,
+        "key": 7,
+        "mode": 1,
+        "genre": [
+            "electronic",
+            "pop",
+            "disco",
+            "dancepop",
+            "synthpop"
+        ]
+    },
+    {
+        "spotify_id": "3AzjcOeAmA57TIOr9zF1ZW",
+        "artist": "Dua Lipa",
+        "track": "Physical",
+        "tempo": 116.073,
+        "key": 9,
+        "mode": 0,
+        "genre": [
+            "electronic",
+            "progressivehouse",
+            "electro",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0cEvs67E5fyRWX745k4hD5",
+        "artist": "Dua Lipa",
+        "track": "Houdini (Live From Mexico)",
+        "tempo": 123.95,
+        "key": 11,
+        "mode": 0,
+        "genre": [
+            "poprock",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "76cy1WJvNGJTj78UqeA5zr",
+        "artist": "Dua Lipa",
+        "track": "IDGAF",
+        "tempo": 146.967,
+        "key": 0,
+        "mode": 1,
+        "genre": [
+            "house",
+            "electronic",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1vYXt7VSjH9JIM5oRRo7vA",
+        "artist": "Dua Lipa",
+        "track": "Dance The Night - From Barbie The Album",
+        "tempo": 103.014,
+        "key": 6,
+        "mode": 0,
+        "genre": [
+            "electronic",
+            "nudisco",
+            "soundtrack",
+            "pop",
+            "dancepop",
+            "stage&screen"
+        ]
+    },
+    {
+        "spotify_id": "4W1cdK67P0XjzHN8snmffR",
+        "artist": "Dua Lipa",
+        "track": "Love Again (Live From Mexico)",
+        "tempo": 113.011,
+        "key": 4,
+        "mode": 0,
+        "genre": [
+            "dancepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6ocbgoVGwYJhOv1GgI9NsF",
+        "artist": "Ariana Grande",
+        "track": "7 rings",
+        "tempo": 102.977,
+        "key": 6,
+        "mode": 0,
+        "genre": [
+            "contemporaryr&b",
+            "funk/soul"
+        ]
+    },
+    {
+        "spotify_id": "76FZM38RC8XaAjJ77CVTNe",
+        "artist": "Ariana Grande",
+        "track": "Into You",
+        "tempo": 139.848,
+        "key": 1,
+        "mode": 0,
+        "genre": [
+            "electronic",
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "7xoUc6faLbCqZO6fQEYprd",
+        "artist": "Ariana Grande",
+        "track": "One Last Time",
+        "tempo": 97.028,
+        "key": 7,
+        "mode": 1,
+        "genre": [
+            "pop"
+        ]
+    },
+
+    {
+        "spotify_id": "5GK7eDDTVz7CTge1wJrDQW",
+        "artist": "BLACKPINK",
+        "track": "Kill This Love",
+        "tempo": 131.98,
+        "key": 2,
+        "mode": 1,
+        "genre": [
+            "hiphop",
+            "kpop",
+            "dancepop",
+            "poprap",
+            "electronic",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1k0JAiH11gHL9dc5dfQjQr",
+        "artist": "ILLIT",
+        "track": "NOT CUTE ANYMORE",
+        "tempo": 98.986,
+        "key": 1,
+        "mode": 1,
+        "genre": [
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2MoUuJhpSO4a0czxvsrSC6",
+        "artist": "ILLIT",
+        "track": "Cherish (My Love)",
+        "tempo": 142.97,
+        "key": 4,
+        "mode": 1,
+        "genre": [
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1aKvZDoLGkNMxoRYgkckZG",
+        "artist": "ILLIT",
+        "track": "Magnetic",
+        "tempo": 131.067,
+        "key": 6,
+        "mode": 1,
+        "genre": [
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "18nZWRpJIHzgb1SQr4ncwb",
+        "artist": "aespa",
+        "track": "Supernova",
+        "tempo": 120.073,
+        "key": 11,
+        "mode": 0,
+        "genre": [
+            "kpop",
+            "dancepop",
+            "electroclash",
+            "electro",
+            "pop",
+            "electrohouse",
+            "electronic"
+        ]
+    }
+]

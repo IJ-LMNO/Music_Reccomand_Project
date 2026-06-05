@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Recommendation System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #9ca3af;
+            font-size: 16px;
+        }
+
+        .search-box {
+            background: #1f2937;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        input {
+            flex: 1;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        select {
+            padding: 14px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            background: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 10px;
+            background: #6366f1;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        button:hover {
+            background: #4f46e5;
+        }
+
+        .detail-wrapper {
+            position: relative;
+        }
+
+        .detail-button {
+            background: #374151;
+            padding: 14px 18px;
+        }
+
+        .detail-button:hover {
+            background: #4b5563;
+        }
+
+        .detail-panel {
+            display: none;
+            position: absolute;
+            top: 54px;
+            right: 0;
+            width: 300px;
+            background: #111827;
+            border: 1px solid #374151;
+            border-radius: 14px;
+            padding: 18px;
+            z-index: 10;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .detail-wrapper:hover .detail-panel,
+        .detail-panel:hover {
+            display: block;
+        }
+
+        .detail-panel h3 {
+            margin: 0 0 14px 0;
+            font-size: 18px;
+        }
+
+        .setting-row {
+            margin-bottom: 14px;
+        }
+
+        .setting-row label {
+            display: block;
+            font-size: 13px;
+            color: #d1d5db;
+            margin-bottom: 6px;
+        }
+
+        .setting-row input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .setting-help {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+
+        .selected-track {
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            display: none;
+        }
+
+        .selected-track h2 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .track-info {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .info-card {
+            background: #374151;
+            padding: 14px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .info-card span {
+            display: block;
+            color: #9ca3af;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .result-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .result-card {
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .result-main h3 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+        }
+
+        .result-main p {
+            margin: 0;
+            color: #9ca3af;
+        }
+
+        .layer-tags {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 12px;
+            padding: 5px 8px;
+            background: #374151;
+            border-radius: 999px;
+            color: #d1d5db;
+        }
+
+        .empty {
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px;
+            background: #1f2937;
+            border-radius: 16px;
+        }
+
+        @media (max-width: 700px) {
+            .input-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .detail-panel {
+                position: static;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .detail-wrapper:hover .detail-panel,
+            .detail-panel:hover {
+                display: block;
+            }
+
+            .track-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .result-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Music Recommendation System</h1>
+            <p>BPM, Genre, Chord Progression 기반 음악 추천</p>
+        </div>
+
+        <div class="search-box">
+            <div class="input-group">
+                <input type="text" id="trackInput" placeholder="예: BLACKPINK DDU-DU DDU-DU" />
+
+                <select id="recommendCount">
+                    <option value="1">1곡</option>
+                    <option value="2">2곡</option>
+                    <option value="3" selected>3곡</option>
+                    <option value="4">4곡</option>
+                    <option value="5">5곡</option>
+                    <option value="6">6곡</option>
+                    <option value="7">7곡</option>
+                    <option value="8">8곡</option>
+                    <option value="9">9곡</option>
+                    <option value="10">10곡</option>
+                </select>
+
+                <div class="detail-wrapper">
+                    <button class="detail-button" type="button">상세 설정</button>
+
+                    <div class="detail-panel">
+                        <h3>추천 상세 설정</h3>
+
+                        <div class="setting-row">
+                            <label for="genreWeight">장르 유사도 비율</label>
+                            <input type="number" id="genreWeight" min="0.1" max="0.4" step="0.1" value="0.3" />
+                            <div class="setting-help">
+                                0.1 ~ 0.4 사이 값. 높을수록 장르 유사도를 더 강하게 반영.
+                            </div>
+                        </div>
+
+                        <div class="setting-row">
+                            <label for="keyPenalty">Key가 다를 때 감점값</label>
+                            <input type="number" id="keyPenalty" min="0" max="0.5" step="0.05" value="0.3" />
+                            <div class="setting-help">
+                                Key가 다를 때 최종 점수에서 감점할 값.
+                            </div>
+                        </div>
+
+                        <div class="setting-row">
+                            <label for="modeBonus">Mode가 같을 때 보너스값</label>
+                            <input type="number" id="modeBonus" min="0" max="1" step="0.05" value="0.3" />
+                            <div class="setting-help">
+                                Major/Minor mode가 같을 때 추가할 점수.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="recommendMusic()">추천받기</button>
+            </div>
+        </div>
+
+        <div class="selected-track" id="selectedTrack">
+            <h2>입력 곡</h2>
+            <h3 id="inputTitle"></h3>
+
+            <div class="track-info">
+                <div class="info-card">
+                    <span>Artist</span>
+                    <strong id="inputArtist"></strong>
+                </div>
+
+                <div class="info-card">
+                    <span>BPM</span>
+                    <strong id="inputBpm"></strong>
+                </div>
+
+                <div class="info-card">
+                    <span>Key</span>
+                    <strong id="inputKey"></strong>
+                </div>
+
+                <div class="info-card">
+                    <span>Genre</span>
+                    <strong id="inputGenre"></strong>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">추천 결과</h2>
+
+        <div class="result-list" id="resultList">
+            <div class="empty">곡을 입력하면 추천 결과가 표시됩니다.</div>
+        </div>
+    </div>
+
+    <script>
+        function getRecommendOptions() {
+            const genreWeight = Number(document.getElementById("genreWeight").value);
+            const keyPenalty = Number(document.getElementById("keyPenalty").value);
+            const modeBonus = Number(document.getElementById("modeBonus").value);
+
+            if (genreWeight < 0.1 || genreWeight > 0.5) {
+                alert("장르 유사도 비율은 0.1 ~ 0.5 사이여야 합니다.");
+                return null;
+            }
+
+            if (keyPenalty < 0 || keyPenalty > 1) {
+                alert("Key 감점값은 0 ~ 1 사이여야 합니다.");
+                return null;
+            }
+
+            if (modeBonus < 0 || modeBonus > 1) {
+                alert("Mode 보너스값은 0 ~ 1 사이여야 합니다.");
+                return null;
+            }
+
+            return {
+                genreWeight: genreWeight,
+                keyPenalty: keyPenalty,
+                modeBonus: modeBonus
+            };
+        }
+
+        async function recommendMusic() {
+            const input = document.getElementById("trackInput").value.trim();
+            const count = Number(document.getElementById("recommendCount").value);
+            const options = getRecommendOptions();
+
+            if (input === "") {
+                alert("곡 이름을 입력하세요.");
+                return;
+            }
+
+            if (options === null) {
+                return;
+            }
+
+            document.getElementById("resultList").innerHTML =
+                `<div class="empty">노래를 찾고 있습니다. 잠시만 기다려 주세요.</div>`;
+
+            try {
+                const response = await fetch("http://localhost:5000/recommend", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        track: input,
+                        count: count,
+                        options: options
+                    })
+                });
+
+                const data = await response.json();
+                console.log(data);
+
+                if (!response.ok) {
+                    alert(data.message || data.error || "노래를 찾지 못했습니다.");
+                    document.getElementById("resultList").innerHTML =
+                        `<div class="empty">추천 결과가 없습니다.</div>`;
+                    return;
+                }
+
+
+                renderInputTrack(data.input);
+                renderRecommendations(data.recommendations);
+
+            } catch (error) {
+                alert("Flask 서버에 연결할 수 없습니다.");
+                console.error(error);
+            }
+        }
+
+        function renderInputTrack(track) {
+            document.getElementById("selectedTrack").style.display = "block";
+            document.getElementById("inputTitle").textContent = track.track;
+            document.getElementById("inputArtist").textContent = track.artist;
+            document.getElementById("inputBpm").textContent = track.tempo;
+            document.getElementById("inputKey").textContent = track.key;
+            document.getElementById("inputGenre").textContent = track.genre.join(", ");
+        }
+
+        function renderRecommendations(recommendations) {
+            const resultList = document.getElementById("resultList");
+            resultList.innerHTML = "";
+
+            if (!recommendations || recommendations.length === 0) {
+                resultList.innerHTML = `<div class="empty">추천 결과가 없습니다.</div>`;
+                return;
+            }
+
+            recommendations.forEach((song) => {
+                const card = document.createElement("div");
+                card.className = "result-card";
+
+                card.innerHTML = `
+          <div class="result-main">
+            <h3>${song.track}</h3>
+            <p>${song.artist} · BPM ${song.tempo} · Key ${song.key} · Mode ${song.mode}</p>
+
+            <div class="layer-tags">
+              ${song.genre.map(g => `<span class="tag">${g}</span>`).join("")}
+            </div>
+          </div>
+        `;
+
+                resultList.appendChild(card);
+            });
+        }
+    </script>
+</body>
+
+</html>

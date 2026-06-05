@@ -1,0 +1,239 @@
+{
+    "kpop": [
+        "kpop"
+    ],
+    "jpop": [
+        "jpop"
+    ],
+    "cpop": [
+        "cpop"
+    ],
+    "dancepop": [
+        "dancepop",
+        "dance"
+    ],
+    "electropop": [
+        "electropop",
+        "electronic"
+    ],
+    "synthpop": [
+        "synthpop",
+        "electronic"
+    ],
+    "hyperpop": [
+        "hyperpop",
+        "electronic"
+    ],
+    "bedroompop": [
+        "bedroompop",
+        "indie"
+    ],
+    "indiepop": [
+        "indiepop",
+        "indie"
+    ],
+    "altpop": [
+        "altpop",
+        "alternative"
+    ],
+    "dreampop": [
+        "dreampop",
+        "indie",
+        "alternative"
+    ],
+    "artpop": [
+        "artpop",
+        "alternative"
+    ],
+    "hiphop": [
+        "hiphop"
+    ],
+    "rap": [
+        "hiphop"
+    ],
+    "trap": [
+        "hiphop",
+        "trap"
+    ],
+    "drill": [
+        "hiphop",
+        "drill"
+    ],
+    "boom bap": [
+        "hiphop",
+        "boombap"
+    ],
+    "lofihiphop": [
+        "hiphop",
+        "lofi"
+    ],
+    "emo rap": [
+        "hiphop",
+        "emo"
+    ],
+    "rnb": [
+        "rnb"
+    ],
+    "contemporaryrnb": [
+        "rnb"
+    ],
+    "neosoul": [
+        "rnb",
+        "soul"
+    ],
+    "soul": [
+        "soul"
+    ],
+    "funk": [
+        "funk"
+    ],
+    "rock": [
+        "rock"
+    ],
+    "alternativerock": [
+        "rock",
+        "alternative"
+    ],
+    "indierock": [
+        "rock",
+        "indie"
+    ],
+    "punk": [
+        "rock",
+        "punk"
+    ],
+    "poprock": [
+        "rock"
+    ],
+    "hardrock": [
+        "rock",
+        "hardrock"
+    ],
+    "metal": [
+        "metal"
+    ],
+    "edm": [
+        "electronic",
+        "dance"
+    ],
+    "house": [
+        "electronic",
+        "house"
+    ],
+    "deephouse": [
+        "electronic",
+        "house"
+    ],
+    "futurehouse": [
+        "electronic",
+        "house"
+    ],
+    "electrohouse": [
+        "electronic",
+        "house"
+    ],
+    "progressivehouse": [
+        "electronic",
+        "house"
+    ],
+    "techno": [
+        "electronic",
+        "techno"
+    ],
+    "trance": [
+        "electronic",
+        "trance"
+    ],
+    "dubstep": [
+        "electronic",
+        "bass"
+    ],
+    "drumnbass": [
+        "electronic",
+        "bass"
+    ],
+    "futurebass": [
+        "electronic",
+        "bass"
+    ],
+    "jazz": [
+        "jazz"
+    ],
+    "blues": [
+        "blues"
+    ],
+    "classical": [
+        "classical"
+    ],
+    "orchestral": [
+        "classical",
+        "orchestral"
+    ],
+    "opera": [
+        "classical",
+        "opera"
+    ],
+    "folk": [
+        "folk"
+    ],
+    "country": [
+        "country",
+        "folk"
+    ],
+    "acoustic": [
+        "acoustic"
+    ],
+    "latin": [
+        "latin"
+    ],
+    "reggaeton": [
+        "latin",
+        "dance"
+    ],
+    "salsa": [
+        "latin",
+        "dance"
+    ],
+    "bossa nova": [
+        "latin",
+        "jazz"
+    ],
+    "afrobeats": [
+        "afrobeats"
+    ],
+    "amapiano": [
+        "afrobeats",
+        "electronic"
+    ],
+    "anisong": [
+        "anisong",
+        "anime"
+    ],
+    "citypop": [
+        "citypop",
+        "jpop",
+        "funk",
+        "jazz"
+    ],
+    "mandopop": [
+        "cpop",
+        "mandopop"
+    ],
+    "cantopop": [
+        "cpop",
+        "cantopop"
+    ],
+    "soundtrack": [
+        "soundtrack"
+    ],
+    "ost": [
+        "soundtrack"
+    ],
+    "anime": [
+        "anime"
+    ],
+    "game music": [
+        "gamemusic",
+        "soundtrack"
+    ]
+}
