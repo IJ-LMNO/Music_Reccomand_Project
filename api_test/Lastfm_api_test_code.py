@@ -1,13 +1,17 @@
 import requests
-API_KEY = None
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+API_KEY = os.getenv("LASTFM")
 
 def Lastfm():
     res = requests.get(
         "https://ws.audioscrobbler.com/2.0/",
         params={
             "method": "track.getTopTags",
-            "artist" : "qwer",
-            "track": "고백중독",
+            "artist" : "blackpink",
+            "track": "DDU-DU DDU-DU",
             "api_key": API_KEY,
             "format": "json",
             "autocorrect": 1,

@@ -1,8 +1,11 @@
 import json
 import time
 import requests
+import os
+from dotenv import load_dotenv
 
-LASTFM_API_KEY = "3b9031a2dab59eaadc87a20b1204619f"
+load_dotenv()
+API_KEY = os.getenv("LASTFM")
 
 ARTISTS = [
   "BLACKPINK",

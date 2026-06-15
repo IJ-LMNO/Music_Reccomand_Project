@@ -35,7 +35,7 @@ def make_metadata(sample_queries):
             metadatas_idx += 1
             continue
 
-        fallback_genre = Discogs.Discogs(
+        fallback_genre = Discogs.Discogs_API(
                 metadata["artist"],
                 metadata["track"]
             )

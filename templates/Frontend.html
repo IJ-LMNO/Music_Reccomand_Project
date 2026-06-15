@@ -200,6 +200,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 18px;
+        }
+
+        .result-main {
+            flex: 1;
         }
 
         .result-main h3 {
@@ -225,6 +230,26 @@
             background: #374151;
             border-radius: 999px;
             color: #d1d5db;
+        }
+
+        .youtube-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            flex-shrink: 0;
+            transition: 0.15s ease;
+        }
+
+        .youtube-link:hover {
+            background: #cc0000;
+            transform: scale(1.05);
         }
 
         .empty {
@@ -257,9 +282,8 @@
             }
 
             .result-card {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
+                flex-direction: row;
+                align-items: center;
             }
         }
     </style>
@@ -427,7 +451,6 @@
                     return;
                 }
 
-
                 renderInputTrack(data.input);
                 renderRecommendations(data.recommendations);
 
@@ -459,16 +482,28 @@
                 const card = document.createElement("div");
                 card.className = "result-card";
 
-                card.innerHTML = `
-          <div class="result-main">
-            <h3>${song.track}</h3>
-            <p>${song.artist} · BPM ${song.tempo} · Key ${song.key} · Mode ${song.mode}</p>
+                const youtubeQuery = encodeURIComponent(`${song.artist} ${song.track}`);
+                const youtubeUrl = `https://www.youtube.com/results?search_query=${youtubeQuery}`;
 
-            <div class="layer-tags">
-              ${song.genre.map(g => `<span class="tag">${g}</span>`).join("")}
-            </div>
-          </div>
-        `;
+                card.innerHTML = `
+                    <div class="result-main">
+                        <h3>${song.track}</h3>
+                        <p>${song.artist} · BPM ${song.tempo} · Key ${song.key} · Mode ${song.mode}</p>
+
+                        <div class="layer-tags">
+                            ${song.genre.map(g => `<span class="tag">${g}</span>`).join("")}
+                        </div>
+                    </div>
+
+                    <a 
+                        class="youtube-link" 
+                        href="${youtubeUrl}" 
+                        target="_blank"
+                        title="YouTube에서 검색"
+                    >
+                        ▶
+                    </a>
+                `;
 
                 resultList.appendChild(card);
             });
