@@ -13,6 +13,9 @@ def dijkstra(graph, start, end):
         "A#": "Bb"
     }
 
+    ##print------------------
+    # print(start)
+    ##-------------------
     start = ENHARMONIC.get(start, start)
     end = ENHARMONIC.get(end, end)
 
@@ -64,24 +67,26 @@ def Make_number_of_chord_cases(Progression, chord, mode):
 
     return number_of_chord_arr
 
-def Compare_note_proximity(input_track, track):
+def Compare_note_proximity(input_track, tracks):
+    return_arr = []
 
-    return_arr =[]
-    
     for input_track_chord in input_track:
-        for track_chord in track:
-            track_note_combination = []
-            for input_track_note, track_note in zip(input_track_chord, track_chord):
-                different_notes = []
-                if(input_track_note == track_note):
-                    continue
-                else:
-                    different_notes.append(input_track_note)
-                    different_notes.append(track_note)
+        chord_compare_result = []
 
-                track_note_combination.append(different_notes)
-            return_arr.append(track_note_combination)
-    
+        for track_chord in tracks:
+            note_pairs = []
+
+            for input_track_note, track_note in zip(input_track_chord, track_chord):
+                if input_track_note == track_note:
+                    continue
+
+                note_pairs.append([input_track_note, track_note])
+
+            chord_compare_result.append(note_pairs)
+
+
+        return_arr.append(chord_compare_result)
+
     return return_arr
             
 
@@ -122,29 +127,37 @@ def Compare_key_Progression(Progression, chords, tonnetz, input_track, track):
     all_posstibilty_input_track_chord = Make_number_of_chord_cases(Progression, chords[input_track_mode][input_track_key], input_track_mode) 
     all_posstibilty_track_chord = Make_number_of_chord_cases(Progression, chords[track_mode][track_key], track_mode)
 
-    proximity_arr = Compare_note_proximity(all_posstibilty_input_track_chord, all_posstibilty_track_chord)
+    chord_pair_arr = Compare_note_proximity(all_posstibilty_input_track_chord, all_posstibilty_track_chord)
     proximity_value = []
-    for track in proximity_arr:
+    for chord_pair in chord_pair_arr:
         if not track:
             continue
+        # ##print------------------
+        # print(chord_pair)
+        # ##-------------------
+        sum = 0
 
-        len_arr = len(track)
-        total = 0
+        for track_pair in chord_pair:
+            for pair in track_pair:
+                if(len(track_pair) == 3):
+                    distance = dijkstra(tonnetz, pair[0], pair[1])
+                    if(distance == None):
+                        distance = 10
+                    
+                    sum = sum + distance
+                else:
+                    distance = dijkstra(tonnetz, pair[0], pair[1])
 
-        for notes in track:
-            if not notes:
-                proximity_value.append(0)
-                continue
-            else:
-                distance = dijkstra(tonnetz, notes[0], notes[1])
-
-                if distance is None:
-                    continue
-
-                total += distance
-
-        proximity = total / len_arr
-        proximity_value.append(proximity)
+                    if(distance == None):
+                        distance = 10
+                    
+                    sum = sum + distance
+                    
+                    for _ in range(0, 3 - len(track_pair)):
+                        sum  = sum + 0
+                    
+                
+        proximity_value.append(sum / 3)
     
     return proximity_value
 
@@ -237,15 +250,15 @@ def Chord_Layer(input_track, after_genre_layer_track_arr, count, key_penalty, mo
     if len(result) < total_return_track_num:
         for i in range(len(result)):
             track_index_num = result[i][0]
-            print(track_index_num)
+
             output_track.append(after_genre_layer_track_arr[track_index_num])
-            print(after_genre_layer_track_arr[track_index_num])
+
     else:
         for i in range(total_return_track_num):
             track_index_num = result[i][0]
-            print(track_index_num)
+
             output_track.append(after_genre_layer_track_arr[track_index_num])
-            print(after_genre_layer_track_arr[track_index_num])
+
 
 
     print_tracks(output_track)

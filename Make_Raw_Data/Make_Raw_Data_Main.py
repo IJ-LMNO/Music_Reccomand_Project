@@ -9,6 +9,17 @@ import Discogs_API as Discogs
 
 BASE_DIR = Path(__file__).parent
 
+def normalize(text):
+    return (
+        text.lower()
+        .replace(" ", "")
+        .replace("-", "")
+        .replace("!", "")
+        .replace("'", "")
+        .replace("(", "")
+        .replace(")", "")
+    )
+
 def make_metadata(sample_queries):
     metadatas = []
 
@@ -107,21 +118,61 @@ def clean_metadata(metadatas):
 
 def main():
     size = 100
-    new_data = []
 
-    with open("Make_Raw_Data/dataset.json", "r", encoding="utf-8") as dataset:
+    with open("Make_Raw_Data/Dataset.json", "r", encoding="utf-8") as dataset:
         dataset = json.load(dataset)
-    dataset_len = len(dataset)
 
-    for start in range(0, dataset_len, size):
-        sample_queries = dataset[start:start + size]
+    with open("Make_Raw_Data/Raw_track_name_index.json", "r", encoding="utf-8") as raw_track_name_index:
+        raw_track_name_index = json.load(raw_track_name_index)
 
-        metadatas = make_metadata(sample_queries)
-        clean_metadatas = clean_metadata(metadatas)
+    with open("Data/Raw_metadata.json", "r", encoding="utf-8") as file:
+        new_data = json.load(file)
 
-        new_data.extend(clean_metadatas)
+    eliminate_overlap_query = []
+    for track in dataset:
+        if(len(eliminate_overlap_query) > size):
+            metadatas = make_metadata(eliminate_overlap_query)
+            clean_metadatas = clean_metadata(metadatas)
 
-        time.sleep(10)
+            new_data.extend(clean_metadatas)
+            
+            with open("Data/Raw_metadata.json", "w", encoding="utf-8") as file:
+                json.dump(
+                    new_data,
+                    file,
+                    ensure_ascii=False,
+                    indent=4
+                )
+
+            for clean_track in clean_metadatas:
+                key = normalize(clean_track["artist"] + clean_track["track"])
+                
+                if key not in raw_track_name_index:
+                    raw_track_name_index[key] = True
+                else:
+                    continue
+
+
+            with open("Make_Raw_Data/Raw_track_name_index.json", "w", encoding="utf-8") as file:
+                json.dump(raw_track_name_index, file, ensure_ascii=False, indent=4)
+
+            print(f"{len(new_data)}곡 저장 완료")
+
+            eliminate_overlap_query = []
+        else:
+            if normalize(track) not in raw_track_name_index:
+                eliminate_overlap_query.append(track)
+            else:
+                continue
+    
+
+    if eliminate_overlap_query:
+            metadatas = make_metadata(eliminate_overlap_query)
+            clean_metadatas = clean_metadata(metadatas)
+
+            new_data.extend(clean_metadatas)
+            eliminate_overlap_query = []
+
 
     with open("Data/Raw_metadata.json", "w", encoding="utf-8") as file:
         json.dump(
@@ -130,6 +181,20 @@ def main():
             ensure_ascii=False,
             indent=4
         )
+    for track in clean_metadatas:
+        key = normalize(normalize(track["artist"] + track["track"]))
+        
+        if key not in raw_track_name_index:
+            raw_track_name_index[key] = True
+        else:
+            continue
+
+
+    with open("Make_Raw_Data/Raw_track_name_index.json", "w", encoding="utf-8") as file:
+        json.dump(raw_track_name_index, file, ensure_ascii=False, indent=4)
+    
+    print(f"마지막 배치 저장 완료")
+
 
     print("raw_metadata.json 저장 완료\n")
 
