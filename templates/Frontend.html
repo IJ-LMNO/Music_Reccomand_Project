@@ -105,7 +105,7 @@
             position: absolute;
             top: 54px;
             right: 0;
-            width: 300px;
+            width: 320px;
             background: #111827;
             border: 1px solid #374151;
             border-radius: 14px;
@@ -139,6 +139,12 @@
             width: 100%;
             padding: 10px 12px;
             border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .setting-row button {
+            width: 100%;
+            padding: 12px 14px;
             font-size: 14px;
         }
 
@@ -215,6 +221,7 @@
         .result-main p {
             margin: 0;
             color: #9ca3af;
+            line-height: 1.5;
         }
 
         .layer-tags {
@@ -230,6 +237,16 @@
             background: #374151;
             border-radius: 999px;
             color: #d1d5db;
+        }
+
+        .weather-tag {
+            background: #92400e;
+            color: #fde68a;
+        }
+
+        .score-tag {
+            background: #065f46;
+            color: #a7f3d0;
         }
 
         .youtube-link {
@@ -258,6 +275,20 @@
             padding: 30px;
             background: #1f2937;
             border-radius: 16px;
+        }
+
+        .weather-result {
+            display: none;
+            background: #0f172a;
+            border: 1px solid #334155;
+            padding: 20px;
+            border-radius: 16px;
+            margin: 24px 0 30px 0;
+        }
+
+        .weather-result h2 {
+            margin-top: 0;
+            color: #facc15;
         }
 
         @media (max-width: 700px) {
@@ -342,6 +373,17 @@
                                 Major/Minor mode가 같을 때 추가할 점수.
                             </div>
                         </div>
+
+                        <div class="setting-row">
+                            <label>날씨 기반 추천</label>
+                            <button type="button" onclick="recommendByWeather()">
+                                현재 날씨 기준으로 1곡 추천
+                            </button>
+                            <div class="setting-help">
+                                먼저 일반 추천을 받은 뒤 사용할 수 있습니다.
+                                현재 추천 결과 중 실제 날씨에 가장 어울리는 1곡을 선택합니다.
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -376,6 +418,8 @@
             </div>
         </div>
 
+        <div class="weather-result" id="weatherResult"></div>
+
         <h2 class="section-title">추천 결과</h2>
 
         <div class="result-list" id="resultList">
@@ -384,6 +428,8 @@
     </div>
 
     <script>
+        let currentRecommendations = [];
+
         function getRecommendOptions() {
             const genreWeight = Number(document.getElementById("genreWeight").value);
             const keyPenalty = Number(document.getElementById("keyPenalty").value);
@@ -428,6 +474,11 @@
             document.getElementById("resultList").innerHTML =
                 `<div class="empty">노래를 찾고 있습니다. 잠시만 기다려 주세요.</div>`;
 
+            document.getElementById("weatherResult").style.display = "none";
+            document.getElementById("weatherResult").innerHTML = "";
+
+            currentRecommendations = [];
+
             try {
                 const response = await fetch("http://localhost:5000/recommend", {
                     method: "POST",
@@ -451,8 +502,53 @@
                     return;
                 }
 
+                currentRecommendations = data.recommendations || [];
+
                 renderInputTrack(data.input);
-                renderRecommendations(data.recommendations);
+                renderRecommendations(currentRecommendations);
+
+            } catch (error) {
+                alert("Flask 서버에 연결할 수 없습니다.");
+                console.error(error);
+            }
+        }
+
+        async function recommendByWeather() {
+            if (!currentRecommendations || currentRecommendations.length === 0) {
+                alert("먼저 일반 추천을 받아야 합니다.");
+                return;
+            }
+
+            const weatherResult = document.getElementById("weatherResult");
+            weatherResult.style.display = "block";
+            weatherResult.innerHTML =
+                `<div class="empty">현재 날씨를 조회하고 추천곡을 계산하고 있습니다.</div>`;
+
+            try {
+                const response = await fetch("http://localhost:5000/weather-recommend", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        recommendations: currentRecommendations
+                    })
+                });
+
+                const data = await response.json();
+                console.log(data);
+
+                if (!response.ok) {
+                    alert(data.message || data.error || "날씨 기반 추천에 실패했습니다.");
+                    weatherResult.innerHTML =
+                        `<div class="empty">날씨 기반 추천 결과가 없습니다.</div>`;
+                    return;
+                }
+
+                renderWeatherRecommendation(
+                    data.weather_recommendation,
+                    data.weather
+                );
 
             } catch (error) {
                 alert("Flask 서버에 연결할 수 없습니다.");
@@ -461,12 +557,21 @@
         }
 
         function renderInputTrack(track) {
+            if (!track) {
+                return;
+            }
+
             document.getElementById("selectedTrack").style.display = "block";
             document.getElementById("inputTitle").textContent = track.track;
             document.getElementById("inputArtist").textContent = track.artist;
             document.getElementById("inputBpm").textContent = track.tempo;
             document.getElementById("inputKey").textContent = track.key;
-            document.getElementById("inputGenre").textContent = track.genre.join(", ");
+
+            if (Array.isArray(track.genre)) {
+                document.getElementById("inputGenre").textContent = track.genre.join(", ");
+            } else {
+                document.getElementById("inputGenre").textContent = track.genre || "";
+            }
         }
 
         function renderRecommendations(recommendations) {
@@ -485,13 +590,15 @@
                 const youtubeQuery = encodeURIComponent(`${song.artist} ${song.track}`);
                 const youtubeUrl = `https://www.youtube.com/results?search_query=${youtubeQuery}`;
 
+                const genres = Array.isArray(song.genre) ? song.genre : [];
+
                 card.innerHTML = `
                     <div class="result-main">
                         <h3>${song.track}</h3>
                         <p>${song.artist} · BPM ${song.tempo} · Key ${song.key} · Mode ${song.mode}</p>
 
                         <div class="layer-tags">
-                            ${song.genre.map(g => `<span class="tag">${g}</span>`).join("")}
+                            ${genres.map(g => `<span class="tag">${g}</span>`).join("")}
                         </div>
                     </div>
 
@@ -507,6 +614,70 @@
 
                 resultList.appendChild(card);
             });
+        }
+
+        function renderWeatherRecommendation(song, weather) {
+            const weatherResult = document.getElementById("weatherResult");
+
+            if (!song) {
+                weatherResult.innerHTML = `<div class="empty">날씨 기반 추천 결과가 없습니다.</div>`;
+                return;
+            }
+
+            weatherResult.style.display = "block";
+
+            const youtubeQuery = encodeURIComponent(`${song.artist} ${song.track}`);
+            const youtubeUrl = `https://www.youtube.com/results?search_query=${youtubeQuery}`;
+
+            const genres = Array.isArray(song.genre) ? song.genre : [];
+
+            const weatherCondition = weather && weather.condition ? weather.condition : "Unknown";
+            const rawCondition = weather && weather.raw_condition ? weather.raw_condition : "";
+            const temp = weather && weather.temp !== undefined ? weather.temp : "";
+            const city = weather && weather.city ? weather.city : "";
+
+            const weatherScore = song.weather_score !== undefined
+                ? `<span class="tag score-tag">Weather Score ${song.weather_score}</span>`
+                : "";
+
+            const cosineScore = song.weather_score_detail && song.weather_score_detail.cosine !== undefined
+                ? `<span class="tag">Cosine ${song.weather_score_detail.cosine}</span>`
+                : "";
+
+            const ruleScore = song.weather_score_detail && song.weather_score_detail.rule !== undefined
+                ? `<span class="tag">Rule ${song.weather_score_detail.rule}</span>`
+                : "";
+
+            weatherResult.innerHTML = `
+                <h2>오늘의 날씨 추천곡</h2>
+
+                <div class="result-card">
+                    <div class="result-main">
+                        <h3>${song.track}</h3>
+                        <p>${song.artist} · BPM ${song.tempo} · Key ${song.key} · Mode ${song.mode}</p>
+
+                        <div class="layer-tags">
+                            <span class="tag weather-tag">City: ${city}</span>
+                            <span class="tag weather-tag">Weather: ${weatherCondition}</span>
+                            ${rawCondition ? `<span class="tag weather-tag">Raw: ${rawCondition}</span>` : ""}
+                            ${temp !== "" ? `<span class="tag weather-tag">Temp: ${temp}℃</span>` : ""}
+                            ${weatherScore}
+                            ${cosineScore}
+                            ${ruleScore}
+                            ${genres.map(g => `<span class="tag">${g}</span>`).join("")}
+                        </div>
+                    </div>
+
+                    <a 
+                        class="youtube-link" 
+                        href="${youtubeUrl}" 
+                        target="_blank"
+                        title="YouTube에서 검색"
+                    >
+                        ▶
+                    </a>
+                </div>
+            `;
         }
     </script>
 </body>

@@ -6,6 +6,10 @@
         "tempo": 110.053,
         "key": 0,
         "mode": 1,
+        "energy": 0.657,
+        "danceability": 0.813,
+        "valence": 0.651,
+        "acousticness": 0.00269,
         "genre": [
             "pop",
             "kpop"
@@ -18,11 +22,15 @@
         "tempo": 131.98,
         "key": 2,
         "mode": 1,
+        "energy": 0.861,
+        "danceability": 0.738,
+        "valence": 0.58,
+        "acousticness": 0.318,
         "genre": [
-            "hiphop",
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop",
+            "hiphop"
         ]
     },
     {
@@ -32,9 +40,13 @@
         "tempo": 151.971,
         "key": 9,
         "mode": 0,
+        "energy": 0.588,
+        "danceability": 0.699,
+        "valence": 0.35,
+        "acousticness": 0.00807,
         "genre": [
-            "hiphop",
             "pop",
+            "hiphop",
             "kpop"
         ]
     },
@@ -45,9 +57,13 @@
         "tempo": 125.036,
         "key": 8,
         "mode": 1,
+        "energy": 0.852,
+        "danceability": 0.786,
+        "valence": 0.455,
+        "acousticness": 0.0687,
         "genre": [
-            "hiphop",
             "pop",
+            "hiphop",
             "kpop"
         ]
     },
@@ -55,9 +71,13 @@
         "spotify_id": "6tCd8bPvYnceDG7W9M1RMk",
         "artist": "BLACKPINK",
         "track": "Shut Down",
-        "tempo": 99.976,
-        "key": 4,
-        "mode": 0,
+        "tempo": 90.016,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.719,
+        "danceability": 0.794,
+        "valence": 0.69,
+        "acousticness": 0.0119,
         "genre": [
             "pop",
             "kpop"
@@ -67,25 +87,33 @@
         "spotify_id": "4ZxOuNHhpyOj4gv52MtQpT",
         "artist": "BLACKPINK",
         "track": "As If It's Your Last",
-        "tempo": 90.016,
-        "key": 0,
+        "tempo": 127.995,
+        "key": 6,
         "mode": 1,
+        "energy": 0.732,
+        "danceability": 0.658,
+        "valence": 0.409,
+        "acousticness": 0.00513,
         "genre": [
-            "hiphop",
-            "pop",
             "synthpop",
-            "jpop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "jpop",
+            "pop",
+            "hiphop"
         ]
     },
     {
         "spotify_id": "4JjJ1KNRrzqstSY0uDuys3",
         "artist": "BLACKPINK",
         "track": "JUMP",
-        "tempo": 127.995,
-        "key": 6,
-        "mode": 1,
+        "tempo": 149.921,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.817,
+        "danceability": 0.776,
+        "valence": 0.515,
+        "acousticness": 0.18,
         "genre": [
             "pop",
             "kpop"
@@ -95,23 +123,31 @@
         "spotify_id": "13MF2TYuyfITClL1R2ei6e",
         "artist": "BLACKPINK",
         "track": "BOOMBAYAH",
-        "tempo": 133.854,
-        "key": 6,
+        "tempo": 139.931,
+        "key": 4,
         "mode": 0,
+        "energy": 0.859,
+        "danceability": 0.671,
+        "valence": 0.39,
+        "acousticness": 0.0313,
         "genre": [
-            "hiphop",
             "trap",
+            "kpop",
             "pop",
-            "kpop"
+            "hiphop"
         ]
     },
     {
         "spotify_id": "1GMufNnkKAnPLnqKJ5HHxW",
         "artist": "BLACKPINK",
         "track": "Lovesick Girls",
-        "tempo": 124.994,
-        "key": 1,
-        "mode": 1,
+        "tempo": 124.952,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.836,
+        "danceability": 0.661,
+        "valence": 0.396,
+        "acousticness": 0.00268,
         "genre": [
             "pop",
             "kpop"
@@ -121,54 +157,42 @@
         "spotify_id": "28tufPkTcXmdNqTvi9hsoG",
         "artist": "BLACKPINK",
         "track": "Pretty Savage",
-        "tempo": 134.971,
-        "key": 10,
-        "mode": 0,
+        "tempo": 130.018,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.787,
+        "danceability": 0.813,
+        "valence": 0.326,
+        "acousticness": 0.0452,
         "genre": []
-    },
-    {
-        "spotify_id": "5sdQOyqq2IDhvmx2lHOpwd",
-        "artist": "NewJeans",
-        "track": "Super Shy",
-        "tempo": 134.993,
-        "key": 5,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "3r8RuvgbX9s7ammBn07D3W",
-        "artist": "NewJeans",
-        "track": "Ditto",
-        "tempo": 104.988,
-        "key": 10,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
     },
     {
         "spotify_id": "65FftemJ1DbbZ45DUfHJXE",
         "artist": "NewJeans",
         "track": "OMG",
-        "tempo": 149.921,
-        "key": 5,
-        "mode": 0,
+        "tempo": 130.019,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.745,
+        "danceability": 0.867,
+        "valence": 0.963,
+        "acousticness": 0.136,
         "genre": [
-            "pop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "6rdkCkjk6D12xRpdMXy0I2",
         "artist": "NewJeans",
         "track": "New Jeans",
-        "tempo": 139.931,
+        "tempo": 99.976,
         "key": 4,
         "mode": 0,
+        "energy": 0.935,
+        "danceability": 0.593,
+        "valence": 0.783,
+        "acousticness": 0.268,
         "genre": [
             "pop",
             "kpop"
@@ -178,90 +202,118 @@
         "spotify_id": "56v8WEnGzLByGsDAXDiv4d",
         "artist": "NewJeans",
         "track": "ETA",
-        "tempo": 124.952,
-        "key": 5,
-        "mode": 0,
+        "tempo": 124.994,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.895,
+        "danceability": 0.803,
+        "valence": 0.757,
+        "acousticness": 0.0816,
         "genre": [
-            "pop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "2pIUpMhHL6L9Z5lnKxJJr9",
         "artist": "NewJeans",
         "track": "Attention",
-        "tempo": 134.014,
-        "key": 4,
+        "tempo": 134.971,
+        "key": 10,
         "mode": 0,
+        "energy": 0.749,
+        "danceability": 0.812,
+        "valence": 0.841,
+        "acousticness": 0.108,
         "genre": [
             "futurebass",
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "0a4MMyCrzT0En247IhqZbD",
         "artist": "NewJeans",
         "track": "Hype Boy",
-        "tempo": 130.018,
-        "key": 11,
-        "mode": 1,
+        "tempo": 134.993,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.65,
+        "danceability": 0.752,
+        "valence": 0.532,
+        "acousticness": 0.653,
         "genre": [
             "futurebass",
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "02wk5BttM0QL38ERjLPQJB",
         "artist": "NewJeans",
         "track": "Cool With You",
-        "tempo": 126.956,
-        "key": 9,
+        "tempo": 104.988,
+        "key": 10,
         "mode": 0,
+        "energy": 0.648,
+        "danceability": 0.811,
+        "valence": 0.695,
+        "acousticness": 0.236,
         "genre": [
             "drumnbass",
-            "pop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "2DwUdMJ5uxv20EhAildreg",
         "artist": "NewJeans",
         "track": "Cookie",
-        "tempo": 156.935,
-        "key": 0,
+        "tempo": 131.067,
+        "key": 6,
         "mode": 1,
+        "energy": 0.668,
+        "danceability": 0.797,
+        "valence": 0.69,
+        "acousticness": 0.257,
         "genre": [
             "futurebass",
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "38tXZcL1gZRfbqfOG0VMTH",
         "artist": "NewJeans",
         "track": "How Sweet",
-        "tempo": 130.019,
-        "key": 2,
+        "tempo": 98.986,
+        "key": 1,
         "mode": 1,
+        "energy": 0.736,
+        "danceability": 0.94,
+        "valence": 0.949,
+        "acousticness": 0.243,
         "genre": [
-            "hiphop",
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop",
+            "hiphop"
         ]
     },
     {
         "spotify_id": "1aKvZDoLGkNMxoRYgkckZG",
         "artist": "ILLIT",
         "track": "Magnetic",
-        "tempo": 119.978,
-        "key": 9,
-        "mode": 1,
+        "tempo": 134.014,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.721,
+        "danceability": 0.807,
+        "valence": 0.532,
+        "acousticness": 0.51,
         "genre": [
             "pop",
             "kpop"
@@ -271,9 +323,13 @@
         "spotify_id": "0znsc67nMhP4X9hjhvoyeP",
         "artist": "ILLIT",
         "track": "Tick-Tack",
-        "tempo": 129.988,
-        "key": 0,
-        "mode": 1,
+        "tempo": 126.956,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.771,
+        "danceability": 0.804,
+        "valence": 0.739,
+        "acousticness": 0.357,
         "genre": [
             "pop",
             "kpop"
@@ -283,21 +339,13 @@
         "spotify_id": "1k0JAiH11gHL9dc5dfQjQr",
         "artist": "ILLIT",
         "track": "NOT CUTE ANYMORE",
-        "tempo": 142.97,
-        "key": 4,
+        "tempo": 156.935,
+        "key": 0,
         "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "2kIUILBPlz4exX9xIFS275",
-        "artist": "ILLIT",
-        "track": "Lucky Girl Syndrome",
-        "tempo": 131.067,
-        "key": 6,
-        "mode": 1,
+        "energy": 0.638,
+        "danceability": 0.847,
+        "valence": 0.661,
+        "acousticness": 0.0596,
         "genre": [
             "pop",
             "kpop"
@@ -307,18 +355,26 @@
         "spotify_id": "4p0uVFAXKUISu8yp9gNtWE",
         "artist": "ILLIT",
         "track": "Billyeoon Goyangi (Do the Dance)",
-        "tempo": 119.986,
-        "key": 0,
+        "tempo": 119.978,
+        "key": 9,
         "mode": 1,
+        "energy": 0.731,
+        "danceability": 0.828,
+        "valence": 0.587,
+        "acousticness": 0.0617,
         "genre": []
     },
     {
         "spotify_id": "2MoUuJhpSO4a0czxvsrSC6",
         "artist": "ILLIT",
         "track": "Cherish (My Love)",
-        "tempo": 129.954,
-        "key": 1,
-        "mode": 0,
+        "tempo": 129.988,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.78,
+        "danceability": 0.685,
+        "valence": 0.863,
+        "acousticness": 0.0939,
         "genre": [
             "pop",
             "kpop"
@@ -328,9 +384,13 @@
         "spotify_id": "6QqrxJe1iQxwLY6he6FLFo",
         "artist": "ILLIT",
         "track": "Midnight Fiction",
-        "tempo": 98.986,
-        "key": 1,
+        "tempo": 142.97,
+        "key": 4,
         "mode": 1,
+        "energy": 0.821,
+        "danceability": 0.714,
+        "valence": 0.303,
+        "acousticness": 0.236,
         "genre": [
             "pop",
             "kpop"
@@ -340,9 +400,13 @@
         "spotify_id": "0wFU2pYHZi45Ws1VD6aSJX",
         "artist": "ILLIT",
         "track": "jellyous",
-        "tempo": 107.997,
-        "key": 11,
-        "mode": 1,
+        "tempo": 129.954,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.74,
+        "danceability": 0.645,
+        "valence": 0.767,
+        "acousticness": 0.0235,
         "genre": [
             "pop",
             "kpop"
@@ -352,9 +416,13 @@
         "spotify_id": "2Xiaplc23BureS4EDeE8xa",
         "artist": "ILLIT",
         "track": "My World",
-        "tempo": 129.942,
-        "key": 4,
+        "tempo": 107.997,
+        "key": 11,
         "mode": 1,
+        "energy": 0.592,
+        "danceability": 0.73,
+        "valence": 0.682,
+        "acousticness": 0.184,
         "genre": [
             "pop",
             "kpop"
@@ -364,9 +432,13 @@
         "spotify_id": "2v7aUMUc1kerJyaRmIx9zd",
         "artist": "ILLIT",
         "track": "I'll Like You",
-        "tempo": 117.941,
-        "key": 1,
-        "mode": 0,
+        "tempo": 129.942,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.837,
+        "danceability": 0.687,
+        "valence": 0.824,
+        "acousticness": 0.241,
         "genre": [
             "kpop",
             "dancepop"
@@ -376,179 +448,13 @@
         "spotify_id": "6CV6j2xz54thzlrWML3kAW",
         "artist": "IVE",
         "track": "After LIKE",
-        "tempo": 104.971,
-        "key": 6,
+        "tempo": 117.941,
+        "key": 1,
         "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "0Q5VnK2DYzRyfqQRJuUtvi",
-        "artist": "IVE",
-        "track": "LOVE DIVE",
-        "tempo": 98.1,
-        "key": 9,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "7KavHYqoVFNB3IUXfs5gvP",
-        "artist": "IVE",
-        "track": "I AM",
-        "tempo": 125.957,
-        "key": 2,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "jpop",
-            "dancepop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "7n2FZQsaLb7ZRfRPfEeIvr",
-        "artist": "IVE",
-        "track": "ELEVEN",
-        "tempo": 82.321,
-        "key": 6,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "5kRMDu7nOelODru9ZmwbLl",
-        "artist": "IVE",
-        "track": "Kitsch",
-        "tempo": 168.978,
-        "key": 7,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "0XrDEv1Xe0ZQsS6AmPn04c",
-        "artist": "IVE",
-        "track": "Baddie",
-        "tempo": 132.02,
-        "key": 0,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "1F0ML26dmVDNhG3jkrVeyo",
-        "artist": "IVE",
-        "track": "Off The Record",
-        "tempo": 146.959,
-        "key": 9,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "6JjydtOl3rysvM2prpCBaf",
-        "artist": "IVE",
-        "track": "HEYA",
-        "tempo": 129.905,
-        "key": 7,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "6VBiGpCFThcOFlldRiCPr9",
-        "artist": "IVE",
-        "track": "ATTITUDE",
-        "tempo": 91.992,
-        "key": 9,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "0Q4HyLehVyOruIJ1bYA3LV",
-        "artist": "IVE",
-        "track": "Accendio",
-        "tempo": 119.8,
-        "key": 7,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "2IYnnkPXK1zvoCIHAkyiFA",
-        "artist": "ITZY",
-        "track": "WANNABE",
-        "tempo": 125.016,
-        "key": 10,
-        "mode": 0,
-        "genre": [
-            "kpop",
-            "trap"
-        ]
-    },
-    {
-        "spotify_id": "6hAznmvhIfHE4vSZYsyONI",
-        "artist": "ITZY",
-        "track": "LOCO",
-        "tempo": 120.073,
-        "key": 11,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "3DD2VHxnv7C9Hew8s7Zgjf",
-        "artist": "ITZY",
-        "track": "Not Shy",
-        "tempo": 90.069,
-        "key": 2,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "7J1P951xPFJa07HNTDnmxy",
-        "artist": "ITZY",
-        "track": "ICY",
-        "tempo": 129.943,
-        "key": 11,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "7h2fuB9cDFhdq9q3DsjiwY",
-        "artist": "ITZY",
-        "track": "Cheshire",
-        "tempo": 90.065,
-        "key": 9,
-        "mode": 0,
+        "energy": 0.709,
+        "danceability": 0.703,
+        "valence": 0.538,
+        "acousticness": 0.00379,
         "genre": [
             "pop",
             "kpop"
@@ -558,9 +464,13 @@
         "spotify_id": "5RoqWTV72C8GZhHmQqBh7O",
         "artist": "ITZY",
         "track": "SNEAKERS",
-        "tempo": 130.047,
-        "key": 11,
+        "tempo": 104.971,
+        "key": 6,
         "mode": 0,
+        "energy": 0.718,
+        "danceability": 0.709,
+        "valence": 0.24,
+        "acousticness": 0.059,
         "genre": [
             "pop",
             "kpop"
@@ -570,95 +480,465 @@
         "spotify_id": "24hyxhmnwutr6ncxX9ALIU",
         "artist": "ITZY",
         "track": "CAKE",
-        "tempo": 103.971,
-        "key": 7,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "68r87x3VZdAMhv8nBVuynz",
-        "artist": "i-dle",
-        "track": "Queencard",
-        "tempo": 104.008,
-        "key": 4,
+        "tempo": 98.1,
+        "key": 9,
         "mode": 0,
+        "energy": 0.792,
+        "danceability": 0.774,
+        "valence": 0.505,
+        "acousticness": 0.00427,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "6WYsZJDfUOftGVji74yYSU",
-        "artist": "i-dle",
-        "track": "TOMBOY",
-        "tempo": 165.004,
+        "spotify_id": "5BXr7hYZQOeRttkeWYTq5S",
+        "artist": "STAYC",
+        "track": "ASAP",
+        "tempo": 125.957,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.915,
+        "danceability": 0.658,
+        "valence": 0.753,
+        "acousticness": 0.177,
+        "genre": [
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "3gFcGnU4kTdMYLXDjH1TK8",
+        "artist": "STAYC",
+        "track": "RUN2U",
+        "tempo": 82.321,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.647,
+        "danceability": 0.594,
+        "valence": 0.511,
+        "acousticness": 0.121,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "2bZIDMpzVooosmPHn0tHnd",
+        "artist": "STAYC",
+        "track": "STEREOTYPE",
+        "tempo": 168.978,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.906,
+        "danceability": 0.557,
+        "valence": 0.616,
+        "acousticness": 0.19,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "13KR2yNRDrbKwR3dOKCDl4",
+        "artist": "STAYC",
+        "track": "SO BAD",
+        "tempo": 132.02,
         "key": 0,
         "mode": 1,
+        "energy": 0.802,
+        "danceability": 0.764,
+        "valence": 0.323,
+        "acousticness": 0.102,
         "genre": [
+            "pop",
             "hiphop",
+            "trap",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "36qXU2yyq1JtGp05omV7bu",
+        "artist": "STAYC",
+        "track": "GPT",
+        "tempo": 129.905,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.749,
+        "danceability": 0.695,
+        "valence": 0.458,
+        "acousticness": 0.392,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "5iXD5rOKV99XGtkaiucHpM",
+        "artist": "STAYC",
+        "track": "BEBE",
+        "tempo": 125.016,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.892,
+        "danceability": 0.749,
+        "valence": 0.77,
+        "acousticness": 0.311,
+        "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "7Ejqkb9YfldcLoh8B6bXgj",
-        "artist": "i-dle",
-        "track": "Nxde",
-        "tempo": 142.951,
+        "spotify_id": "7HGKvoju3ucB7UqVt1GoJu",
+        "artist": "STAYC",
+        "track": "YOUNG LUV",
+        "tempo": 129.943,
         "key": 11,
-        "mode": 1,
+        "mode": 0,
+        "energy": 0.676,
+        "danceability": 0.722,
+        "valence": 0.362,
+        "acousticness": 0.000835,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "19OuCZgYAfV4g8oRUDPLnA",
-        "artist": "i-dle",
-        "track": "Oh my god",
-        "tempo": 113.076,
-        "key": 1,
+        "spotify_id": "6uPnrBgweGOcwjFL4ItAvV",
+        "artist": "aespa",
+        "track": "Whiplash",
+        "tempo": 136.054,
+        "key": 5,
         "mode": 1,
+        "energy": 0.82,
+        "danceability": 0.697,
+        "valence": 0.502,
+        "acousticness": 0.1,
+        "genre": [
+            "dancepop",
+            "kpop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "5eWcGfUCrVFMoYskyfkEPE",
+        "artist": "aespa",
+        "track": "Armageddon",
+        "tempo": 130.047,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.899,
+        "danceability": 0.802,
+        "valence": 0.531,
+        "acousticness": 0.00953,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "5MkmB9khBQE8R70ZqN2MP9",
-        "artist": "i-dle",
-        "track": "MY BAG",
+        "spotify_id": "3dbLT62Cvs46Ju7a8gpr36",
+        "artist": "aespa",
+        "track": "Savage",
+        "tempo": 146.959,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.879,
+        "danceability": 0.727,
+        "valence": 0.671,
+        "acousticness": 0.124,
+        "genre": [
+            "trap",
+            "futurebass",
+            "kpop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "2zrhoHlFKxFTRF5aMyxMoQ",
+        "artist": "aespa",
+        "track": "Next Level",
+        "tempo": 91.992,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.786,
+        "danceability": 0.695,
+        "valence": 0.465,
+        "acousticness": 0.0668,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "1t2qYCAjUAoGfeFeoBlK51",
+        "artist": "aespa",
+        "track": "Black Mamba",
+        "tempo": 119.8,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.816,
+        "danceability": 0.586,
+        "valence": 0.265,
+        "acousticness": 0.0911,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "3jGKjBgEfalyWNQtd82ouc",
+        "artist": "aespa",
+        "track": "Spicy",
+        "tempo": 90.069,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.915,
+        "danceability": 0.52,
+        "valence": 0.5,
+        "acousticness": 0.0618,
+        "genre": [
+            "trap",
+            "altpop",
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1o844wI52S3TjXGBwvGcc7",
+        "artist": "aespa",
+        "track": "Hold On Tight",
+        "tempo": 126.007,
+        "key": 8,
+        "mode": 0,
+        "energy": 0.901,
+        "danceability": 0.856,
+        "valence": 0.743,
+        "acousticness": 0.0943,
+        "genre": [
+            "electrohouse",
+            "soundtrack",
+            "dancepop",
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6vdCWFMLfa4if2f9SdqKIM",
+        "artist": "aespa",
+        "track": "Illusion",
         "tempo": 105.025,
         "key": 10,
         "mode": 0,
+        "energy": 0.797,
+        "danceability": 0.882,
+        "valence": 0.824,
+        "acousticness": 0.0821,
         "genre": [
-            "hiphop",
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "2ezKXygNO30pXyDQXkm6oD",
-        "artist": "i-dle",
-        "track": "LATATA",
-        "tempo": 139.998,
-        "key": 6,
+        "spotify_id": "3AoEQRuFf8zVXWqSLo2UOi",
+        "artist": "LE SSERAFIM",
+        "track": "CRAZY",
+        "tempo": 109.036,
+        "key": 11,
         "mode": 0,
+        "energy": 0.852,
+        "danceability": 0.82,
+        "valence": 0.82,
+        "acousticness": 0.488,
+        "genre": [
+            "house",
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "3lwK3WyKAI5bUuGY1OgGbZ",
+        "artist": "LE SSERAFIM",
+        "track": "Smart",
+        "tempo": 90.065,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.757,
+        "danceability": 0.715,
+        "valence": 0.464,
+        "acousticness": 0.231,
         "genre": [
             "pop",
             "kpop"
+        ]
+    },
+    {
+        "spotify_id": "2O4Bb2WCkjlTPO827OnBMI",
+        "artist": "LE SSERAFIM",
+        "track": "EASY",
+        "tempo": 103.971,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.62,
+        "danceability": 0.863,
+        "valence": 0.432,
+        "acousticness": 0.0508,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "6wBpO4Xc4YgShnENGSFA1M",
+        "artist": "LE SSERAFIM",
+        "track": "Sour Grapes",
+        "tempo": 104.008,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.875,
+        "danceability": 0.795,
+        "valence": 0.375,
+        "acousticness": 0.111,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "296nXCOv97WJNRWzIBQnoj",
+        "artist": "LE SSERAFIM",
+        "track": "FEARLESS",
+        "tempo": 165.004,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.7,
+        "danceability": 0.744,
+        "valence": 0.602,
+        "acousticness": 0.189,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "7F0MuIk5glqtowCUjbn9es",
+        "artist": "LE SSERAFIM",
+        "track": "Impurities",
+        "tempo": 113.076,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.675,
+        "danceability": 0.799,
+        "valence": 0.594,
+        "acousticness": 0.115,
+        "genre": [
+            "dancepop",
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "51vRumtqbkNW9wrKfESwfu",
+        "artist": "LE SSERAFIM",
+        "track": "UNFORGIVEN (feat. Nile Rodgers)",
+        "tempo": 139.998,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.801,
+        "danceability": 0.779,
+        "valence": 0.72,
+        "acousticness": 0.395,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "5UwxdcV6s0iE9v5f99tDMg",
+        "artist": "TWICE",
+        "track": "LIKEY",
+        "tempo": 125.042,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.917,
+        "danceability": 0.709,
+        "valence": 0.515,
+        "acousticness": 0.0409,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "646UF6MvpT5PbnLosjfX34",
+        "artist": "TWICE",
+        "track": "Talk that Talk",
+        "tempo": 129.986,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.903,
+        "danceability": 0.726,
+        "valence": 0.958,
+        "acousticness": 0.055,
+        "genre": [
+            "dancepop",
+            "kpop",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "7L81PqO3zKKPsfO7jfyvus",
+        "artist": "TWICE",
+        "track": "What is Love?",
+        "tempo": 119.959,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.896,
+        "danceability": 0.695,
+        "valence": 0.508,
+        "acousticness": 0.179,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "5jp969JsOEJSuRYPZzXnYF",
+        "artist": "TWICE",
+        "track": "YES or YES",
+        "tempo": 149.985,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.736,
+        "danceability": 0.714,
+        "valence": 0.814,
+        "acousticness": 0.191,
+        "genre": [
+            "dancepop",
+            "kpop",
+            "pop",
+            "jpop"
         ]
     },
     {
         "spotify_id": "3CYH422oy1cZNoo0GTG1TK",
         "artist": "Red Velvet",
         "track": "Psycho",
-        "tempo": 125.042,
-        "key": 9,
+        "tempo": 157.964,
+        "key": 1,
         "mode": 1,
+        "energy": 0.94,
+        "danceability": 0.412,
+        "valence": 0.423,
+        "acousticness": 0.0648,
         "genre": [
             "pop",
             "kpop"
@@ -668,9 +948,13 @@
         "spotify_id": "5HiSc2ZCGn8L3cH3qSwzBT",
         "artist": "Red Velvet",
         "track": "러시안 룰렛 Russian Roulette",
-        "tempo": 129.986,
-        "key": 7,
+        "tempo": 114.953,
+        "key": 1,
         "mode": 0,
+        "energy": 0.902,
+        "danceability": 0.839,
+        "valence": 0.639,
+        "acousticness": 0.0868,
         "genre": [
             "pop",
             "kpop"
@@ -680,67 +964,13 @@
         "spotify_id": "5GKwq4sO5ZHKuWaDmdwMQc",
         "artist": "Red Velvet",
         "track": "Bad Boy",
-        "tempo": 145.99,
-        "key": 7,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "42tFTth2jcF7iSo0RBjfJF",
-        "artist": "Red Velvet",
-        "track": "Peek-A-Boo",
-        "tempo": 171.93,
-        "key": 1,
+        "tempo": 139.987,
+        "key": 8,
         "mode": 1,
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "spotify_id": "7nKQ5WAcjnG48knyLuo8gO",
-        "artist": "Red Velvet",
-        "track": "Red Flavor",
-        "tempo": 119.959,
-        "key": 5,
-        "mode": 1,
-        "genre": [
-            "pop"
-        ]
-    },
-    {
-        "spotify_id": "2oBMZYteeO8DyXV9gDx6Za",
-        "artist": "Red Velvet",
-        "track": "Feel My Rhythm",
-        "tempo": 149.985,
-        "key": 2,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "6SpPr7K4YQ2wp8jU6uOTmQ",
-        "artist": "Red Velvet",
-        "track": "Queendom",
-        "tempo": 157.964,
-        "key": 1,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "3pDGJRDN3p6kCNZcD97FYY",
-        "artist": "Red Velvet",
-        "track": "Cosmic",
-        "tempo": 105.964,
-        "key": 1,
-        "mode": 1,
+        "energy": 0.666,
+        "danceability": 0.664,
+        "valence": 0.405,
+        "acousticness": 0.193,
         "genre": [
             "pop",
             "kpop"
@@ -750,9 +980,13 @@
         "spotify_id": "64iDjAuWDogVhuoWhKklF9",
         "artist": "Red Velvet",
         "track": "Dumb Dumb",
-        "tempo": 114.953,
-        "key": 1,
+        "tempo": 145.99,
+        "key": 7,
         "mode": 0,
+        "energy": 0.789,
+        "danceability": 0.778,
+        "valence": 0.799,
+        "acousticness": 0.0334,
         "genre": [
             "pop",
             "kpop"
@@ -762,125 +996,13 @@
         "spotify_id": "74muMkVdMYoR65lhmdzy13",
         "artist": "Red Velvet",
         "track": "Day 1",
-        "tempo": 139.987,
-        "key": 8,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "6C734SmqoIYuRWo2qSCnpC",
-        "artist": "NMIXX",
-        "track": "DICE",
-        "tempo": 120.037,
-        "key": 5,
-        "mode": 0,
-        "genre": [
-            "hiphop",
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "2W8UduoifU1zgjKZlfY79S",
-        "artist": "NMIXX",
-        "track": "Love Me Like This",
-        "tempo": 83.687,
-        "key": 0,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "1mXIJLlpAEG3Vab5b21QIM",
-        "artist": "NMIXX",
-        "track": "DASH",
-        "tempo": 99.971,
-        "key": 10,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "2AlNztYMWRJOg13xhUGwOj",
-        "artist": "NMIXX",
-        "track": "Roller Coaster",
-        "tempo": 90.055,
-        "key": 7,
-        "mode": 1,
-        "genre": [
-            "deephouse",
-            "pop",
-            "dancepop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "2AtshmTKGwbtCybUmYxB4u",
-        "artist": "NMIXX",
-        "track": "TANK",
-        "tempo": 110.02,
+        "tempo": 171.93,
         "key": 1,
         "mode": 1,
-        "genre": [
-            "hiphop",
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "3zQKe6vQMBHmthdjLHnKya",
-        "artist": "NMIXX",
-        "track": "Soñar (Breaker)",
-        "tempo": 139.912,
-        "key": 11,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "719MkAinn7QVNoibvtkSHW",
-        "artist": "NMIXX",
-        "track": "KNOW ABOUT ME",
-        "tempo": 99.98,
-        "key": 6,
-        "mode": 1,
-        "genre": [
-            "trap",
-            "pop",
-            "dancepop",
-            "kpop",
-            "altpop"
-        ]
-    },
-    {
-        "spotify_id": "0FKR7mQJnYqdEmHAMhgQjw",
-        "artist": "NMIXX",
-        "track": "Blue Valentine",
-        "tempo": 94.019,
-        "key": 5,
-        "mode": 0,
-        "genre": [
-            "rock",
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "73qHAnNGv0iuiedYenz8EB",
-        "artist": "NMIXX",
-        "track": "Young, Dumb, Stupid",
-        "tempo": 118.969,
-        "key": 6,
-        "mode": 1,
+        "energy": 0.884,
+        "danceability": 0.645,
+        "valence": 0.708,
+        "acousticness": 0.112,
         "genre": [
             "pop",
             "kpop"
@@ -890,21 +1012,13 @@
         "spotify_id": "0vaxYDAuAO1nPolC6bQp7V",
         "artist": "KISS OF LIFE",
         "track": "Midas Touch",
-        "tempo": 125.941,
-        "key": 11,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "2DbDefRFJ5YOfXCKOeCJJh",
-        "artist": "KISS OF LIFE",
-        "track": "Igloo",
-        "tempo": 123.988,
-        "key": 0,
+        "tempo": 118.969,
+        "key": 6,
         "mode": 1,
+        "energy": 0.9,
+        "danceability": 0.796,
+        "valence": 0.854,
+        "acousticness": 0.0513,
         "genre": [
             "pop",
             "kpop"
@@ -914,9 +1028,13 @@
         "spotify_id": "0NoeYUnwpb9R26mpylHcR9",
         "artist": "KISS OF LIFE",
         "track": "Sugarcoat (NATTY Solo)",
-        "tempo": 104.993,
-        "key": 7,
-        "mode": 1,
+        "tempo": 120.037,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.78,
+        "danceability": 0.741,
+        "valence": 0.44,
+        "acousticness": 0.299,
         "genre": [
             "pop",
             "kpop"
@@ -926,21 +1044,29 @@
         "spotify_id": "4e1aewX6ATPcdfQIqr7gqO",
         "artist": "KISS OF LIFE",
         "track": "Sticky",
-        "tempo": 113.986,
-        "key": 4,
+        "tempo": 83.687,
+        "key": 0,
         "mode": 1,
+        "energy": 0.857,
+        "danceability": 0.581,
+        "valence": 0.879,
+        "acousticness": 0.249,
         "genre": [
-            "pop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "70efTlnBNM8BvfhfPiqOBN",
         "artist": "KISS OF LIFE",
         "track": "Nobody Knows",
-        "tempo": 109.904,
-        "key": 1,
-        "mode": 0,
+        "tempo": 112.026,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.842,
+        "danceability": 0.72,
+        "valence": 0.894,
+        "acousticness": 0.35,
         "genre": [
             "pop",
             "kpop"
@@ -950,22 +1076,30 @@
         "spotify_id": "76qqDJijAjFph7sjUxNVG8",
         "artist": "KISS OF LIFE",
         "track": "Shhh",
-        "tempo": 100.072,
-        "key": 1,
+        "tempo": 83.953,
+        "key": 6,
         "mode": 1,
+        "energy": 0.802,
+        "danceability": 0.615,
+        "valence": 0.632,
+        "acousticness": 0.182,
         "genre": [
             "pop",
-            "kpop",
-            "altpop"
+            "altpop",
+            "kpop"
         ]
     },
     {
         "spotify_id": "7AGq5qaaF9awHDaKuCvVjj",
         "artist": "KISS OF LIFE",
         "track": "Bad News",
-        "tempo": 117.989,
-        "key": 6,
+        "tempo": 122.028,
+        "key": 11,
         "mode": 0,
+        "energy": 0.898,
+        "danceability": 0.649,
+        "valence": 0.663,
+        "acousticness": 0.0213,
         "genre": [
             "pop",
             "kpop"
@@ -975,9 +1109,13 @@
         "spotify_id": "3ym9bzwGG4uxVaJ0pLoQbM",
         "artist": "KISS OF LIFE",
         "track": "Nothing",
-        "tempo": 130.98,
-        "key": 7,
-        "mode": 1,
+        "tempo": 140.025,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.801,
+        "danceability": 0.672,
+        "valence": 0.415,
+        "acousticness": 0.0539,
         "genre": [
             "pop",
             "kpop"
@@ -987,80 +1125,87 @@
         "spotify_id": "7zi7dD55ORKCGEjDNwSa1n",
         "artist": "KISS OF LIFE",
         "track": "Get Loud",
-        "tempo": 112.026,
-        "key": 11,
-        "mode": 1,
+        "tempo": 99.971,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.701,
+        "danceability": 0.702,
+        "valence": 0.595,
+        "acousticness": 0.391,
         "genre": [
             "poprock",
             "house",
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "5yilfTuo2JyDZUoBPQ4Vjs",
         "artist": "KISS OF LIFE",
         "track": "Te Quiero",
-        "tempo": 135.875,
-        "key": 11,
-        "mode": 0,
+        "tempo": 90.055,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.646,
+        "danceability": 0.655,
+        "valence": 0.927,
+        "acousticness": 0.278,
         "genre": [
-            "pop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "7B9W7Qsy5M2kyUNjQYIEG8",
         "artist": "fromis_9",
         "track": "DM",
-        "tempo": 121.959,
+        "tempo": 110.02,
         "key": 1,
         "mode": 1,
+        "energy": 0.829,
+        "danceability": 0.845,
+        "valence": 0.879,
+        "acousticness": 0.0799,
         "genre": [
-            "citypop",
             "funk",
+            "kpop",
             "pop",
-            "kpop"
+            "citypop"
         ]
     },
     {
         "spotify_id": "2IMPPA9UZpqTnnVIy9lDHU",
         "artist": "fromis_9",
         "track": "Love Me Back",
-        "tempo": 122.028,
-        "key": 11,
-        "mode": 0,
+        "tempo": 99.98,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.758,
+        "danceability": 0.796,
+        "valence": 0.829,
+        "acousticness": 0.156,
         "genre": [
-            "citypop",
-            "pop",
             "synthpop",
+            "soundtrack",
             "kpop",
-            "soundtrack"
+            "pop",
+            "citypop"
         ]
     },
     {
         "spotify_id": "6oNLSQX8bcAdbCElZYju3v",
         "artist": "fromis_9",
         "track": "Supersonic",
-        "tempo": 123.945,
-        "key": 11,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "3RtapbUtHJgnVlZWahStUS",
-        "artist": "fromis_9",
-        "track": "LOVE BOMB",
-        "tempo": 140.025,
-        "key": 6,
+        "tempo": 94.019,
+        "key": 5,
         "mode": 0,
+        "energy": 0.82,
+        "danceability": 0.663,
+        "valence": 0.568,
+        "acousticness": 0.0339,
         "genre": [
             "pop",
-            "synthpop",
             "kpop"
         ]
     },
@@ -1068,53 +1213,69 @@
         "spotify_id": "7oQqeRSV38YqkRv2UGvmbS",
         "artist": "fromis_9",
         "track": "WE GO",
-        "tempo": 124.008,
-        "key": 8,
+        "tempo": 104.993,
+        "key": 7,
         "mode": 1,
+        "energy": 0.832,
+        "danceability": 0.6,
+        "valence": 0.435,
+        "acousticness": 0.0614,
         "genre": [
-            "funk",
-            "pop",
             "synthpop",
-            "kpop"
+            "funk",
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "4lIAPwAU6R8PAy2WhykC4i",
         "artist": "fromis_9",
         "track": "#menow",
-        "tempo": 124.001,
-        "key": 6,
+        "tempo": 113.986,
+        "key": 4,
         "mode": 1,
+        "energy": 0.669,
+        "danceability": 0.859,
+        "valence": 0.555,
+        "acousticness": 0.166,
         "genre": [
+            "futurehouse",
             "futurebass",
-            "pop",
             "dancepop",
             "kpop",
-            "futurehouse"
+            "pop"
         ]
     },
     {
         "spotify_id": "1jkoDKZBMInTDwGlqoPOFC",
         "artist": "fromis_9",
         "track": "Attitude",
-        "tempo": 154.061,
-        "key": 6,
+        "tempo": 109.904,
+        "key": 1,
         "mode": 0,
+        "energy": 0.796,
+        "danceability": 0.545,
+        "valence": 0.307,
+        "acousticness": 0.132,
         "genre": [
+            "futurehouse",
             "futurebass",
-            "pop",
             "dancepop",
             "kpop",
-            "futurehouse"
+            "pop"
         ]
     },
     {
         "spotify_id": "3pqgVtpnQbBAZoWT4AEm1B",
         "artist": "fromis_9",
         "track": "Stay This Way",
-        "tempo": 159.915,
-        "key": 5,
-        "mode": 1,
+        "tempo": 117.989,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.909,
+        "danceability": 0.703,
+        "valence": 0.83,
+        "acousticness": 0.192,
         "genre": [
             "pop",
             "kpop"
@@ -1124,9 +1285,13 @@
         "spotify_id": "4ljXOIFNSjnGA2VuCYHQTS",
         "artist": "OH MY GIRL",
         "track": "Nonstop",
-        "tempo": 106.087,
-        "key": 8,
+        "tempo": 123.945,
+        "key": 11,
         "mode": 1,
+        "energy": 0.855,
+        "danceability": 0.682,
+        "valence": 0.764,
+        "acousticness": 0.0709,
         "genre": [
             "pop",
             "kpop"
@@ -1136,9 +1301,13 @@
         "spotify_id": "5gpojs9yi3nm8aC3BOg6q5",
         "artist": "OH MY GIRL",
         "track": "Dolphin",
-        "tempo": 120.035,
-        "key": 6,
+        "tempo": 114.97,
+        "key": 1,
         "mode": 0,
+        "energy": 0.958,
+        "danceability": 0.66,
+        "valence": 0.74,
+        "acousticness": 0.169,
         "genre": [
             "pop",
             "kpop"
@@ -1148,9 +1317,13 @@
         "spotify_id": "5rp3c6ueLX4XjTeDS1RLjN",
         "artist": "OH MY GIRL",
         "track": "Dun Dun Dance",
-        "tempo": 126.036,
-        "key": 10,
+        "tempo": 124.008,
+        "key": 8,
         "mode": 1,
+        "energy": 0.931,
+        "danceability": 0.694,
+        "valence": 0.807,
+        "acousticness": 0.0377,
         "genre": [
             "pop",
             "kpop"
@@ -1160,9 +1333,13 @@
         "spotify_id": "2NlrTlIzVoLit7Q3ixYesc",
         "artist": "OH MY GIRL",
         "track": "CLOSER",
-        "tempo": 97.912,
-        "key": 3,
-        "mode": 0,
+        "tempo": 124.001,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.925,
+        "danceability": 0.666,
+        "valence": 0.798,
+        "acousticness": 0.0162,
         "genre": [
             "pop",
             "kpop"
@@ -1172,9 +1349,13 @@
         "spotify_id": "1xB3DS43HzAz7YKhjSFSwl",
         "artist": "OH MY GIRL",
         "track": "Secret Garden",
-        "tempo": 91.688,
-        "key": 4,
-        "mode": 0,
+        "tempo": 159.915,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.88,
+        "danceability": 0.643,
+        "valence": 0.8,
+        "acousticness": 0.167,
         "genre": [
             "pop",
             "kpop"
@@ -1184,9 +1365,13 @@
         "spotify_id": "16P7lvq8uSrcPt1QSrvA8m",
         "artist": "OH MY GIRL",
         "track": "LIAR LIAR",
-        "tempo": 122.006,
-        "key": 7,
-        "mode": 0,
+        "tempo": 114.022,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.87,
+        "danceability": 0.695,
+        "valence": 0.697,
+        "acousticness": 0.201,
         "genre": [
             "pop",
             "kpop"
@@ -1196,9 +1381,13 @@
         "spotify_id": "3n0tXe8qbofu9mra6BK9cs",
         "artist": "OH MY GIRL",
         "track": "WINDY DAY",
-        "tempo": 113.988,
-        "key": 0,
+        "tempo": 106.087,
+        "key": 8,
         "mode": 1,
+        "energy": 0.924,
+        "danceability": 0.646,
+        "valence": 0.706,
+        "acousticness": 0.168,
         "genre": [
             "pop",
             "kpop"
@@ -1208,9 +1397,13 @@
         "spotify_id": "2cwBu3CpELFHePDsPXqDgB",
         "artist": "OH MY GIRL",
         "track": "Remember Me",
-        "tempo": 125.003,
+        "tempo": 120.035,
         "key": 6,
         "mode": 0,
+        "energy": 0.824,
+        "danceability": 0.623,
+        "valence": 0.658,
+        "acousticness": 0.00623,
         "genre": [
             "pop",
             "kpop"
@@ -1220,9 +1413,13 @@
         "spotify_id": "49EywdY1mHFj27OY7U8Y2d",
         "artist": "GFRIEND",
         "track": "MAGO",
-        "tempo": 115.434,
+        "tempo": 126.036,
         "key": 10,
         "mode": 1,
+        "energy": 0.896,
+        "danceability": 0.741,
+        "valence": 0.759,
+        "acousticness": 0.024,
         "genre": [
             "pop",
             "kpop"
@@ -1232,9 +1429,13 @@
         "spotify_id": "3AtYSKkZ75F7z0fi03pKuq",
         "artist": "GFRIEND",
         "track": "Me Gustas Tu",
-        "tempo": 124.138,
-        "key": 9,
+        "tempo": 122.006,
+        "key": 7,
         "mode": 0,
+        "energy": 0.968,
+        "danceability": 0.704,
+        "valence": 0.786,
+        "acousticness": 0.0604,
         "genre": [
             "pop",
             "kpop"
@@ -1244,9 +1445,13 @@
         "spotify_id": "0kXAes90xxL3Ps3VPo8Erv",
         "artist": "GFRIEND",
         "track": "Glass Bead",
-        "tempo": 138.032,
-        "key": 3,
-        "mode": 0,
+        "tempo": 100.072,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.92,
+        "danceability": 0.694,
+        "valence": 0.793,
+        "acousticness": 0.193,
         "genre": [
             "pop",
             "dancepop",
@@ -1257,9 +1462,13 @@
         "spotify_id": "75vepksethG7GrRn815ZYH",
         "artist": "GFRIEND",
         "track": "Rough",
-        "tempo": 173.931,
-        "key": 11,
-        "mode": 1,
+        "tempo": 125.003,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.957,
+        "danceability": 0.643,
+        "valence": 0.801,
+        "acousticness": 0.0438,
         "genre": [
             "pop",
             "kpop"
@@ -1269,22 +1478,30 @@
         "spotify_id": "53SSnDsAYRJX0dVtnyJbwX",
         "artist": "GFRIEND",
         "track": "FINGERTIP",
-        "tempo": 112.006,
-        "key": 8,
+        "tempo": 130.98,
+        "key": 7,
         "mode": 1,
+        "energy": 0.903,
+        "danceability": 0.662,
+        "valence": 0.86,
+        "acousticness": 0.153,
         "genre": [
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "23wVB9x79s921M2Bbu2SB3",
         "artist": "GFRIEND",
         "track": "NAVILLERA",
-        "tempo": 96.929,
-        "key": 0,
-        "mode": 1,
+        "tempo": 135.875,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.938,
+        "danceability": 0.622,
+        "valence": 0.628,
+        "acousticness": 0.0663,
         "genre": [
             "pop",
             "kpop"
@@ -1294,46 +1511,13 @@
         "spotify_id": "3QmBca9MMT2G4zpOhzHB79",
         "artist": "GFRIEND",
         "track": "Neverland",
-        "tempo": 127.098,
-        "key": 4,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "dancepop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "75vepksethG7GrRn815ZYH",
-        "artist": "GFRIEND",
-        "track": "Rough",
-        "tempo": 138.055,
-        "key": 7,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "3AtYSKkZ75F7z0fi03pKuq",
-        "artist": "GFRIEND",
-        "track": "Me Gustas Tu",
-        "tempo": 96.95,
+        "tempo": 112.006,
         "key": 8,
         "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "0kXAes90xxL3Ps3VPo8Erv",
-        "artist": "GFRIEND",
-        "track": "Glass Bead",
-        "tempo": 132.889,
-        "key": 5,
-        "mode": 0,
+        "energy": 0.912,
+        "danceability": 0.614,
+        "valence": 0.741,
+        "acousticness": 0.152,
         "genre": [
             "pop",
             "dancepop",
@@ -1344,9 +1528,13 @@
         "spotify_id": "24nK8tW7Pt3Inh2utttuoG",
         "artist": "MAMAMOO",
         "track": "HIP",
-        "tempo": 156.096,
-        "key": 9,
+        "tempo": 97.912,
+        "key": 3,
         "mode": 0,
+        "energy": 0.83,
+        "danceability": 0.617,
+        "valence": 0.614,
+        "acousticness": 0.318,
         "genre": [
             "pop",
             "kpop"
@@ -1356,9 +1544,13 @@
         "spotify_id": "3a7OyTsoZ8CCBdvEEvzLBv",
         "artist": "MAMAMOO",
         "track": "Egotistic",
-        "tempo": 104.972,
-        "key": 1,
-        "mode": 1,
+        "tempo": 91.688,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.858,
+        "danceability": 0.634,
+        "valence": 0.637,
+        "acousticness": 0.101,
         "genre": [
             "pop",
             "kpop"
@@ -1368,9 +1560,13 @@
         "spotify_id": "6E7jAJN2e3znSHyPCdQqx8",
         "artist": "MAMAMOO",
         "track": "gogobebe",
-        "tempo": 115.004,
-        "key": 10,
-        "mode": 1,
+        "tempo": 119.963,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.925,
+        "danceability": 0.772,
+        "valence": 0.795,
+        "acousticness": 0.0549,
         "genre": [
             "pop",
             "kpop"
@@ -1380,9 +1576,13 @@
         "spotify_id": "3qUJ0kC9YdBO5qRFdYXeXX",
         "artist": "MAMAMOO",
         "track": "Starry Night",
-        "tempo": 155.029,
-        "key": 11,
-        "mode": 0,
+        "tempo": 113.988,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.795,
+        "danceability": 0.735,
+        "valence": 0.825,
+        "acousticness": 0.656,
         "genre": [
             "pop",
             "kpop"
@@ -1392,9 +1592,13 @@
         "spotify_id": "4BZXVFYCb76Q0Klojq4piV",
         "artist": "MAMAMOO",
         "track": "AYA",
-        "tempo": 72.999,
-        "key": 6,
-        "mode": 0,
+        "tempo": 115.434,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.859,
+        "danceability": 0.648,
+        "valence": 0.541,
+        "acousticness": 0.113,
         "genre": [
             "pop",
             "kpop"
@@ -1404,58 +1608,163 @@
         "spotify_id": "0bDYceyQd1jnJO4sK47YxU",
         "artist": "MAMAMOO",
         "track": "Dingga",
-        "tempo": 108.07,
-        "key": 8,
+        "tempo": 124.138,
+        "key": 9,
         "mode": 0,
+        "energy": 0.773,
+        "danceability": 0.581,
+        "valence": 0.507,
+        "acousticness": 0.656,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "6I2tqFhk8tq69iursYxuxd",
-        "artist": "SEVENTEEN",
-        "track": "HOT",
-        "tempo": 111.944,
-        "key": 5,
+        "spotify_id": "0oeVHAgY8Q7Mdce5Quj2G4",
+        "artist": "MAMAMOO",
+        "track": "ILLELLA",
+        "tempo": 138.032,
+        "key": 3,
         "mode": 0,
+        "energy": 0.731,
+        "danceability": 0.782,
+        "valence": 0.824,
+        "acousticness": 0.0376,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "1Rrj7KyS2R6SP9CQMDJW1w",
-        "artist": "SEVENTEEN",
-        "track": "VERY NICE",
-        "tempo": 158.356,
-        "key": 5,
+        "spotify_id": "2qwyjoSsSr3M7HTt611Q5O",
+        "artist": "MAMAMOO",
+        "track": "Wind flower",
+        "tempo": 173.931,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.83,
+        "danceability": 0.523,
+        "valence": 0.812,
+        "acousticness": 0.00359,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "5WitNasXEIRptoLIQUcXMx",
+        "artist": "MAMAMOO",
+        "track": "Décalcomanie",
+        "tempo": 96.929,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.787,
+        "danceability": 0.704,
+        "valence": 0.707,
+        "acousticness": 0.114,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "35BDWUd4raAL1Cyn7kP5o9",
+        "artist": "MAMAMOO",
+        "track": "Yes I Am",
+        "tempo": 72.999,
+        "key": 6,
         "mode": 0,
+        "energy": 0.713,
+        "danceability": 0.6,
+        "valence": 0.471,
+        "acousticness": 0.0642,
+        "genre": [
+            "synthpop",
+            "dancepop",
+            "kpop",
+            "pop",
+            "jazz"
+        ]
+    },
+    {
+        "spotify_id": "7mpdNiaQvygj2rHoxkzMfa",
+        "artist": "ENHYPEN",
+        "track": "Bite Me",
+        "tempo": 127.098,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.886,
+        "danceability": 0.604,
+        "valence": 0.401,
+        "acousticness": 0.0925,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "3AOf6YEpxQ894FmrwI9k96",
-        "artist": "SEVENTEEN",
-        "track": "Super",
-        "tempo": 137.018,
+        "spotify_id": "5elW2CKSoqjYoJ32AGDxf1",
+        "artist": "ENHYPEN",
+        "track": "Polaroid Love",
+        "tempo": 138.055,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.67,
+        "danceability": 0.738,
+        "valence": 0.651,
+        "acousticness": 0.458,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "69WpV0U7OMNFGyq8I63dcC",
+        "artist": "ENHYPEN",
+        "track": "Given-Taken",
+        "tempo": 96.95,
         "key": 8,
         "mode": 1,
+        "energy": 0.761,
+        "danceability": 0.662,
+        "valence": 0.471,
+        "acousticness": 0.112,
         "genre": [
-            "hiphop",
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "6LnEoRQKMcaFTR5UvaKuBy",
-        "artist": "SEVENTEEN",
-        "track": "Rock with you",
-        "tempo": 92.9,
-        "key": 0,
+        "spotify_id": "3RkSwrsIadAvqVtMp5yhaB",
+        "artist": "ENHYPEN",
+        "track": "XO (Only If You Say Yes)",
+        "tempo": 156.096,
+        "key": 9,
         "mode": 0,
+        "energy": 0.9,
+        "danceability": 0.658,
+        "valence": 0.526,
+        "acousticness": 0.0364,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "2YmfV4lAjrAQvuggKCUX6m",
+        "artist": "ENHYPEN",
+        "track": "Sweet Venom",
+        "tempo": 104.972,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.781,
+        "danceability": 0.795,
+        "valence": 0.687,
+        "acousticness": 0.285,
         "genre": [
             "rock",
             "pop",
@@ -1463,24 +1772,152 @@
         ]
     },
     {
-        "spotify_id": "5QGooKayQPVZMUDc8Qt3Dm",
-        "artist": "SEVENTEEN",
-        "track": "Left & Right",
-        "tempo": 106.994,
-        "key": 8,
+        "spotify_id": "1zoyteFQmeUUqyOl2Xznpy",
+        "artist": "ENHYPEN",
+        "track": "Tamed-Dashed",
+        "tempo": 115.004,
+        "key": 10,
         "mode": 1,
+        "energy": 0.673,
+        "danceability": 0.84,
+        "valence": 0.911,
+        "acousticness": 0.0426,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "6PRy17C5LiiN7VCLS6IA98",
+        "artist": "ENHYPEN",
+        "track": "Future Perfect (Pass the MIC)",
+        "tempo": 155.029,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.809,
+        "danceability": 0.568,
+        "valence": 0.709,
+        "acousticness": 0.000253,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "6vo0dV9t7PCQZKsLFwVwZ5",
-        "artist": "SEVENTEEN",
-        "track": "Darl+ing",
+        "spotify_id": "7ecbsiAQ6PNdiAq0hplVZo",
+        "artist": "ENHYPEN",
+        "track": "Blessed-Cursed",
+        "tempo": 108.07,
+        "key": 8,
+        "mode": 0,
+        "energy": 0.649,
+        "danceability": 0.631,
+        "valence": 0.459,
+        "acousticness": 0.17,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "0qoUPCxFcpjgm8caUaj6fN",
+        "artist": "Stray Kids",
+        "track": "소리꾼 Thunderous",
+        "tempo": 111.944,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.777,
+        "danceability": 0.765,
+        "valence": 0.64,
+        "acousticness": 0.0539,
+        "genre": [
+            "kpop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "26yvgQHa2ozFcwpwHDyUUp",
+        "artist": "Stray Kids",
+        "track": "락 (樂) LALALALA",
+        "tempo": 137.018,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.88,
+        "danceability": 0.771,
+        "valence": 0.347,
+        "acousticness": 0.162,
+        "genre": [
+            "pop",
+            "hiphop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "54zRGA28tVRKRmFCpywWko",
+        "artist": "Stray Kids",
+        "track": "특 S-Class",
+        "tempo": 121.967,
+        "key": 3,
+        "mode": 0,
+        "energy": 0.898,
+        "danceability": 0.746,
+        "valence": 0.879,
+        "acousticness": 0.0526,
+        "genre": [
+            "pop",
+            "hiphop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "3Z2x4v9CdkCzkh3KIi5roQ",
+        "artist": "Stray Kids",
+        "track": "CASE 143",
         "tempo": 163.966,
         "key": 11,
         "mode": 1,
+        "energy": 0.816,
+        "danceability": 0.621,
+        "valence": 0.694,
+        "acousticness": 0.0966,
+        "genre": [
+            "pop",
+            "jpop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "13e2aslSF5yAxbiroTd1v8",
+        "artist": "Stray Kids",
+        "track": "MIROH",
+        "tempo": 100.005,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.683,
+        "danceability": 0.781,
+        "valence": 0.722,
+        "acousticness": 0.164,
+        "genre": [
+            "trap",
+            "kpop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "6vo0dV9t7PCQZKsLFwVwZ5",
+        "artist": "SEVENTEEN",
+        "track": "Darl+ing",
+        "tempo": 158.356,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.88,
+        "danceability": 0.478,
+        "valence": 0.707,
+        "acousticness": 0.0213,
         "genre": [
             "pop",
             "kpop"
@@ -1490,9 +1927,13 @@
         "spotify_id": "1117juaaAkSIUsQxTmmcKM",
         "artist": "SEVENTEEN",
         "track": "Pretty U",
-        "tempo": 155.088,
-        "key": 8,
-        "mode": 1,
+        "tempo": 92.9,
+        "key": 0,
+        "mode": 0,
+        "energy": 0.885,
+        "danceability": 0.584,
+        "valence": 0.605,
+        "acousticness": 0.0244,
         "genre": [
             "pop",
             "kpop"
@@ -1502,9 +1943,13 @@
         "spotify_id": "19t5GSN3XsLB7UOsZD8Fwv",
         "artist": "SEVENTEEN",
         "track": "CLAP",
-        "tempo": 100.005,
-        "key": 0,
+        "tempo": 155.088,
+        "key": 8,
         "mode": 1,
+        "energy": 0.931,
+        "danceability": 0.642,
+        "valence": 0.884,
+        "acousticness": 0.0173,
         "genre": [
             "pop",
             "kpop"
@@ -1517,12 +1962,16 @@
         "tempo": 111.01,
         "key": 2,
         "mode": 0,
+        "energy": 0.809,
+        "danceability": 0.709,
+        "valence": 0.788,
+        "acousticness": 0.312,
         "genre": [
-            "hiphop",
             "trap",
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop",
+            "hiphop"
         ]
     },
     {
@@ -1532,6 +1981,10 @@
         "tempo": 100.024,
         "key": 8,
         "mode": 1,
+        "energy": 0.918,
+        "danceability": 0.722,
+        "valence": 0.831,
+        "acousticness": 0.141,
         "genre": [
             "pop",
             "kpop"
@@ -1544,11 +1997,15 @@
         "tempo": 129.817,
         "key": 1,
         "mode": 0,
+        "energy": 0.775,
+        "danceability": 0.599,
+        "valence": 0.703,
+        "acousticness": 0.022,
         "genre": [
-            "hiphop",
+            "rock",
             "pop",
-            "kpop",
-            "rock"
+            "hiphop",
+            "kpop"
         ]
     },
     {
@@ -1558,19 +2015,27 @@
         "tempo": 109.997,
         "key": 8,
         "mode": 1,
+        "energy": 0.459,
+        "danceability": 0.759,
+        "valence": 0.695,
+        "acousticness": 0.00323,
         "genre": [
-            "hiphop",
+            "jpop",
             "pop",
-            "jpop"
+            "hiphop"
         ]
     },
     {
         "spotify_id": "1mWdTewIgB3gtBM3TOSFhB",
         "artist": "BTS",
         "track": "Butter",
-        "tempo": 147.024,
-        "key": 2,
+        "tempo": 114.044,
+        "key": 6,
         "mode": 0,
+        "energy": 0.765,
+        "danceability": 0.746,
+        "valence": 0.737,
+        "acousticness": 0.0112,
         "genre": [
             "pop",
             "kpop"
@@ -1580,21 +2045,29 @@
         "spotify_id": "2ngmiq1KoYn3x25VOmvd8F",
         "artist": "BTS",
         "track": "DNA",
-        "tempo": 114.044,
-        "key": 6,
+        "tempo": 119.947,
+        "key": 11,
         "mode": 0,
+        "energy": 0.862,
+        "danceability": 0.645,
+        "valence": 0.803,
+        "acousticness": 0.0933,
         "genre": [
-            "jpop",
-            "pop"
+            "pop",
+            "jpop"
         ]
     },
     {
         "spotify_id": "2u54HNQamwFuOMLSuhSRom",
         "artist": "BTS",
         "track": "Blood Sweat & Tears",
-        "tempo": 149.994,
-        "key": 6,
+        "tempo": 77.502,
+        "key": 2,
         "mode": 0,
+        "energy": 0.719,
+        "danceability": 0.557,
+        "valence": 0.345,
+        "acousticness": 0.00267,
         "genre": [
             "pop",
             "kpop"
@@ -1604,53 +2077,52 @@
         "spotify_id": "3wQnyXNFXNUEOBt1pb4urq",
         "artist": "BTS",
         "track": "I Need U",
-        "tempo": 119.947,
-        "key": 11,
-        "mode": 0,
+        "tempo": 96.06,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.686,
+        "danceability": 0.71,
+        "valence": 0.483,
+        "acousticness": 0.296,
         "genre": [
-            "hiphop",
+            "kpop",
             "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "2YNr0DZEdeEiuIAYEQSJUp",
-        "artist": "BTS",
-        "track": "IDOL",
-        "tempo": 77.502,
-        "key": 2,
-        "mode": 0,
-        "genre": [
-            "hiphop",
-            "pop",
-            "kpop"
+            "hiphop"
         ]
     },
     {
         "spotify_id": "6wH3AP7b01vpzKYRJhreMy",
         "artist": "BTS",
         "track": "Black Swan",
-        "tempo": 96.06,
-        "key": 0,
+        "tempo": 106.994,
+        "key": 8,
         "mode": 1,
+        "energy": 0.846,
+        "danceability": 0.539,
+        "valence": 0.462,
+        "acousticness": 0.00631,
         "genre": [
-            "hiphop",
             "trap",
+            "kpop",
             "pop",
-            "kpop"
+            "hiphop"
         ]
     },
     {
         "spotify_id": "2j1fFjWHCI9KJSwcuYAOyF",
         "artist": "BTS",
         "track": "Spring Day",
-        "tempo": 109.995,
-        "key": 8,
-        "mode": 1,
+        "tempo": 147.024,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.757,
+        "danceability": 0.719,
+        "valence": 0.489,
+        "acousticness": 0.137,
         "genre": [
-            "hiphop",
+            "jpop",
             "pop",
-            "jpop"
+            "hiphop"
         ]
     },
     {
@@ -1660,18 +2132,26 @@
         "tempo": 98.524,
         "key": 8,
         "mode": 1,
+        "energy": 0.75,
+        "danceability": 0.752,
+        "valence": 0.419,
+        "acousticness": 0.447,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "0lUtQTBt2ydznYzuAeYFrZ",
+        "spotify_id": "4ndxCrtl74lgOdF6Lz7bIq",
         "artist": "RIIZE",
         "track": "Love 119",
-        "tempo": 92.961,
-        "key": 5,
-        "mode": 0,
+        "tempo": 109.995,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.621,
+        "danceability": 0.9,
+        "valence": 0.895,
+        "acousticness": 0.126,
         "genre": [
             "pop",
             "kpop"
@@ -1681,9 +2161,13 @@
         "spotify_id": "7egcmrxRDee6C5M3AtXZ7L",
         "artist": "RIIZE",
         "track": "Memories",
-        "tempo": 106.006,
-        "key": 2,
+        "tempo": 104.978,
+        "key": 1,
         "mode": 1,
+        "energy": 0.828,
+        "danceability": 0.807,
+        "valence": 0.672,
+        "acousticness": 0.00101,
         "genre": [
             "pop",
             "kpop"
@@ -1693,9 +2177,13 @@
         "spotify_id": "6Ixrp3yXfzv5brZXmZuXXN",
         "artist": "RIIZE",
         "track": "Boom Boom Bass",
-        "tempo": 117.005,
+        "tempo": 92.961,
         "key": 5,
         "mode": 0,
+        "energy": 0.802,
+        "danceability": 0.691,
+        "valence": 0.399,
+        "acousticness": 0.015,
         "genre": [
             "pop",
             "kpop"
@@ -1705,9 +2193,13 @@
         "spotify_id": "2cN2qkaSnO5KKAMSa5ZfIm",
         "artist": "RIIZE",
         "track": "Impossible",
-        "tempo": 128.005,
-        "key": 1,
-        "mode": 0,
+        "tempo": 106.006,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.837,
+        "danceability": 0.665,
+        "valence": 0.682,
+        "acousticness": 0.0297,
         "genre": [
             "pop",
             "kpop"
@@ -1717,24 +2209,32 @@
         "spotify_id": "5k3DYylnDDNUMY0EOhrb22",
         "artist": "RIIZE",
         "track": "Talk Saxy",
-        "tempo": 88.949,
+        "tempo": 117.005,
         "key": 5,
         "mode": 0,
+        "energy": 0.759,
+        "danceability": 0.811,
+        "valence": 0.83,
+        "acousticness": 0.0197,
         "genre": [
             "pop",
             "kpop"
         ]
     },
     {
-        "spotify_id": "3K8OJiXeEYnQ0nUlLDwh4X",
+        "spotify_id": "0ECkPMDQlTtL373y7BByup",
         "artist": "RIIZE",
         "track": "Siren",
-        "tempo": 104.978,
+        "tempo": 128.005,
         "key": 1,
-        "mode": 1,
+        "mode": 0,
+        "energy": 0.808,
+        "danceability": 0.766,
+        "valence": 0.819,
+        "acousticness": 0.00518,
         "genre": [
-            "hiphop",
             "pop",
+            "hiphop",
             "kpop"
         ]
     },
@@ -1742,9 +2242,13 @@
         "spotify_id": "7pjjoNOZQW7H8pOSCFIvsX",
         "artist": "RIIZE",
         "track": "Fame",
-        "tempo": 130.041,
-        "key": 8,
-        "mode": 1,
+        "tempo": 88.949,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.586,
+        "danceability": 0.713,
+        "valence": 0.559,
+        "acousticness": 0.11,
         "genre": [
             "pop",
             "kpop"
@@ -1754,47 +2258,14 @@
         "spotify_id": "4aShw2oGVO55cXxFGu7MM7",
         "artist": "RIIZE",
         "track": "One Kiss",
-        "tempo": 150.064,
-        "key": 1,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "5nIMaWairXgZsh8hjC1r26",
-        "artist": "RIIZE",
-        "track": "Bag Bad Back",
-        "tempo": 100.034,
-        "key": 6,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "6rcn967QN5JtkPOBDwYIuT",
-        "artist": "NCT DREAM",
-        "track": "BOOM",
-        "tempo": 166.008,
-        "key": 1,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "kpop"
-        ]
-    },
-    {
-        "spotify_id": "6B8MM3PVQtUbZLay7tP7er",
-        "artist": "NCT DREAM",
-        "track": "Hot Sauce",
-        "tempo": 150.009,
-        "key": 1,
+        "tempo": 119.969,
+        "key": 5,
         "mode": 0,
+        "energy": 0.516,
+        "danceability": 0.914,
+        "valence": 0.702,
+        "acousticness": 0.131,
         "genre": [
-            "hiphop",
             "pop",
             "kpop"
         ]
@@ -1803,22 +2274,30 @@
         "spotify_id": "27bIik73QCu8Xzt3xpG1bI",
         "artist": "NCT DREAM",
         "track": "Candy",
-        "tempo": 134.979,
-        "key": 10,
+        "tempo": 130.041,
+        "key": 8,
         "mode": 1,
+        "energy": 0.874,
+        "danceability": 0.67,
+        "valence": 0.789,
+        "acousticness": 0.00231,
         "genre": [
-            "pop",
             "dancepop",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
         "spotify_id": "332GJ8ykVuEt3jOT1sy7j6",
         "artist": "NCT DREAM",
         "track": "Hello Future",
-        "tempo": 169.935,
+        "tempo": 150.064,
         "key": 1,
         "mode": 1,
+        "energy": 0.821,
+        "danceability": 0.587,
+        "valence": 0.392,
+        "acousticness": 0.188,
         "genre": [
             "pop",
             "kpop"
@@ -1828,9 +2307,13 @@
         "spotify_id": "26vOBLHS116a4WNUVlvAUW",
         "artist": "NCT DREAM",
         "track": "We Go Up",
-        "tempo": 120.008,
+        "tempo": 166.008,
         "key": 1,
         "mode": 1,
+        "energy": 0.935,
+        "danceability": 0.574,
+        "valence": 0.836,
+        "acousticness": 0.112,
         "genre": [
             "pop",
             "kpop"
@@ -1840,9 +2323,13 @@
         "spotify_id": "3THdOskGxdJcRbp0DcS4s0",
         "artist": "NCT DREAM",
         "track": "Life Is Still Going On",
-        "tempo": 90.008,
-        "key": 5,
-        "mode": 1,
+        "tempo": 150.009,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.903,
+        "danceability": 0.549,
+        "valence": 0.513,
+        "acousticness": 0.178,
         "genre": [
             "pop",
             "kpop"
@@ -1852,12 +2339,16 @@
         "spotify_id": "5b1PngLlxc7hj3fJXrE2Zm",
         "artist": "NCT DREAM",
         "track": "Glitch Mode",
-        "tempo": 89.995,
-        "key": 5,
+        "tempo": 169.935,
+        "key": 1,
         "mode": 1,
+        "energy": 0.824,
+        "danceability": 0.627,
+        "valence": 0.774,
+        "acousticness": 0.0699,
         "genre": [
-            "jpop",
             "pop",
+            "jpop",
             "kpop"
         ]
     },
@@ -1865,9 +2356,13 @@
         "spotify_id": "0CatzXH85XWyBqqdB6qPMB",
         "artist": "NCT DREAM",
         "track": "Beatbox",
-        "tempo": 170.045,
-        "key": 4,
-        "mode": 0,
+        "tempo": 120.008,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.964,
+        "danceability": 0.65,
+        "valence": 0.836,
+        "acousticness": 0.0538,
         "genre": [
             "pop",
             "kpop"
@@ -1880,11 +2375,15 @@
         "tempo": 122.067,
         "key": 8,
         "mode": 1,
+        "energy": 0.77,
+        "danceability": 0.893,
+        "valence": 0.349,
+        "acousticness": 0.0138,
         "genre": [
             "poprock",
-            "pop",
             "rock",
-            "kpop"
+            "kpop",
+            "pop"
         ]
     },
     {
@@ -1894,6 +2393,10 @@
         "tempo": 170.006,
         "key": 1,
         "mode": 1,
+        "energy": 0.803,
+        "danceability": 0.545,
+        "valence": 0.5,
+        "acousticness": 0.0261,
         "genre": [
             "pop",
             "kpop"
@@ -1906,6 +2409,10 @@
         "tempo": 150.039,
         "key": 0,
         "mode": 0,
+        "energy": 0.749,
+        "danceability": 0.681,
+        "valence": 0.676,
+        "acousticness": 0.158,
         "genre": [
             "jpop",
             "pop"
@@ -1918,32 +2425,44 @@
         "tempo": 93.997,
         "key": 4,
         "mode": 0,
+        "energy": 0.7,
+        "danceability": 0.857,
+        "valence": 0.773,
+        "acousticness": 0.0411,
         "genre": [
-            "hiphop",
             "hyperpop",
+            "jpop",
             "pop",
-            "jpop"
+            "hiphop"
         ]
     },
     {
         "spotify_id": "06XQvnJb53SUYmlWIhUXUi",
         "artist": "YOASOBI",
         "track": "怪物",
-        "tempo": 130.02,
+        "tempo": 166.923,
         "key": 0,
         "mode": 0,
+        "energy": 0.78,
+        "danceability": 0.634,
+        "valence": 0.694,
+        "acousticness": 0.0164,
         "genre": [
-            "anime",
-            "jpop"
+            "jpop",
+            "anime"
         ]
     },
     {
         "spotify_id": "4LjIQmt1t6NjpM0tpttzjo",
         "artist": "YOASOBI",
         "track": "勇者",
-        "tempo": 132.054,
+        "tempo": 134.979,
         "key": 10,
-        "mode": 0,
+        "mode": 1,
+        "energy": 0.87,
+        "danceability": 0.719,
+        "valence": 0.732,
+        "acousticness": 0.321,
         "genre": [
             "jpop",
             "pop",
@@ -1951,27 +2470,35 @@
         ]
     },
     {
-        "spotify_id": "7HneEBTvTra2CRYsxgMOAi",
+        "spotify_id": "08YwAPnX8sygJUXG9rvhDv",
         "artist": "YOASOBI",
         "track": "ハルジオン",
-        "tempo": 118.738,
-        "key": 7,
+        "tempo": 178.069,
+        "key": 11,
         "mode": 0,
+        "energy": 0.978,
+        "danceability": 0.525,
+        "valence": 0.577,
+        "acousticness": 0.00485,
         "genre": [
-            "jpop",
-            "pop"
+            "pop",
+            "jpop"
         ]
     },
     {
         "spotify_id": "61KYsWS25JXUO4fGb1138X",
         "artist": "Ado",
         "track": "Usseewa",
-        "tempo": 129.974,
-        "key": 5,
+        "tempo": 170.045,
+        "key": 4,
         "mode": 0,
+        "energy": 0.958,
+        "danceability": 0.553,
+        "valence": 0.541,
+        "acousticness": 0.0186,
         "genre": [
-            "pop",
             "synthpop",
+            "pop",
             "jpop"
         ]
     },
@@ -1979,87 +2506,65 @@
         "spotify_id": "4gpvY7b9wHA9G1ZsMDu15b",
         "artist": "Ado",
         "track": "Aishite Aishite Aishite",
-        "tempo": 199.844,
-        "key": 1,
+        "tempo": 115.005,
+        "key": 8,
         "mode": 1,
+        "energy": 0.877,
+        "danceability": 0.573,
+        "valence": 0.251,
+        "acousticness": 0.234,
         "genre": [
+            "rock",
             "pop",
-            "jpop",
-            "rock"
-        ]
-    },
-    {
-        "spotify_id": "6A8NfypDHuwiLWbo4a1yca",
-        "artist": "Ado",
-        "track": "New Genesis",
-        "tempo": 128.013,
-        "key": 1,
-        "mode": 1,
-        "genre": [
-            "pop",
-            "jpop",
-            "rock"
-        ]
-    },
-    {
-        "spotify_id": "37bNBNB332HXbSy6079cws",
-        "artist": "Ado",
-        "track": "Odo",
-        "tempo": 178.129,
-        "key": 11,
-        "mode": 0,
-        "genre": [
-            "jpop",
-            "pop"
-        ]
-    },
-    {
-        "spotify_id": "3WY0iazRPHOlIq6CdbKLZ6",
-        "artist": "Ado",
-        "track": "Backlight",
-        "tempo": 143.16,
-        "key": 5,
-        "mode": 0,
-        "genre": [
-            "pop",
-            "jpop",
-            "rock"
+            "jpop"
         ]
     },
     {
         "spotify_id": "1rDgAHDX95RmylxjgVW9tN",
         "artist": "Ado",
         "track": "Show",
-        "tempo": 92.026,
-        "key": 5,
+        "tempo": 132.054,
+        "key": 10,
         "mode": 0,
+        "energy": 0.975,
+        "danceability": 0.616,
+        "valence": 0.742,
+        "acousticness": 0.172,
         "genre": [
+            "rock",
             "pop",
-            "jpop",
-            "rock"
+            "jpop"
         ]
     },
     {
         "spotify_id": "4eChbtoFoOmWQt03aRDzaJ",
         "artist": "Ado",
         "track": "Tot Musica",
-        "tempo": 91.955,
-        "key": 8,
-        "mode": 1,
+        "tempo": 118.738,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.844,
+        "danceability": 0.334,
+        "valence": 0.182,
+        "acousticness": 0.00319,
         "genre": [
-            "pop",
-            "jpop",
             "rock",
-            "soundtrack"
+            "soundtrack",
+            "pop",
+            "jpop"
         ]
     },
     {
         "spotify_id": "7o0TPSw494RG2Q4iWmd1v6",
         "artist": "Ado",
         "track": "唱",
-        "tempo": 150.094,
-        "key": 6,
-        "mode": 1,
+        "tempo": 129.974,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.934,
+        "danceability": 0.669,
+        "valence": 0.175,
+        "acousticness": 0.073,
         "genre": [
             "house",
             "pop",
@@ -2070,56 +2575,72 @@
         "spotify_id": "7Cd17G3oNQ34OWUwS8ZxfR",
         "artist": "Kenshi Yonezu",
         "track": "Lemon",
-        "tempo": 163.032,
-        "key": 9,
+        "tempo": 121.001,
+        "key": 1,
         "mode": 0,
+        "energy": 0.931,
+        "danceability": 0.679,
+        "valence": 0.962,
+        "acousticness": 0.00466,
         "genre": [
+            "rock",
             "indierock",
             "pop",
-            "jpop",
-            "rock"
+            "jpop"
         ]
     },
     {
         "spotify_id": "3khEEPRyBeOUabbmOPJzAG",
         "artist": "Kenshi Yonezu",
         "track": "KICK BACK",
-        "tempo": 97.995,
-        "key": 2,
+        "tempo": 114.075,
+        "key": 7,
         "mode": 1,
+        "energy": 0.668,
+        "danceability": 0.76,
+        "valence": 0.913,
+        "acousticness": 0.165,
         "genre": [
+            "rock",
             "alternativerock",
             "pop",
-            "jpop",
-            "rock"
+            "jpop"
         ]
     },
     {
         "spotify_id": "7AqUE5AY514dbzeOAfJRa0",
         "artist": "Kenshi Yonezu",
         "track": "LOSER",
-        "tempo": 75.093,
-        "key": 2,
-        "mode": 1,
+        "tempo": 100.003,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.935,
+        "danceability": 0.593,
+        "valence": 0.618,
+        "acousticness": 0.00221,
         "genre": [
             "poprock",
+            "rock",
             "indiepop",
             "pop",
-            "jpop",
-            "rock"
+            "jpop"
         ]
     },
     {
         "spotify_id": "45YBVp6zMwQZRbUDcPzmMB",
         "artist": "Kenshi Yonezu",
         "track": "アイネクライネ",
-        "tempo": 90.978,
-        "key": 9,
-        "mode": 1,
+        "tempo": 92.026,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.948,
+        "danceability": 0.496,
+        "valence": 0.158,
+        "acousticness": 0.0155,
         "genre": [
-            "jpop",
             "rock",
             "pop",
+            "jpop",
             "indierock"
         ]
     },
@@ -2127,54 +2648,2530 @@
         "spotify_id": "59hVbgr8rfYkDbHfr8RcGI",
         "artist": "Kenshi Yonezu",
         "track": "IRIS OUT",
-        "tempo": 129.845,
-        "key": 11,
+        "tempo": 173.969,
+        "key": 1,
         "mode": 1,
+        "energy": 0.868,
+        "danceability": 0.471,
+        "valence": 0.811,
+        "acousticness": 0.0384,
         "genre": [
+            "rock",
             "pop",
-            "jpop",
-            "rock"
+            "jpop"
         ]
     },
     {
         "spotify_id": "3ILWwi1JNj3NGuuf6DzYxN",
         "artist": "Kenshi Yonezu",
         "track": "Flamingo",
-        "tempo": 104.022,
-        "key": 8,
-        "mode": 1,
+        "tempo": 124.006,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.881,
+        "danceability": 0.693,
+        "valence": 0.881,
+        "acousticness": 0.203,
         "genre": [
-            "jpop",
             "rock",
             "pop",
-            "indierock"
-        ]
-    },
-    {
-        "spotify_id": "1bIZxrSkbxatnTo8ObcIxX",
-        "artist": "Kenshi Yonezu",
-        "track": "orion",
-        "tempo": 157.034,
-        "key": 7,
-        "mode": 1,
-        "genre": [
-            "poprock",
-            "indiepop",
-            "pop",
             "jpop",
-            "rock"
+            "indierock"
         ]
     },
     {
         "spotify_id": "3lUOzabhWYyRImRszpJGOU",
         "artist": "Vaundy",
         "track": "CHAINSAW BLOOD",
-        "tempo": 124.006,
-        "key": 5,
-        "mode": 0,
+        "tempo": 146.987,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.855,
+        "danceability": 0.528,
+        "valence": 0.549,
+        "acousticness": 7.38e-05,
         "genre": [
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "6IjINOLuPnJFOKBXt0XzC8",
+        "artist": "Vaundy",
+        "track": "Tokyo Flash",
+        "tempo": 97.995,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.648,
+        "danceability": 0.627,
+        "valence": 0.614,
+        "acousticness": 0.00255,
+        "genre": [
+            "rock",
             "jpop",
             "pop"
+        ]
+    },
+    {
+        "spotify_id": "4vEPfqkEgL3ARGLS3Qdq2H",
+        "artist": "Vaundy",
+        "track": "life hack",
+        "tempo": 90.978,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.664,
+        "danceability": 0.71,
+        "valence": 0.779,
+        "acousticness": 0.0214,
+        "genre": [
+            "rock",
+            "jpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "660DEXh1St2BlzAYOtn4Rn",
+        "artist": "Vaundy",
+        "track": "napori",
+        "tempo": 157.034,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.476,
+        "danceability": 0.718,
+        "valence": 0.684,
+        "acousticness": 0.853,
+        "genre": [
+            "rock",
+            "jpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0GWNtMohuYUEHVZ40tcnHF",
+        "artist": "King Gnu",
+        "track": "SPECIALZ",
+        "tempo": 117.048,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.85,
+        "danceability": 0.566,
+        "valence": 0.722,
+        "acousticness": 0.0663,
+        "genre": [
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "65X2koe1LhDgQmRkNdJFv9",
+        "artist": "King Gnu",
+        "track": "AIZO",
+        "tempo": 83.443,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.708,
+        "danceability": 0.204,
+        "valence": 0.278,
+        "acousticness": 0.442,
+        "genre": [
+            "rock",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0r2PAeROizyyoFMpu0fvwI",
+        "artist": "King Gnu",
+        "track": "Prayer X",
+        "tempo": 79.953,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.533,
+        "danceability": 0.628,
+        "valence": 0.459,
+        "acousticness": 0.643,
+        "genre": [
+            "rock",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3oQaOjaIYPsnJbGNzXcIID",
+        "artist": "King Gnu",
+        "track": "BOY",
+        "tempo": 79.936,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.841,
+        "danceability": 0.475,
+        "valence": 0.469,
+        "acousticness": 0.0711,
+        "genre": [
+            "rock",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0J0P8iSE6l3pYHbUdNFYdS",
+        "artist": "King Gnu",
+        "track": "カメレオン",
+        "tempo": 184.91,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.887,
+        "danceability": 0.31,
+        "valence": 0.745,
+        "acousticness": 0.00184,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "7wnOPAiqvIG4dTvEInj0YT",
+        "artist": "King Gnu",
+        "track": "Teenager Forever",
+        "tempo": 174.112,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.752,
+        "danceability": 0.528,
+        "valence": 0.542,
+        "acousticness": 0.419,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "64yajM6CxtLghmgB53VeXT",
+        "artist": "Mrs. GREEN APPLE",
+        "track": "インフェルノ",
+        "tempo": 149.923,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.794,
+        "danceability": 0.531,
+        "valence": 0.775,
+        "acousticness": 0.0176,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "78W4mTLIh4qoLu92W4IQhO",
+        "artist": "Mrs. GREEN APPLE",
+        "track": "ライラック",
+        "tempo": 92.463,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.93,
+        "danceability": 0.529,
+        "valence": 0.694,
+        "acousticness": 0.00955,
+        "genre": [
+            "poprock",
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "406ZlqOP9nLQxJFBY7d9S4",
+        "artist": "Mrs. GREEN APPLE",
+        "track": "ケセラセラ",
+        "tempo": 117.51,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.758,
+        "danceability": 0.671,
+        "valence": 0.537,
+        "acousticness": 0.0604,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "3huSUfmhUr4entz2S0G31O",
+        "artist": "Mrs. GREEN APPLE",
+        "track": "クスシキ",
+        "tempo": 140.053,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.628,
+        "danceability": 0.668,
+        "valence": 0.568,
+        "acousticness": 0.129,
+        "genre": [
+            "poprock",
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "3YML5IHoqWbw9c9vJJvrvM",
+        "artist": "Mrs. GREEN APPLE",
+        "track": "Soranji",
+        "tempo": 115.01,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.58,
+        "danceability": 0.757,
+        "valence": 0.698,
+        "acousticness": 0.029,
+        "genre": [
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "170XOP1T4MvY9TLTgPw07D",
+        "artist": "Mrs. GREEN APPLE",
+        "track": "Magic",
+        "tempo": 150.076,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.652,
+        "danceability": 0.804,
+        "valence": 0.854,
+        "acousticness": 0.0267,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "45OX2jjEw1l7lOFJfDP9fv",
+        "artist": "LISA",
+        "track": "MONEY",
+        "tempo": 87.545,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.771,
+        "danceability": 0.497,
+        "valence": 0.551,
+        "acousticness": 0.0631,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "6vvPecFTmWxDfEJ6cYT1wa",
+        "artist": "LISA",
+        "track": "Rockstar",
+        "tempo": 152.015,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.631,
+        "danceability": 0.502,
+        "valence": 0.31,
+        "acousticness": 0.447,
+        "genre": [
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "7KNmIjcmGJIBrhP2s5Vioe",
+        "artist": "LISA",
+        "track": "Born Again (feat. Doja Cat & RAYE)",
+        "tempo": 114.998,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.777,
+        "danceability": 0.688,
+        "valence": 0.368,
+        "acousticness": 0.0688,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5UmfBGfRJgjZ8CdhgffabQ",
+        "artist": "LISA",
+        "track": "New Woman (feat. ROSALÍA)",
+        "tempo": 107.1,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.858,
+        "danceability": 0.492,
+        "valence": 0.312,
+        "acousticness": 0.0849,
+        "genre": [
+            "electropop",
+            "pop",
+            "futurebass"
+        ]
+    },
+    {
+        "spotify_id": "2KZ3sNqPogEyMUUH6A5HFy",
+        "artist": "LISA",
+        "track": "LALISA",
+        "tempo": 137.909,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.786,
+        "danceability": 0.578,
+        "valence": 0.911,
+        "acousticness": 0.00163,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "4BvuZVf9KyBN3QiPfeI9hw",
+        "artist": "LiSA",
+        "track": "crossing field",
+        "tempo": 106.948,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.672,
+        "danceability": 0.592,
+        "valence": 0.523,
+        "acousticness": 0.261,
+        "genre": [
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "3yDRcs0Y4pPzkvMbUfeF9H",
+        "artist": "LISA",
+        "track": "Moonlit Floor (Kiss Me)",
+        "tempo": 148.02,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.448,
+        "danceability": 0.559,
+        "valence": 0.354,
+        "acousticness": 0.537,
+        "genre": [
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "0jLunknItK9AujRCUYkVhn",
+        "artist": "LISA",
+        "track": "Chill",
+        "tempo": 106.094,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.745,
+        "danceability": 0.545,
+        "valence": 0.413,
+        "acousticness": 0.0452,
+        "genre": [
+            "poprock",
+            "rock",
+            "soundtrack"
+        ]
+    },
+    {
+        "spotify_id": "0jWVUKsIoyo3zw64RaEWYg",
+        "artist": "Aimyon",
+        "track": "マリーゴールド",
+        "tempo": 119.977,
+        "key": 3,
+        "mode": 0,
+        "energy": 0.716,
+        "danceability": 0.866,
+        "valence": 0.889,
+        "acousticness": 0.195,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "3RmKpob8xzv1pzHEQrMJah",
+        "artist": "Eve",
+        "track": "Let Me Blow Ya Mind",
+        "tempo": 126.036,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.979,
+        "danceability": 0.557,
+        "valence": 0.798,
+        "acousticness": 0.000207,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "6y4GYuZszeXNOXuBFsJlos",
+        "artist": "Eve",
+        "track": "Kaikai Kitan",
+        "tempo": 106.988,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.945,
+        "danceability": 0.652,
+        "valence": 0.717,
+        "acousticness": 0.403,
+        "genre": [
+            "anime",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "72uSoNIf7eScfGZFQjNHrR",
+        "artist": "Eve",
+        "track": "Dramaturgy",
+        "tempo": 102.623,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.854,
+        "danceability": 0.82,
+        "valence": 0.574,
+        "acousticness": 0.239,
+        "genre": [
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "1U16aNzvnlfARgjWXjKmQj",
+        "artist": "Eve",
+        "track": "Tambourine",
+        "tempo": 176.025,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.838,
+        "danceability": 0.497,
+        "valence": 0.82,
+        "acousticness": 0.000815,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "4gM814NneKElxn37F5Ht7G",
+        "artist": "Eve",
+        "track": "Last Dance",
+        "tempo": 104.855,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.852,
+        "danceability": 0.441,
+        "valence": 0.64,
+        "acousticness": 0.0254,
+        "genre": [
+            "classical"
+        ]
+    },
+    {
+        "spotify_id": "4GqO80eGXA542oTvlYv4LS",
+        "artist": "back number",
+        "track": "ハッピーエンド",
+        "tempo": 145.988,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.602,
+        "danceability": 0.482,
+        "valence": 0.535,
+        "acousticness": 0.0702,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "5P8ZvBQoCrujjNcLAxO3Su",
+        "artist": "back number",
+        "track": "クリスマスソング",
+        "tempo": 77.988,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.624,
+        "danceability": 0.468,
+        "valence": 0.462,
+        "acousticness": 0.296,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "4FMz2RFrbDGzJO7K4D0vS3",
+        "artist": "back number",
+        "track": "HAPPY BIRTHDAY",
+        "tempo": 159.963,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.713,
+        "danceability": 0.519,
+        "valence": 0.505,
+        "acousticness": 0.0178,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "3hBAYbAECEix9raaTq8S3H",
+        "artist": "back number",
+        "track": "ヒロイン",
+        "tempo": 137.977,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.923,
+        "danceability": 0.54,
+        "valence": 0.343,
+        "acousticness": 0.066,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "4gbHag1jhjLTDcrbfpFnYQ",
+        "artist": "back number",
+        "track": "アイラブユー",
+        "tempo": 119.961,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.811,
+        "danceability": 0.329,
+        "valence": 0.395,
+        "acousticness": 0.00634,
+        "genre": [
+            "rock",
+            "pop",
+            "jpop"
+        ]
+    },
+    {
+        "spotify_id": "1u8c2t2Cy7UBoG4ArRcF5g",
+        "artist": "Taylor Swift",
+        "track": "Blank Space",
+        "tempo": 114.028,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.847,
+        "danceability": 0.636,
+        "valence": 0.8,
+        "acousticness": 0.407,
+        "genre": [
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "0cqRj7pUJDkTCEsJkx8snD",
+        "artist": "Taylor Swift",
+        "track": "Shake It Off",
+        "tempo": 96.888,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.648,
+        "danceability": 0.633,
+        "valence": 0.49,
+        "acousticness": 0.121,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0ug5NqcwcFR2xrfTkc7k8e",
+        "artist": "Taylor Swift",
+        "track": "Style",
+        "tempo": 130.033,
+        "key": 0,
+        "mode": 0,
+        "energy": 0.581,
+        "danceability": 0.613,
+        "valence": 0.551,
+        "acousticness": 0.537,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4R2kfaDFhslZEMJqAFNpdd",
+        "artist": "Taylor Swift",
+        "track": "cardigan",
+        "tempo": 186.003,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.587,
+        "danceability": 0.679,
+        "valence": 0.486,
+        "acousticness": 0.141,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "1D4PL9B8gOg78jiHg3FvBb",
+        "artist": "Taylor Swift",
+        "track": "Love Story",
+        "tempo": 113.003,
+        "key": 0,
+        "mode": 0,
+        "energy": 0.564,
+        "danceability": 0.585,
+        "valence": 0.137,
+        "acousticness": 0.0671,
+        "genre": [
+            "pop",
+            "country",
+            "poprock"
+        ]
+    },
+    {
+        "spotify_id": "1GEBsLDvJGw7kviySRI6GX",
+        "artist": "Taylor Swift",
+        "track": "You Belong With Me",
+        "tempo": 171.001,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.73,
+        "danceability": 0.513,
+        "valence": 0.334,
+        "acousticness": 0.00143,
+        "genre": [
+            "techno",
+            "country",
+            "poprock",
+            "rock",
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3hUxzQpSfdDqwM3ZTFQY0K",
+        "artist": "Taylor Swift",
+        "track": "august",
+        "tempo": 118.984,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.741,
+        "danceability": 0.617,
+        "valence": 0.306,
+        "acousticness": 0.131,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1dGr1c8CrMLDpV6mPbImSI",
+        "artist": "Taylor Swift",
+        "track": "Lover",
+        "tempo": 94.933,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.791,
+        "danceability": 0.588,
+        "valence": 0.487,
+        "acousticness": 0.00245,
+        "genre": [
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "0V3wPSX9ygBnCm8psDIegu",
+        "artist": "Taylor Swift",
+        "track": "Anti-Hero",
+        "tempo": 160.078,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.8,
+        "danceability": 0.647,
+        "valence": 0.942,
+        "acousticness": 0.0647,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7MXVkk9YMctZqd1Srtv4MB",
+        "artist": "The Weeknd",
+        "track": "Starboy",
+        "tempo": 129.966,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.745,
+        "danceability": 0.687,
+        "valence": 0.435,
+        "acousticness": 0.178,
+        "genre": []
+    },
+    {
+        "spotify_id": "0VjIjW4GlUZAMYd2vXMi3b",
+        "artist": "The Weeknd",
+        "track": "Blinding Lights",
+        "tempo": 68.534,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.543,
+        "danceability": 0.359,
+        "valence": 0.453,
+        "acousticness": 0.492,
+        "genre": []
+    },
+    {
+        "spotify_id": "7fBv7CLKzipRk6EC6TWHOB",
+        "artist": "The Weeknd",
+        "track": "The Hills",
+        "tempo": 89.937,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.623,
+        "danceability": 0.532,
+        "valence": 0.403,
+        "acousticness": 0.538,
+        "genre": [
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "22VdIZQfgXJea34mQxlt81",
+        "artist": "The Weeknd",
+        "track": "Can't Feel My Face",
+        "tempo": 134.165,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.593,
+        "danceability": 0.461,
+        "valence": 0.174,
+        "acousticness": 0.165,
+        "genre": [
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "5QO79kh1waicV47BqGRL3g",
+        "artist": "The Weeknd",
+        "track": "Save Your Tears",
+        "tempo": 84.828,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.64,
+        "danceability": 0.264,
+        "valence": 0.19,
+        "acousticness": 0.0393,
+        "genre": [
+            "synthpop",
+            "dancepop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "4EDijkJdHBZZ0GwJ12iTAj",
+        "artist": "The Weeknd",
+        "track": "Stargirl Interlude",
+        "tempo": 107.949,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.769,
+        "danceability": 0.705,
+        "valence": 0.583,
+        "acousticness": 0.113,
+        "genre": [
+            "synthpop",
+            "dancepop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "09mEdoA6zrmBPgTEN5qXmN",
+        "artist": "The Weeknd",
+        "track": "Call Out My Name",
+        "tempo": 116.073,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.7,
+        "danceability": 0.762,
+        "valence": 0.608,
+        "acousticness": 0.00261,
+        "genre": [
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "7CyPwkp0oE8Ro9Dd5CUDjW",
+        "artist": "The Weeknd",
+        "track": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+        "tempo": 123.95,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.793,
+        "danceability": 0.793,
+        "valence": 0.679,
+        "acousticness": 0.0123,
+        "genre": [
+            "synthpop",
+            "pop",
+            "soundtrack",
+            "rnb"
+        ]
+    },
+    {
+        "spotify_id": "3dhjNA0jGA8vHBQ1VdD6vV",
+        "artist": "The Weeknd",
+        "track": "I Feel It Coming",
+        "tempo": 103.014,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.884,
+        "danceability": 0.695,
+        "valence": 0.914,
+        "acousticness": 0.0561,
+        "genre": [
+            "house",
+            "dancepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3PfIrDoz19wz7qK7tYeu62",
+        "artist": "Dua Lipa",
+        "track": "Don't Start Now",
+        "tempo": 113.011,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.729,
+        "danceability": 0.73,
+        "valence": 0.467,
+        "acousticness": 0.167,
+        "genre": [
+            "synthpop",
+            "dancepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2ekn2ttSfGqwhhate0LSR0",
+        "artist": "Dua Lipa",
+        "track": "New Rules",
+        "tempo": 102.977,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.825,
+        "danceability": 0.702,
+        "valence": 0.915,
+        "acousticness": 0.00883,
+        "genre": [
+            "deephouse",
+            "trap",
+            "house",
+            "dancepop",
+            "pop",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "5nujrmhLynf4yMoMtj8AQF",
+        "artist": "Dua Lipa",
+        "track": "Levitating (feat. DaBaby)",
+        "tempo": 118.049,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.825,
+        "danceability": 0.679,
+        "valence": 0.644,
+        "acousticness": 0.0212,
+        "genre": [
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "6D8y7Bck8h11byRY88Pt2z",
+        "artist": "Dua Lipa",
+        "track": "Houdini",
+        "tempo": 116.985,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.789,
+        "danceability": 0.744,
+        "valence": 0.866,
+        "acousticness": 0.0036,
+        "genre": [
+            "synthpop",
+            "funk",
+            "dancepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "76cy1WJvNGJTj78UqeA5zr",
+        "artist": "Dua Lipa",
+        "track": "IDGAF",
+        "tempo": 99.128,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.712,
+        "danceability": 0.486,
+        "valence": 0.244,
+        "acousticness": 0.00936,
+        "genre": [
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1vYXt7VSjH9JIM5oRRo7vA",
+        "artist": "Dua Lipa",
+        "track": "Dance The Night - From Barbie The Album",
+        "tempo": 125.025,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.593,
+        "danceability": 0.628,
+        "valence": 0.104,
+        "acousticness": 0.093,
+        "genre": [
+            "soundtrack",
+            "dancepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4rPkN1FMzQyFNP9cLUGIIB",
+        "artist": "Dua Lipa",
+        "track": "Love Again",
+        "tempo": 110.056,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.845,
+        "danceability": 0.671,
+        "valence": 0.775,
+        "acousticness": 0.0207,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "76FZM38RC8XaAjJ77CVTNe",
+        "artist": "Ariana Grande",
+        "track": "Into You",
+        "tempo": 115.842,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.646,
+        "danceability": 0.645,
+        "valence": 0.295,
+        "acousticness": 0.0615,
+        "genre": [
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "6ocbgoVGwYJhOv1GgI9NsF",
+        "artist": "Ariana Grande",
+        "track": "7 rings",
+        "tempo": 107.853,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.734,
+        "danceability": 0.623,
+        "valence": 0.37,
+        "acousticness": 0.0162,
+        "genre": []
+    },
+    {
+        "spotify_id": "7xoUc6faLbCqZO6fQEYprd",
+        "artist": "Ariana Grande",
+        "track": "One Last Time",
+        "tempo": 134.049,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.602,
+        "danceability": 0.664,
+        "valence": 0.289,
+        "acousticness": 0.0529,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3e9HZxeyfWwjeyPAMmWSSQ",
+        "artist": "Ariana Grande",
+        "track": "thank u, next",
+        "tempo": 106.976,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.654,
+        "danceability": 0.72,
+        "valence": 0.411,
+        "acousticness": 0.227,
+        "genre": [
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "5J4ZkQpzMUFojo1CtAZYpn",
+        "artist": "Ariana Grande",
+        "track": "Love Me Harder",
+        "tempo": 139.848,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.317,
+        "danceability": 0.777,
+        "valence": 0.33,
+        "acousticness": 0.591,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3nef5W8jTkXrOKgCu4kmq7",
+        "artist": "Ariana Grande",
+        "track": "Dangerous Woman",
+        "tempo": 97.028,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.544,
+        "danceability": 0.836,
+        "valence": 0.51,
+        "acousticness": 0.0403,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "46kspZSY3aKmwQe7O77fCC",
+        "artist": "Ariana Grande",
+        "track": "we can't be friends (wait for your love)",
+        "tempo": 115.982,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.667,
+        "danceability": 0.659,
+        "valence": 0.468,
+        "acousticness": 0.00173,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "44ONERBHALxftQNWq6dmyd",
+        "artist": "Ariana Grande",
+        "track": "Side To Side",
+        "tempo": 143.875,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.431,
+        "danceability": 0.561,
+        "valence": 0.137,
+        "acousticness": 0.768,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "12KUFSHFgT0XCoiSlvdQi4",
+        "artist": "Ariana Grande",
+        "track": "Break Free",
+        "tempo": 166.928,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.664,
+        "danceability": 0.563,
+        "valence": 0.688,
+        "acousticness": 0.335,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4ZtFanR9U6ndgddUvNcjcG",
+        "artist": "Olivia Rodrigo",
+        "track": "good 4 u",
+        "tempo": 129.948,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.702,
+        "danceability": 0.686,
+        "valence": 0.29,
+        "acousticness": 0.00637,
+        "genre": [
+            "poprock",
+            "rock",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6HU7h9RYOaPRFeh0R3UeAr",
+        "artist": "Olivia Rodrigo",
+        "track": "deja vu",
+        "tempo": 129.981,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.881,
+        "danceability": 0.631,
+        "valence": 0.808,
+        "acousticness": 0.00177,
+        "genre": [
+            "synthpop",
+            "poprock",
+            "rock",
+            "indierock",
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5wANPM4fQCJwkGd4rN57mH",
+        "artist": "Olivia Rodrigo",
+        "track": "drivers license",
+        "tempo": 159.182,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.736,
+        "danceability": 0.649,
+        "valence": 0.612,
+        "acousticness": 0.0528,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1kuGVB7EU95pJObxwvfwKS",
+        "artist": "Olivia Rodrigo",
+        "track": "vampire",
+        "tempo": 136.848,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.53,
+        "danceability": 0.484,
+        "valence": 0.323,
+        "acousticness": 0.154,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "5CZ40GBx1sQ9agT82CLQCT",
+        "artist": "Olivia Rodrigo",
+        "track": "traitor",
+        "tempo": 123.999,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.526,
+        "danceability": 0.672,
+        "valence": 0.28,
+        "acousticness": 0.0311,
+        "genre": [
+            "rock",
+            "pop",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "0MMyJUC3WNnFS1lit5pTjk",
+        "artist": "Olivia Rodrigo",
+        "track": "jealousy, jealousy",
+        "tempo": 100.607,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.339,
+        "danceability": 0.38,
+        "valence": 0.0849,
+        "acousticness": 0.691,
+        "genre": [
+            "rock",
+            "pop",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "6SRsiMl7w1USE4mFqrOhHC",
+        "artist": "Olivia Rodrigo",
+        "track": "brutal",
+        "tempo": 180.917,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.612,
+        "danceability": 0.442,
+        "valence": 0.178,
+        "acousticness": 0.584,
+        "genre": [
+            "rock",
+            "pop",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "5JCoSi02qi3jJeHdZXMmR8",
+        "artist": "Olivia Rodrigo",
+        "track": "favorite crime",
+        "tempo": 172.929,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.272,
+        "danceability": 0.369,
+        "valence": 0.218,
+        "acousticness": 0.866,
+        "genre": [
+            "rock",
+            "pop",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "3IX0yuEVvDbnqUwMBB3ouC",
+        "artist": "Olivia Rodrigo",
+        "track": "bad idea right?",
+        "tempo": 163.929,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.575,
+        "danceability": 0.695,
+        "valence": 0.699,
+        "acousticness": 0.198,
+        "genre": [
+            "poprock",
+            "rock",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6dOtVTDdiauQNBQEDOtlAB",
+        "artist": "Billie Eilish",
+        "track": "BIRDS OF A FEATHER",
+        "tempo": 115.284,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.296,
+        "danceability": 0.351,
+        "valence": 0.12,
+        "acousticness": 0.934,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2Fxmhks0bxGSBdJ92vM42m",
+        "artist": "Billie Eilish",
+        "track": "bad guy",
+        "tempo": 124.987,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.4,
+        "danceability": 0.893,
+        "valence": 0.945,
+        "acousticness": 0.0452,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "3QaPy1KgI7nu9FJEQUgn6h",
+        "artist": "Billie Eilish",
+        "track": "WILDFLOWER",
+        "tempo": 103.983,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.742,
+        "danceability": 0.708,
+        "valence": 0.726,
+        "acousticness": 0.122,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "43zdsphuZLzwA9k4DJhU0I",
+        "artist": "Billie Eilish",
+        "track": "when the party's over",
+        "tempo": 81.055,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.225,
+        "danceability": 0.332,
+        "valence": 0.297,
+        "acousticness": 0.767,
+        "genre": [
+            "pop",
+            "indiepop",
+            "trap"
+        ]
+    },
+    {
+        "spotify_id": "629DixmZGHc7ILtEntuiWE",
+        "artist": "Billie Eilish",
+        "track": "LUNCH",
+        "tempo": 82.642,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.111,
+        "danceability": 0.367,
+        "valence": 0.198,
+        "acousticness": 0.978,
+        "genre": []
+    },
+    {
+        "spotify_id": "4RVwu0g32PAqgUiJoXsdF8",
+        "artist": "Billie Eilish",
+        "track": "Happier Than Ever",
+        "tempo": 110.015,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.425,
+        "danceability": 0.7,
+        "valence": 0.521,
+        "acousticness": 0.144,
+        "genre": [
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7BRD7x5pt8Lqa1eGYC4dzj",
+        "artist": "Billie Eilish",
+        "track": "CHIHIRO",
+        "tempo": 104.978,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.507,
+        "danceability": 0.747,
+        "valence": 0.438,
+        "acousticness": 0.2,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2uIX8YMNjGMD7441kqyyNU",
+        "artist": "Billie Eilish",
+        "track": "ocean eyes",
+        "tempo": 148.101,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.247,
+        "danceability": 0.467,
+        "valence": 0.126,
+        "acousticness": 0.612,
+        "genre": [
+            "dubstep",
+            "house",
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0u2P5u6lvoDfwTYjAADbn4",
+        "artist": "Billie Eilish",
+        "track": "lovely (with Khalid)",
+        "tempo": 135.128,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.425,
+        "danceability": 0.701,
+        "valence": 0.562,
+        "acousticness": 0.328,
+        "genre": [
+            "pop",
+            "altpop"
+        ]
+    },
+    {
+        "spotify_id": "3ZCTVFBt2Brf31RLEnCkWJ",
+        "artist": "Billie Eilish",
+        "track": "everything i wanted",
+        "tempo": 120.006,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.225,
+        "danceability": 0.704,
+        "valence": 0.243,
+        "acousticness": 0.902,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "5G2f63n7IPVPPjfNIGih7Q",
+        "artist": "Sabrina Carpenter",
+        "track": "Taste",
+        "tempo": 94.99,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.727,
+        "danceability": 0.739,
+        "valence": 0.676,
+        "acousticness": 0.0678,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6dgUya35uo964z7GZXM07g",
+        "artist": "Sabrina Carpenter",
+        "track": "Nonsense",
+        "tempo": 90.035,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.463,
+        "danceability": 0.749,
+        "valence": 0.189,
+        "acousticness": 0.21,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2Zo1PcszsT9WQ0ANntJbID",
+        "artist": "Sabrina Carpenter",
+        "track": "Feather",
+        "tempo": 110.97,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.705,
+        "danceability": 0.764,
+        "valence": 0.781,
+        "acousticness": 0.259,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "42UBPzRMh5yyz0EDPr6fr1",
+        "artist": "Sabrina Carpenter",
+        "track": "Manchild",
+        "tempo": 107.998,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.764,
+        "danceability": 0.824,
+        "valence": 0.881,
+        "acousticness": 0.0888,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1UHS8Rf6h5Ar3CDWRd3wjF",
+        "artist": "Sabrina Carpenter",
+        "track": "Bed Chem",
+        "tempo": 112.964,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.907,
+        "danceability": 0.674,
+        "valence": 0.721,
+        "acousticness": 0.101,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "21B4gaTWnTkuSh77iWEXdS",
+        "artist": "Sabrina Carpenter",
+        "track": "Juno",
+        "tempo": 126.012,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.759,
+        "danceability": 0.758,
+        "valence": 0.732,
+        "acousticness": 0.329,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "42VUCXerQ5qTr4Qp6PhKo4",
+        "artist": "Sabrina Carpenter",
+        "track": "Tears",
+        "tempo": 130.504,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.725,
+        "danceability": 0.633,
+        "valence": 0.64,
+        "acousticness": 0.0461,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "102YUQbYmwdBXS7jwamI90",
+        "artist": "Sabrina Carpenter",
+        "track": "Good Graces",
+        "tempo": 113.036,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.876,
+        "danceability": 0.699,
+        "valence": 0.485,
+        "acousticness": 0.0204,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3DarAbFujv6eYNliUTyqtz",
+        "artist": "Doja Cat",
+        "track": "Kiss Me More (feat. SZA)",
+        "tempo": 123.508,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.694,
+        "danceability": 0.791,
+        "valence": 0.826,
+        "acousticness": 0.0736,
+        "genre": [
+            "pop",
+            "rnb",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "6Uj1ctrBOjOas8xZXGqKk4",
+        "artist": "Doja Cat",
+        "track": "Woman",
+        "tempo": 123.01,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.685,
+        "danceability": 0.731,
+        "valence": 0.811,
+        "acousticness": 0.122,
+        "genre": [
+            "dancepop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "60ynsPSSKe6O3sfwRnIBRf",
+        "artist": "Doja Cat",
+        "track": "Streets",
+        "tempo": 138.992,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.697,
+        "danceability": 0.74,
+        "valence": 0.732,
+        "acousticness": 0.0268,
+        "genre": [
+            "hiphop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "3Dv1eDb0MEgF93GpLXlucZ",
+        "artist": "Doja Cat",
+        "track": "Say So",
+        "tempo": 110.962,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.673,
+        "danceability": 0.787,
+        "valence": 0.779,
+        "acousticness": 0.264,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "0k4d5YPDr1r7FX77VdqWez",
+        "artist": "Doja Cat",
+        "track": "You Right",
+        "tempo": 123.026,
+        "key": 8,
+        "mode": 0,
+        "energy": 0.674,
+        "danceability": 0.75,
+        "valence": 0.392,
+        "acousticness": 0.228,
+        "genre": [
+            "dancepop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "2IGMVunIBsBLtEQyoI1Mu7",
+        "artist": "Doja Cat",
+        "track": "Paint The Town Red",
+        "tempo": 112.912,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.684,
+        "danceability": 0.692,
+        "valence": 0.406,
+        "acousticness": 0.131,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "5lAnYvAIkSDNXqfo7DyFUm",
+        "artist": "Doja Cat",
+        "track": "Ain't Shit",
+        "tempo": 91.942,
+        "key": 8,
+        "mode": 0,
+        "energy": 0.655,
+        "danceability": 0.912,
+        "valence": 0.793,
+        "acousticness": 0.315,
+        "genre": [
+            "rnb",
+            "hiphop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7dJYggqjKo71KI9sLzqCs8",
+        "artist": "Doja Cat",
+        "track": "Agora Hills",
+        "tempo": 128.986,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.621,
+        "danceability": 0.828,
+        "valence": 0.436,
+        "acousticness": 0.0164,
+        "genre": [
+            "trap",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "0W6I02J9xcqK8MtSeosEXb",
+        "artist": "Doja Cat",
+        "track": "Get Into It (Yuh)",
+        "tempo": 124.097,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.488,
+        "danceability": 0.855,
+        "valence": 0.619,
+        "acousticness": 0.506,
+        "genre": [
+            "dancepop",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "3OHfY25tqY28d16oZczHc8",
+        "artist": "SZA",
+        "track": "Kill Bill",
+        "tempo": 88.993,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.728,
+        "danceability": 0.644,
+        "valence": 0.43,
+        "acousticness": 0.0543,
+        "genre": []
+    },
+    {
+        "spotify_id": "4iZ4pt7kvcaH6Yo8UoZ4s2",
+        "artist": "SZA",
+        "track": "Snooze",
+        "tempo": 143.008,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.551,
+        "danceability": 0.559,
+        "valence": 0.392,
+        "acousticness": 0.141,
+        "genre": []
+    },
+    {
+        "spotify_id": "4PMqSO5qyjpvzhlLI5GnID",
+        "artist": "SZA",
+        "track": "Good Days",
+        "tempo": 121.07,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.651,
+        "danceability": 0.461,
+        "valence": 0.383,
+        "acousticness": 0.418,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "1bjeWoagtHmUKputLVyDxQ",
+        "artist": "SZA",
+        "track": "Saturn",
+        "tempo": 177.937,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.619,
+        "danceability": 0.411,
+        "valence": 0.337,
+        "acousticness": 0.62,
+        "genre": []
+    },
+    {
+        "spotify_id": "5Y35SjAfXjjG0sFQ3KOxmm",
+        "artist": "SZA",
+        "track": "Nobody Gets Me",
+        "tempo": 77.559,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.59,
+        "danceability": 0.665,
+        "valence": 0.216,
+        "acousticness": 0.763,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "0q75NwOoFiARAVp4EXU4Bs",
+        "artist": "SZA",
+        "track": "Love Galore (feat. Travis Scott)",
+        "tempo": 89.908,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.478,
+        "danceability": 0.76,
+        "valence": 0.913,
+        "acousticness": 0.552,
+        "genre": []
+    },
+    {
+        "spotify_id": "0xaFw2zDYf1rIJWl2dXiSF",
+        "artist": "SZA",
+        "track": "Open Arms (feat. Travis Scott)",
+        "tempo": 159.798,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.52,
+        "danceability": 0.585,
+        "valence": 0.129,
+        "acousticness": 0.124,
+        "genre": [
+            "neosoul"
+        ]
+    },
+    {
+        "spotify_id": "2wSTnntOPRi7aQneobFtU4",
+        "artist": "SZA",
+        "track": "Shirt",
+        "tempo": 145.07,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.578,
+        "danceability": 0.674,
+        "valence": 0.34,
+        "acousticness": 0.331,
+        "genre": []
+    },
+    {
+        "spotify_id": "3KkXRkHbMCARz0aVfEt68P",
+        "artist": "Post Malone",
+        "track": "Sunflower - Spider-Man: Into the Spider-Verse",
+        "tempo": 135.002,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.594,
+        "danceability": 0.795,
+        "valence": 0.409,
+        "acousticness": 0.112,
+        "genre": [
+            "soundtrack",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "21jGcNKet2qwijlDFuPiPb",
+        "artist": "Post Malone",
+        "track": "Circles",
+        "tempo": 99.796,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.284,
+        "danceability": 0.358,
+        "valence": 0.276,
+        "acousticness": 0.805,
+        "genre": [
+            "rock",
+            "pop",
+            "indiepop",
+            "poprock"
+        ]
+    },
+    {
+        "spotify_id": "0e7ipj03S05BNilyu5bRzt",
+        "artist": "Post Malone",
+        "track": "rockstar (feat. 21 Savage)",
+        "tempo": 120.009,
+        "key": 3,
+        "mode": 0,
+        "energy": 0.512,
+        "danceability": 0.848,
+        "valence": 0.572,
+        "acousticness": 0.228,
+        "genre": [
+            "trap",
+            "rap",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "3a1lNhkSLSkpJE4MSHpDu9",
+        "artist": "Post Malone",
+        "track": "Congratulations",
+        "tempo": 120.042,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.763,
+        "danceability": 0.695,
+        "valence": 0.551,
+        "acousticness": 0.189,
+        "genre": [
+            "hiphop",
+            "trap"
+        ]
+    },
+    {
+        "spotify_id": "7dt6x5M1jzdTEt8oCbisTK",
+        "artist": "Post Malone",
+        "track": "Better Now",
+        "tempo": 99.952,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.538,
+        "danceability": 0.829,
+        "valence": 0.389,
+        "acousticness": 0.137,
+        "genre": [
+            "trap",
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "7xQAfvXzm3AkraOtGPWIZg",
+        "artist": "Post Malone",
+        "track": "Wow.",
+        "tempo": 130.098,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.561,
+        "danceability": 0.675,
+        "valence": 0.309,
+        "acousticness": 0.233,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "6eT7xZZlB2mwyzJ2sUKG6w",
+        "artist": "Post Malone",
+        "track": "White Iverson",
+        "tempo": 123.146,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.804,
+        "danceability": 0.63,
+        "valence": 0.492,
+        "acousticness": 0.215,
+        "genre": [
+            "hiphop",
+            "trap"
+        ]
+    },
+    {
+        "spotify_id": "75ZvA4QfFiZvzhj2xkaWAh",
+        "artist": "Post Malone",
+        "track": "I Fall Apart",
+        "tempo": 135.007,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.834,
+        "danceability": 0.461,
+        "valence": 0.471,
+        "acousticness": 0.0232,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "3swc6WTsr7rl9DqQKQA55C",
+        "artist": "Post Malone",
+        "track": "Psycho (feat. Ty Dolla $ign)",
+        "tempo": 95.049,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.608,
+        "danceability": 0.806,
+        "valence": 0.849,
+        "acousticness": 0.0113,
+        "genre": [
+            "rap",
+            "hiphop",
+            "trap"
+        ]
+    },
+    {
+        "spotify_id": "7qiZfU4dY1lWllzX7mPBI3",
+        "artist": "Ed Sheeran",
+        "track": "Shape of You",
+        "tempo": 84.996,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.289,
+        "danceability": 0.642,
+        "valence": 0.407,
+        "acousticness": 0.669,
+        "genre": [
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "34gCuhDGsG4bRPIf9bb02f",
+        "artist": "Ed Sheeran",
+        "track": "Thinking out Loud",
+        "tempo": 95.05,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.448,
+        "danceability": 0.599,
+        "valence": 0.168,
+        "acousticness": 0.163,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1HNkqx9Ahdgi1Ixy2xkKkL",
+        "artist": "Ed Sheeran",
+        "track": "Photograph",
+        "tempo": 107.989,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.379,
+        "danceability": 0.614,
+        "valence": 0.201,
+        "acousticness": 0.607,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1VdZ0vKfR5jneCmWIUAMxK",
+        "artist": "Ed Sheeran",
+        "track": "The A Team",
+        "tempo": 140.06,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.56,
+        "danceability": 0.75,
+        "valence": 0.459,
+        "acousticness": 0.546,
+        "genre": [
+            "dubstep",
+            "rock",
+            "drumnbass",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "0tgVpDi06FyKpA1z0VMD4v",
+        "artist": "Ed Sheeran",
+        "track": "Perfect",
+        "tempo": 126.011,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.893,
+        "danceability": 0.807,
+        "valence": 0.537,
+        "acousticness": 0.0451,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1huvTbEYtgltjQRXzrNKGi",
+        "artist": "Ed Sheeran",
+        "track": "Don't",
+        "tempo": 78.998,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.445,
+        "danceability": 0.781,
+        "valence": 0.591,
+        "acousticness": 0.474,
+        "genre": [
+            "rock",
+            "pop",
+            "poprock",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "3rmo8F54jFF8OgYsqTxm5d",
+        "artist": "Ed Sheeran",
+        "track": "Bad Habits",
+        "tempo": 143.946,
+        "key": 8,
+        "mode": 0,
+        "energy": 0.538,
+        "danceability": 0.556,
+        "valence": 0.291,
+        "acousticness": 0.0689,
+        "genre": [
+            "house",
+            "pop",
+            "amapiano"
+        ]
+    },
+    {
+        "spotify_id": "6PCUP3dWmTjcTtXY02oFdT",
+        "artist": "Ed Sheeran",
+        "track": "Castle on the Hill",
+        "tempo": 99.943,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.876,
+        "danceability": 0.624,
+        "valence": 0.781,
+        "acousticness": 0.0735,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0afhq8XCExXpqazXczTSve",
+        "artist": "Ed Sheeran",
+        "track": "Galway Girl",
+        "tempo": 95.977,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.652,
+        "danceability": 0.825,
+        "valence": 0.931,
+        "acousticness": 0.581,
+        "genre": [
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "3w3y8KPTfNeOKPiqUTakBh",
+        "artist": "Bruno Mars",
+        "track": "Locked out of Heaven",
+        "tempo": 109.021,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.841,
+        "danceability": 0.635,
+        "valence": 0.424,
+        "acousticness": 0.0134,
+        "genre": [
+            "progressivehouse",
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7BqBn9nzAq8spo5e7cZ0dJ",
+        "artist": "Bruno Mars",
+        "track": "Just the Way You Are",
+        "tempo": 143.994,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.698,
+        "danceability": 0.726,
+        "valence": 0.867,
+        "acousticness": 0.049,
+        "genre": [
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "0KKkJNfGyhkQ5aFogxQAPU",
+        "artist": "Bruno Mars",
+        "track": "That's What I Like",
+        "tempo": 116.017,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.692,
+        "danceability": 0.874,
+        "valence": 0.937,
+        "acousticness": 0.0412,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4lLtanYk6tkMvooU0tWzG8",
+        "artist": "Bruno Mars",
+        "track": "Grenade",
+        "tempo": 134.066,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.56,
+        "danceability": 0.853,
+        "valence": 0.86,
+        "acousticness": 0.013,
+        "genre": [
+            "pop",
+            "house"
+        ]
+    },
+    {
+        "spotify_id": "0nJW01T7XtvILxQgC5J7Wh",
+        "artist": "Bruno Mars",
+        "track": "When I Was Your Man",
+        "tempo": 72.795,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.28,
+        "danceability": 0.612,
+        "valence": 0.387,
+        "acousticness": 0.932,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "55h7vJchibLdUkxdlX3fK7",
+        "artist": "Bruno Mars",
+        "track": "Treasure",
+        "tempo": 128.003,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.843,
+        "danceability": 0.602,
+        "valence": 0.526,
+        "acousticness": 0.000688,
+        "genre": [
+            "electrohouse",
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "161DnLWsx1i3u1JT05lzqU",
+        "artist": "Bruno Mars",
+        "track": "Talking to the Moon",
+        "tempo": 106.97,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.803,
+        "danceability": 0.818,
+        "valence": 0.632,
+        "acousticness": 0.034,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6b8Be6ljOzmkOmFslEb23P",
+        "artist": "Bruno Mars",
+        "track": "24K Magic",
+        "tempo": 145.867,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.59,
+        "danceability": 0.498,
+        "valence": 0.0784,
+        "acousticness": 0.511,
+        "genre": [
+            "funk",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6epn3r7S14KUqlReYr77hA",
+        "artist": "Justin Bieber",
+        "track": "Baby",
+        "tempo": 125.02,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.567,
+        "danceability": 0.845,
+        "valence": 0.793,
+        "acousticness": 0.59,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4B0JvthVoAAuygILe3n4Bs",
+        "artist": "Justin Bieber",
+        "track": "What Do You Mean?",
+        "tempo": 134.122,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.565,
+        "danceability": 0.741,
+        "valence": 0.892,
+        "acousticness": 0.114,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "50kpGaPAhYJ3sGmk6vplg0",
+        "artist": "Justin Bieber",
+        "track": "Love Yourself",
+        "tempo": 65.043,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.859,
+        "danceability": 0.728,
+        "valence": 0.535,
+        "acousticness": 0.0401,
+        "genre": [
+            "pop",
+            "electrohouse"
+        ]
+    },
+    {
+        "spotify_id": "3UGIZ8qcrMTwzLbx6Kttqt",
+        "artist": "Justin Bieber",
+        "track": "Boyfriend",
+        "tempo": 96.976,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.55,
+        "danceability": 0.717,
+        "valence": 0.332,
+        "acousticness": 0.0358,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3JsydWaf2Ev4ehaLUjj3SY",
+        "artist": "Justin Bieber",
+        "track": "Confident",
+        "tempo": 119.007,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.921,
+        "danceability": 0.695,
+        "valence": 0.714,
+        "acousticness": 0.00314,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7xapw9Oy21WpfEcib2ErSA",
+        "artist": "Justin Bieber",
+        "track": "Mistletoe",
+        "tempo": 153.96,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.741,
+        "danceability": 0.601,
+        "valence": 0.441,
+        "acousticness": 0.185,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4iJyoBOLtHqaGxP12qzhQI",
+        "artist": "Justin Bieber",
+        "track": "Peaches (feat. Daniel Caesar & Giveon)",
+        "tempo": 119.001,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.806,
+        "danceability": 0.851,
+        "valence": 0.774,
+        "acousticness": 0.119,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6I3mqTwhRpn34SLVafSH7G",
+        "artist": "Justin Bieber",
+        "track": "Ghost",
+        "tempo": 161.993,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.56,
+        "danceability": 0.658,
+        "valence": 0.854,
+        "acousticness": 0.498,
+        "genre": [
+            "dubstep",
+            "progressivehouse",
+            "dancepop",
+            "pop",
+            "citypop"
+        ]
+    },
+    {
+        "spotify_id": "1QV6tiMFM6fSOKOGLMHYYg",
+        "artist": "Lady Gaga",
+        "track": "Poker Face",
+        "tempo": 100.43,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.378,
+        "danceability": 0.609,
+        "valence": 0.515,
+        "acousticness": 0.835,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "0SiywuOBRcynK0uKGWdCnn",
+        "artist": "Lady Gaga",
+        "track": "Bad Romance",
+        "tempo": 90.03,
+        "key": 0,
+        "mode": 1,
+        "energy": 0.696,
+        "danceability": 0.677,
+        "valence": 0.464,
+        "acousticness": 0.321,
+        "genre": [
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "02XnQdf7sipaKBBHixz3Zp",
+        "artist": "Lady Gaga",
+        "track": "Paparazzi",
+        "tempo": 114.903,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.692,
+        "danceability": 0.762,
+        "valence": 0.397,
+        "acousticness": 0.112,
+        "genre": [
+            "house",
+            "pop",
+            "synthpop"
+        ]
+    },
+    {
+        "spotify_id": "0eH2eHURaXUP15D8gQlfjx",
+        "artist": "Lady Gaga",
+        "track": "LoveGame",
+        "tempo": 105.029,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.678,
+        "danceability": 0.894,
+        "valence": 0.844,
+        "acousticness": 0.00569,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7F25roCtYi55JouckaayPC",
+        "artist": "Lady Gaga",
+        "track": "Judas",
+        "tempo": 130.983,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.934,
+        "danceability": 0.664,
+        "valence": 0.529,
+        "acousticness": 0.00108,
+        "genre": [
+            "synthpop",
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1HHeOs6zRdF8Ck58easiAY",
+        "artist": "Lady Gaga",
+        "track": "Alejandro",
+        "tempo": 98.995,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.795,
+        "danceability": 0.623,
+        "valence": 0.358,
+        "acousticness": 0.000399,
+        "genre": [
+            "synthpop",
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4TCL0qqKyqsMZml0G3M9IM",
+        "artist": "Lady Gaga",
+        "track": "Telephone",
+        "tempo": 139.945,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.78,
+        "danceability": 0.668,
+        "valence": 0.738,
+        "acousticness": 0.0265,
+        "genre": [
+            "synthpop",
+            "electrohouse",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2plbrEY59IikOBgBGLjaoe",
+        "artist": "Lady Gaga",
+        "track": "Die With A Smile",
+        "tempo": 122.013,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.837,
+        "danceability": 0.824,
+        "valence": 0.715,
+        "acousticness": 0.00521,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5ka2ajep9OAvU5Sgduhiex",
+        "artist": "Lady Gaga",
+        "track": "Applause",
+        "tempo": 157.969,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.592,
+        "danceability": 0.521,
+        "valence": 0.535,
+        "acousticness": 0.308,
+        "genre": [
+            "pop",
+            "synthpop"
         ]
     }
 ]

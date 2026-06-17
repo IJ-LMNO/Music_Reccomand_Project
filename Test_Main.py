@@ -1,6 +1,7 @@
 from Layer.Bpm_layer import Bpm_Layer as bpm
 from Layer.Genre_layer import Genre_layer as genre
 from Layer.Chord_layer import Chord_Layer as chord
+from Layer.Weather_layer import Weather_Layer as weather
 
 def Main():
     track =  "Blackpink DDU-DU DDU-DU"
@@ -15,6 +16,8 @@ def Main():
     bpm_output_arr = bpm(track,bpm_count)
     genre_output_arr = genre(bpm_output_arr[0], bpm_output_arr[1],genre_count,genre_weight)
     chord_output_arr = chord(bpm_output_arr[0], genre_output_arr, count, key_penalty, mode_penalty)
+    weather_ouput_arr = weather(chord_output_arr, K = 1 , city= "seoul" )
+
 
 
 if __name__ == "__main__":

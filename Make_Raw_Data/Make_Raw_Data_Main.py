@@ -86,17 +86,16 @@ def combine_metadatas_reccobeats_metadatas(
         # Reccobeats 응답 범위 검사
         if reccobeats_metadatas_idx < len(reccobeats_metadatas):
 
-            metadatas[metadatas_idx]["tempo"] = (
-                reccobeats_metadatas[reccobeats_metadatas_idx]["tempo"]
-            )
+            recco_data = reccobeats_metadatas[reccobeats_metadatas_idx]
 
-            metadatas[metadatas_idx]["key"] = (
-                reccobeats_metadatas[reccobeats_metadatas_idx]["key"]
-            )
+            metadatas[metadatas_idx]["tempo"] = recco_data["tempo"]
+            metadatas[metadatas_idx]["key"] = recco_data["key"]
+            metadatas[metadatas_idx]["mode"] = recco_data["mode"]
 
-            metadatas[metadatas_idx]["mode"] = (
-                reccobeats_metadatas[reccobeats_metadatas_idx]["mode"]
-            )
+            metadatas[metadatas_idx]["energy"] = recco_data.get("energy", 0.5)
+            metadatas[metadatas_idx]["danceability"] = recco_data.get("danceability", 0.5)
+            metadatas[metadatas_idx]["valence"] = recco_data.get("valence", 0.5)
+            metadatas[metadatas_idx]["acousticness"] = recco_data.get("acousticness", 0.5)
 
             reccobeats_metadatas_idx += 1
             metadatas_idx += 1
@@ -117,7 +116,7 @@ def clean_metadata(metadatas):
 
 
 def main():
-    size = 100
+    size = 10
 
     with open("Make_Raw_Data/Dataset.json", "r", encoding="utf-8") as dataset:
         dataset = json.load(dataset)
@@ -157,6 +156,7 @@ def main():
                 json.dump(raw_track_name_index, file, ensure_ascii=False, indent=4)
 
             print(f"{len(new_data)}곡 저장 완료")
+            time.sleep(20)
 
             eliminate_overlap_query = []
         else:
