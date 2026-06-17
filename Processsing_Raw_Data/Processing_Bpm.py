@@ -16,7 +16,16 @@ def Processing_Bpm():
 
         seen.add(spotify_id)
 
-        tempo = int(track["tempo"])
+        tempo = track.get("tempo")
+
+        if tempo is None:
+            continue
+
+        try:
+            tempo = int(tempo)
+        except (TypeError, ValueError):
+            continue
+
         processing_bpm = (tempo // 10) * 10
 
         if processing_bpm not in bpmdataset:

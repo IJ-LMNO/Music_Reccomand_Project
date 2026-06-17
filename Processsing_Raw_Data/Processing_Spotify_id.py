@@ -9,6 +9,8 @@ def Make_Track_index():
 
     for metadata in clean_metadata:
         track_dataset[metadata["spotify_id"]] = metadata
+    
+    print(f"spofity_id_index : {len(track_dataset)}")
 
     with open("Data/Spotify_id_index.json", "w", encoding="utf-8") as file:
         json.dump(track_dataset, file, ensure_ascii=False, indent=4)
