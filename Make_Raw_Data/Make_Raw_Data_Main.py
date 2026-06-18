@@ -68,6 +68,7 @@ def make_metadata(sample_queries):
     return metadatas
 
 
+        
 def combine_metadatas_reccobeats_metadatas(
         metadatas,
         reccobeats_metadatas):
@@ -106,13 +107,39 @@ def combine_metadatas_reccobeats_metadatas(
 def clean_metadata(metadatas):
     required_keys = ["spotify_id", "artist", "track", "tempo", "key", "mode", "genre"]
 
-    return [
-        metadata
-        for metadata in metadatas
-        if (metadata 
-            and all(key in metadata for key in required_keys)
-            and metadata["genre"])
-    ]
+    cleaned = []
+
+    for metadata in metadatas:
+        if not metadata:
+            continue
+
+        if not all(key in metadata for key in required_keys):
+            continue
+
+        if not metadata["spotify_id"]:
+            continue
+
+        if not metadata["artist"]:
+            continue
+
+        if not metadata["track"]:
+            continue
+
+        if metadata["tempo"] is None:
+            continue
+
+        if not metadata["key"]:
+            continue
+
+        if metadata["mode"] is None:
+            continue
+
+        if not metadata["genre"]:
+            continue
+
+        cleaned.append(metadata)
+
+    return cleaned
 
 
 def main():

@@ -2,8 +2,6 @@ import json
 import heapq
 
 CUTING_RATIO = 0.5
-MODE_PENALTY = 0.3
-KEY_PENALTY = 0.3
 
 def dijkstra(graph, start, end):
     ENHARMONIC = {
@@ -84,6 +82,11 @@ def Compare_note_proximity(input_track, tracks):
 
             chord_compare_result.append(note_pairs)
 
+            # #--------------------------------------
+            # print(chord_compare_result)
+            # print()
+            # #---------------------------------------
+
 
         return_arr.append(chord_compare_result)
 
@@ -134,6 +137,7 @@ def Compare_key_Progression(Progression, chords, tonnetz, input_track, track):
             continue
         # ##print------------------
         # print(chord_pair)
+        # print()
         # ##-------------------
         sum = 0
 
@@ -188,7 +192,7 @@ def proximity_analze(simularity_chord_value_arr):
 
     
         
-def Give_penalty(result, after_genre_layer, input_track):
+def Give_penalty(result, after_genre_layer, input_track, key, mode):
     return_result = []
 
     for track_proximity in result:
@@ -199,12 +203,12 @@ def Give_penalty(result, after_genre_layer, input_track):
         new_score = score
 
         if input_track["mode"] == track["mode"]:
-            new_score -= MODE_PENALTY
+            new_score -= mode
         else:
-            new_score += MODE_PENALTY
+            new_score += mode
 
         if input_track["key"] != track["key"]:
-            new_score += KEY_PENALTY
+            new_score += key
 
         return_result.append(
             (
@@ -218,11 +222,9 @@ def Give_penalty(result, after_genre_layer, input_track):
 
 
       
-def Chord_Layer(input_track, after_genre_layer_track_arr, count, key_penalty, mode_penalty):
+def Chord_Layer(input_track, after_genre_layer_track_arr, count, key_penalty = 1, mode_penalty = 1):
     total_return_track_num = count
     output_track = []
-    KEY_PENALTY = key_penalty
-    MODE_PENALTY = mode_penalty
 
     with open("Data/Constant_data/Tonnetz_Graph.json", "r", encoding="utf-8") as t,\
     open("Data/Constant_data/Representation_Progressions.json", "r", encoding="utf-8") as p,\
@@ -245,7 +247,7 @@ def Chord_Layer(input_track, after_genre_layer_track_arr, count, key_penalty, mo
         key=lambda x: x[1]
     )
 
-    result = Give_penalty(result, after_genre_layer_track_arr, input_track)
+    result = Give_penalty(result, after_genre_layer_track_arr, input_track, key_penalty, mode_penalty)
 
     if len(result) < total_return_track_num:
         for i in range(len(result)):

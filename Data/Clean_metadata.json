@@ -12938,5 +12938,1281 @@
             "kpop",
             "pop"
         ]
+    },
+    {
+        "spotify_id": "7DnAm9FOTWE3cUvso43HhI",
+        "artist": "Ava Max",
+        "track": "Sweet but Psycho",
+        "tempo": 116.001,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.934,
+        "danceability": 0.614,
+        "valence": 0.436,
+        "acousticness": 0.0697,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7a53HqqArd4b9NF4XAmlbI",
+        "artist": "Ava Max",
+        "track": "Kings & Queens",
+        "tempo": 133.002,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.706,
+        "danceability": 0.72,
+        "valence": 0.62,
+        "acousticness": 0.0684,
+        "genre": [
+            "pop",
+            "synthpop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "2Xnv3GntqbBH1juvUYSpHG",
+        "artist": "Ava Max",
+        "track": "So Am I",
+        "tempo": 110.003,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.65,
+        "danceability": 0.733,
+        "valence": 0.348,
+        "acousticness": 0.0703,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1KixkQVDUHggZMU9dUobgm",
+        "artist": "Ava Max",
+        "track": "My Head & My Heart",
+        "tempo": 133.017,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.85,
+        "danceability": 0.653,
+        "valence": 0.642,
+        "acousticness": 0.0328,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5iyZwawawLjHYpX4MxUKVF",
+        "artist": "Ava Max",
+        "track": "Salt",
+        "tempo": 128.052,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.835,
+        "danceability": 0.693,
+        "valence": 0.744,
+        "acousticness": 0.131,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6WDG2ybdV3SBXV0lwBGu4D",
+        "artist": "Ava Max",
+        "track": "Maybe You’re The Problem",
+        "tempo": 125.057,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.831,
+        "danceability": 0.665,
+        "valence": 0.696,
+        "acousticness": 0.111,
+        "genre": [
+            "pop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "1QLZKzC2pjP4ySf4ALrNhm",
+        "artist": "Ava Max",
+        "track": "Christmas Without You",
+        "tempo": 130.089,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.657,
+        "danceability": 0.681,
+        "valence": 0.628,
+        "acousticness": 0.0748,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6SpVp6ttad3XJOsjKBZwaq",
+        "artist": "Ava Max",
+        "track": "Torn",
+        "tempo": 184.021,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.641,
+        "danceability": 0.648,
+        "valence": 0.505,
+        "acousticness": 0.00565,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3wFM8TWbbkwPuB6TyqpVDv",
+        "artist": "Ava Max",
+        "track": "Million Dollar Baby",
+        "tempo": 129.857,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.69,
+        "danceability": 0.637,
+        "valence": 0.457,
+        "acousticness": 0.00786,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "18AJRdgUoO9EYn11N7xzaT",
+        "artist": "Tove Lo",
+        "track": "Habits (Stay High)",
+        "tempo": 118.078,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.596,
+        "danceability": 0.654,
+        "valence": 0.382,
+        "acousticness": 0.424,
+        "genre": [
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5JCi3pyggvk4B0yd0BK3ow",
+        "artist": "Tove Lo",
+        "track": "Stay High - Habits Remix",
+        "tempo": 120.028,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.837,
+        "danceability": 0.755,
+        "valence": 0.714,
+        "acousticness": 0.0991,
+        "genre": [
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3tJ4y2Zqx6gM9xOAuFfsSF",
+        "artist": "Tove Lo",
+        "track": "Cool Girl",
+        "tempo": 125.001,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.945,
+        "danceability": 0.702,
+        "valence": 0.427,
+        "acousticness": 0.00695,
+        "genre": [
+            "pop",
+            "progressivehouse",
+            "house"
+        ]
+    },
+    {
+        "spotify_id": "1TIiWomS4i0Ikaf9EKdcLn",
+        "artist": "Tove Lo",
+        "track": "disco tits",
+        "tempo": 110.059,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.728,
+        "danceability": 0.79,
+        "valence": 0.333,
+        "acousticness": 0.025,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "51DXwluqCo7bx4QAFuGoEm",
+        "artist": "Tove Lo",
+        "track": "No One Dies From Love",
+        "tempo": 91.026,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.596,
+        "danceability": 0.795,
+        "valence": 0.506,
+        "acousticness": 0.0823,
+        "genre": [
+            "electrohouse"
+        ]
+    },
+    {
+        "spotify_id": "5i3pIDBLDc1tSCyVxxo151",
+        "artist": "Tove Lo",
+        "track": "Habits (Stay High) - Hippie Sabotage Remix",
+        "tempo": 121.011,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.686,
+        "danceability": 0.735,
+        "valence": 0.0656,
+        "acousticness": 0.00108,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3Du9k9oZz7DJCMZviju2lD",
+        "artist": "Tove Lo",
+        "track": "HEAT",
+        "tempo": 101.993,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.694,
+        "danceability": 0.674,
+        "valence": 0.203,
+        "acousticness": 0.313,
+        "genre": [
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "1VYlIU9IpVa4MHUqzKHyOb",
+        "artist": "Tove Lo",
+        "track": "2 Die 4",
+        "tempo": 125.036,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.675,
+        "danceability": 0.729,
+        "valence": 0.74,
+        "acousticness": 4.14e-05,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6vc2Jq2vaGu8z326kSrw92",
+        "artist": "Kesha",
+        "track": "Your Love Is My Drug",
+        "tempo": 118.014,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.799,
+        "danceability": 0.817,
+        "valence": 0.56,
+        "acousticness": 0.0295,
+        "genre": [
+            "house",
+            "trance",
+            "electrohouse",
+            "dancepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0WCiI0ddWiu5F2kSHgfw5S",
+        "artist": "Kesha",
+        "track": "Take It Off",
+        "tempo": 121.01,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.677,
+        "danceability": 0.736,
+        "valence": 0.0747,
+        "acousticness": 0.00114,
+        "genre": [
+            "pop",
+            "house"
+        ]
+    },
+    {
+        "spotify_id": "7EQGXaVSyEDsCWKmUcfpLk",
+        "artist": "Kesha",
+        "track": "Die Young",
+        "tempo": 128.001,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.7,
+        "danceability": 0.711,
+        "valence": 0.801,
+        "acousticness": 0.00498,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3pYDZTJM2tVBUhIRifWVzI",
+        "artist": "Kesha",
+        "track": "Blow",
+        "tempo": 159.941,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.939,
+        "danceability": 0.6,
+        "valence": 0.833,
+        "acousticness": 0.0666,
+        "genre": [
+            "pop",
+            "electrohouse"
+        ]
+    },
+    {
+        "spotify_id": "3OY9NKwRfYqNNpeogsm5eR",
+        "artist": "Kesha",
+        "track": "Kiss N Tell",
+        "tempo": 126.019,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.87,
+        "danceability": 0.534,
+        "valence": 0.462,
+        "acousticness": 0.000334,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4GRFzKI7jTZ3kbMfouc7bn",
+        "artist": "Kesha",
+        "track": "Backstabber",
+        "tempo": 95.0,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.547,
+        "danceability": 0.778,
+        "valence": 0.442,
+        "acousticness": 0.344,
+        "genre": [
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "68A5jxOT3LAMgJpIRt94rW",
+        "artist": "Kesha",
+        "track": "Hungover",
+        "tempo": 122.019,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.709,
+        "danceability": 0.7,
+        "valence": 0.624,
+        "acousticness": 0.0048,
+        "genre": [
+            "house",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3ZMYiiZU9jaADQXSVc6Zrg",
+        "artist": "Kesha",
+        "track": "Party At A Rich Dude's House",
+        "tempo": 103.998,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.628,
+        "danceability": 0.674,
+        "valence": 0.552,
+        "acousticness": 0.00144,
+        "genre": [
+            "pop",
+            "synthpop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "0JiY190vktuhSGN6aqJdrt",
+        "artist": "P!nk",
+        "track": "So What",
+        "tempo": 128.93,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.903,
+        "danceability": 0.802,
+        "valence": 0.96,
+        "acousticness": 0.0011,
+        "genre": [
+            "pop",
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1gv4xPanImH17bKZ9rOveR",
+        "artist": "P!nk",
+        "track": "Raise Your Glass",
+        "tempo": 180.008,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.844,
+        "danceability": 0.284,
+        "valence": 0.551,
+        "acousticness": 0.0362,
+        "genre": [
+            "pop",
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1mKXFLRA179hdOWQBwUk9e",
+        "artist": "P!nk",
+        "track": "Just Give Me a Reason (feat. Nate Ruess)",
+        "tempo": 146.951,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.801,
+        "danceability": 0.475,
+        "valence": 0.304,
+        "acousticness": 8.63e-05,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1jF7IL57ayN4Ity3jQqGu0",
+        "artist": "P!nk",
+        "track": "Try",
+        "tempo": 120.013,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.729,
+        "danceability": 0.753,
+        "valence": 0.812,
+        "acousticness": 0.00334,
+        "genre": [
+            "pop",
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3BJe4B8zGnqEdQPMvfVjuS",
+        "artist": "Lana Del Rey",
+        "track": "Summertime Sadness",
+        "tempo": 86.02,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.626,
+        "danceability": 0.428,
+        "valence": 0.379,
+        "acousticness": 0.222,
+        "genre": [
+            "progressivehouse",
+            "deephouse"
+        ]
+    },
+    {
+        "spotify_id": "0fBSs3fRoh1yJcne77fdu9",
+        "artist": "Lana Del Rey",
+        "track": "Video Games",
+        "tempo": 72.847,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.249,
+        "danceability": 0.236,
+        "valence": 0.181,
+        "acousticness": 0.811,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2nMeu6UenVvwUktBCpLMK9",
+        "artist": "Lana Del Rey",
+        "track": "Young And Beautiful",
+        "tempo": 88.013,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.696,
+        "danceability": 0.595,
+        "valence": 0.533,
+        "acousticness": 0.276,
+        "genre": [
+            "pop",
+            "progressivehouse"
+        ]
+    },
+    {
+        "spotify_id": "4Ouhoi2lAhrLJKFzUqEzwl",
+        "artist": "Lana Del Rey",
+        "track": "Born To Die",
+        "tempo": 113.608,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.588,
+        "danceability": 0.491,
+        "valence": 0.193,
+        "acousticness": 0.0281,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5Y6nVaayzitvsD5F7nr3DV",
+        "artist": "Lana Del Rey",
+        "track": "West Coast",
+        "tempo": 107.747,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.664,
+        "danceability": 0.404,
+        "valence": 0.0949,
+        "acousticness": 0.542,
+        "genre": [
+            "drumnbass",
+            "deephouse"
+        ]
+    },
+    {
+        "spotify_id": "2vtmY2mSccRzKGjtcHSzI3",
+        "artist": "Lana Del Rey",
+        "track": "Diet Mountain Dew",
+        "tempo": 111.968,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.654,
+        "danceability": 0.565,
+        "valence": 0.235,
+        "acousticness": 0.0542,
+        "genre": [
+            "pop",
+            "altpop"
+        ]
+    },
+    {
+        "spotify_id": "1NZs6n6hl8UuMaX0UC0YTz",
+        "artist": "Lana Del Rey",
+        "track": "Brooklyn Baby",
+        "tempo": 113.986,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.416,
+        "danceability": 0.324,
+        "valence": 0.151,
+        "acousticness": 0.262,
+        "genre": [
+            "electrohouse"
+        ]
+    },
+    {
+        "spotify_id": "3taCbWWTilb7eNMsAzOBq4",
+        "artist": "Lana Del Rey",
+        "track": "Radio",
+        "tempo": 115.001,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.909,
+        "danceability": 0.71,
+        "valence": 0.648,
+        "acousticness": 0.0135,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0Oqc0kKFsQ6MhFOLBNZIGX",
+        "artist": "Lana Del Rey",
+        "track": "Doin' Time",
+        "tempo": 120.021,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.58,
+        "danceability": 0.782,
+        "valence": 0.66,
+        "acousticness": 0.0114,
+        "genre": [
+            "pop",
+            "altpop"
+        ]
+    },
+    {
+        "spotify_id": "20I6sIOMTCkB6w7ryavxtO",
+        "artist": "Carly Rae Jepsen",
+        "track": "Call Me Maybe",
+        "tempo": 122.062,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.805,
+        "danceability": 0.62,
+        "valence": 0.586,
+        "acousticness": 0.00564,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1tRtELNORw5rijldY4JoWU",
+        "artist": "Carly Rae Jepsen",
+        "track": "I Really Like You",
+        "tempo": 119.027,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.719,
+        "danceability": 0.564,
+        "valence": 0.251,
+        "acousticness": 0.0126,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0Jirkb7LGNWyVhKOsKFdZ2",
+        "artist": "Carly Rae Jepsen",
+        "track": "Run Away With Me",
+        "tempo": 113.972,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.628,
+        "danceability": 0.761,
+        "valence": 0.271,
+        "acousticness": 0.0688,
+        "genre": [
+            "house",
+            "dancepop",
+            "pop",
+            "synthpop",
+            "deephouse"
+        ]
+    },
+    {
+        "spotify_id": "6EJiVf7U0p1BBfs0qqeb1f",
+        "artist": "Carly Rae Jepsen",
+        "track": "Cut To The Feeling",
+        "tempo": 109.544,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.802,
+        "danceability": 0.694,
+        "valence": 0.513,
+        "acousticness": 0.114,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5DerNWKZt27S4dD6jjgg92",
+        "artist": "Carly Rae Jepsen",
+        "track": "Your Type",
+        "tempo": 79.978,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.475,
+        "danceability": 0.575,
+        "valence": 0.491,
+        "acousticness": 0.135,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5ucGbZG1Eg3358FICjMVur",
+        "artist": "Carly Rae Jepsen",
+        "track": "Emotion",
+        "tempo": 112.042,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.91,
+        "danceability": 0.703,
+        "valence": 0.829,
+        "acousticness": 0.0121,
+        "genre": [
+            "pop",
+            "synthpop"
+        ]
+    },
+    {
+        "spotify_id": "4V2qQZUW2Hcs4zFKjKafs2",
+        "artist": "Carly Rae Jepsen",
+        "track": "Gimmie Love",
+        "tempo": 92.033,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.813,
+        "danceability": 0.628,
+        "valence": 0.49,
+        "acousticness": 0.00246,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6EZLcNpHEMWjVm7tfU90em",
+        "artist": "Carly Rae Jepsen",
+        "track": "Boy Problems",
+        "tempo": 75.024,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.857,
+        "danceability": 0.423,
+        "valence": 0.196,
+        "acousticness": 0.188,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4PijdRV622NbKXowFC5tdS",
+        "artist": "Carly Rae Jepsen",
+        "track": "All That",
+        "tempo": 144.982,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.559,
+        "danceability": 0.641,
+        "valence": 0.523,
+        "acousticness": 0.404,
+        "genre": [
+            "pop",
+            "synthpop"
+        ]
+    },
+    {
+        "spotify_id": "0WbMK4wrZ1wFSty9F7FCgu",
+        "artist": "Chappell Roan",
+        "track": "Good Luck, Babe!",
+        "tempo": 118.01,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.704,
+        "danceability": 0.771,
+        "valence": 0.55,
+        "acousticness": 0.0835,
+        "genre": [
+            "pop",
+            "rock",
+            "poprock"
+        ]
+    },
+    {
+        "spotify_id": "4xdBrk0nFZaP54vvZj0yx7",
+        "artist": "Chappell Roan",
+        "track": "HOT TO GO!",
+        "tempo": 108.548,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.808,
+        "danceability": 0.554,
+        "valence": 0.372,
+        "acousticness": 0.214,
+        "genre": [
+            "pop",
+            "altpop"
+        ]
+    },
+    {
+        "spotify_id": "1k2pQc5i348DCHwbn5KTdc",
+        "artist": "Chappell Roan",
+        "track": "Pink Pony Club",
+        "tempo": 124.041,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.82,
+        "danceability": 0.657,
+        "valence": 0.709,
+        "acousticness": 0.0176,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7FOgcfdz9Nx5V9lCNXdBYv",
+        "artist": "Chappell Roan",
+        "track": "Red Wine Supernova",
+        "tempo": 116.712,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.582,
+        "danceability": 0.7,
+        "valence": 0.785,
+        "acousticness": 0.0502,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3WSOUb3U7tqURbBSgZTrZX",
+        "artist": "Chappell Roan",
+        "track": "Casual",
+        "tempo": 131.008,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.411,
+        "danceability": 0.508,
+        "valence": 0.34,
+        "acousticness": 0.226,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "53IRnAWx13PYmoVYtemUBS",
+        "artist": "Chappell Roan",
+        "track": "Femininomenon",
+        "tempo": 139.982,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.757,
+        "danceability": 0.742,
+        "valence": 0.957,
+        "acousticness": 0.0187,
+        "genre": [
+            "pop",
+            "synthpop"
+        ]
+    },
+    {
+        "spotify_id": "32fSZSbxeVoiZShMQKLc6Z",
+        "artist": "Chappell Roan",
+        "track": "My Kink Is Karma",
+        "tempo": 86.727,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.599,
+        "danceability": 0.555,
+        "valence": 0.415,
+        "acousticness": 0.00925,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2SsY5k7UWFqgye3PUMG3Oq",
+        "artist": "Chappell Roan",
+        "track": "The Subway",
+        "tempo": 160.586,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.468,
+        "danceability": 0.354,
+        "valence": 0.281,
+        "acousticness": 0.4,
+        "genre": [
+            "pop",
+            "country"
+        ]
+    },
+    {
+        "spotify_id": "4LKYOetuIF5c9XjeLBL9av",
+        "artist": "Chappell Roan",
+        "track": "Naked In Manhattan",
+        "tempo": 106.719,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.65,
+        "danceability": 0.61,
+        "valence": 0.507,
+        "acousticness": 0.399,
+        "genre": [
+            "pop",
+            "synthpop",
+            "dancepop"
+        ]
+    },
+    {
+        "spotify_id": "7ne4VBA60CxGM75vw0EYad",
+        "artist": "Gracie Abrams",
+        "track": "That’s So True",
+        "tempo": 166.337,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.608,
+        "danceability": 0.31,
+        "valence": 0.503,
+        "acousticness": 0.426,
+        "genre": [
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2bl81llf715VEEbAx03yvB",
+        "artist": "Gracie Abrams",
+        "track": "Close To You",
+        "tempo": 119.896,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.584,
+        "danceability": 0.654,
+        "valence": 0.468,
+        "acousticness": 0.536,
+        "genre": [
+            "pop",
+            "indiepop",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "0gZGUAO42F1HmzZWHNPGAu",
+        "artist": "Gracie Abrams",
+        "track": "Risk",
+        "tempo": 125.056,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.671,
+        "danceability": 0.755,
+        "valence": 0.409,
+        "acousticness": 0.514,
+        "genre": [
+            "pop",
+            "indiepop",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "0PLhwCmQ7cC3ThRGPn3HxF",
+        "artist": "Gracie Abrams",
+        "track": "Mess It Up",
+        "tempo": 180.104,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.426,
+        "danceability": 0.386,
+        "valence": 0.261,
+        "acousticness": 0.807,
+        "genre": [
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "35IcAVSMsU9qzHfpPbvC8A",
+        "artist": "Gracie Abrams",
+        "track": "Feels Like",
+        "tempo": 113.015,
+        "key": 3,
+        "mode": 0,
+        "energy": 0.496,
+        "danceability": 0.716,
+        "valence": 0.559,
+        "acousticness": 0.514,
+        "genre": [
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "33uKUpu9ZXsHhcxRLoxnWI",
+        "artist": "Gracie Abrams",
+        "track": "I know it won't work",
+        "tempo": 102.043,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.553,
+        "danceability": 0.533,
+        "valence": 0.391,
+        "acousticness": 0.498,
+        "genre": [
+            "indiepop",
+            "pop",
+            "rock",
+            "acoustic"
+        ]
+    },
+    {
+        "spotify_id": "5meVa5klVlJalupZTvv5XX",
+        "artist": "Gracie Abrams",
+        "track": "21",
+        "tempo": 121.966,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.727,
+        "danceability": 0.59,
+        "valence": 0.356,
+        "acousticness": 0.0259,
+        "genre": [
+            "pop",
+            "altpop"
+        ]
+    },
+    {
+        "spotify_id": "0hhzNPE68LWLfgZwdpxVdR",
+        "artist": "Gracie Abrams",
+        "track": "us. (feat. Taylor Swift)",
+        "tempo": 123.128,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.642,
+        "danceability": 0.533,
+        "valence": 0.488,
+        "acousticness": 0.221,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "48vIfHaK7by6x0T6ucpODL",
+        "artist": "Madison Beer",
+        "track": "make you mine",
+        "tempo": 75.217,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.461,
+        "danceability": 0.375,
+        "valence": 0.233,
+        "acousticness": 0.627,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5ajjAnNRh8bxFvaVHzpPjh",
+        "artist": "Madison Beer",
+        "track": "Reckless",
+        "tempo": 109.885,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.455,
+        "danceability": 0.445,
+        "valence": 0.151,
+        "acousticness": 0.731,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4PV0uE5pZSh44E3NqNNDEH",
+        "artist": "Madison Beer",
+        "track": "Selfish",
+        "tempo": 144.99,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.483,
+        "danceability": 0.617,
+        "valence": 0.176,
+        "acousticness": 0.702,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3A02hWQ2ebOFDWSbAMNnpw",
+        "artist": "Madison Beer",
+        "track": "bittersweet",
+        "tempo": 121.122,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.699,
+        "danceability": 0.638,
+        "valence": 0.57,
+        "acousticness": 0.0203,
+        "genre": [
+            "pop",
+            "altpop"
+        ]
+    },
+    {
+        "spotify_id": "2uvLpXs8bZAjee0l3KNnhx",
+        "artist": "Madison Beer",
+        "track": "yes baby",
+        "tempo": 101.013,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.595,
+        "danceability": 0.742,
+        "valence": 0.431,
+        "acousticness": 0.15,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2diyn0LGRfXprGer1atyMH",
+        "artist": "Madison Beer",
+        "track": "Home To Another One",
+        "tempo": 96.992,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.532,
+        "danceability": 0.798,
+        "valence": 0.372,
+        "acousticness": 0.386,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6XiqdnMk2LLbmybmyx30jD",
+        "artist": "Madison Beer",
+        "track": "BOYSHIT",
+        "tempo": 103.209,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.7,
+        "danceability": 0.597,
+        "valence": 0.553,
+        "acousticness": 0.4,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "330CwDQh6mZ9yAWnJ1svDL",
+        "artist": "Madison Beer",
+        "track": "Dead",
+        "tempo": 132.994,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.522,
+        "danceability": 0.677,
+        "valence": 0.458,
+        "acousticness": 0.0998,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3jVtllWS5CFFWLQng8sKsr",
+        "artist": "Tinashe",
+        "track": "2 On (feat. ScHoolboy Q)",
+        "tempo": 100.002,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.411,
+        "danceability": 0.931,
+        "valence": 0.515,
+        "acousticness": 0.165,
+        "genre": [
+            "rnb",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6NjWCIYu1W8xa3HIvcIhd4",
+        "artist": "Tinashe",
+        "track": "Nasty",
+        "tempo": 109.971,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.619,
+        "danceability": 0.628,
+        "valence": 0.177,
+        "acousticness": 0.735,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "6sg284TefDkBpFh0317Agp",
+        "artist": "Tinashe",
+        "track": "Needs",
+        "tempo": 134.102,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.871,
+        "danceability": 0.546,
+        "valence": 0.46,
+        "acousticness": 0.00136,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "56OhfmcHVTQZA6OjjgIbx5",
+        "artist": "Tinashe",
+        "track": "Save Room For Us",
+        "tempo": 99.024,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.42,
+        "danceability": 0.78,
+        "valence": 0.0952,
+        "acousticness": 0.0314,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "2qB5DAgRdacJUtayEnf3ip",
+        "artist": "Tinashe",
+        "track": "Talk To Me Nice",
+        "tempo": 172.01,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.638,
+        "danceability": 0.497,
+        "valence": 0.77,
+        "acousticness": 0.0467,
+        "genre": [
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "6szioGVkC3UrHp1aeO7Ige",
+        "artist": "Tinashe",
+        "track": "Perfect Crime",
+        "tempo": 105.997,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.822,
+        "danceability": 0.613,
+        "valence": 0.567,
+        "acousticness": 0.0092,
+        "genre": [
+            "pop",
+            "trap",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "6qtO5pbmn1BTlUiZdtfZU7",
+        "artist": "Tinashe",
+        "track": "X",
+        "tempo": 75.515,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.49,
+        "danceability": 0.803,
+        "valence": 0.207,
+        "acousticness": 0.61,
+        "genre": [
+            "dancepop",
+            "pop",
+            "trap",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "3vkCueOmm7xQDoJ17W1Pm3",
+        "artist": "Mitski",
+        "track": "My Love Mine All Mine",
+        "tempo": 101.986,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.448,
+        "danceability": 0.535,
+        "valence": 0.32,
+        "acousticness": 0.00262,
+        "genre": [
+            "indiepop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2Co0IjcLTSHMtodwD4gzfg",
+        "artist": "Mitski",
+        "track": "I Bet on Losing Dogs",
+        "tempo": 82.048,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.493,
+        "danceability": 0.398,
+        "valence": 0.412,
+        "acousticness": 0.00347,
+        "genre": [
+            "rock",
+            "indierock"
+        ]
     }
 ]

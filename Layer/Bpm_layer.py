@@ -1,7 +1,5 @@
 import json
 import random
-from Make_Raw_Data import Main_API as Make_Raw_Data_API
-from Add_New_Data import Add_New_Data_Main as Add_New_Data_Main
 
 
 
@@ -43,20 +41,9 @@ def Bpm_Layer(input_data, count):
 
     normalize_input_data = normalize(input_data)
 
-    if normalize_input_data not in track_name_index:
-        print("새로운 노래 추가 중")
-
-        new_track = Make_Raw_Data_API.main(normalize_input_data)
-
-        if new_track is None:
-            print("해당 노래 없음")
-            raise ValueError("해당 노래가 없습니다.")
-
-        Add_New_Data_Main.Main(new_track, normalize_input_data)
-        print("노래 추가 완료")
-
-        # 새 노래가 JSON 파일에 추가되었으므로 다시 읽기
-        track_name_index, bpm_dataset, track_index = load_bpm_data()
+    if normalize_input_data not in track_name_index:           
+        print("해당 노래 없음")
+        raise ValueError("해당 노래가 없습니다.")
 
     track_spotify_id = track_name_index[normalize_input_data]
     track_data = track_index[track_spotify_id]

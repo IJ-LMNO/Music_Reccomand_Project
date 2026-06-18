@@ -360,7 +360,7 @@
 
                         <div class="setting-row">
                             <label for="keyPenalty">Key가 다를 때 감점값</label>
-                            <input type="number" id="keyPenalty" min="0" max="0.5" step="0.05" value="0.3" />
+                            <input type="number" id="keyPenalty" min="1" max="5" step="1" value="1" />
                             <div class="setting-help">
                                 Key가 다를 때 최종 점수에서 감점할 값.
                             </div>
@@ -368,7 +368,7 @@
 
                         <div class="setting-row">
                             <label for="modeBonus">Mode가 같을 때 보너스값</label>
-                            <input type="number" id="modeBonus" min="0" max="1" step="0.05" value="0.3" />
+                            <input type="number" id="modeBonus" min="1" max="5" step="1" value="1" />
                             <div class="setting-help">
                                 Major/Minor mode가 같을 때 추가할 점수.
                             </div>
@@ -440,13 +440,13 @@
                 return null;
             }
 
-            if (keyPenalty < 0 || keyPenalty > 1) {
-                alert("Key 감점값은 0 ~ 1 사이여야 합니다.");
+            if (keyPenalty < 1 || keyPenalty > 5) {
+                alert("Key 감점값은 1 ~ 5 사이여야 합니다.");
                 return null;
             }
 
-            if (modeBonus < 0 || modeBonus > 1) {
-                alert("Mode 보너스값은 0 ~ 1 사이여야 합니다.");
+            if (modeBonus < 1  || modeBonus > 5) {
+                alert("Mode 보너스값은 1 ~ 5 사이여야 합니다.");
                 return null;
             }
 
