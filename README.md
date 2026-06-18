@@ -38,6 +38,6 @@ frontend HTML 파일을 통해 음악 검색
 --------------------------------------------------------------------------------
 Requirement
 
-flask
-flask-cors
+flask,
+flask-cors,
 requests
