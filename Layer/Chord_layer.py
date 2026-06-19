@@ -217,6 +217,11 @@ def Give_penalty(result, after_genre_layer, input_track, key, mode):
             )
         )
 
+        #-----------------------
+        print(return_result)
+        print()
+        #-------------------
+
     return return_result
 
 

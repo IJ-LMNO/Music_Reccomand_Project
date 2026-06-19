@@ -15574,5 +15574,2160 @@
             "rock",
             "indierock"
         ]
+    },
+    {
+        "spotify_id": "7cgu4JBW3hq1GwTM1ilkKQ",
+        "artist": "Tove Lo",
+        "track": "Talking Body",
+        "tempo": 120.028,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.837,
+        "danceability": 0.755,
+        "valence": 0.714,
+        "acousticness": 0.0991,
+        "genre": [
+            "pop",
+            "electronic",
+            "vocal"
+        ]
+    },
+    {
+        "spotify_id": "0HPD5WQqrq7wPWR7P7Dw1i",
+        "artist": "Kesha",
+        "track": "TiK ToK",
+        "tempo": 138.014,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.845,
+        "danceability": 0.588,
+        "valence": 0.745,
+        "acousticness": 0.00869,
+        "genre": [
+            "house",
+            "electronic",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "3LUWWox8YYykohBbHUrrxd",
+        "artist": "Kesha",
+        "track": "We R Who We R",
+        "tempo": 140.004,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.734,
+        "danceability": 0.688,
+        "valence": 0.46,
+        "acousticness": 0.00462,
+        "genre": [
+            "pop",
+            "electrohouse",
+            "house",
+            "electronic",
+            "tribalhouse"
+        ]
+    },
+    {
+        "spotify_id": "2hns6Dv29Yrg68AVTJiAyA",
+        "artist": "P!nk",
+        "track": "Who Knew - Edit",
+        "tempo": 91.026,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.596,
+        "danceability": 0.795,
+        "valence": 0.506,
+        "acousticness": 0.0823,
+        "genre": [
+            "postgrunge",
+            "powerpop",
+            "poprock",
+            "pink"
+        ]
+    },
+    {
+        "spotify_id": "7cNz65PfCatRXoX7QtqM2A",
+        "artist": "Lana Del Rey",
+        "track": "National Anthem",
+        "tempo": 119.999,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.761,
+        "danceability": 0.736,
+        "valence": 0.114,
+        "acousticness": 0.0966,
+        "genre": [
+            "pop",
+            "triphop",
+            "house",
+            "electronic",
+            "electro"
+        ]
+    },
+    {
+        "spotify_id": "5KtvumPgVZmt8wg9xONE0T",
+        "artist": "Chappell Roan",
+        "track": "Picture You",
+        "tempo": 139.054,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.698,
+        "danceability": 0.658,
+        "valence": 0.456,
+        "acousticness": 0.433,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "51rfRCiUSvxXlCSCfIztBy",
+        "artist": "Gracie Abrams",
+        "track": "I Love You, I'm Sorry",
+        "tempo": 96.992,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.532,
+        "danceability": 0.798,
+        "valence": 0.372,
+        "acousticness": 0.386,
+        "genre": [
+            "pop",
+            "indiepop",
+            "electronic",
+            "synthpop"
+        ]
+    },
+    {
+        "spotify_id": "4nyF5lmSziBAt7ESAUjpbx",
+        "artist": "Gracie Abrams",
+        "track": "I miss you, I’m sorry",
+        "tempo": 122.971,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.548,
+        "danceability": 0.701,
+        "valence": 0.509,
+        "acousticness": 0.103,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "4y3g40TWe7fCWCayJZuGvw",
+        "artist": "Madison Beer",
+        "track": "Good In Goodbye",
+        "tempo": 115.94,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.406,
+        "danceability": 0.53,
+        "valence": 0.338,
+        "acousticness": 0.656,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1X4ZkhlRRohkV33cITaJYs",
+        "artist": "Madison Beer",
+        "track": "Baby",
+        "tempo": 105.997,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.822,
+        "danceability": 0.613,
+        "valence": 0.567,
+        "acousticness": 0.0092,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "7D8aQaRzoi9Qzz5yerVK5b",
+        "artist": "Tinashe",
+        "track": "Throw A Fit",
+        "tempo": 109.885,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.455,
+        "danceability": 0.445,
+        "valence": 0.151,
+        "acousticness": 0.731,
+        "genre": [
+            "pop",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "5pOrrAIvLrPa5lpKebckRS",
+        "artist": "Tinashe",
+        "track": "Link Up",
+        "tempo": 160.586,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.468,
+        "danceability": 0.354,
+        "valence": 0.281,
+        "acousticness": 0.4,
+        "genre": [
+            "pop",
+            "funk/soul",
+            "trap",
+            "contemporaryr&b",
+            "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "2hns6Dv29Yrg68AVTJiAyA",
+        "artist": "P!nk",
+        "track": "Who Knew - Edit",
+        "tempo": 140.004,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.734,
+        "danceability": 0.688,
+        "valence": 0.46,
+        "acousticness": 0.00462,
+        "genre": [
+            "postgrunge",
+            "powerpop",
+            "poprock",
+            "pink"
+        ]
+    },
+    {
+        "spotify_id": "1mKXFLRA179hdOWQBwUk9e",
+        "artist": "P!nk",
+        "track": "Just Give Me a Reason (feat. Nate Ruess)",
+        "tempo": 91.026,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.596,
+        "danceability": 0.795,
+        "valence": 0.506,
+        "acousticness": 0.0823,
+        "genre": [
+            "pop",
+            "p!nk"
+        ]
+    },
+    {
+        "spotify_id": "1kXmApTm4wonqscYBoLwxj",
+        "artist": "Tinashe",
+        "track": "All Hands on Deck",
+        "tempo": 128.93,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.903,
+        "danceability": 0.802,
+        "valence": 0.96,
+        "acousticness": 0.0011,
+        "genre": [
+            "funk/soul",
+            "pop",
+            "contemporaryr&b"
+        ]
+    },
+    {
+        "spotify_id": "3jjsRKEsF42ccXf8kWR3nu",
+        "artist": "Mitski",
+        "track": "Washing Machine Heart",
+        "tempo": 113.608,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.588,
+        "danceability": 0.491,
+        "valence": 0.193,
+        "acousticness": 0.0281,
+        "genre": [
+            "indierock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3sslYZcFKtUvIEWN9lADgr",
+        "artist": "Mitski",
+        "track": "First Love/Late Spring",
+        "tempo": 128.999,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.44,
+        "danceability": 0.377,
+        "valence": 0.224,
+        "acousticness": 0.931,
+        "genre": [
+            "folk,world,&country",
+            "indierock",
+            "lofi",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3pANfZVFdtuVnJsE6xa5Ox",
+        "artist": "Mitski",
+        "track": "Me and My Husband",
+        "tempo": 131.024,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.749,
+        "danceability": 0.6,
+        "valence": 0.485,
+        "acousticness": 0.0467,
+        "genre": [
+            "indierock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7fd3aMiuwHWKsTdZafjOfZ",
+        "artist": "Mitski",
+        "track": "A Pearl",
+        "tempo": 76.235,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.342,
+        "danceability": 0.424,
+        "valence": 0.124,
+        "acousticness": 0.838,
+        "genre": [
+            "indierock",
+            "lofi",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3XCveEutwTaDiekRkkfdp9",
+        "artist": "Mitski",
+        "track": "Liquid Smooth",
+        "tempo": 84.551,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.637,
+        "danceability": 0.295,
+        "valence": 0.221,
+        "acousticness": 0.0496,
+        "genre": [
+            "pop",
+            "indiepop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7FHj19QQigvMH1onMYRNLn",
+        "artist": "Mitski",
+        "track": "I Want You",
+        "tempo": 172.01,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.638,
+        "danceability": 0.497,
+        "valence": 0.77,
+        "acousticness": 0.0467,
+        "genre": [
+            "alternativerock",
+            "pop",
+            "indiepop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "25Syi9wnfn6ZGAmiOBypPq",
+        "artist": "Phoebe Bridgers",
+        "track": "Motion Sickness",
+        "tempo": 154.909,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.243,
+        "danceability": 0.339,
+        "valence": 0.183,
+        "acousticness": 0.869,
+        "genre": [
+            "folk,world,&country",
+            "indierock",
+            "folk",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "21uFPefbgeR3QLVJWATlrr",
+        "artist": "Phoebe Bridgers",
+        "track": "Scott Street",
+        "tempo": 111.826,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.323,
+        "danceability": 0.323,
+        "valence": 0.256,
+        "acousticness": 0.33,
+        "genre": [
+            "folk,world,&country",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "0pJW1Xw3aY4Eh6k5iuBkfI",
+        "artist": "Phoebe Bridgers",
+        "track": "I Know The End",
+        "tempo": 131.702,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.292,
+        "danceability": 0.339,
+        "valence": 0.0655,
+        "acousticness": 0.514,
+        "genre": [
+            "folk,world,&country",
+            "indierock",
+            "folk",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "4vjvx7Zxkb4AltGcZ0BBvI",
+        "artist": "Phoebe Bridgers",
+        "track": "Kyoto",
+        "tempo": 134.944,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.417,
+        "danceability": 0.508,
+        "valence": 0.483,
+        "acousticness": 0.77,
+        "genre": [
+            "folk",
+            "folk,world,&country",
+            "indierock",
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "5BN59BDczcpxstFKILIH0q",
+        "artist": "Phoebe Bridgers",
+        "track": "Savior Complex",
+        "tempo": 107.021,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.546,
+        "danceability": 0.651,
+        "valence": 0.623,
+        "acousticness": 0.774,
+        "genre": [
+            "pop",
+            "indierock",
+            "indiepop",
+            "modern",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "5bIgzvxvlefRUCQK9JPocF",
+        "artist": "Phoebe Bridgers",
+        "track": "Garden Song",
+        "tempo": 142.087,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.488,
+        "danceability": 0.665,
+        "valence": 0.477,
+        "acousticness": 0.272,
+        "genre": [
+            "folk,world,&country",
+            "indierock",
+            "folk",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "04mAOoQNsXmDJlyupJwmkO",
+        "artist": "Phoebe Bridgers",
+        "track": "Waiting Room",
+        "tempo": 169.969,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.885,
+        "danceability": 0.588,
+        "valence": 0.544,
+        "acousticness": 0.114,
+        "genre": [
+            "folk",
+            "pop",
+            "indiepop",
+            "classical"
+        ]
+    },
+    {
+        "spotify_id": "5Z0AM9HW78XIyZqF2BPasr",
+        "artist": "FLETCHER",
+        "track": "Bitter",
+        "tempo": 159.982,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.617,
+        "danceability": 0.579,
+        "valence": 0.362,
+        "acousticness": 0.5,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1Pj5oOFzLYELyyeh1IYRK0",
+        "artist": "FLETCHER",
+        "track": "Undrunk",
+        "tempo": 78.012,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.729,
+        "danceability": 0.518,
+        "valence": 0.271,
+        "acousticness": 0.137,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6eutgX6jfXAsjTXgQtCtYV",
+        "artist": "FLETCHER",
+        "track": "girls girls girls",
+        "tempo": 136.002,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.594,
+        "danceability": 0.724,
+        "valence": 0.413,
+        "acousticness": 0.393,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4PFx9vhlWnpB4Qcgr3AR4O",
+        "artist": "FLETCHER",
+        "track": "Healing",
+        "tempo": 83.336,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.579,
+        "danceability": 0.442,
+        "valence": 0.546,
+        "acousticness": 0.489,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "1UmFLqmTmgHoSyvss6Q7gw",
+        "artist": "FLETCHER",
+        "track": "Serial Heartbreaker",
+        "tempo": 129.753,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.289,
+        "danceability": 0.531,
+        "valence": 0.12,
+        "acousticness": 0.339,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "0qbFoKlLA7v2ECDJDTXExs",
+        "artist": "FLETCHER",
+        "track": "Eras Of Us",
+        "tempo": 150.073,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.557,
+        "danceability": 0.652,
+        "valence": 0.483,
+        "acousticness": 0.74,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "2qxmye6gAegTMjLKEBoR3d",
+        "artist": "Alec Benjamin",
+        "track": "Let Me Down Slowly",
+        "tempo": 75.473,
+        "key": 5,
+        "mode": 0,
+        "energy": 0.645,
+        "danceability": 0.656,
+        "valence": 0.669,
+        "acousticness": 0.504,
+        "genre": [
+            "pop",
+            "indiepop",
+            "vocal"
+        ]
+    },
+    {
+        "spotify_id": "4IhKLu7Vk3j2TLmnFPl6To",
+        "artist": "Alec Benjamin",
+        "track": "Water Fountain",
+        "tempo": 150.267,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.569,
+        "danceability": 0.655,
+        "valence": 0.44,
+        "acousticness": 0.716,
+        "genre": [
+            "pop",
+            "indiepop",
+            "vocal"
+        ]
+    },
+    {
+        "spotify_id": "7pT6WSg4PCt4mr5ZFyUfsF",
+        "artist": "Alec Benjamin",
+        "track": "If We Have Each Other",
+        "tempo": 173.094,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.577,
+        "danceability": 0.656,
+        "valence": 0.861,
+        "acousticness": 0.698,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0WHi11uzahqpEtPGYCW6oQ",
+        "artist": "Alec Benjamin",
+        "track": "If I Killed Someone For You",
+        "tempo": 133.975,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.504,
+        "danceability": 0.723,
+        "valence": 0.551,
+        "acousticness": 0.388,
+        "genre": [
+            "pop",
+            "indiepop",
+            "vocal"
+        ]
+    },
+    {
+        "spotify_id": "60cYr5uuMoxvyuIx45rGEW",
+        "artist": "Alec Benjamin",
+        "track": "Boy In The Bubble",
+        "tempo": 112.482,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.649,
+        "danceability": 0.416,
+        "valence": 0.474,
+        "acousticness": 0.655,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2W0AJEbIC2vdZTV2nVSAsg",
+        "artist": "Alec Benjamin",
+        "track": "Outrunning Karma",
+        "tempo": 143.982,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.578,
+        "danceability": 0.817,
+        "valence": 0.851,
+        "acousticness": 0.224,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2hGQDYmjkwTS0J7Q2bM2sF",
+        "artist": "Alec Benjamin",
+        "track": "Mind Is A Prison",
+        "tempo": 121.15,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.606,
+        "danceability": 0.448,
+        "valence": 0.483,
+        "acousticness": 0.577,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0uLPKDuIhkIhttiwezNdiG",
+        "artist": "Alec Benjamin",
+        "track": "Jesus in LA",
+        "tempo": 129.92,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.617,
+        "danceability": 0.579,
+        "valence": 0.152,
+        "acousticness": 0.0756,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "2PWTZV5znjLtZC5T1EVJvL",
+        "artist": "JVKE",
+        "track": "this is what falling in love feels like",
+        "tempo": 132.052,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.544,
+        "danceability": 0.571,
+        "valence": 0.216,
+        "acousticness": 0.453,
+        "genre": [
+            "pop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "6G9YlbU3ByPJQvOFDRdwyM",
+        "artist": "JVKE",
+        "track": "her",
+        "tempo": 120.043,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.504,
+        "danceability": 0.88,
+        "valence": 0.476,
+        "acousticness": 0.0532,
+        "genre": [
+            "beautiful"
+        ]
+    },
+    {
+        "spotify_id": "4RxdAzEmkPXTiIU6ULLoXh",
+        "artist": "JVKE",
+        "track": "this is what heartbreak feels like",
+        "tempo": 143.728,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.589,
+        "danceability": 0.434,
+        "valence": 0.582,
+        "acousticness": 0.932,
+        "genre": [
+            "pop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "6KxgptZSrQC4Vv21ZBOG7S",
+        "artist": "JVKE",
+        "track": "golden hour - Fujii Kaze Remix",
+        "tempo": 141.28,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.321,
+        "danceability": 0.483,
+        "valence": 0.148,
+        "acousticness": 0.82,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "0vLUcf0D21qANv4C2ES7Ay",
+        "artist": "JVKE",
+        "track": "Upside Down",
+        "tempo": 79.445,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.441,
+        "danceability": 0.238,
+        "valence": 0.164,
+        "acousticness": 0.912,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "5GpYt1p4z2EPVKv5t7XDof",
+        "artist": "JVKE",
+        "track": "this is what sadness feels like",
+        "tempo": 109.991,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.474,
+        "danceability": 0.707,
+        "valence": 0.538,
+        "acousticness": 0.578,
+        "genre": [
+            "pop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "7MGUDGEQpcqf29gWAmJyy4",
+        "artist": "d4vd",
+        "track": "Sleep Well",
+        "tempo": 109.25,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.549,
+        "danceability": 0.445,
+        "valence": 0.218,
+        "acousticness": 0.0703,
+        "genre": [
+            "hypnagogicpop",
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "51TCxtQ1u4Qi655ekjDCZD",
+        "artist": "d4vd",
+        "track": "Feel It",
+        "tempo": 176.009,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.714,
+        "danceability": 0.432,
+        "valence": 0.322,
+        "acousticness": 0.0876,
+        "genre": [
+            "stage&screen",
+            "soundtrack",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "3SAga35lAPYdjj3qyfEsCF",
+        "artist": "d4vd",
+        "track": "Feel It (From “Invincible”)",
+        "tempo": 120.509,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.593,
+        "danceability": 0.565,
+        "valence": 0.429,
+        "acousticness": 0.0288,
+        "genre": [
+            "stage&screen",
+            "soundtrack",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "32GHYtVVAsYNQGafHrrRxv",
+        "artist": "d4vd",
+        "track": "Take Me To The Sun",
+        "tempo": 101.358,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.508,
+        "danceability": 0.539,
+        "valence": 0.227,
+        "acousticness": 0.727,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "0T5iIrXA4p5GsubkhuBIKV",
+        "artist": "Stephen Sanchez",
+        "track": "Until I Found You",
+        "tempo": 101.19,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.55,
+        "danceability": 0.551,
+        "valence": 0.342,
+        "acousticness": 0.777,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "1Y3LN4zO1Edc2EluIoSPJN",
+        "artist": "Stephen Sanchez",
+        "track": "Until I Found You (with Em Beihold) - Em Beihold Version",
+        "tempo": 178.182,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.734,
+        "danceability": 0.446,
+        "valence": 0.545,
+        "acousticness": 8.24e-06,
+        "genre": [
+            "georgia",
+            "love",
+            "ohiusedtosay",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "06vNG6CiV4k8oNA0wUUAO7",
+        "artist": "Stephen Sanchez",
+        "track": "Until I Found You - Piano Version",
+        "tempo": 121.775,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.505,
+        "danceability": 0.389,
+        "valence": 0.244,
+        "acousticness": 0.538,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "4bp4kwe29qY9PBdrEgSa53",
+        "artist": "Stephen Sanchez",
+        "track": "Be More",
+        "tempo": 74.906,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.296,
+        "danceability": 0.794,
+        "valence": 0.617,
+        "acousticness": 0.296,
+        "genre": [
+            "pop",
+            "indiepop",
+            "poprock",
+            "vocal",
+            "ballad",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "4wPKUEm0EOoyUiFtI6mz1a",
+        "artist": "Stephen Sanchez",
+        "track": "Lady by the Sea",
+        "tempo": 107.941,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.61,
+        "danceability": 0.619,
+        "valence": 0.6,
+        "acousticness": 0.0508,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "4rypm0OAHbU1IXLA8atiGE",
+        "artist": "Stephen Sanchez",
+        "track": "Hey Girl",
+        "tempo": 186.01,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.503,
+        "danceability": 0.439,
+        "valence": 0.519,
+        "acousticness": 0.284,
+        "genre": [
+            "softrock",
+            "pop",
+            "indiepop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "0vzLb0PpVkVozVRZxsCcQU",
+        "artist": "Stephen Sanchez",
+        "track": "Only Girl",
+        "tempo": 98.323,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.439,
+        "danceability": 0.227,
+        "valence": 0.104,
+        "acousticness": 0.293,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "6usohdchdzW9oML7VC4Uhk",
+        "artist": "Teddy Swims",
+        "track": "Lose Control",
+        "tempo": 159.92,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.604,
+        "danceability": 0.561,
+        "valence": 0.242,
+        "acousticness": 0.199,
+        "genre": [
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3dj4wgM3cPeuLwMNHDuBon",
+        "artist": "Teddy Swims",
+        "track": "The Door",
+        "tempo": 118.776,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.233,
+        "danceability": 0.291,
+        "valence": 0.134,
+        "acousticness": 0.88,
+        "genre": [
+            "blues",
+            "funk/soul",
+            "rhythm&blues"
+        ]
+    },
+    {
+        "spotify_id": "3nHuKdFJZm78CoeBnDcFKe",
+        "artist": "Teddy Swims",
+        "track": "Bad Dreams",
+        "tempo": 95.451,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.148,
+        "danceability": 0.603,
+        "valence": 0.228,
+        "acousticness": 0.927,
+        "genre": [
+            "blues",
+            "funk/soul",
+            "pop",
+            "rhythm&blues"
+        ]
+    },
+    {
+        "spotify_id": "0IdwfnHFfyb7zc7GFs75QQ",
+        "artist": "Teddy Swims",
+        "track": "Hammer to the Heart",
+        "tempo": 137.976,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.665,
+        "danceability": 0.514,
+        "valence": 0.411,
+        "acousticness": 0.0406,
+        "genre": [
+            "pop",
+            "soul",
+            "funk/soul",
+            "bluesrock",
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1MmNMaPzI1uZQS20RV88AT",
+        "artist": "Teddy Swims",
+        "track": "What More Can I Say",
+        "tempo": 121.291,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.626,
+        "danceability": 0.523,
+        "valence": 0.323,
+        "acousticness": 0.119,
+        "genre": [
+            "blues",
+            "funk/soul",
+            "soul"
+        ]
+    },
+    {
+        "spotify_id": "3sXWFs0hku4tR5cy54PnRz",
+        "artist": "Teddy Swims",
+        "track": "Some Things I'll Never Know",
+        "tempo": 169.925,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.358,
+        "danceability": 0.586,
+        "valence": 0.365,
+        "acousticness": 0.556,
+        "genre": [
+            "funk/soul",
+            "pop",
+            "contemporaryr&b"
+        ]
+    },
+    {
+        "spotify_id": "0mflMxspEfB0VbI1kyLiAv",
+        "artist": "Noah Kahan",
+        "track": "Stick Season",
+        "tempo": 116.002,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.665,
+        "danceability": 0.666,
+        "valence": 0.474,
+        "acousticness": 0.309,
+        "genre": [
+            "folk,world,&country",
+            "folk",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "4nHJcUtNSUVjXRnjdP29Bk",
+        "artist": "Noah Kahan",
+        "track": "You’re Gonna Go Far",
+        "tempo": 120.133,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.378,
+        "danceability": 0.662,
+        "valence": 0.207,
+        "acousticness": 0.475,
+        "genre": [
+            "pop",
+            "indiepop",
+            "altpop"
+        ]
+    },
+    {
+        "spotify_id": "4O2rRsoSPb5aN7N3tG6Y3v",
+        "artist": "Noah Kahan",
+        "track": "Northern Attitude",
+        "tempo": 121.861,
+        "key": 3,
+        "mode": 1,
+        "energy": 0.644,
+        "danceability": 0.488,
+        "valence": 0.33,
+        "acousticness": 0.132,
+        "genre": [
+            "folk,world,&country",
+            "indierock",
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "22VHOlVYBqytsrAqV8yXBK",
+        "artist": "Noah Kahan",
+        "track": "Dial Drunk (with Post Malone)",
+        "tempo": 112.108,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.606,
+        "danceability": 0.669,
+        "valence": 0.69,
+        "acousticness": 0.124,
+        "genre": [
+            "americana",
+            "folkrock",
+            "indiefolk"
+        ]
+    },
+    {
+        "spotify_id": "7ByxizhA4GgEf7Sxomxhze",
+        "artist": "Noah Kahan",
+        "track": "All My Love",
+        "tempo": 117.896,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.5,
+        "danceability": 0.664,
+        "valence": 0.801,
+        "acousticness": 0.799,
+        "genre": [
+            "folk,world,&country",
+            "folk",
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3Z2anmIVG8b1GelyeFQdnP",
+        "artist": "Noah Kahan",
+        "track": "Maine",
+        "tempo": 175.486,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.24,
+        "danceability": 0.533,
+        "valence": 0.265,
+        "acousticness": 0.729,
+        "genre": [
+            "folk,world,&country",
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "3dYD57lRAUcMHufyqn9GcI",
+        "artist": "Hozier",
+        "track": "Take Me To Church",
+        "tempo": 184.123,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.54,
+        "danceability": 0.44,
+        "valence": 0.587,
+        "acousticness": 0.407,
+        "genre": [
+            "blues",
+            "funk/soul",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "35PKfoynRpVFoAUE3D5Kc6",
+        "artist": "Hozier",
+        "track": "Work Song",
+        "tempo": 177.234,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.388,
+        "danceability": 0.433,
+        "valence": 0.262,
+        "acousticness": 0.776,
+        "genre": [
+            "folk,world,&country"
+        ]
+    },
+    {
+        "spotify_id": "4LGJ2pLDvTRnul3EcZoYkX",
+        "artist": "Hozier",
+        "track": "Like Real People Do",
+        "tempo": 82.378,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.712,
+        "danceability": 0.566,
+        "valence": 0.767,
+        "acousticness": 0.0687,
+        "genre": [
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "22sS7JkzeVeq4vOPCB6Fbj",
+        "artist": "Hozier",
+        "track": "Someone New",
+        "tempo": 90.036,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.687,
+        "danceability": 0.523,
+        "valence": 0.711,
+        "acousticness": 0.0218,
+        "genre": [
+            "blues",
+            "funk/soul",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "0bkW98npv8EsWQ2fXFzK56",
+        "artist": "Hozier",
+        "track": "From Eden",
+        "tempo": 64.895,
+        "key": 5,
+        "mode": 1,
+        "energy": 0.526,
+        "danceability": 0.397,
+        "valence": 0.497,
+        "acousticness": 0.242,
+        "genre": [
+            "folk,world,&country"
+        ]
+    },
+    {
+        "spotify_id": "4Q66chx9WzqWcLItXoZ5r4",
+        "artist": "Hozier",
+        "track": "Cherry Wine - Live",
+        "tempo": 101.487,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.111,
+        "danceability": 0.475,
+        "valence": 0.233,
+        "acousticness": 0.952,
+        "genre": [
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "0L3oQdYUvVbsOOPJSkZ3C3",
+        "artist": "Hozier",
+        "track": "Would That I",
+        "tempo": 129.071,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.664,
+        "danceability": 0.575,
+        "valence": 0.437,
+        "acousticness": 0.637,
+        "genre": [
+            "folk,world,&country",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "5xo1Gj4WTssjQgQ0w03cf2",
+        "artist": "Hozier",
+        "track": "Jackie And Wilson",
+        "tempo": 117.038,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.62,
+        "danceability": 0.741,
+        "valence": 0.934,
+        "acousticness": 0.0295,
+        "genre": [
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7uttm8Iurm5uK67Vr9G2Sp",
+        "artist": "Hozier",
+        "track": "Almost (Sweet Music)",
+        "tempo": 70.062,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.183,
+        "danceability": 0.571,
+        "valence": 0.13,
+        "acousticness": 0.914,
+        "genre": [
+            "softrock",
+            "indierock",
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "6PwjJ58I4t7Mae9xfZ9l9v",
+        "artist": "The Killers",
+        "track": "Somebody Told Me",
+        "tempo": 132.246,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.917,
+        "danceability": 0.543,
+        "valence": 0.329,
+        "acousticness": 0.00572,
+        "genre": [
+            "house",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "70wYA8oYHoMzhRRkARoMhU",
+        "artist": "The Killers",
+        "track": "When You Were Young",
+        "tempo": 130.433,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.988,
+        "danceability": 0.467,
+        "valence": 0.321,
+        "acousticness": 0.000152,
+        "genre": [
+            "synthpop",
+            "pop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "5vollujufHY0jMZxx77VWr",
+        "artist": "The Killers",
+        "track": "All These Things That I've Done",
+        "tempo": 138.081,
+        "key": 10,
+        "mode": 0,
+        "energy": 0.97,
+        "danceability": 0.497,
+        "valence": 0.689,
+        "acousticness": 9.04e-05,
+        "genre": [
+            "pop",
+            "indierock",
+            "indiepop",
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3KANrKOFYyAxfjQJHkgBdb",
+        "artist": "The Killers",
+        "track": "Smile Like You Mean It",
+        "tempo": 125.043,
+        "key": 3,
+        "mode": 0,
+        "energy": 0.965,
+        "danceability": 0.346,
+        "valence": 0.384,
+        "acousticness": 0.000461,
+        "genre": [
+            "electro",
+            "house",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "1sTsuZTdANkiFd7T34H3nb",
+        "artist": "The Killers",
+        "track": "Human",
+        "tempo": 118.106,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.702,
+        "danceability": 0.539,
+        "valence": 0.206,
+        "acousticness": 0.00245,
+        "genre": [
+            "electro",
+            "trance",
+            "electronic",
+            "house"
+        ]
+    },
+    {
+        "spotify_id": "7cX4PJz1old9fyFI8RlfgW",
+        "artist": "The Killers",
+        "track": "Read My Mind",
+        "tempo": 135.47,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.8,
+        "danceability": 0.557,
+        "valence": 0.582,
+        "acousticness": 0.00132,
+        "genre": [
+            "indierock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "60eVCXFCuw1WYswBuNZc4H",
+        "artist": "The Killers",
+        "track": "Jenny Was A Friend Of Mine",
+        "tempo": 126.996,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.925,
+        "danceability": 0.593,
+        "valence": 0.671,
+        "acousticness": 0.0148,
+        "genre": [
+            "indierock",
+            "newwave",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1z7yOTP8Y7UQsrVUAZjgQk",
+        "artist": "The Killers",
+        "track": "On Top",
+        "tempo": 80.87,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.525,
+        "danceability": 0.761,
+        "valence": 0.531,
+        "acousticness": 0.44,
+        "genre": [
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1A8SxnqRK3qabmuN2qxIpa",
+        "artist": "The Killers",
+        "track": "Spaceman",
+        "tempo": 183.114,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.369,
+        "danceability": 0.487,
+        "valence": 0.106,
+        "acousticness": 0.736,
+        "genre": [
+            "poprock",
+            "alternativerock",
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "3USxtqRwSYz57Ewm6wWRMp",
+        "artist": "Glass Animals",
+        "track": "Heat Waves",
+        "tempo": 151.988,
+        "key": 4,
+        "mode": 1,
+        "energy": 0.904,
+        "danceability": 0.525,
+        "valence": 0.803,
+        "acousticness": 0.00257,
+        "genre": [
+            "electronic",
+            "progressivehouse"
+        ]
+    },
+    {
+        "spotify_id": "1gk3FhAV07q9Jg77UxnVjX",
+        "artist": "Glass Animals",
+        "track": "Gooey",
+        "tempo": 114.048,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.961,
+        "danceability": 0.542,
+        "valence": 0.472,
+        "acousticness": 0.000128,
+        "genre": [
+            "pop",
+            "indiepop",
+            "electronic",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1LPGwuFgIzbJoShfDdw7MY",
+        "artist": "Glass Animals",
+        "track": "Youth",
+        "tempo": 96.017,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.718,
+        "danceability": 0.648,
+        "valence": 0.785,
+        "acousticness": 0.129,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "32zkKx35Et6A515oZKxDkD",
+        "artist": "Glass Animals",
+        "track": "Life Itself",
+        "tempo": 134.002,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.8,
+        "danceability": 0.714,
+        "valence": 0.589,
+        "acousticness": 0.127,
+        "genre": [
+            "pop",
+            "indiepop"
+        ]
+    },
+    {
+        "spotify_id": "5C5gvDZsl6d8bh89URfKHr",
+        "artist": "Glass Animals",
+        "track": "Pork Soda",
+        "tempo": 149.941,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.583,
+        "danceability": 0.845,
+        "valence": 0.842,
+        "acousticness": 0.114,
+        "genre": [
+            "synthpop",
+            "pop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "63OC8cNa4ZnFB3bbvbWCOc",
+        "artist": "Glass Animals",
+        "track": "Black Mambo",
+        "tempo": 108.004,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.663,
+        "danceability": 0.851,
+        "valence": 0.605,
+        "acousticness": 0.0167,
+        "genre": [
+            "downtempo",
+            "pop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "0bx6v84HtmEYFRBAOvDTgk",
+        "artist": "Glass Animals",
+        "track": "Your Love (Déjà Vu)",
+        "tempo": 102.999,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.939,
+        "danceability": 0.625,
+        "valence": 0.644,
+        "acousticness": 0.00138,
+        "genre": [
+            "pop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "40rOlDoGejXXF4B0BYsjx8",
+        "artist": "Glass Animals",
+        "track": "Tangerine",
+        "tempo": 132.507,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.608,
+        "danceability": 0.75,
+        "valence": 0.958,
+        "acousticness": 0.00165,
+        "genre": [
+            "pop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "3Wrjm47oTz2sjIgck11l5e",
+        "artist": "Måneskin",
+        "track": "Beggin'",
+        "tempo": 111.988,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.67,
+        "danceability": 0.699,
+        "valence": 0.556,
+        "acousticness": 0.0147,
+        "genre": [
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "4pt5fDVTg5GhEvEtlz9dKk",
+        "artist": "Måneskin",
+        "track": "I WANNA BE YOUR SLAVE",
+        "tempo": 96.001,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.664,
+        "danceability": 0.698,
+        "valence": 0.623,
+        "acousticness": 0.121,
+        "genre": [
+            "hardrock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "776AftMmFFAWUIEAb3lHhw",
+        "artist": "Måneskin",
+        "track": "ZITTI E BUONI",
+        "tempo": 139.914,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.821,
+        "danceability": 0.706,
+        "valence": 0.918,
+        "acousticness": 0.00164,
+        "genre": [
+            "hardrock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "4GvPlSOKfN7aXEuGW8zKUx",
+        "artist": "Måneskin",
+        "track": "GOSSIP (feat. Tom Morello)",
+        "tempo": 128.012,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.338,
+        "danceability": 0.689,
+        "valence": 0.568,
+        "acousticness": 0.349,
+        "genre": [
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1Ame8XTX6QHY0l0ahqUhgv",
+        "artist": "Måneskin",
+        "track": "THE LONELIEST",
+        "tempo": 83.996,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.701,
+        "danceability": 0.464,
+        "valence": 0.356,
+        "acousticness": 0.00892,
+        "genre": [
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "2KReCz1L5XkGIBhDncQ5VZ",
+        "artist": "Måneskin",
+        "track": "BABY SAID",
+        "tempo": 142.063,
+        "key": 1,
+        "mode": 0,
+        "energy": 0.676,
+        "danceability": 0.768,
+        "valence": 0.801,
+        "acousticness": 0.00062,
+        "genre": [
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "5UHHuxxYFnuE5KBbpl4Hzu",
+        "artist": "Måneskin",
+        "track": "HONEY (ARE U COMING?)",
+        "tempo": 124.053,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.807,
+        "danceability": 0.612,
+        "valence": 0.398,
+        "acousticness": 0.0495,
+        "genre": [
+            "poprock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7HMz8o0m7ASQ3ImFPfhWTY",
+        "artist": "Måneskin",
+        "track": "CORALINE",
+        "tempo": 93.986,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.568,
+        "danceability": 0.575,
+        "valence": 0.37,
+        "acousticness": 0.0484,
+        "genre": [
+            "hardrock",
+            "glam",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7oJ3Nb3LIY1ond1fHF3xio",
+        "artist": "Måneskin",
+        "track": "MAMMAMIA",
+        "tempo": 88.036,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.881,
+        "danceability": 0.551,
+        "valence": 0.387,
+        "acousticness": 0.186,
+        "genre": [
+            "hardrock",
+            "glam",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "2QjOHCTQ1Jl3zawyYOpxh6",
+        "artist": "The Neighbourhood",
+        "track": "Sweater Weather",
+        "tempo": 162.124,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.678,
+        "danceability": 0.363,
+        "valence": 0.321,
+        "acousticness": 0.0299,
+        "genre": [
+            "indierock",
+            "hiphop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "5E30LdtzQTGqRvNd7l6kG5",
+        "artist": "The Neighbourhood",
+        "track": "Daddy Issues",
+        "tempo": 131.012,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.715,
+        "danceability": 0.622,
+        "valence": 0.607,
+        "acousticness": 0.000982,
+        "genre": [
+            "pop",
+            "indierock",
+            "indiepop",
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "2K7xn816oNHJZ0aVqdQsha",
+        "artist": "The Neighbourhood",
+        "track": "Softcore",
+        "tempo": 139.987,
+        "key": 7,
+        "mode": 0,
+        "energy": 0.94,
+        "danceability": 0.476,
+        "valence": 0.372,
+        "acousticness": 0.00196,
+        "genre": [
+            "indierock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "7zwn1eykZtZ5LODrf7c0tS",
+        "artist": "The Neighbourhood",
+        "track": "You Get Me So High",
+        "tempo": 85.012,
+        "key": 10,
+        "mode": 1,
+        "energy": 0.521,
+        "danceability": 0.588,
+        "valence": 0.337,
+        "acousticness": 0.0678,
+        "genre": [
+            "pop",
+            "hiphop",
+            "indiepop",
+            "electronic"
+        ]
+    },
+    {
+        "spotify_id": "7brQHA2CgQpcMBiOlfiXYb",
+        "artist": "The Neighbourhood",
+        "track": "Afraid",
+        "tempo": 129.786,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.595,
+        "danceability": 0.519,
+        "valence": 0.237,
+        "acousticness": 0.00151,
+        "genre": [
+            "indierock",
+            "hiphop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "2xql0pid3EUwW38AsywxhV",
+        "artist": "The Neighbourhood",
+        "track": "Reflections",
+        "tempo": 113.983,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.594,
+        "danceability": 0.648,
+        "valence": 0.544,
+        "acousticness": 0.114,
+        "genre": [
+            "indierock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "2u0CelO5c81XS7z3dGpHbS",
+        "artist": "The Neighbourhood",
+        "track": "The Beach",
+        "tempo": 120.023,
+        "key": 8,
+        "mode": 0,
+        "energy": 0.683,
+        "danceability": 0.682,
+        "valence": 0.64,
+        "acousticness": 0.156,
+        "genre": [
+            "pop",
+            "indierock",
+            "indiepop",
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "0EfsDEYaSjGYd66Pr881nq",
+        "artist": "The Neighbourhood",
+        "track": "Cry Baby",
+        "tempo": 82.009,
+        "key": 11,
+        "mode": 0,
+        "energy": 0.708,
+        "danceability": 0.504,
+        "valence": 0.51,
+        "acousticness": 0.00112,
+        "genre": [
+            "pop",
+            "indierock",
+            "indiepop",
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "0VF7YLIxSQKyNiFL3X6MmN",
+        "artist": "The Neighbourhood",
+        "track": "Stargazing",
+        "tempo": 148.893,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.914,
+        "danceability": 0.497,
+        "valence": 0.385,
+        "acousticness": 0.126,
+        "genre": [
+            "indiepop",
+            "alternative",
+            "stargazingtheneighborhood",
+            "psychedelicpop"
+        ]
+    },
+    {
+        "spotify_id": "5naar7XewEOAjOywIp6Jjq",
+        "artist": "Wallows",
+        "track": "Remember When",
+        "tempo": 139.963,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.797,
+        "danceability": 0.636,
+        "valence": 0.965,
+        "acousticness": 0.00598,
+        "genre": [
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1pNUmVxDiE8t6P1XxcZAv8",
+        "artist": "Wallows",
+        "track": "Scrawny",
+        "tempo": 154.958,
+        "key": 6,
+        "mode": 1,
+        "energy": 0.819,
+        "danceability": 0.443,
+        "valence": 0.494,
+        "acousticness": 0.000248,
+        "genre": [
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "11zf7m4vw9Ze7cer9Nyhk1",
+        "artist": "Wallows",
+        "track": "Pleaser",
+        "tempo": 102.006,
+        "key": 7,
+        "mode": 1,
+        "energy": 0.625,
+        "danceability": 0.72,
+        "valence": 0.818,
+        "acousticness": 0.0112,
+        "genre": [
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "4gZDCOFuLCxCRWNhSEcOtJ",
+        "artist": "Wallows",
+        "track": "These Days",
+        "tempo": 108.033,
+        "key": 4,
+        "mode": 0,
+        "energy": 0.656,
+        "danceability": 0.581,
+        "valence": 0.338,
+        "acousticness": 0.00269,
+        "genre": [
+            "alternativerock",
+            "pop",
+            "altpop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "0APAKxMXB7jdDs4kw1l30y",
+        "artist": "Wallows",
+        "track": "OK",
+        "tempo": 135.739,
+        "key": 2,
+        "mode": 0,
+        "energy": 0.64,
+        "danceability": 0.245,
+        "valence": 0.105,
+        "acousticness": 0.131,
+        "genre": [
+            "pop",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "415dK4glwDO7fXxYg3np8B",
+        "artist": "Wallows",
+        "track": "Pictures of Girls",
+        "tempo": 138.008,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.816,
+        "danceability": 0.639,
+        "valence": 0.802,
+        "acousticness": 0.000985,
+        "genre": [
+            "indierock",
+            "poprock",
+            "surf",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "4BreyjJu4w5EUhTKPIQymq",
+        "artist": "Wallows",
+        "track": "Uncomfortable",
+        "tempo": 142.016,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.768,
+        "danceability": 0.395,
+        "valence": 0.251,
+        "acousticness": 0.115,
+        "genre": [
+            "alternativerock",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "6WYsZJDfUOftGVji74yYSU",
+        "artist": "i-dle",
+        "track": "TOMBOY",
+        "tempo": 104.971,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.718,
+        "danceability": 0.709,
+        "valence": 0.24,
+        "acousticness": 0.059,
+        "genre": [
+            "pop",
+            "hiphop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "7Ejqkb9YfldcLoh8B6bXgj",
+        "artist": "i-dle",
+        "track": "Nxde",
+        "tempo": 98.1,
+        "key": 9,
+        "mode": 0,
+        "energy": 0.792,
+        "danceability": 0.774,
+        "valence": 0.505,
+        "acousticness": 0.00427,
+        "genre": [
+            "pop",
+            "poprock",
+            "powerpop",
+            "kpop",
+            "poprap",
+            "vocal",
+            "rock"
+        ]
+    },
+    {
+        "spotify_id": "1mXIJLlpAEG3Vab5b21QIM",
+        "artist": "NMIXX",
+        "track": "DASH",
+        "tempo": 97.025,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.731,
+        "danceability": 0.663,
+        "valence": 0.356,
+        "acousticness": 0.00892,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "2AlNztYMWRJOg13xhUGwOj",
+        "artist": "NMIXX",
+        "track": "Roller Coaster",
+        "tempo": 116.982,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.764,
+        "danceability": 0.746,
+        "valence": 0.701,
+        "acousticness": 0.00803,
+        "genre": [
+            "pop",
+            "deephouse",
+            "ukgarage",
+            "dancepop",
+            "electronic",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "2AtshmTKGwbtCybUmYxB4u",
+        "artist": "NMIXX",
+        "track": "TANK",
+        "tempo": 158.078,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.76,
+        "danceability": 0.6,
+        "valence": 0.519,
+        "acousticness": 0.166,
+        "genre": [
+            "poprap",
+            "pop",
+            "hiphop",
+            "kpop"
+        ]
+    },
+    {
+        "spotify_id": "3zQKe6vQMBHmthdjLHnKya",
+        "artist": "NMIXX",
+        "track": "Soñar (Breaker)",
+        "tempo": 158.078,
+        "key": 6,
+        "mode": 0,
+        "energy": 0.76,
+        "danceability": 0.6,
+        "valence": 0.519,
+        "acousticness": 0.166,
+        "genre": [
+            "pop",
+            "kpop"
+        ]
     }
 ]
