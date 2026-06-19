@@ -1,5 +1,5 @@
-과제4 기말프로젝트 알고리즘
-작성자 : 202235239 김지환
+과제4 기말프로젝트 알고리즘 조사
+202235239 김지환
 
 [프로젝트명]
 음악 추천 시스템
@@ -20,6 +20,16 @@ pip install -r requirements.txt
 
 python Main.py
 
+[데이터 출처]
+
+Spotify API
+ReccoBeats API
+Discogs API
+Last.fm API
+
+수집 데이터를 전처리하여 JSON 형태로 저장 후 사용
+
+
 [폴더 구조]
 Main.py
 Layer/                   추천 레이어 코드
@@ -34,7 +44,6 @@ frontend HTML 파일을 통해 음악 검색
 [주의사항]
 사용하는 여러 API의 토큰 제공이 불가능한 관계로, 일부 기능을 막아두었기 때문에
 반드시 음악 검색 시 Track_name_index.json의 키 값 중 하나로 검색해야 함
-
 --------------------------------------------------------------------------------
 Requirement
 
