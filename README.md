@@ -1,16 +1,3 @@
-과제4 기말프로젝트 알고리즘 조사
-202235239 김지환
-
-[프로젝트명]
-음악 추천 시스템
-
-[실행 환경]
-Python 3.x
-
-[필요 라이브러리]
-flask
-flask-cors
-requests
 
 설치 명령어:
 pip install -r requirements.txt
@@ -44,11 +31,3 @@ frontend HTML 파일을 통해 음악 검색
 [주의사항]
 사용하는 여러 API의 토큰 제공이 불가능한 관계로, 일부 기능을 막아두었기 때문에
 반드시 음악 검색 시 Track_name_index.json의 키 값 중 하나로 검색해야 함
-
---------------------------------------------------------------------------------
-
-Requirement
-
-flask,
-flask-cors,
-requests
