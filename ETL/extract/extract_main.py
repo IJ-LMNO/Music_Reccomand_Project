@@ -11,10 +11,8 @@ from Music_Reccomand_Project.ETL.Extract.common.normalize import normalize
 
 ##============================================================================
 ##============================================================================
-
 BASE_DIR = Path(__file__).parent
 SPOTIFY_ACCESS_TIME_LIMIT = 1
-
 ##============================================================================
 ##============================================================================
 
@@ -72,12 +70,13 @@ def make_raw_data(quries):
     ##spotify======================================================================
     ##============================================================================
 
+    # spotify는 개별 요청 검색만을 지원
     for query in quries:
         spotify_return_query = spotify.search(query, token)
         data = spotify.match(query, spotify_return_query)
         spotify.append(data, spotify_raw_data)
 
-        ##spotify api 접근 제한 확인해야 함
+        #@@spotify api 접근 제한 확인해야 함
         time.sleep(SPOTIFY_ACCESS_TIME_LIMIT)
 
     ##============================================================================
@@ -88,6 +87,7 @@ def make_raw_data(quries):
     ##reccobeats=======================================================================
     ##============================================================================
 
+    # reccobeats는 개별 검색, 다수 검색 모두 지원
     reccobeats_raw_data = reccobeats.search(spotify_raw_data)["content"]
 
     ##============================================================================
@@ -115,22 +115,19 @@ def make_raw_data(quries):
             data_idx += 1
             continue
 
-        genre = discogs.search(
-                data["artist"],
-                data["track"]
-            )
+        # discogs는 개별 검색 요청만을 지원
+        genre = discogs.search( data["artist"], data["track"])
 
         # discogs에 장르가 없는 경우 lastfm을 통한 장르 추가
         if genre:
             spotify_raw_data[data_idx]["genre"] = genre
         else:
-            genre = lastfm.search(
-                data["artist"],
-                data["track"]
-            )
+            # lastfm는 개별 검색 요청만을 지원
+            genre = lastfm.search( data["artist"], data["track"] )
             spotify_raw_data[data_idx]["genre"] = genre
 
 
+        # discogs는 분당에 60번 호출 제한이 있음
         time.sleep(1)
 
         data_idx += 1
@@ -189,17 +186,21 @@ def clean_raw_data(metadatas):
 ##============================================================================
 def main():
     with open("data/artist_top_tracks.json", "r", encoding="utf-8") as artist_top_tracks:
-        ## artist_top_tracks는  ["title1", "title2"]구조
-        ## list로 반환
         artist_top_tracks = json.load(artist_top_tracks)
 
-
-    raw_data = clean_raw_data(make_raw_data(artist_top_tracks))
+    # artist_top_track에 저장된 노래에 대한 raw_Data 생성
+    ## artist_top_track에 데이터가 없는 경우 노래가 없음을 알린 후 return
+    if(len(artist_top_tracks) == 0):
+        print("검색할 노래가 없음")
+        return
+    else:
+        raw_data = clean_raw_data(make_raw_data(artist_top_tracks))
 
     with open("data/collected_spotify_id", "r", encoding="utf-8") as collected_spotify_id:
         collected_spotify_id = json.load(collected_spotify_id)
 
 
+    # collected_spotify_id와의 중복 검사 후 중복 제거된 곡들을 elminate_duplicated_raw_dat에 저장
     eliminate_duplicated_raw_data = []
     for data in raw_data:
         spotify_id = data["spotify_id"]
@@ -211,6 +212,7 @@ def main():
         collected_spotify_id[spotify_id] = True
 
 
+    # collected_track_title과 collected_track_title_and_spotify_id에 저장할 dict 생성
     track_title = {}
     track_title_and_spotify_id = {}
     for data in eliminate_duplicated_raw_data:
@@ -222,10 +224,10 @@ def main():
     with (
         open("data/collected_track_title", "r", encoding="utf-8") as collected_track_title,
         open("data/raw_data", "r", encoding="utf-8") as raw_data,
-        open("data/dataset_track_title_and_spotify_id", "r", encoding="utf-8") as dataset_track_title_and_spotify_id
+        open("data/collected_track_title_and_spotify_id", "r", encoding="utf-8") as collected_track_title_and_spotify_id
     ):
         saved_track_title = json.load(collected_track_title)
-        saved_track_title_and_spotify_id = json.load(dataset_track_title_and_spotify_id)
+        saved_track_title_and_spotify_id = json.load(collected_track_title_and_spotify_id)
         saved_raw_data = json.load(raw_data)
 
 
@@ -270,11 +272,13 @@ def main():
             indent=4
         )
 
+    ##@@이번 main실행에 따른 artist_top_track 내용을 삭제할지 아니면 가지고 있을지에 대한 규칙 생각
+    ## 1. 전체 삭제
+    ## 2. 탐색되지 않은 노래만 삭제
+    ## 3. 전체를 보존
+
+    return True
+
 ##============================================================================
 ##============================================================================
 
-
-    
-
-if __name__ == "__main__":
-    main()

@@ -1,6 +1,6 @@
 import json
 
-def Make_clean_metadata():
+def processing():
 
     with open("Data/Raw_metadata.json", "r", encoding="utf-8") as file_rawdata, \
          open("Data/Constant_data/Normalize_Genre_Whitelist.json", "r", encoding="utf-8") as file_whitelist:

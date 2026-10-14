@@ -1,6 +1,6 @@
 import json
 
-def Processing_Bpm():
+def processing():
 
     with open("Data/Clean_metadata.json", "r", encoding="utf-8") as cleandata:
         cleandata = json.load(cleandata)

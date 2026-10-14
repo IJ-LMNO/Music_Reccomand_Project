@@ -3,12 +3,18 @@ import os
 
 from dotenv import load_dotenv
 
+##============================================================================
+##============================================================================
 load_dotenv()
-
 DISCOGS_TOKEN = os.getenv("DISCOGS")
+##============================================================================
+##============================================================================
 
 
+##discorg search=======================================================================
+##============================================================================
 def search(artist, track):
+    genres = []
 
     res = requests.get(
         "https://api.discogs.com/database/search",
@@ -23,17 +29,12 @@ def search(artist, track):
         }
     )
 
-    print(f"discogs status : {res.status_code}")
-
     data = res.json()
 
     # 검색 결과 없음
     if "results" not in data or not data["results"]:
         return []
-
     release = data["results"][0]
-
-    genres = []
 
     # genre
     if "genre" in release:
@@ -50,3 +51,5 @@ def search(artist, track):
     ))
 
     return genres
+##============================================================================
+##============================================================================

@@ -1,0 +1,2 @@
+1. ETL 폴더 내부에서 EXTRACT TRANSFORM별로 흩어져 있던 데이터셋들을 DATA 폴더로 통일
+    -> 파일 경로 수정해야 함 : pathlib 한 번 사용해보자
