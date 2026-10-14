@@ -1,5 +1,6 @@
 import requests
 import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -7,7 +8,7 @@ load_dotenv()
 DISCOGS_TOKEN = os.getenv("DISCOGS")
 
 
-def Discogs_API(artist, track):
+def search(artist, track):
 
     res = requests.get(
         "https://api.discogs.com/database/search",

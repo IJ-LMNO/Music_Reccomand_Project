@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.getenv("LASTFM")
 
-def Lastfm_API(artist, track, limit=10):
+def search(artist, track, limit=10):
     res = requests.get(
         "https://ws.audioscrobbler.com/2.0/",
         params={
