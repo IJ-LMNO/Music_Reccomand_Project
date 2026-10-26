@@ -1,13 +1,18 @@
-import Music_Reccomand_Project.make_dataset.Processsing_Raw_Data.Processing_Bpm as bpm
-import Music_Reccomand_Project.make_dataset.Processsing_Raw_Data.Processing_Clean_metadata as cleanmetadata
-import Music_Reccomand_Project.make_dataset.Processsing_Raw_Data.Processing_Spotify_id as id
-import Music_Reccomand_Project.make_dataset.Processsing_Raw_Data.Processing_Track_name as track
+import transform.processing_to_clean_data_json as clean_data
+import transform.processing_to_bpm_json as bpm
+import transform.processing_to_spotify_id_json as spotify_id
+
+from multiprocessing import Pool
 
 def main():
-    cleanmetadata.Make_clean_metadata()
-    bpm.Processing_Bpm()
-    id.Make_Track_index()
-    track.Make_Track_index()
+    clean_data.processing()
 
-if __name__ == "__main__":
-    main()
+    with Pool(processes= 2)as pool:
+        bpm_pool_result = pool.apply_async(bpm.processing)
+        spotify_id_pool_result = pool.apply_async(spotify_id.processing)
+
+        bpm_pool_result.get()
+        spotify_id_pool_result.get()
+
+    return True
+

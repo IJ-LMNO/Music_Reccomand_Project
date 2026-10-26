@@ -1,9 +1,6 @@
 import json
 import heapq
 
-# 유사도 계산 시 상위 몇 %의 결과만 사용할지 결정하는 비율
-CUTING_RATIO = 0.5
-
 
 # Tonnetz 그래프에서 두 코드 사이의 최단 거리를 계산하는 함수
 def dijkstra(graph, start, end):
@@ -14,9 +11,6 @@ def dijkstra(graph, start, end):
         "A#": "Bb"
     }
 
-    ##print------------------
-    # print(start)
-    ##-------------------
     start = ENHARMONIC.get(start, start)
     end = ENHARMONIC.get(end, end)
 
@@ -90,11 +84,6 @@ def Compare_note_proximity(input_track, tracks):
 
             chord_compare_result.append(note_pairs)
 
-            # #--------------------------------------
-            # print(chord_compare_result)
-            # print()
-            # #---------------------------------------
-
         return_arr.append(chord_compare_result)
 
     return return_arr
@@ -102,24 +91,10 @@ def Compare_note_proximity(input_track, tracks):
 
 # 입력곡과 후보곡의 Key/Mode를 기준으로 가능한 코드 진행을 만들고,
 # Tonnetz 그래프 거리 기반으로 코드 진행 유사도를 계산
+# sporify는 key를 숫자로 제공하기에 이를 key와 매핑해둔 자료구조가 필요 : key_map.json
 def Compare_key_Progression(Progression, chords, tonnetz, input_track, track):
     input_track_mode = None
     track_mode = None
-
-    KEY_MAP = {
-        0: "C",
-        1: "Db",
-        2: "D",
-        3: "Eb",
-        4: "E",
-        5: "F",
-        6: "F#",
-        7: "G",
-        8: "Ab",
-        9: "A",
-        10: "Bb",
-        11: "B"
-    }
 
     # 입력곡의 Key/Mode 변환
     if input_track["mode"] == 0:
@@ -251,23 +226,32 @@ def Give_penalty(result, after_genre_layer, input_track, key, mode):
     return return_result
 
 
-# 코드 진행 기반 추천 레이어
+def load():
+    with open("chord/data/tonnetz_graph.json", "r", encoding="utf-8") as tonnetz,\
+    open("chord/data/representation_progressions.json", "r", encoding="utf-8") as progressions,\
+    open("chord/data/key_chords.json", "r", encoding="utf-8") as chord:
+            tonnetz = json.load(tonnetz)
+            progressions = json.load(progressions)
+            chord = json.load(chord)
+
+    return tonnetz, progressions, chord
+
+
 # Tonnetz 거리, 코드 진행 유사도, Key/Mode 보정을 이용하여 후보곡을 선별
-def Chord_Layer(input_track, after_genre_layer_track_arr, count, key_penalty=1, mode_penalty=1):
-    total_return_track_num = count
-    output_track = []
+def Chord_Layer(after_genre_layer, selected_ratio, count, key_penalty=1, mode_penalty=1):
+    track_data = after_genre_layer[0] # 입력된 곡
+    input_data = after_genre_layer[1] # genre 계층을 통과한 곡들을
+    ratio = selected_ratio
+    min_required_tracks = count
+
+    output_data = []
 
     # 코드 진행 비교에 필요한 고정 데이터 로드
-    with open("Data/Constant_data/Tonnetz_Graph.json", "r", encoding="utf-8") as t,\
-    open("Data/Constant_data/Representation_Progressions.json", "r", encoding="utf-8") as p,\
-    open("Data/Constant_data/Key_Chords.json", "r", encoding="utf-8") as k:
-            tonnetz = json.load(t)
-            progression = json.load(p)
-            chords = json.load(k)
+    tonnetz, progressions, chord = load()
 
     # 장르 레이어를 통과한 후보곡 전체에 대해 코드 진행 유사도 계산
-    simularity_chord_value_arr = []
-    for track in after_genre_layer_track_arr:
+    input_data_chord_similarity_ratio = []
+    for track in input_data:
         simulairty = Compare_key_Progression(progression, chords, tonnetz, input_track, track)
         simularity_chord_value_arr.append(simulairty)
 
@@ -299,23 +283,3 @@ def Chord_Layer(input_track, after_genre_layer_track_arr, count, key_penalty=1, 
     print_tracks(output_track)
     return output_track
 
-
-# 코드 진행 레이어를 통과한 추천 결과 출력
-def print_tracks(output_track_arr):
-    if not output_track_arr:
-        print("empty")
-    else:
-        print("after filtering chord ->")
-        for metadata in output_track_arr:
-            print(metadata["artist"])
-            print(metadata["track"])
-            print(metadata["tempo"])
-            print("--------------------------------")
-            print()
-        print()
-        print()
-        print()
-
-
-if __name__ == "__main__":
-    Chord_Layer()

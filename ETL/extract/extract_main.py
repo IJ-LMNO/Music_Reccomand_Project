@@ -185,7 +185,7 @@ def clean_raw_data(metadatas):
 ##============================================================================
 ##============================================================================
 def main():
-    with open("data/artist_top_tracks.json", "r", encoding="utf-8") as artist_top_tracks:
+    with open("data/extract/artist_top_tracks.json", "r", encoding="utf-8") as artist_top_tracks:
         artist_top_tracks = json.load(artist_top_tracks)
 
     # artist_top_track에 저장된 노래에 대한 raw_Data 생성
@@ -222,9 +222,9 @@ def main():
 
     # 기존 데이터 불러오기
     with (
-        open("data/collected_track_title", "r", encoding="utf-8") as collected_track_title,
-        open("data/raw_data", "r", encoding="utf-8") as raw_data,
-        open("data/collected_track_title_and_spotify_id", "r", encoding="utf-8") as collected_track_title_and_spotify_id
+        open("data/extract/collected_track_title", "r", encoding="utf-8") as collected_track_title,
+        open("data/extract/raw_data", "r", encoding="utf-8") as raw_data,
+        open("data/extract/collected_track_title_and_spotify_id", "r", encoding="utf-8") as collected_track_title_and_spotify_id
     ):
         saved_track_title = json.load(collected_track_title)
         saved_track_title_and_spotify_id = json.load(collected_track_title_and_spotify_id)
@@ -239,10 +239,10 @@ def main():
 
     # 병합된 데이터 저장
     with (
-        open("data/collected_spotify_id", "w", encoding="utf-8") as f1,
-        open("data/collected_track_title", "w", encoding="utf-8") as f2,
-        open("data/raw_data", "w", encoding="utf-8") as f3,
-        open("data/dataset_track_title_and_spotify_id", "w", encoding="utf-8") as f4
+        open("data/extract/collected_spotify_id", "w", encoding="utf-8") as f1,
+        open("data/extract/collected_track_title", "w", encoding="utf-8") as f2,
+        open("data/extract/raw_data", "w", encoding="utf-8") as f3,
+        open("data/extract/collected_track_title_and_spotify_id", "w", encoding="utf-8") as f4
     ):
         json.dump(
             collected_spotify_id,

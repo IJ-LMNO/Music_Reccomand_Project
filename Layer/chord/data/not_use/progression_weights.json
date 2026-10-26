@@ -1,0 +1,634 @@
+{
+  "major": {
+    "3_chord": [
+      {
+        "pattern": [
+          "I",
+          "IV",
+          "V"
+        ],
+        "weight": 1.55,
+        "category": "classic",
+        "source_url": "https://api.hooktheory.com/support/musicreference?concept=music-concepts-harmony"
+      },
+      {
+        "pattern": [
+          "IV",
+          "V",
+          "I"
+        ],
+        "weight": 1.45,
+        "category": "classic",
+        "source_url": "https://api.hooktheory.com/support/musicreference?concept=music-concepts-harmony"
+      },
+      {
+        "pattern": [
+          "I",
+          "V",
+          "VI"
+        ],
+        "weight": 1.4,
+        "category": "axis_subsequence",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VI",
+          "IV",
+          "I"
+        ],
+        "weight": 1.4,
+        "category": "axis_rotation_subsequence",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "VI",
+          "IV"
+        ],
+        "weight": 1.4,
+        "category": "doo_wop_subsequence",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "V",
+          "IV"
+        ],
+        "weight": 1.3,
+        "category": "rock_pattern",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "IV",
+          "V",
+          "VI"
+        ],
+        "weight": 1.3,
+        "category": "axis_subsequence",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "II",
+          "V",
+          "I"
+        ],
+        "weight": 1.25,
+        "category": "jazz_classic",
+        "source_url": "https://www.hooktheory.com/trends"
+      },
+      {
+        "pattern": [
+          "VI",
+          "IV",
+          "V"
+        ],
+        "weight": 1.2,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "IV",
+          "I"
+        ],
+        "weight": 1.2,
+        "category": "classic",
+        "source_url": "https://api.hooktheory.com/support/musicreference?concept=music-concepts-harmony"
+      },
+      {
+        "pattern": [
+          "I",
+          "V",
+          "I"
+        ],
+        "weight": 1.2,
+        "category": "classic",
+        "source_url": "https://api.hooktheory.com/support/musicreference?concept=music-concepts-harmony"
+      },
+      {
+        "pattern": [
+          "IV",
+          "I",
+          "V"
+        ],
+        "weight": 1.15,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VI",
+          "V",
+          "IV"
+        ],
+        "weight": 1.1,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VI",
+          "II",
+          "V"
+        ],
+        "weight": 1.15,
+        "category": "circle",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "III",
+          "VI"
+        ],
+        "weight": 1.1,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "II",
+          "V"
+        ],
+        "weight": 1.1,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "III",
+          "VI",
+          "II"
+        ],
+        "weight": 1.0,
+        "category": "circle",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "II",
+          "IV",
+          "V"
+        ],
+        "weight": 1.0,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "II",
+          "V",
+          "VI"
+        ],
+        "weight": 1.0,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VI",
+          "II",
+          "IV"
+        ],
+        "weight": 1.0,
+        "category": "curated",
+        "source_url": null
+      }
+    ],
+    "4_chord": [
+      {
+        "pattern": [
+          "I",
+          "V",
+          "VI",
+          "IV"
+        ],
+        "weight": 1.65,
+        "category": "hooktheory_1300_top",
+        "source_url": "https://api.hooktheory.com/blog/music-theory-analysis-1300-songs-for-songwriting-part2/"
+      },
+      {
+        "pattern": [
+          "VI",
+          "IV",
+          "I",
+          "V"
+        ],
+        "weight": 1.5,
+        "category": "axis_rotation",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "VI",
+          "IV",
+          "V"
+        ],
+        "weight": 1.5,
+        "category": "doo_wop",
+        "source_url": "https://www.hooktheory.com/trends"
+      },
+      {
+        "pattern": [
+          "IV",
+          "V",
+          "III",
+          "VI"
+        ],
+        "weight": 1.35,
+        "category": "royal_road",
+        "source_url": "https://songcage.com/blog/royal-road-progression/"
+      },
+      {
+        "pattern": [
+          "I",
+          "IV",
+          "V",
+          "I"
+        ],
+        "weight": 1.35,
+        "category": "classic",
+        "source_url": "https://api.hooktheory.com/support/musicreference?concept=music-concepts-harmony"
+      },
+      {
+        "pattern": [
+          "I",
+          "IV",
+          "VI",
+          "V"
+        ],
+        "weight": 1.3,
+        "category": "pop_common",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "V",
+          "IV",
+          "V"
+        ],
+        "weight": 1.25,
+        "category": "rock_pattern",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VI",
+          "V",
+          "IV",
+          "V"
+        ],
+        "weight": 1.15,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "III",
+          "IV",
+          "V"
+        ],
+        "weight": 1.15,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "II",
+          "V",
+          "I",
+          "VI"
+        ],
+        "weight": 1.1,
+        "category": "jazz_classic_variant",
+        "source_url": null
+      }
+    ]
+  },
+  "minor": {
+    "3_chord": [
+      {
+        "pattern": [
+          "VI",
+          "VII",
+          "I"
+        ],
+        "weight": 1.55,
+        "category": "hooktheory_minor_example",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "I",
+          "VI",
+          "VII"
+        ],
+        "weight": 1.45,
+        "category": "curated_common",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "VII",
+          "VI"
+        ],
+        "weight": 1.4,
+        "category": "curated_common",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "IV",
+          "V"
+        ],
+        "weight": 1.25,
+        "category": "classic_natural_minor",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "IV",
+          "V",
+          "I"
+        ],
+        "weight": 1.25,
+        "category": "classic_natural_minor",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "VI",
+          "III"
+        ],
+        "weight": 1.25,
+        "category": "popular_family",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "VII",
+          "III"
+        ],
+        "weight": 1.25,
+        "category": "popular_family",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "III",
+          "VII"
+        ],
+        "weight": 1.2,
+        "category": "popular_family",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VI",
+          "VII",
+          "III"
+        ],
+        "weight": 1.25,
+        "category": "hooktheory_minor_example",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "I",
+          "IV",
+          "VII"
+        ],
+        "weight": 1.15,
+        "category": "hooktheory_minor_subsequence",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "I",
+          "V",
+          "IV"
+        ],
+        "weight": 1.2,
+        "category": "hooktheory_minor_subsequence",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "VI",
+          "III",
+          "VII"
+        ],
+        "weight": 1.15,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "III",
+          "VI"
+        ],
+        "weight": 1.15,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VII",
+          "VI",
+          "I"
+        ],
+        "weight": 1.15,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "VI",
+          "I",
+          "VII"
+        ],
+        "weight": 1.15,
+        "category": "hooktheory_minor_subsequence",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "III",
+          "VII",
+          "I"
+        ],
+        "weight": 1.1,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "V",
+          "VI"
+        ],
+        "weight": 1.1,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "IV",
+          "VII",
+          "III"
+        ],
+        "weight": 1.1,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "VI",
+          "IV"
+        ],
+        "weight": 1.15,
+        "category": "hooktheory_minor_subsequence",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "I",
+          "VII",
+          "I"
+        ],
+        "weight": 1.1,
+        "category": "curated",
+        "source_url": null
+      }
+    ],
+    "4_chord": [
+      {
+        "pattern": [
+          "I",
+          "VI",
+          "III",
+          "VII"
+        ],
+        "weight": 1.55,
+        "category": "minor_pop_loop",
+        "source_url": "https://www.hooktheory.com/trends"
+      },
+      {
+        "pattern": [
+          "I",
+          "VII",
+          "VI",
+          "VII"
+        ],
+        "weight": 1.45,
+        "category": "curated_common",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "V",
+          "IV",
+          "VII"
+        ],
+        "weight": 1.35,
+        "category": "hooktheory_dont_speak",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "I",
+          "IV",
+          "VI",
+          "VII"
+        ],
+        "weight": 1.3,
+        "category": "hooktheory_theorytab_examples",
+        "source_url": "https://www.hooktheory.com/theorytab/advanced-search?chordString=i+iv+VI+VII&sort=key"
+      },
+      {
+        "pattern": [
+          "VI",
+          "I",
+          "VII",
+          "III"
+        ],
+        "weight": 1.35,
+        "category": "hooktheory_diamonds",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "VI",
+          "I",
+          "III",
+          "VI"
+        ],
+        "weight": 1.3,
+        "category": "hooktheory_wrecking_ball",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "VI",
+          "VII",
+          "I",
+          "VII"
+        ],
+        "weight": 1.25,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "III",
+          "VII",
+          "VI"
+        ],
+        "weight": 1.25,
+        "category": "curated",
+        "source_url": null
+      },
+      {
+        "pattern": [
+          "I",
+          "VI",
+          "IV",
+          "VII"
+        ],
+        "weight": 1.3,
+        "category": "hooktheory_say_my_name_subseq",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      },
+      {
+        "pattern": [
+          "IV",
+          "III",
+          "IV",
+          "I"
+        ],
+        "weight": 1.2,
+        "category": "hooktheory_beyond_these_hazel_eyes",
+        "source_url": "https://api.hooktheory.com/blog/minor-chord-progressions/"
+      }
+    ]
+  }
+}

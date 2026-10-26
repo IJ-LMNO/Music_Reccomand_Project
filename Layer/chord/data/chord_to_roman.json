@@ -1,0 +1,222 @@
+{
+    "major": {
+        "C": {
+            "C": "I",
+            "Dm": "II",
+            "Em": "III",
+            "F": "IV",
+            "G": "V",
+            "Am": "VI",
+            "Bdim": "VII"
+        },
+        "Db": {
+            "Db": "I",
+            "Ebm": "II",
+            "Fm": "III",
+            "Gb": "IV",
+            "Ab": "V",
+            "Bbm": "VI",
+            "Cdim": "VII"
+        },
+        "D": {
+            "D": "I",
+            "Em": "II",
+            "F#m": "III",
+            "G": "IV",
+            "A": "V",
+            "Bm": "VI",
+            "C#dim": "VII"
+        },
+        "Eb": {
+            "Eb": "I",
+            "Fm": "II",
+            "Gm": "III",
+            "Ab": "IV",
+            "Bb": "V",
+            "Cm": "VI",
+            "Ddim": "VII"
+        },
+        "E": {
+            "E": "I",
+            "F#m": "II",
+            "G#m": "III",
+            "A": "IV",
+            "B": "V",
+            "C#m": "VI",
+            "D#dim": "VII"
+        },
+        "F": {
+            "F": "I",
+            "Gm": "II",
+            "Am": "III",
+            "Bb": "IV",
+            "C": "V",
+            "Dm": "VI",
+            "Edim": "VII"
+        },
+        "F#": {
+            "F#": "I",
+            "G#m": "II",
+            "A#m": "III",
+            "B": "IV",
+            "C#": "V",
+            "D#m": "VI",
+            "E#dim": "VII"
+        },
+        "G": {
+            "G": "I",
+            "Am": "II",
+            "Bm": "III",
+            "C": "IV",
+            "D": "V",
+            "Em": "VI",
+            "F#dim": "VII"
+        },
+        "Ab": {
+            "Ab": "I",
+            "Bbm": "II",
+            "Cm": "III",
+            "Db": "IV",
+            "Eb": "V",
+            "Fm": "VI",
+            "Gdim": "VII"
+        },
+        "A": {
+            "A": "I",
+            "Bm": "II",
+            "C#m": "III",
+            "D": "IV",
+            "E": "V",
+            "F#m": "VI",
+            "G#dim": "VII"
+        },
+        "Bb": {
+            "Bb": "I",
+            "Cm": "II",
+            "Dm": "III",
+            "Eb": "IV",
+            "F": "V",
+            "Gm": "VI",
+            "Adim": "VII"
+        },
+        "B": {
+            "B": "I",
+            "C#m": "II",
+            "D#m": "III",
+            "E": "IV",
+            "F#": "V",
+            "G#m": "VI",
+            "A#dim": "VII"
+        }
+    },
+    "minor": {
+        "C": {
+            "Cm": "I",
+            "Ddim": "II",
+            "Eb": "III",
+            "Fm": "IV",
+            "Gm": "V",
+            "Ab": "VI",
+            "Bb": "VII"
+        },
+        "Db": {
+            "C#m": "I",
+            "D#dim": "II",
+            "E": "III",
+            "F#m": "IV",
+            "G#m": "V",
+            "A": "VI",
+            "B": "VII"
+        },
+        "D": {
+            "Dm": "I",
+            "Edim": "II",
+            "F": "III",
+            "Gm": "IV",
+            "Am": "V",
+            "Bb": "VI",
+            "C": "VII"
+        },
+        "Eb": {
+            "Ebm": "I",
+            "Fdim": "II",
+            "Gb": "III",
+            "Abm": "IV",
+            "Bbm": "V",
+            "Cb": "VI",
+            "Db": "VII"
+        },
+        "E": {
+            "Em": "I",
+            "F#dim": "II",
+            "G": "III",
+            "Am": "IV",
+            "Bm": "V",
+            "C": "VI",
+            "D": "VII"
+        },
+        "F": {
+            "Fm": "I",
+            "Gdim": "II",
+            "Ab": "III",
+            "Bbm": "IV",
+            "Cm": "V",
+            "Db": "VI",
+            "Eb": "VII"
+        },
+        "F#": {
+            "F#m": "I",
+            "G#dim": "II",
+            "A": "III",
+            "Bm": "IV",
+            "C#m": "V",
+            "D": "VI",
+            "E": "VII"
+        },
+        "G": {
+            "Gm": "I",
+            "Adim": "II",
+            "Bb": "III",
+            "Cm": "IV",
+            "Dm": "V",
+            "Eb": "VI",
+            "F": "VII"
+        },
+        "Ab": {
+            "G#m": "I",
+            "A#dim": "II",
+            "B": "III",
+            "C#m": "IV",
+            "D#m": "V",
+            "E": "VI",
+            "F#": "VII"
+        },
+        "A": {
+            "Am": "I",
+            "Bdim": "II",
+            "C": "III",
+            "Dm": "IV",
+            "Em": "V",
+            "F": "VI",
+            "G": "VII"
+        },
+        "Bb": {
+            "Bbm": "I",
+            "Cdim": "II",
+            "Db": "III",
+            "Ebm": "IV",
+            "Fm": "V",
+            "Gb": "VI",
+            "Ab": "VII"
+        },
+        "B": {
+            "Bm": "I",
+            "C#dim": "II",
+            "D": "III",
+            "Em": "IV",
+            "F#m": "V",
+            "G": "VI",
+            "A": "VII"
+        }
+    }
+}

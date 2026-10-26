@@ -1,5 +1,5 @@
 from extract.extract_main import main as extract_main
-from transfrom.transform_main import main as transform_main
+from transform.transform_main import main as transform_main
 from load.load_main import main as load_main
 
 def main():

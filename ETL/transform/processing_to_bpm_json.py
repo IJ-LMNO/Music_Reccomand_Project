@@ -2,20 +2,12 @@ import json
 
 def processing():
 
-    with open("Data/Clean_metadata.json", "r", encoding="utf-8") as cleandata:
-        cleandata = json.load(cleandata)
+    with open("data/transform/clean_data.json", "r", encoding="utf-8") as clean_data:
+        clean_data = json.load(clean_data)
 
-    bpmdataset = {}
-    seen = set()
+    bpm_dataset = {}
 
-    for track in cleandata:
-        spotify_id = track["spotify_id"]
-
-        if spotify_id in seen:
-            continue
-
-        seen.add(spotify_id)
-
+    for track in clean_data:
         tempo = track.get("tempo")
 
         if tempo is None:
@@ -28,10 +20,10 @@ def processing():
 
         processing_bpm = (tempo // 10) * 10
 
-        if processing_bpm not in bpmdataset:
-            bpmdataset[processing_bpm] = []
+        if processing_bpm not in bpm_dataset:
+            bpm_dataset[processing_bpm] = []
 
-        bpmdataset[processing_bpm].append(track)
+        bpm_dataset[processing_bpm].append(track)
 
-    with open("Data/Bpm_dataset.json", "w", encoding="utf-8") as file:
-        json.dump(bpmdataset, file, ensure_ascii=False, indent=4)
+    with open("data/transform/dataset_by_bpm.json", "w", encoding="utf-8") as file:
+        json.dump(bpm_dataset, file, ensure_ascii=False, indent=4)
