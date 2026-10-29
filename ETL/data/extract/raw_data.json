@@ -17729,5 +17729,39 @@
             "pop",
             "kpop"
         ]
+    },
+    {
+        "spotify_id": "6bvZRLLkBKkmgpBJTTj3QK",
+        "artist": "BLACKPINK",
+        "track": "How You Like That",
+        "tempo": 131.98,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.861,
+        "danceability": 0.738,
+        "valence": 0.58,
+        "acousticness": 0.318,
+        "genre": [
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5GK7eDDTVz7CTge1wJrDQW",
+        "artist": "BLACKPINK",
+        "track": "Kill This Love",
+        "tempo": 130.018,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.787,
+        "danceability": 0.813,
+        "valence": 0.326,
+        "acousticness": 0.0452,
+        "genre": [
+            "poprap",
+            "hiphop",
+            "kpop",
+            "pop"
+        ]
     }
 ]

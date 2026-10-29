@@ -3,8 +3,8 @@ import json
 def processing():
 
     with open("data/extract/raw_data.json", "r", encoding="utf-8") as raw_data, \
-        open("data/common/normalize_genre_white_list.json", "r", encoding="utf-8") as whitelist, \
-        open("data/commom/essential_key.json" ,"r", encoding="utf-8") as essential_key:
+        open("data/common/normalize_genre_whitelist.json", "r", encoding="utf-8") as whitelist, \
+        open("data/common/essential_key.json" ,"r", encoding="utf-8") as essential_key:
             
             raw_data = json.load(raw_data)
             whitelist = json.load(whitelist)

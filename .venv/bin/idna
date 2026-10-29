@@ -1,4 +1,4 @@
-#!/home/anylook1248/Music_Recomend_System/Music_Reccomand_Project/.venv/bin/python3
+#!/home/anylook1248/Music_Recommend_Project/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

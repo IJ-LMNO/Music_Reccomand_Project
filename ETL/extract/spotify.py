@@ -4,15 +4,15 @@ import time
 import os
 
 from dotenv import load_dotenv
-from Music_Reccomand_Project.ETL.Extract.common.normalize import normalize
+from extract.common.normalize import normalize
 
 
 
 ## Access Token 가상화 ======================================================================
 ##============================================================================
 load_dotenv()
-CLIENT_ID = os.getenv("CLIENT_ID")
-CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
+CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 ##============================================================================
 ##============================================================================
 
@@ -47,7 +47,7 @@ def get_access_token():
 
 ## 스포티파이에서 노래 검색======================================================================
 ##============================================================================
-def search(query, token, limit=5):
+def search(query, token, limit=10):
     while True:
         res = requests.get(
             "https://api.spotify.com/v1/search",
@@ -77,7 +77,7 @@ def search(query, token, limit=5):
 
 ## 스포티파이에서 노래 검색_copy======================================================================
 ##============================================================================
-def search_spotify(query, token, limit=5):
+def search_spotify(query, token, limit=10):
     while True:
         try:
             res = requests.get(
@@ -178,9 +178,9 @@ def match(query, return_query):
 def append(data, raw_data):
     if data:
         raw_data.append({
-            "spotify_id": raw_data[0],
-            "artist": raw_data[1],
-            "track": raw_data[2]
+            "spotify_id": data[0],
+            "artist": data[1],
+            "track": data[2]
         })
     else:
         raw_data.append([])

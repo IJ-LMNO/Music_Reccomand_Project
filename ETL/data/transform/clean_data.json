@@ -9296,6 +9296,22 @@
         ]
     },
     {
+        "spotify_id": "1rfofaqEpACxVEHIZBJe6W",
+        "artist": "Camila Cabello",
+        "track": "Havana (feat. Young Thug)",
+        "tempo": 105.046,
+        "key": 8,
+        "mode": 1,
+        "energy": 0.491,
+        "danceability": 0.724,
+        "valence": 0.383,
+        "acousticness": 0.018,
+        "genre": [
+            "pop",
+            "latin"
+        ]
+    },
+    {
         "spotify_id": "6FZDfxM3a3UCqtzo5pxSLZ",
         "artist": "Halsey",
         "track": "Without Me",
@@ -13398,6 +13414,21 @@
         ]
     },
     {
+        "spotify_id": "1mKXFLRA179hdOWQBwUk9e",
+        "artist": "P!nk",
+        "track": "Just Give Me a Reason (feat. Nate Ruess)",
+        "tempo": 95.0,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.547,
+        "danceability": 0.778,
+        "valence": 0.442,
+        "acousticness": 0.344,
+        "genre": [
+            "pop"
+        ]
+    },
+    {
         "spotify_id": "3BJe4B8zGnqEdQPMvfVjuS",
         "artist": "Lana Del Rey",
         "track": "Summertime Sadness",
@@ -14403,6 +14434,36 @@
             "pop",
             "trap",
             "hiphop"
+        ]
+    },
+    {
+        "spotify_id": "2hns6Dv29Yrg68AVTJiAyA",
+        "artist": "P!nk",
+        "track": "Who Knew - Edit",
+        "tempo": 140.004,
+        "key": 9,
+        "mode": 1,
+        "energy": 0.734,
+        "danceability": 0.688,
+        "valence": 0.46,
+        "acousticness": 0.00462,
+        "genre": [
+            "poprock"
+        ]
+    },
+    {
+        "spotify_id": "1mKXFLRA179hdOWQBwUk9e",
+        "artist": "P!nk",
+        "track": "Just Give Me a Reason (feat. Nate Ruess)",
+        "tempo": 91.026,
+        "key": 1,
+        "mode": 1,
+        "energy": 0.596,
+        "danceability": 0.795,
+        "valence": 0.506,
+        "acousticness": 0.0823,
+        "genre": [
+            "pop"
         ]
     },
     {
@@ -16188,6 +16249,39 @@
         "genre": [
             "pop",
             "kpop"
+        ]
+    },
+    {
+        "spotify_id": "6bvZRLLkBKkmgpBJTTj3QK",
+        "artist": "BLACKPINK",
+        "track": "How You Like That",
+        "tempo": 131.98,
+        "key": 2,
+        "mode": 1,
+        "energy": 0.861,
+        "danceability": 0.738,
+        "valence": 0.58,
+        "acousticness": 0.318,
+        "genre": [
+            "kpop",
+            "pop"
+        ]
+    },
+    {
+        "spotify_id": "5GK7eDDTVz7CTge1wJrDQW",
+        "artist": "BLACKPINK",
+        "track": "Kill This Love",
+        "tempo": 130.018,
+        "key": 11,
+        "mode": 1,
+        "energy": 0.787,
+        "danceability": 0.813,
+        "valence": 0.326,
+        "acousticness": 0.0452,
+        "genre": [
+            "hiphop",
+            "kpop",
+            "pop"
         ]
     }
 ]

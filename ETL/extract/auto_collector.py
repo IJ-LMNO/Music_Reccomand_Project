@@ -8,45 +8,7 @@ load_dotenv()
 API_KEY = os.getenv("LASTFM")
 
 ARTISTS = [
-    # Pop / R&B
-    "Ava Max",
-    "Tove Lo",
-    "Kesha",
-    "P!nk",
-    "Lana Del Rey",
-    "Carly Rae Jepsen",
-    "Chappell Roan",
-    "Gracie Abrams",
-    "Madison Beer",
-    "Tinashe",
-
-    # Singer-songwriter / Indie
-    "Mitski",
-    "Phoebe Bridgers",
-    "Fletcher",
-    "Alec Benjamin",
-    "JVKE",
-    "d4vd",
-    "Stephen Sanchez",
-    "Teddy Swims",
-    "Noah Kahan",
-    "Hozier",
-
-    # Band / Alternative
-    "The Killers",
-    "Glass Animals",
-    "Måneskin",
-    "The Neighbourhood",
-    "Wallows",
-
-    # Korean / Japanese
-    "DAY6",
-    "(G)I-DLE",
-    "NMIXX",
-    "Fujii Kaze",
-    "Official HIGE DANdism"
-
-
+    "blackpink"
 ]
 
 
@@ -87,7 +49,7 @@ def get_artist_top_tracks(api_key, artist_name, limit=10):
     return result
 
 
-def make_dataset(api_key, artists, output_path="Make_Raw_Data/dataset.json"):
+def make_dataset(api_key, artists, output_path="../data/extract/artist_top_tracks.json"):
     dataset = []
     seen = set()
 

@@ -6,6 +6,7 @@ def main():
     #@@ 예외처리를 raise해서 최상단인 main에서 할 것인지 아니면
     #@@ 각 파일에서 할 것인지에 대한 전략 필요 
     checkpoint_extract = extract_main()
+    print(checkpoint_extract)
 
     if checkpoint_extract:
         checkpoint_tramsform = transform_main()

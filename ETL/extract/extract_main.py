@@ -2,17 +2,17 @@ from pathlib import Path
 import json
 import time
 
-import Music_Reccomand_Project.ETL.Extract.reccobeats as reccobeats
-import Music_Reccomand_Project.ETL.Extract.lastfm as lastfm
-import Music_Reccomand_Project.ETL.Extract.spotify as spotify
-import Music_Reccomand_Project.ETL.Extract.discogs as discogs
-from Music_Reccomand_Project.ETL.Extract.common.normalize import normalize 
+import extract.reccobeats as reccobeats
+import extract.lastfm as lastfm
+import extract.spotify as spotify
+import extract.discogs as discogs
+from extract.common.normalize import normalize 
 
 
 ##============================================================================
 ##============================================================================
 BASE_DIR = Path(__file__).parent
-SPOTIFY_ACCESS_TIME_LIMIT = 1
+SPOTIFY_ACCESS_TIME_LIMIT = 5
 ##============================================================================
 ##============================================================================
 
@@ -38,7 +38,7 @@ def combine(spotify_raw_data, reccobeats_raw_data):
         # Spotify_raw_data에서 []인 경우 조건문을 통해 reccobeats에서는 검색하지 않음
         # -> (params=[("ids", query["spotify_id"]) for query in quries if query])
         # spotify_raw_data_idx = []인 경우에 해당하는 query는 reccobeats_raw_data에 존재하지 않음
-        if reccobeats_raw_data_idx < len(reccobeats_raw_data_idx):
+        if reccobeats_raw_data_idx < len(reccobeats_raw_data):
 
             recco_data = reccobeats_raw_data[reccobeats_raw_data_idx]
 
@@ -88,7 +88,7 @@ def make_raw_data(quries):
     ##============================================================================
 
     # reccobeats는 개별 검색, 다수 검색 모두 지원
-    reccobeats_raw_data = reccobeats.search(spotify_raw_data)["content"]
+    reccobeats_raw_data = reccobeats.search(spotify_raw_data)
 
     ##============================================================================
     ##============================================================================
@@ -196,11 +196,11 @@ def main():
     else:
         raw_data = clean_raw_data(make_raw_data(artist_top_tracks))
 
-    with open("data/collected_spotify_id", "r", encoding="utf-8") as collected_spotify_id:
+    with open("data/extract/collected_spotify_id.json", "r", encoding="utf-8") as collected_spotify_id:
         collected_spotify_id = json.load(collected_spotify_id)
 
 
-    # collected_spotify_id와의 중복 검사 후 중복 제거된 곡들을 elminate_duplicated_raw_dat에 저장
+    # collected_spotify_id와의 중복 검사 후 중복 제거된 곡들을 elminate_duplicated_raw_data에 저장
     eliminate_duplicated_raw_data = []
     for data in raw_data:
         spotify_id = data["spotify_id"]
@@ -215,16 +215,18 @@ def main():
     # collected_track_title과 collected_track_title_and_spotify_id에 저장할 dict 생성
     track_title = {}
     track_title_and_spotify_id = {}
+
     for data in eliminate_duplicated_raw_data:
-        track_title = normalize(data["artist"] + data["track"])
-        track_title[track_title] = True
-        track_title_and_spotify_id[track_title] = data["spotify_id"]
+        normalized_title = normalize(data["artist"] + data["track"])
+
+        track_title[normalized_title] = True
+        track_title_and_spotify_id[normalized_title] = data["spotify_id"]
 
     # 기존 데이터 불러오기
     with (
-        open("data/extract/collected_track_title", "r", encoding="utf-8") as collected_track_title,
-        open("data/extract/raw_data", "r", encoding="utf-8") as raw_data,
-        open("data/extract/collected_track_title_and_spotify_id", "r", encoding="utf-8") as collected_track_title_and_spotify_id
+        open("data/extract/collected_track_title.json", "r", encoding="utf-8") as collected_track_title,
+        open("data/extract/raw_data.json", "r", encoding="utf-8") as raw_data,
+        open("data/extract/collected_track_title_and_spotify_id.json", "r", encoding="utf-8") as collected_track_title_and_spotify_id
     ):
         saved_track_title = json.load(collected_track_title)
         saved_track_title_and_spotify_id = json.load(collected_track_title_and_spotify_id)
@@ -233,16 +235,16 @@ def main():
 
     # 기존 데이터와 새로운 데이터 병합
     saved_track_title.update(track_title)
-    saved_track_title_and_spotify_id.upadate(track_title_and_spotify_id)
+    saved_track_title_and_spotify_id.update(track_title_and_spotify_id)
     saved_raw_data.extend(eliminate_duplicated_raw_data)
 
 
     # 병합된 데이터 저장
     with (
-        open("data/extract/collected_spotify_id", "w", encoding="utf-8") as f1,
-        open("data/extract/collected_track_title", "w", encoding="utf-8") as f2,
-        open("data/extract/raw_data", "w", encoding="utf-8") as f3,
-        open("data/extract/collected_track_title_and_spotify_id", "w", encoding="utf-8") as f4
+        open("data/extract/collected_spotify_id.json", "w", encoding="utf-8") as f1,
+        open("data/extract/collected_track_title.json", "w", encoding="utf-8") as f2,
+        open("data/extract/raw_data.json", "w", encoding="utf-8") as f3,
+        open("data/extract/collected_track_title_and_spotify_id.json", "w", encoding="utf-8") as f4
     ):
         json.dump(
             collected_spotify_id,
