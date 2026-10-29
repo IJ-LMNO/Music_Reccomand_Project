@@ -1,0 +1,384 @@
+/* 1. 공통 스타일: chat.html과 동일한 브랜드 색상을 사용한다. */
+:root {
+    --ink: #24222c;
+    --muted: #8c8792;
+    --accent: #6e5ce8;
+    --border: #e5e1e9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    color: var(--ink);
+    background: #faf9f7;
+}
+
+button,
+input,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #baadff;
+    outline-offset: 3px;
+}
+
+.layout {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* 2. 왼쪽 소개 영역: 로그인 화면의 목적과 서비스를 소개한다. */
+.showcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 720px;
+    padding: 45px clamp(32px, 5.5vw, 92px);
+    overflow: hidden;
+    color: #fff;
+    background: radial-gradient(circle at 78% 25%, #6f63bd 0%, transparent 41%), linear-gradient(145deg, #24203e 7%, #443b78 65%, #6b568d 100%);
+}
+
+.showcase::after {
+    position: absolute;
+    right: -170px;
+    bottom: -240px;
+    width: 580px;
+    height: 580px;
+    border: 1px solid rgba(255, 255, 255, .13);
+    border-radius: 50%;
+    content: "";
+    box-shadow: 0 0 0 90px rgba(255, 255, 255, .025), 0 0 0 180px rgba(255, 255, 255, .018);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -.06em;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    background: #a295fa;
+    color: #211b4f;
+    font-size: 23px;
+    transform: rotate(-9deg);
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 1;
+    margin: auto 0;
+    padding: 60px 0 80px;
+}
+
+.kicker {
+    color: #c5baff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.showcase h1 {
+    margin: 22px 0 25px;
+    font-size: clamp(42px, 4.3vw, 74px);
+    line-height: 1.13;
+    letter-spacing: -.08em;
+    font-weight: 800;
+}
+
+.showcase h1 em {
+    font-style: normal;
+    color: #baaaff;
+}
+
+.showcase-desc {
+    max-width: 410px;
+    color: #c9c2df;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 37px;
+}
+
+.tag {
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, .065);
+    font-size: 11px;
+    color: #d8d3e9;
+}
+
+.showcase-bottom {
+    position: relative;
+    z-index: 1;
+    color: #aea8c6;
+    font-size: 11px;
+    letter-spacing: .035em;
+}
+
+/* 3. 오른쪽 로그인 폼: 사용자 입력과 오류 메시지를 표시한다. */
+.login-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 28px;
+}
+
+.login-card {
+    width: min(100%, 390px);
+}
+
+.overline {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    color: #8172e5;
+}
+
+.overline::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 2px;
+    background: #8172e5;
+}
+
+.login-card h2 {
+    margin: 18px 0 11px;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: -.065em;
+}
+
+.description {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+    margin: 0 0 37px;
+}
+
+.field {
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.field input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: #fff;
+    color: var(--ink);
+    height: 52px;
+    padding: 0 16px;
+    font-size: 13px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.field input:focus {
+    border-color: #a99bf3;
+    box-shadow: 0 0 0 4px rgba(110, 92, 232, .08);
+}
+
+.field input::placeholder {
+    color: #b1acb8;
+}
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 70px;
+}
+
+.visibility {
+    position: absolute;
+    right: 9px;
+    top: 7px;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    color: #827b91;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    height: 53px;
+    width: 100%;
+    margin-top: 31px;
+    border: 0;
+    border-radius: 13px;
+    color: #fff;
+    background: var(--accent);
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 10px 25px rgba(110, 92, 232, .18);
+    transition: background .2s, transform .2s;
+}
+
+.submit:hover:not(:disabled) {
+    background: #5945d0;
+    transform: translateY(-1px);
+}
+
+.submit:disabled {
+    opacity: .7;
+    cursor: wait;
+}
+
+.status {
+    display: none;
+    margin-top: 18px;
+    padding: 13px 15px;
+    border-radius: 11px;
+    font-size: 12px;
+    line-height: 1.7;
+    background: #f2edff;
+    color: #5f50ba;
+}
+
+.status.show {
+    display: block;
+}
+
+.status.error {
+    background: #fff0f2;
+    color: #9c4057;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #b4adb9;
+    font-size: 11px;
+    margin: 34px 0 20px;
+}
+
+.divider::before,
+.divider::after {
+    flex: 1;
+    content: "";
+    height: 1px;
+    background: #e8e4e9;
+}
+
+.preview-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    color: #5b5565;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.preview-link:hover {
+    background: #f2efff;
+    border-color: #c4baf7;
+}
+
+.disclaimer {
+    margin-top: 22px;
+    text-align: center;
+    color: #a7a1ac;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* 4. 모바일 화면에서는 좌우 2단을 세로 배치로 바꾼다. */
+@media(max-width:920px) {
+    .showcase {
+        padding: 35px;
+    }
+
+    .showcase h1 {
+        font-size: 45px;
+    }
+}
+
+@media(max-width:720px) {
+    .layout {
+        display: block;
+    }
+
+    .showcase {
+        min-height: auto;
+        padding: 23px 25px 29px;
+    }
+
+    .showcase-content,
+    .showcase-bottom {
+        display: none;
+    }
+
+    .brand {
+        font-size: 22px;
+    }
+
+    .login-area {
+        min-height: calc(100dvh - 93px);
+        padding: 44px 24px;
+        justify-content: flex-start;
+    }
+
+    .login-card h2 {
+        font-size: 31px;
+    }
+}

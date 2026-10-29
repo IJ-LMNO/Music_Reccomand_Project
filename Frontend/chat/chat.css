@@ -1,0 +1,778 @@
+/* 1. 공통 색상·글꼴·기본 레이아웃 */
+:root {
+    --canvas: #faf9f7;
+    --surface: #ffffff;
+    --sidebar: #f2f0ec;
+    --ink: #22212a;
+    --muted: #84808a;
+    --stroke: #e8e5e1;
+    --accent: #6e5ce8;
+    --accent-soft: #efecff;
+    --accent-dark: #5543c8;
+    --shadow: 0 18px 60px rgba(36, 29, 70, .08);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-width: 320px;
+    height: 100%;
+}
+
+body {
+    background: var(--canvas);
+    color: var(--ink);
+}
+
+button,
+textarea,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #b6aaff;
+    outline-offset: 3px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 264px minmax(0, 1fr) 278px;
+    height: 100dvh;
+    min-height: 540px;
+}
+
+/* 2. 왼쪽 사이드바: 대화 생성·탐색·전환 */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 27px 16px 18px;
+    min-height: 0;
+    background: var(--sidebar);
+    border-right: 1px solid var(--stroke);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 12px 30px;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -.75px;
+}
+
+.brand-mark {
+    width: 32px;
+    height: 32px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--accent);
+    color: white;
+    font-size: 18px;
+    transform: rotate(-8deg);
+}
+
+.brand small {
+    margin-left: auto;
+    align-self: end;
+    margin-bottom: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    color: var(--muted);
+}
+
+.new-chat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+    border: none;
+    border-radius: 13px;
+    padding: 13px 12px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background .2s;
+}
+
+.new-chat:hover {
+    background: #4b4357;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: #99949c;
+    margin: 28px 12px 11px;
+}
+
+.conversation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+    min-height: 0;
+    padding-right: 3px;
+}
+
+.conversation-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 42px;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: transparent;
+    color: #625d66;
+    font-size: 12px;
+}
+
+.conversation-item:hover {
+    background: #e9e5e2;
+}
+
+.conversation-item.active {
+    background: #fff;
+    color: var(--ink);
+    font-weight: 700;
+    box-shadow: 0 3px 12px rgba(24, 22, 37, .045);
+}
+
+.conversation-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bubble-icon {
+    flex: none;
+    width: 18px;
+    opacity: .7;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #e2ded9;
+}
+
+.account-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #615d68;
+}
+
+.account-link:hover {
+    background: #eae7e2;
+}
+
+.avatar {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 11px;
+    background: #ddd7ff;
+    color: #6150d0;
+    font-weight: 800;
+}
+
+.sidebar-note {
+    padding: 12px 10px 0;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #a6a0aa;
+}
+
+/* 3. 본문: 채팅 헤더, 메시지 영역, 하단 입력창 */
+.main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 75px;
+    min-height: 75px;
+    padding: 0 35px;
+    border-bottom: 1px solid var(--stroke);
+    background: rgba(255, 255, 255, .58);
+}
+
+.mobile-menu {
+    display: none;
+    padding: 6px;
+    border: none;
+    background: transparent;
+    font-size: 23px;
+}
+
+.header-titles {
+    min-width: 0;
+}
+
+.eyebrow {
+    color: #a09ba5;
+    font-size: 10px;
+    letter-spacing: .12em;
+    font-weight: 800;
+}
+
+.header-title {
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.soft-button {
+    border: 1px solid var(--stroke);
+    background: white;
+    border-radius: 10px;
+    padding: 9px 12px;
+    color: #625d69;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.soft-button:hover {
+    background: #f3f0ff;
+}
+
+.delete-button:hover {
+    color: #b23b57;
+    background: #fff1f3;
+}
+
+.playlist-toggle {
+    display: none;
+}
+
+.chat-scroll {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    scroll-behavior: smooth;
+}
+
+.chat-inner {
+    max-width: 790px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 30px 30px 28px;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.welcome-orbit {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 92px;
+    width: 92px;
+    margin-bottom: 24px;
+    border-radius: 30px;
+    transform: rotate(-12deg);
+    background: linear-gradient(145deg, #f3e0ec, #dedafc);
+    font-size: 40px;
+    color: #6a55db;
+    box-shadow: 0 16px 36px rgba(110, 92, 232, .12);
+}
+
+.welcome h1 {
+    margin: 0;
+    font-size: clamp(24px, 3vw, 37px);
+    letter-spacing: -.065em;
+    font-weight: 800;
+}
+
+.welcome p {
+    max-width: 470px;
+    margin: 15px 0 34px;
+    font-size: 13px;
+    line-height: 1.85;
+    color: #817b87;
+}
+
+.suggestions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: min(100%, 480px);
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    padding: 14px 16px;
+    background: white;
+    border: 1px solid var(--stroke);
+    border-radius: 14px;
+    color: #625d68;
+    font-size: 12px;
+    transition: .2s;
+}
+
+.suggestion:hover {
+    border-color: #c9c0ff;
+    background: #faf9ff;
+    transform: translateY(-2px);
+}
+
+.suggestion span {
+    font-size: 19px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding: 8px 0 30px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message-avatar {
+    display: grid;
+    place-items: center;
+    width: 31px;
+    height: 31px;
+    flex: none;
+    border-radius: 12px;
+    background: var(--accent);
+    color: white;
+    font-size: 15px;
+}
+
+.message-bubble {
+    max-width: min(85%, 590px);
+    padding: 15px 19px;
+    border-radius: 5px 17px 17px 17px;
+    background: white;
+    border: 1px solid var(--stroke);
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.message.user .message-bubble {
+    background: #ece9fb;
+    border-color: #ece9fb;
+    border-radius: 17px 17px 5px 17px;
+}
+
+.message-label {
+    font-size: 10px;
+    color: #a09ba5;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.message.user .message-label {
+    text-align: right;
+}
+
+.composer-wrap {
+    padding: 11px 30px 23px;
+    background: linear-gradient(to bottom, rgba(250, 249, 247, 0), var(--canvas) 23%);
+}
+
+.composer {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    width: min(100%, 730px);
+    margin: 0 auto;
+    padding: 13px 13px 13px 19px;
+    border-radius: 19px;
+    border: 1px solid #e1dce8;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.composer:focus-within {
+    border-color: #ada1f5;
+}
+
+.composer textarea {
+    width: 100%;
+    max-height: 160px;
+    min-height: 28px;
+    resize: none;
+    border: 0;
+    outline: 0;
+    padding: 7px 0 4px;
+    font-size: 13px;
+    color: var(--ink);
+    background: transparent;
+    line-height: 1.5;
+}
+
+.composer textarea::placeholder {
+    color: #a19ca7;
+}
+
+.send-button {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    border: none;
+    border-radius: 13px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 19px;
+}
+
+.send-button:hover {
+    background: var(--accent-dark);
+}
+
+.send-button:disabled {
+    background: #c8c1de;
+    cursor: not-allowed;
+}
+
+.composer-note {
+    margin: 11px auto 0;
+    text-align: center;
+    font-size: 10px;
+    color: #a39eaa;
+}
+
+/* 4. 오른쪽 패널: 현재 대화의 플레이리스트 상태 */
+.playlist-panel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 28px 22px;
+    border-left: 1px solid var(--stroke);
+    background: white;
+}
+
+.panel-kicker {
+    font-size: 10px;
+    color: #9d98a4;
+    letter-spacing: .13em;
+    font-weight: 800;
+}
+
+.panel-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 10px 0 18px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.playlist-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 164px;
+    padding: 21px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #494277, #7866cb 58%, #ad86b9);
+    color: #fff;
+}
+
+.playlist-card::after {
+    position: absolute;
+    content: "◉";
+    right: -17px;
+    bottom: -57px;
+    font-size: 180px;
+    line-height: 1;
+    color: rgba(255, 255, 255, .10);
+}
+
+.playlist-card p {
+    margin: 0;
+    font-size: 10px;
+    opacity: .75;
+    letter-spacing: .11em;
+    font-weight: 800;
+}
+
+.playlist-card h2 {
+    position: relative;
+    z-index: 1;
+    max-width: 190px;
+    margin: 11px 0 20px;
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: -.03em;
+}
+
+.track-count {
+    display: inline-flex;
+    gap: 6px;
+    padding: 6px 9px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .16);
+    font-size: 10px;
+}
+
+.track-heading {
+    margin: 28px 0 13px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.track-empty {
+    padding: 27px 12px;
+    border: 1px dashed #dfdbe4;
+    border-radius: 13px;
+    text-align: center;
+    color: #aaa3b0;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.track-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 11px;
+    border: 1px solid var(--stroke);
+    border-radius: 12px;
+}
+
+.track-art {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    flex: none;
+    border-radius: 9px;
+    color: #6755d6;
+    background: var(--accent-soft);
+}
+
+.track-info {
+    min-width: 0;
+}
+
+.track-name {
+    font-size: 12px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.track-artist {
+    margin-top: 4px;
+    color: #9a93a1;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.panel-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    color: #a39da9;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.toast {
+    position: fixed;
+    z-index: 8;
+    bottom: 116px;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    opacity: 0;
+    pointer-events: none;
+    background: #2c2839;
+    color: white;
+    padding: 12px 17px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    font-size: 12px;
+    transition: opacity .2s, transform .2s;
+    max-width: calc(100% - 32px);
+    text-align: center;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.overlay {
+    display: none;
+}
+
+/* 5. 좁은 화면에서는 플레이리스트 패널·대화 목록을 접었다 펼침 */
+@media (max-width: 1100px) {
+    .app {
+        grid-template-columns: 246px minmax(0, 1fr);
+    }
+
+    .playlist-panel {
+        display: none;
+        position: fixed;
+        z-index: 12;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: min(310px, 90vw);
+        box-shadow: var(--shadow);
+    }
+
+    .playlist-panel.open {
+        display: flex;
+    }
+
+    .playlist-toggle {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 720px) {
+    .app {
+        display: block;
+    }
+
+    .sidebar {
+        position: fixed;
+        z-index: 12;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: min(280px, 85vw);
+        transform: translateX(-105%);
+        transition: transform .2s;
+        box-shadow: var(--shadow);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .overlay.show {
+        display: block;
+        position: fixed;
+        z-index: 11;
+        inset: 0;
+        background: rgba(32, 27, 44, .32);
+    }
+
+    .main {
+        height: 100dvh;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .main-header {
+        padding: 0 18px;
+        height: 65px;
+        min-height: 65px;
+    }
+
+    .main-header .delete-button {
+        display: none;
+    }
+
+    .chat-inner {
+        padding: 24px 19px;
+    }
+
+    .composer-wrap {
+        padding: 8px 14px 17px;
+    }
+
+    .welcome {
+        padding-bottom: 0;
+    }
+
+    .suggestions {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome h1 {
+        font-size: 27px;
+    }
+
+    .welcome p {
+        margin-bottom: 22px;
+    }
+}

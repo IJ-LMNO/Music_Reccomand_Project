@@ -85,7 +85,8 @@ def layer(after_bpm_layer, count, selected_ratio):
     # (유사도, input_data 인덱스)를 이용해 input_data에서 track을 가져와 output_data를 만들어야 함
     output_data = []
     for i in selected_tracks:
-        output_data.append(input_data[i[1]]) 
+        idx = i[0]
+        output_data.append(input_data[idx]) 
 
 
     return output_data
