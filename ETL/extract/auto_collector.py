@@ -12,7 +12,7 @@ API_KEY = os.getenv("LASTFM")
 BASE_DIR = Path(__file__).resolve().parent.parent
 SEEN_ARTISTS= BASE_DIR / "data" / "extract" / "seen_artists.json"
 SEEN_TRACKS = BASE_DIR / "data" / "extract" / "seen_tracks.json"
-NEW_TRACKS = BASE_DIR / "data" / "extract" / "new_track.json"
+NEW_TRACKS = BASE_DIR / "data" / "extract" / "new_tracks.json"
 
 
 def load():

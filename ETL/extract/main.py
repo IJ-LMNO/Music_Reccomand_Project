@@ -59,8 +59,12 @@ def combine(spotify_raw_data, reccobeats_raw_data):
     combine_raw_data =[]
 
     for track in spotify_raw_data:
+        if not track:
+            continue
+
         if track["spotify_id"] in reccobeats_raw_data:
-            combine_raw_data.append(track.update(reccobeats_raw_data[track["spotify_id"]]))
+            track.update(reccobeats_raw_data[track["spotify_id"]])
+            combine_raw_data.append(track)
         
 
     return combine_raw_data
@@ -70,61 +74,54 @@ def combine(spotify_raw_data, reccobeats_raw_data):
 # 음악 메타데이터 수집
 # =========================================================
 
-def make(queries):
+def make(batch):
     raw_data = []
 
-    while True:
-        if not queries:
-            break
+    spotify_raw_data = []
+    token = spotify.get_access_token()
 
-        batch = queries[0:10]
-        del queries[0: 10]
-
-        spotify_raw_data = []
-        token = spotify.get_access_token()
-
-        # Spotify: 곡 검색 및 기본 메타데이터 수집
-        while batch:
-            query = batch.pop(0)
+    # Spotify: 곡 검색 및 기본 메타데이터 수집
+    while batch:
+        query = batch.pop(0)
 
 
-            try:
-                spotify_result = spotify.search(query, batch, token)
-            except (requests.exceptions.HTTPError, RuntimeError) as error:
-                print("Spotify 오류:", error)
-                input("에러 확인 후 Enter: ")
-                raise
-            
+        try:
+            spotify_result = spotify.search(query, batch, token)
+        except (requests.exceptions.HTTPError, RuntimeError) as error:
+            print("Spotify 오류:", error)
+            input("에러 확인 후 Enter: ")
+            raise
+        
 
-            if spotify_result == None:
-                input("에러 확인 후 아무키나 입력: ")
-                continue
- 
-            data = spotify.match(query, spotify_result)
-            spotify.append(data, spotify_raw_data)
+        if spotify_result == None:
+            input("에러 확인 후 아무키나 입력: ")
+            continue
 
-            time.sleep(SPOTIFY_ACCESS_TIME_LIMIT)
+        data = spotify.match(query, spotify_result)
+        spotify.append(data, spotify_raw_data)
 
-        # ReccoBeats: BPM 및 음계 관련 데이터 수집
-        reccobeats_raw_data = reccobeats.search(spotify_raw_data)
+        time.sleep(SPOTIFY_ACCESS_TIME_LIMIT)
 
-        combine_raw_data = combine(spotify_raw_data, reccobeats_raw_data)
+    # ReccoBeats: BPM 및 음계 관련 데이터 수집
+    reccobeats_raw_data = reccobeats.search(spotify_raw_data)
 
-        # Discogs 우선 검색, 실패 시 Last.fm으로 장르 보완
-        for data in combine_raw_data:
-            if not data:
-                continue
+    combine_raw_data = combine(spotify_raw_data, reccobeats_raw_data)
 
-            genre = discogs.search(data["artist"], data["track"])
+    # Discogs 우선 검색, 실패 시 Last.fm으로 장르 보완
+    for data in combine_raw_data:
+        if not data:
+            continue
 
-            if not genre:
-                genre = lastfm.search(data["artist"], data["track"])
+        genre = discogs.search(data["artist"], data["track"])
 
-            data["genre"] = genre
+        if not genre:
+            genre = lastfm.search(data["artist"], data["track"])
 
-            time.sleep(1)
+        data["genre"] = genre
 
-        raw_data.extend(combine_raw_data)
+        time.sleep(1)
+
+    raw_data.extend(combine_raw_data)
 
     return raw_data
 
@@ -195,8 +192,22 @@ def extract():
         return
 
     # 음악 메타데이터 수집 및 검증
-    raw_data = clean_raw_data(make(queries))
+    raw_data = []
+    while True:
+        if not queries:
+            break
 
+        batch = queries[0 : 10]
+
+        try:
+            batch_data = clean_raw_data(make(batch))
+        except:
+            print("예외 발생 : batch 보존")
+            return False
+
+        del queries[0 : 10]
+        raw_data.extend(batch_data)
+        
     new_raw_data = []
 
     # Spotify ID 기준으로 중복 데이터 제거

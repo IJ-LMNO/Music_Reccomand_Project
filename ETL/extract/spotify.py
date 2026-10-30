@@ -4,7 +4,7 @@ import time
 import os
 
 from dotenv import load_dotenv
-from ETL.common.normalize import normalize
+from common.normalize import normalize
 
 
 
