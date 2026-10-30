@@ -1,13 +1,23 @@
-from fastapi import FastAPI
+import uvicorn
+from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5500"],
+    allow_credentials=True,
+    allow_methods=["POST"],
+    allow_headers=["Content-Type"]
+)
 
 
-@app.get("/")
-def read_root():
-  return {"Hello": "World"}
+@app.post("/login/")
+async def read_root(request : Request):
+  data = await request.json()
+  print(data)
 
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

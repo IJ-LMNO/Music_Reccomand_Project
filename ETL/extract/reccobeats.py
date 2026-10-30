@@ -11,7 +11,7 @@ RECCOBEATS_COUNT_LIMIT = 30
 def search(raw_data):
 
     raw_data_len = 0
-    return_value = []
+    return_value = {}
 
     #reccobeats는 배열로 다수의 곡을 요청하는 것이 가능
     while(raw_data_len < len(raw_data)):
@@ -32,7 +32,8 @@ def search(raw_data):
         batch_return_value = res.json()
 
         if "content" in batch_return_value:
-            return_value.extend(batch_return_value["content"])
+            for track in batch_return_value["content"]:
+                return_value[track["href"].split("/track/")[1]] = track
         else:
             #content가 없는 경우의 리턴처리: 추후 작성 에정
             pass

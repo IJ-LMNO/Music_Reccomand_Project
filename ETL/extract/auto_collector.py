@@ -2,78 +2,132 @@ import json
 import time
 import requests
 import os
+
 from dotenv import load_dotenv
+from pathlib import Path
+from common.normalize import normalize
 
 load_dotenv()
 API_KEY = os.getenv("LASTFM")
+BASE_DIR = Path(__file__).resolve().parent.parent
+SEEN_ARTISTS= BASE_DIR / "data" / "extract" / "seen_artists.json"
+SEEN_TRACKS = BASE_DIR / "data" / "extract" / "seen_tracks.json"
+NEW_TRACKS = BASE_DIR / "data" / "extract" / "new_track.json"
 
-ARTISTS = [
-    "blackpink"
-]
+
+def load():
+    with open(SEEN_ARTISTS, "r", encoding="utf-8") as seen_artists,\
+    open(SEEN_TRACKS, "r", encoding="utf-8") as seen_tracks,\
+    open(NEW_TRACKS,"r", encoding="utf-8") as new_tracks:
+        seen_artists = json.load(seen_artists)
+        seen_tracks = json.load(seen_tracks)
+        new_tracks = json.load(new_tracks)
+
+    return seen_artists, seen_tracks, new_tracks
 
 
-
-def get_artist_top_tracks(api_key, artist_name, limit=10):
+def search_artist(api_key, seen_artists, limit = 10):
+    new_artist = []
     url = "https://ws.audioscrobbler.com/2.0/"
 
     res = requests.get(
         url,
         params={
-            "method": "artist.gettoptracks",
-            "artist": artist_name,
+            "method": "chart.gettopartists",
             "api_key": api_key,
             "format": "json",
             "limit": limit,
-            "autocorrect": 1
+            "page": 1
         }
     )
 
-    if res.status_code != 200:
-        print("Last.fm error:", artist_name, res.status_code, res.text)
-        return []
+    page = res.json()["artists"]["artist"]
 
-    data = res.json()
+    for artist in page:
+        if normalize(artist["name"]) in seen_artists:
+            continue
+        new_artist.append(artist["name"])
 
-    if "toptracks" not in data:
-        print("No toptracks:", artist_name, data)
-        return []
-
-    tracks = data["toptracks"].get("track", [])
-
-    result = []
-
-    for track in tracks:
-        track_name = track["name"]
-        result.append(f"{artist_name} {track_name}")
-
-    return result
+    return new_artist
 
 
-def make_dataset(api_key, artists, output_path="../data/extract/artist_top_tracks.json"):
-    dataset = []
-    seen = set()
 
-    for artist in artists:
-        tracks = get_artist_top_tracks(api_key, artist, limit=10)
 
-        for query in tracks:
-            key = query.lower().replace(" ", "")
+def search_tracks(api_key, new_artists, seen_tracks, limit = 10):
+    new_artist_and_tracks = {}
 
-            if key in seen:
+    for artist in new_artists:
+        artist_track = []
+        url = "https://ws.audioscrobbler.com/2.0/"
+
+        res = requests.get(
+            url,
+            params={
+                "method": "artist.gettoptracks",
+                "artist": artist,
+                "api_key": api_key,
+                "format": "json",
+                "limit": limit,
+                "autocorrect": 1
+            }
+        )
+
+        if res.status_code != 200:
+            print("Last.fm error:", artist, res.status_code, res.text)
+            continue
+
+        data = res.json()
+
+        if "toptracks" not in data:
+            print("No toptracks:", artist)
+            continue
+
+        tracks = data["toptracks"]["track"]
+
+        for track in tracks:
+            if normalize(str(artist + track["name"])) in seen_tracks:
                 continue
+            artist_track.append(track["name"])
 
-            seen.add(key)
-            dataset.append(query)
+        new_artist_and_tracks[artist]= artist_track
 
-        print(artist, "->", len(tracks))
-        time.sleep(0.3)
+        time.sleep(0.5)
 
-    with open(output_path, "w", encoding="utf-8") as file:
-        json.dump(dataset, file, ensure_ascii=False, indent=4)
+    return new_artist_and_tracks
 
-    print("saved:", output_path)
-    print("track count:", len(dataset))
+
+def reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks):
+    for artist, tracks in new_artists_and_tracks.items():
+        seen_artists[normalize(artist)] = True
+
+        for track in tracks:
+            seen_tracks[normalize(artist + track)] = True
+            new_tracks.append(normalize(artist + track))
+
+    
+
+    with open(SEEN_ARTISTS, "w", encoding="utf-8") as f:
+        json.dump(seen_artists, f, ensure_ascii=False, indent=4)
+
+    with open(SEEN_TRACKS, "w", encoding="utf-8") as f:
+        json.dump(seen_tracks, f, ensure_ascii=False, indent=4)
+
+    with open(NEW_TRACKS, "w", encoding="utf-8") as f:
+        json.dump(new_tracks, f, ensure_ascii=False, indent=4)
+
+
+    
+    
+        
+
+def collect():
+    seen_artists, seen_tracks, new_tracks = load()
+
+    new_artists = search_artist(API_KEY, seen_artists)
+    new_artists_and_tracks = search_tracks(API_KEY, new_artists, seen_tracks)
+
+    reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks)
 
 
 if __name__ == "__main__":
-    make_dataset(API_KEY, ARTISTS)
+    collect()

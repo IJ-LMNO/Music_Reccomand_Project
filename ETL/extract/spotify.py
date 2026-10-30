@@ -4,7 +4,7 @@ import time
 import os
 
 from dotenv import load_dotenv
-from extract.common.normalize import normalize
+from ETL.common.normalize import normalize
 
 
 
@@ -47,8 +47,8 @@ def get_access_token():
 
 ## 스포티파이에서 노래 검색======================================================================
 ##============================================================================
-def search(query, token, limit=10):
-    while True:
+def search(query, batch, token, limit=10):
+    try:
         res = requests.get(
             "https://api.spotify.com/v1/search",
             headers={
@@ -58,53 +58,52 @@ def search(query, token, limit=10):
                 "q": query,
                 "type": "track",
                 "limit": limit
-            }
+            },
+            timeout=10
         )
 
-        if res.status_code == 429:
-            wait_time = int(res.headers.get("Retry-After", 10))
-            print(f"Spotify 요청 제한 발생: {wait_time}초 대기")
-            time.sleep(wait_time)
-            continue
+    # 네트워크 연결 오류 및 Timeout
+    except requests.exceptions.RequestException as error:
+        batch.append(query)
+        print(f"Spotify 연결 오류: {error}")
+        return None
 
-        res.raise_for_status()
-        return res.json()
-##============================================================================
-##============================================================================
-
-
-
-
-## 스포티파이에서 노래 검색_copy======================================================================
-##============================================================================
-def search_spotify(query, token, limit=10):
-    while True:
+    # 정상 응답
+    if res.status_code == 200:
         try:
-            res = requests.get(
-                "https://api.spotify.com/v1/search",
-                headers={
-                    "Authorization": f"Bearer {token}"
-                },
-                params={
-                    "q": query,
-                    "type": "track",
-                    "limit": limit
-                }
-            )
-        except Exception:
-            if res.status_code == 429:
-                wait_time = int(res.headers.get("Retry-After", 10))
-                print(f"Spotify 요청 제한 발생: {wait_time}초 대기")
-                time.sleep(wait_time)
-                continue
+            return res.json()
+        except ValueError:
+            batch.append(query)
+            print("Spotify JSON 응답 오류")
+            return None
 
+    # API 호출 제한
+    elif res.status_code == 429:
+        batch.append(query)
+
+        try:
+            wait_time = max(1, int(res.headers.get("Retry-After", 10)))
+        except ValueError:
+            wait_time = 10
+
+        extand_wait_time = wait_time + 10
+        print(f"Spotify 요청 제한: {extand_wait_time}초 대기")
+        
+        time.sleep(extand_wait_time)
+        return None
+
+    # Spotify 서버 오류
+    elif 500 <= res.status_code < 600:
+        batch.append(query)
+        print(f"Spotify 서버 오류: {res.status_code}")
+        return None
+
+    # 그 외 HTTP 오류는 원인 확인 필요
+    else:
         res.raise_for_status()
-        return res.json()
+        raise RuntimeError(f"예상하지 못한 응답: {res.status_code}")
 ##============================================================================
 ##============================================================================
-
-
-
 
 
 
