@@ -1,0 +1,12 @@
+[
+    "spotify_id",
+    "artist",
+    "track",
+    "tempo",
+    "key",
+    "mode",
+    "energy",
+    "danceability",
+    "valence",
+    "acousticness"
+]

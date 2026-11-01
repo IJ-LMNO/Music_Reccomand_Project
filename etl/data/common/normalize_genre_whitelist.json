@@ -1,0 +1,78 @@
+{
+    "kpop": 0,
+    "pop": 0,
+    "dancepop": 0,
+    "electropop": 0,
+    "synthpop": 0,
+    "hyperpop": 0,
+    "bedroompop": 0,
+    "indiepop": 0,
+    "altpop": 0,
+    "dreampop": 0,
+    "artpop": 0,
+
+    "hiphop": 0,
+    "rap": 0,
+    "trap": 0,
+    "drill": 0,
+    "boom bap": 0,
+    "lofihiphop": 0,
+    "emo rap": 0,
+
+    "rnb": 0,
+    "contemporaryrnb": 0,
+    "neosoul": 0,
+    "soul": 0,
+    "funk": 0,
+
+    "rock": 0,
+    "alternativerock": 0,
+    "indierock": 0,
+    "punk": 0,
+    "poprock": 0,
+    "hardrock": 0,
+    "metal": 0,
+
+    "edm": 0,
+    "house": 0,
+    "deephouse": 0,
+    "futurehouse": 0,
+    "electrohouse": 0,
+    "progressivehouse": 0,
+    "techno": 0,
+    "trance": 0,
+    "dubstep": 0,
+    "drumnbass": 0,
+    "futurebass": 0,
+
+    "jazz": 0,
+    "blues": 0,
+    "classical": 0,
+    "orchestral": 0,
+    "opera": 0,
+
+    "folk": 0,
+    "country": 0,
+    "acoustic": 0,
+
+    "latin": 0,
+    "reggaeton": 0,
+    "salsa": 0,
+    "bossa nova": 0,
+
+    "afrobeats": 0,
+    "amapiano": 0,
+
+    "jpop": 0,
+    "anisong": 0,
+    "citypop": 0,
+
+    "cpop": 0,
+    "mandopop": 0,
+    "cantopop": 0,
+
+    "soundtrack": 0,
+    "ost": 0,
+    "anime": 0,
+    "game music": 0
+}
