@@ -1,1 +1,0 @@
-*/20 * * * * cd /home/anylook1248/Music_Recommend_Project/etl && /home/anylook1248/Music_Recommend_Project/.venv/bin/python -u main.py >> cron.log 2>&1
