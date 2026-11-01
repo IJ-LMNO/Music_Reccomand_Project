@@ -1,4 +1,6 @@
 .env
 __pycache__/
 *.pyc
-.vscode/etl/cron.log
+.vscode/
+etl/cron.log
+etl/crontab.txt
