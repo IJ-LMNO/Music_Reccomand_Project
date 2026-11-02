@@ -5,7 +5,7 @@
     // 추후 FastAPI 추천 서비스의 API 경로로 변경한다. (예: "/api/chat/messages")
     // API는 {conversation_id, message}를 받고 {reply, playlist} 형태의 JSON을 응답한다고 가정한다.
     // 실제 백엔드 계약이 정해지면 sendMessageToServer()의 요청·응답 필드를 일치시켜야 한다.
-    const CHAT_ENDPOINT = null;
+    const CHAT_ENDPOINT = "http://localhost:8000/chat/";
 
     // 2. 이 HTML 단독 실행 시에도 대화 전환을 확인하도록 브라우저에만 저장한다.
     // 제출용 로그인 세션/서버 저장 기능과는 무관하다.
@@ -20,7 +20,11 @@
     let toastTimer;
 
     function makeConversation() {
-      return {id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`, title: "새 플레이리스트", messages: [], playlist: [] };
+      return {
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`, 
+        title: "새 플레이리스트", 
+        messages: [], 
+        playlist: [] };
     }
 
     function readSavedChats() {

@@ -46,8 +46,14 @@ form.addEventListener("submit", async (event) => {
             headers: { "Content-Type": "application/json" },
             credentials: "same-origin", // Redis 세션 식별 쿠키를 받거나 전달하기 위한 옵션
             // 로그인 API가 form-data를 받는 설계라면 body 부분을 해당 형식으로 변경한다.
-            body: JSON.stringify({ username: username.value.trim(), password: password.value })
+            body: JSON.stringify({ id: username.value.trim(), password: password.value })
         });
+
+        console.log("서버 응답 도착:", response.status);
+
+        const response_result = await response.json();
+        console.log("로그인 결과:", response_result);
+
         if (!response.ok) {
             if (response.status === 401 || response.status === 403) {
                 showStatus("아이디 또는 비밀번호를 확인해 주세요.", true);
@@ -56,9 +62,15 @@ form.addEventListener("submit", async (event) => {
             }
             return;
         }
-        // 성공 여부는 서버의 HTTP 응답으로만 결정하며 프론트에서 인증 성공을 임의로 만들지 않는다.
-        window.location.assign("chat.html");
-    } catch (_) {
+
+        if(response_result["success"] == true){
+            window.location.href = '/chat/chat.html'
+        }else{
+            // 성공 여부는 서버의 HTTP 응답으로만 결정하며 프론트에서 인증 성공을 임의로 만들지 않는다.
+            window.location.assign("chat.html");
+        }
+    } catch (_)
+    {
         showStatus("로그인 서버에 연결할 수 없습니다. 서버 실행 상태를 확인해 주세요.", true);
     } finally {
         loginButton.disabled = false;
