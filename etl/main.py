@@ -6,7 +6,7 @@ from load.load_main import main as load_main
 
 def main():
     while True:
-        # collect()
+        collect()
 
         # Extract
         if not extract_main():

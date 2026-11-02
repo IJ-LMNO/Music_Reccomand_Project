@@ -24,12 +24,21 @@ def search(raw_data):
             len(raw_data)
         )
 
-        res = requests.get(
-            "https://api.reccobeats.com/v1/audio-features",
-            params=[("ids", query["spotify_id"]) for query in quries if query]
-        )
+        try:
+            res = requests.get(
+                "https://api.reccobeats.com/v1/audio-features",
+                params=[
+                    ("ids", query["spotify_id"])
+                    for query in quries if query
+                ],
+                timeout=20
+            )
 
-        batch_return_value = res.json()
+            batch_return_value = res.json()
+
+        except Exception as error:
+            print("ReccoBeats 오류:", repr(error))
+            raise
 
         if "content" in batch_return_value:
             for track in batch_return_value["content"]:

@@ -104,7 +104,6 @@ def make(batch):
 
     # ReccoBeats: BPM 및 음계 관련 데이터 수집
     reccobeats_raw_data = reccobeats.search(spotify_raw_data)
-
     combine_raw_data = combine(spotify_raw_data, reccobeats_raw_data)
 
     # Discogs 우선 검색, 실패 시 Last.fm으로 장르 보완
