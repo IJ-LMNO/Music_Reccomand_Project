@@ -775,4 +775,92 @@ a {
     .welcome p {
         margin-bottom: 22px;
     }
+
+}
+
+.composer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 곡 / 문장 전환 버튼 */
+.input-mode-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100px;
+    height: 38px;
+    padding: 3px;
+    border-radius: 20px;
+    background: #f0eef8;
+}
+
+/* 움직이는 슬라이더 */
+.mode-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc((100% - 6px) / 2);
+    height: calc(100% - 6px);
+    border-radius: 17px;
+    background: #c8c0e6;
+    transition: transform 0.25s ease;
+    pointer-events: none;
+}
+
+/* 선택 모드가 곡일 때 */
+.input-mode-switch:has([data-mode="song"].active) .mode-slider {
+    transform: translateX(0);
+}
+
+/* 선택 모드가 문장일 때 */
+.input-mode-switch:has([data-mode="sentence"].active) .mode-slider {
+    transform: translateX(100%);
+}
+
+/* 두 선택 버튼 */
+.mode-option {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #77718f;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.mode-option.active {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* 입력창이 남은 공간 사용 */
+.composer #messageInput {
+    flex: 1;
+    min-width: 0;
+}
+
+.input-mode-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 100px;
+    height: 38px;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #f0eef8;
+}
+
+.input-mode-switch .mode-option {
+    flex: 1;
+    min-width: 0;
 }

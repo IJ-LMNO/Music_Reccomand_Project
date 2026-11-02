@@ -5,7 +5,7 @@
     // 추후 FastAPI 추천 서비스의 API 경로로 변경한다. (예: "/api/chat/messages")
     // API는 {conversation_id, message}를 받고 {reply, playlist} 형태의 JSON을 응답한다고 가정한다.
     // 실제 백엔드 계약이 정해지면 sendMessageToServer()의 요청·응답 필드를 일치시켜야 한다.
-    const CHAT_ENDPOINT = "http://localhost:8000/chat/";
+    const CHAT_ENDPOINT = "http://localhost:8000/chat/question";
 
     // 2. 이 HTML 단독 실행 시에도 대화 전환을 확인하도록 브라우저에만 저장한다.
     // 제출용 로그인 세션/서버 저장 기능과는 무관하다.
@@ -13,12 +13,40 @@
     const ACTIVE_KEY = "melo_active_chat_v1";
 
     const $ = (selector) => document.querySelector(selector);
-    const list = $("#conversationList");
-    const chat = $("#chatContent");
-    const chatScroll = $("#chatScroll");
-    const input = $("#messageInput");
+    const list = $("#conversationList"); //left sidebar nav tag
+    const chat = $("#chatContent"); //채팅 메시지 출력 영역 div
+    const chatScroll = $("#chatScroll");// 채팅메시지 출력 영역 section
+    const input = $("#messageInput"); // 메시지 입력 textarea
+    const mode = $(".mode-option");
+    const buttons = document.querySelectorAll(".mode-option");
+    const messageInput = document.querySelector("#messageInput");
     let toastTimer;
+    let inputMode = "sentence";
 
+    function setupModeSwitch() {
+
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+
+                inputMode = button.dataset.mode;
+
+                buttons.forEach((btn) => {
+                    btn.classList.toggle("active", btn === button);
+                });
+
+                if (inputMode === "song") {
+                    messageInput.placeholder = "노래 제목을 입력해 주세요...";
+                } else {
+                    messageInput.placeholder = "원하는 분위기나 노래를 말해 주세요...";
+                }
+            });
+        });
+    }
+
+    setupModeSwitch();
+
+
+    // 새로운 채팅창에 대한 객체 생성
     function makeConversation() {
       return {
         id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`, 
@@ -27,6 +55,8 @@
         playlist: [] };
     }
 
+
+    //
     function readSavedChats() {
       try {
         const result = JSON.parse(localStorage.getItem(STORAGE_KEY));
@@ -38,11 +68,14 @@
     }
 
     let conversations = readSavedChats();
-    if (conversations.length === 0) conversations = [makeConversation()];
+    if (conversations.length === 0){
+        conversations = [makeConversation()]
+    }
 
     let activeId = localStorage.getItem(ACTIVE_KEY);
-    if (!conversations.some(item => item.id === activeId)) activeId = conversations[0].id;
-
+    if (!conversations.some(item => item.id === activeId)) {
+        activeId = conversations[0].id;
+    }
     const current = () => conversations.find(item => item.id === activeId);
 
     function save() {
@@ -55,27 +88,29 @@
     }
 
     // 3. 안전한 DOM 조작: 사용자 메시지를 innerHTML로 해석하지 않고 textContent로 출력한다.
+    // 왼쪽 sidebar에 대한 함수
     function renderSidebar() {
         list.replaceChildren();
 
         for (const conversation of conversations) {
             const button = document.createElement("button");
 
-        button.type = "button";
-        button.className = `conversation-item${conversation.id === activeId ? " active" : ""}`;
-        button.setAttribute("aria-current", conversation.id === activeId ? "page" : "false");
+            button.type = "button";
+            button.className = `conversation-item${conversation.id === activeId ? " active" : ""}`;
+            //button에 css부어
+            button.setAttribute("aria-current", conversation.id === activeId ? "page" : "false");
 
-        const icon = document.createElement("span");
-        icon.className = "bubble-icon";
-        icon.textContent = "☰";
+            const icon = document.createElement("span");
+            icon.className = "bubble-icon";
+            icon.textContent = "☰";
 
-        const title = document.createElement("span");
-        title.className = "conversation-title";
-        title.textContent = conversation.title;
-        
-        button.append(icon, title);
-            button.addEventListener("click", () => {activeId = conversation.id; save(); render(); closePanels(); });
-        list.append(button);
+            const title = document.createElement("span");
+            title.className = "conversation-title";
+            title.textContent = conversation.title;
+            
+            button.append(icon, title);
+                button.addEventListener("click", () => {activeId = conversation.id; save(); render(); closePanels(); });
+            list.append(button);
         }
     }
 
@@ -139,6 +174,9 @@
             bubble.textContent = String(message.text ?? "");
             
             group.append(label, bubble);
+
+            console.log("message.text:", message.text); 
+            console.log("type:", typeof message.text);      
             
             if (!user) {
                 const avatar = document.createElement("div");
@@ -154,6 +192,7 @@
         chat.append(container);
     }
 
+    //오른쪽 sidebar
     function renderPlaylist(conversation) {
         const tracks = Array.isArray(conversation.playlist) ? conversation.playlist : [];
         
@@ -232,18 +271,36 @@
                 method: "POST",
                 headers: {"Content-Type": "application/json" },
                 credentials: "same-origin", // 향후 Redis 세션 식별용 쿠키를 자동 전송
-                body: JSON.stringify({conversation_id: conversationId, message })
+                body: JSON.stringify({
+                    conversation_id: conversationId, 
+                    message : message,
+                    mode : inputMode 
+                })
             });
             
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
             
             const data = await response.json();
-                // API 결과가 비동기로 도착했을 때도 요청한 대화에 붙여야 한다.
-                const target = conversations.find(item => item.id === conversationId);
+            console.log(data)
+            // API 결과가 비동기로 도착했을 때도 요청한 대화에 붙여야 한다.
+            const target = conversations.find(item => item.id === conversationId);
             
             if (!target) return;
-            if (typeof data.reply === "string") target.messages.push({role: "assistant", text: data.reply });
-            if (Array.isArray(data.playlist)) target.playlist = data.playlist;
+            
+
+
+            if (data) target.messages.push({
+                role: "assistant", 
+                text: data.map(
+                    item => item.artist + " - " + item.track
+                ).join("\n")
+            });
+            if (Array.isArray(data)) target.playlist = data.map(
+                    item => item.artist + " - " + item.track
+                ).join("\n");
+
+            console.log(target.messages)
             
             save();
             render();

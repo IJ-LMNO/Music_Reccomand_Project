@@ -21,7 +21,7 @@ DATA_FILES = {
     "new_tracks": DATA_DIR / "new_tracks.json",
     "collected_spotify_id": DATA_DIR / "collected_spotify_id.json",
     "collected_track_title": DATA_DIR / "collected_track_title.json",
-    "collected_track_title_and_spotify_id": DATA_DIR / "collected_track_title_and_spotify_id.json",
+    "collected_track_and_spotify_id": DATA_DIR / "collected_track_and_spotify_id.json",
     "raw_data": DATA_DIR / "raw_data.json",
 }
 

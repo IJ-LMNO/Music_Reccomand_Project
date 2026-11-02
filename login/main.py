@@ -10,7 +10,8 @@ connect = pymysql.connect(
    user='users_service',
    password='2323',
    database='users_service',
-   cursorclass=pymysql.cursors.DictCursor
+   cursorclass=pymysql.cursors.DictCursor,
+   
 )
 
 
