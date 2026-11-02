@@ -13,20 +13,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SEEN_ARTISTS= BASE_DIR / "data" / "extract" / "seen_artists.json"
 SEEN_TRACKS = BASE_DIR / "data" / "extract" / "seen_tracks.json"
 NEW_TRACKS = BASE_DIR / "data" / "extract" / "new_tracks.json"
+PAGE = BASE_DIR / "data" / "extract" / "page.json"
 
 
 def load():
     with open(SEEN_ARTISTS, "r", encoding="utf-8") as seen_artists,\
     open(SEEN_TRACKS, "r", encoding="utf-8") as seen_tracks,\
-    open(NEW_TRACKS,"r", encoding="utf-8") as new_tracks:
+    open(NEW_TRACKS,"r", encoding="utf-8") as new_tracks,\
+    open(PAGE, "r", encoding="utf-8") as page:
         seen_artists = json.load(seen_artists)
         seen_tracks = json.load(seen_tracks)
         new_tracks = json.load(new_tracks)
+        page = json.load(page)
 
-    return seen_artists, seen_tracks, new_tracks
+    return seen_artists, seen_tracks, new_tracks, page
 
 
-def search_artist(api_key, seen_artists, limit = 10):
+def search_artist(api_key, seen_artists, page, limit = 10):
     new_artist = []
     url = "https://ws.audioscrobbler.com/2.0/"
 
@@ -37,13 +40,13 @@ def search_artist(api_key, seen_artists, limit = 10):
             "api_key": api_key,
             "format": "json",
             "limit": limit,
-            "page": 1
+            "page": page["page"]
         }
     )
 
-    page = res.json()["artists"]["artist"]
+    artists = res.json()["artists"]["artist"]
 
-    for artist in page:
+    for artist in artists:
         if normalize(artist["name"]) in seen_artists:
             continue
         new_artist.append(artist["name"])
@@ -73,8 +76,9 @@ def search_tracks(api_key, new_artists, seen_tracks, limit = 10):
         )
 
         if res.status_code != 200:
-            print("Last.fm error:", artist, res.status_code, res.text)
-            continue
+            raise RuntimeError(
+                f"Last.fm error: {artist}, {res.status_code}"
+            )
 
         data = res.json()
 
@@ -96,7 +100,7 @@ def search_tracks(api_key, new_artists, seen_tracks, limit = 10):
     return new_artist_and_tracks
 
 
-def reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks):
+def reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks, page):
     for artist, tracks in new_artists_and_tracks.items():
         seen_artists[normalize(artist)] = True
 
@@ -104,6 +108,7 @@ def reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks):
             seen_tracks[normalize(artist + track)] = True
             new_tracks.append(normalize(artist + track))
 
+    page["page"] += 1
     
 
     with open(SEEN_ARTISTS, "w", encoding="utf-8") as f:
@@ -115,18 +120,21 @@ def reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks):
     with open(NEW_TRACKS, "w", encoding="utf-8") as f:
         json.dump(new_tracks, f, ensure_ascii=False, indent=4)
 
+    with open(PAGE, "w", encoding="utf-8") as f:
+        json.dump(page, f, ensure_ascii=False, indent=4)
+
 
     
     
         
 
 def collect():
-    seen_artists, seen_tracks, new_tracks = load()
+    seen_artists, seen_tracks, new_tracks, page = load()
 
-    new_artists = search_artist(API_KEY, seen_artists)
+    new_artists = search_artist(API_KEY, seen_artists, page)
     new_artists_and_tracks = search_tracks(API_KEY, new_artists, seen_tracks)
 
-    reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks)
+    reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks, page)
 
 
 if __name__ == "__main__":

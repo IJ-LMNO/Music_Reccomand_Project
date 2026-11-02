@@ -226,7 +226,7 @@ def extract():
 
         data["collected_track_title"][normalized_title] = True
 
-        data["collected_track_title_and_spotify_id"][
+        data["collected_track_and_spotify_id"][
             normalized_title
         ] = spotify_id
 

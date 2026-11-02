@@ -31,14 +31,15 @@ connect = pymysql.connect(
 )
 
 def recommend(input_track):
-    after_bpm = bpm(input_track[0])
-    after_genre = genre(input_track[0], after_bpm)
-    after_chord = chord(input_track[0], after_genre)
+    #recommend에 들어온 input_track은 동일한 곡명이 여러개 있을 경우 하나로 특정해서 들어온 상태로 가정
+    after_bpm = bpm(input_track)
+    after_genre = genre(input_track, after_bpm)
+    after_chord = chord(input_track, after_genre)
 
     return after_chord
 
 
-@app.post("/chat/question")
+@app.post("/chat/song")
 async def chat(request : Request):
     data = await request.json()
     after_recommend = []
@@ -46,20 +47,21 @@ async def chat(request : Request):
 
     with connect.cursor() as cur:
         try:
-            if(data["mode"] == "song"):
-                cur.execute("select * from clean_data where track = %s",data["message"])
+            cur.execute("select * from clean_data where track = %s",data["message"])
 
-                result = cur.fetchall()
-                #같은 노래가 있어서 result가 여러개 리턴될 경우 처리
-            else:
-                ## 문장으로 처리된 경우 처리 -> llm 연동
-                return "개발예정"
+            result = cur.fetchall()
 
             if result is None:
                 raise HTTPException(
                     status_code=404,
                     detail="에러 발생"
                 )   
+
+            #같은 노래가 있어서 result가 여러개 리턴될 경우 곡 특정
+            if(len(result) > 1):
+                return result
+
+
         except Exception as err:
             print(err)
 

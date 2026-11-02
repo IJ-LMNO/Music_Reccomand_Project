@@ -5,7 +5,8 @@
     // 추후 FastAPI 추천 서비스의 API 경로로 변경한다. (예: "/api/chat/messages")
     // API는 {conversation_id, message}를 받고 {reply, playlist} 형태의 JSON을 응답한다고 가정한다.
     // 실제 백엔드 계약이 정해지면 sendMessageToServer()의 요청·응답 필드를 일치시켜야 한다.
-    const CHAT_ENDPOINT = "http://localhost:8000/chat/question";
+    const CHAT_MODE_SONG_ENDPOINT = "http://localhost:8000/chat/song";
+    const CHAT_MODE_SENTENCE_ENDPOINT = "http://localhost:8000/chat/sentence";
 
     // 2. 이 HTML 단독 실행 시에도 대화 전환을 확인하도록 브라우저에만 저장한다.
     // 제출용 로그인 세션/서버 저장 기능과는 무관하다.
@@ -97,7 +98,7 @@
 
             button.type = "button";
             button.className = `conversation-item${conversation.id === activeId ? " active" : ""}`;
-            //button에 css부어
+            //button에 css 연결
             button.setAttribute("aria-current", conversation.id === activeId ? "page" : "false");
 
             const icon = document.createElement("span");
@@ -262,33 +263,52 @@
             toastTimer = setTimeout(() => toast.classList.remove("show"), 3500);
     }
 
+    //서버와의 통신을 담당하는 비동기 함수
+    async function telemetry(conversationId, message) {
+        let endpoint = null
+
+        if (inputMode == "song"){
+            endpoint = CHAT_MODE_SONG_ENDPOINT
+        }
+        else{
+            endpoint = CHAT_MODE_SENTENCE_ENDPOINT
+        }
+    
+        if (endpoint ==null){
+            //에러코드 발생
+        }
+
+        try{
+            const response = await fetch(endpoint, {
+                        method: "POST",
+                        headers: {"Content-Type": "application/json" },
+                        credentials: "same-origin", // 향후 Redis 세션 식별용 쿠키를 자동 전송
+                        body: JSON.stringify({
+                            conversation_id: conversationId, 
+                            message : message,
+                        })  
+                    })
+        }
+        catch(_){
+            showToast("백엔드 요청 중 에러 발생")
+        }
+
+        if(!response.ok) throw new Error(`HTTP ${response.status}`)
+        const data = await response.json()
+
+        return data
+    } 
+
     // 4. 서버 연결부: 실제 API가 생기기 전에는 답변을 만들어내지 않는다.
     async function sendMessageToServer(conversationId, message) {
-        if (!CHAT_ENDPOINT) return;
-
-        try {
-            const response = await fetch(CHAT_ENDPOINT, {
-                method: "POST",
-                headers: {"Content-Type": "application/json" },
-                credentials: "same-origin", // 향후 Redis 세션 식별용 쿠키를 자동 전송
-                body: JSON.stringify({
-                    conversation_id: conversationId, 
-                    message : message,
-                    mode : inputMode 
-                })
-            });
             
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
+            // 백엔드 서버와의 http 통신
+            data = telemetry(conversationId, message)
             
-            const data = await response.json();
-            console.log(data)
             // API 결과가 비동기로 도착했을 때도 요청한 대화에 붙여야 한다.
             const target = conversations.find(item => item.id === conversationId);
-            
             if (!target) return;
             
-
 
             if (data) target.messages.push({
                 role: "assistant", 
@@ -304,9 +324,6 @@
             
             save();
             render();
-        } catch (error) {
-            showToast(`추천 서버 요청 실패: ${error.message}`);
-        }
     }
 
     function updateComposer() {
