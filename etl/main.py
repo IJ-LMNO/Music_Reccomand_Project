@@ -25,20 +25,5 @@ def main():
             print(f"Load에서 오류 발생 : {error}")
             return
 
-        # # 정상 완료 후 재실행 여부 확인
-        # while True:
-        #     checkpoint_continue = input(
-        #         "계속 진행하시겠습니까[y/n] : "
-        #     ).strip().lower()
-
-        #     if checkpoint_continue in ("y", "n"):
-        #         break
-
-        #     print("y 또는 n을 입력해주세요.")
-
-        # if checkpoint_continue == "n":
-        #     return
-
-
 if __name__ == "__main__":
     main()

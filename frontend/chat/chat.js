@@ -263,40 +263,80 @@
             toastTimer = setTimeout(() => toast.classList.remove("show"), 3500);
     }
 
-    //서버와의 통신을 담당하는 비동기 함수
-    async function telemetry(conversationId, message) {
-        let endpoint = BASE_ENDPOINT + `\${}`
-    
-        if (endpoint ==null){
-            //에러코드 발생
-        }
+    async function telemetry(conversationId, message, url) {
+        const endpoint = `${BASE_ENDPOINT}/${url}`;
 
-        try{
+        try {
             const response = await fetch(endpoint, {
-                        method: "POST",
-                        headers: {"Content-Type": "application/json" },
-                        credentials: "same-origin", // 향후 Redis 세션 식별용 쿠키를 자동 전송
-                        body: JSON.stringify({
-                            conversation_id: conversationId, 
-                            message : message,
-                        })  
-                    })
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                credentials: "same-origin",
+                body: JSON.stringify({
+                    conversation_id: conversationId,
+                    message: message
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            return await response.json();
+
+        } catch (error) {
+            showToast("백엔드 요청 중 에러 발생");
+            throw error;
         }
-        catch(_){
-            showToast("백엔드 요청 중 에러 발생")
-        }
+    }
 
-        if(!response.ok) throw new Error(`HTTP ${response.status}`)
-        const data = await response.json()
-
-        return data
-    } 
-
-    // 4. 서버 연결부: 실제 API가 생기기 전에는 답변을 만들어내지 않는다.
     async function sendMessageToServer(conversationId, message) {
-            
-            // 백엔드 서버와의 http 통신
-            data = telemetry(conversationId, message)
+        let response = null;
+
+        // 중복 곡 검색
+        const track_info = await telemetry(conversationId, message, "check");
+
+        if (track_info.length > 1) {
+            input.style.display = "none";
+
+            const textarea_button = document.createElement("div");
+
+            for (const track of track_info) {
+                const button = document.createElement("button");
+
+                button.type = "button";
+                button.textContent = `${track.artist} - ${track.track}`;
+
+                button.addEventListener("click", async () => {
+                    const selectedMessage = {
+                        track: track.track,
+                        artist: track.artist
+                    };
+
+                    response = await telemetry(
+                        conversationId,
+                        selectedMessage,
+                        inputMode
+                    );
+
+                    // 버튼 목록 제거 및 입력창 복원
+                    textarea_button.remove();
+                    input.style.display = "";
+
+                    // 여기서 response를 화면에 반영
+                });
+
+                textarea_button.append(button);
+            }
+
+            // 생성한 버튼 목록을 실제 HTML에 추가
+            input.before(textarea_button);
+
+        } else {
+            response = await telemetry(conversationId, message, inputMode);
+
+            // 여기서 response를 화면에 반영
+        }
+
             
             // API 결과가 비동기로 도착했을 때도 요청한 대화에 붙여야 한다.
             const target = conversations.find(item => item.id === conversationId);

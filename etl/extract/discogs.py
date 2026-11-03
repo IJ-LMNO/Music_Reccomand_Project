@@ -2,6 +2,7 @@ import requests
 import os
 
 from dotenv import load_dotenv
+from common.etlerror import Etlerror
 
 ##============================================================================
 ##============================================================================
@@ -16,24 +17,30 @@ DISCOGS_TOKEN = os.getenv("DISCOGS")
 def search(artist, track):
     genres = []
 
-    res = requests.get(
-        "https://api.discogs.com/database/search",
-        headers={
-            "Authorization": f"Discogs token={DISCOGS_TOKEN}",
-            "User-Agent": "MusicRecommendationProject/1.0"
-        },
-        params={
-            "artist": artist,
-            "track": track,
-            "type": "release"
-        }
-    )
+    try:
+        res = requests.get(
+            "https://api.discogs.com/database/search",
+            headers={
+                "Authorization": f"Discogs token={DISCOGS_TOKEN}",
+                "User-Agent": "MusicRecommendationProject/1.0"
+            },
+            params={
+                "artist": artist,
+                "track": track,
+                "type": "release"
+            }
+        )
+    except Exception as err:
+        raise Etlerror(location="discogs", track = track, error= err)
 
+    
     data = res.json()
 
     # 검색 결과 없음
     if "results" not in data or not data["results"]:
-        return []
+         raise Etlerror(location="discogs", track = track, error="no data")
+
+    
     release = data["results"][0]
 
     # genre

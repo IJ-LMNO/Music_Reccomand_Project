@@ -5,7 +5,7 @@ import os
 
 from dotenv import load_dotenv
 from common.normalize import normalize
-
+from common.etlerror import Etlerror
 
 
 ## Access Token 가상화 ======================================================================
@@ -63,17 +63,24 @@ def search(query, token, limit=10):
         )
 
     # 네트워크 연결 오류 및 Timeout
-    except requests.exceptions.RequestException:
-        raise
+    except requests.exceptions.RequestException as error:
+        raise Etlerror("spotify", query, error)
     
 
     # 정상 응답
     if res.status_code == 200:
-        try:
-            return res.json()
-        except ValueError:
-            raise
+        data = None
 
+        try:
+            data = res.json()
+        except ValueError as error:
+            raise Etlerror("spotify", query, error)
+
+        if not data:
+            raise Etlerror("spotify", query, "no data")
+
+        return data
+    
     # API 호출 제한
     elif res.status_code == 429:
 
@@ -90,11 +97,11 @@ def search(query, token, limit=10):
 
     # Spotify 서버 오류
     elif 500 <= res.status_code < 600:
-        raise
+        raise Etlerror("spotify", query, "error code : 500 ~ 600")
 
     # 그 외 HTTP 오류는 원인 확인 필요
     else:
-        raise
+        raise Etlerror("spotify", query, "error code : i don't know")
 ##============================================================================
 ##============================================================================
 

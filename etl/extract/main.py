@@ -1,4 +1,3 @@
-
 import json
 import time
 import requests
@@ -6,12 +5,8 @@ from pathlib import Path
 
 from extract import reccobeats, lastfm, spotify, discogs
 from common.normalize import normalize
+from common.etlerror import Etlerror
 
-class Etlerror(Exception):
-    def __init__(self, error_location, track, error):
-        self.error_location = error_location
-        self.track = track
-        self.error = error
 
 # =========================================================
 # 환경 설정 및 데이터 경로
@@ -28,13 +23,14 @@ DATA_FILES = {
     "collected_track_title": DATA_DIR / "collected_track_title.json",
     "collected_track_and_spotify_id": DATA_DIR / "collected_track_and_spotify_id.json",
     "raw_data": DATA_DIR / "raw_data.json",
-    "failed_data" : DATA_DIR / "failed_tracks.json"
+    "failed_data": DATA_DIR / "failed_tracks.json",
 }
 
 
 # =========================================================
 # JSON 파일 로드 및 저장
 # =========================================================
+
 
 def load():
     data = {}
@@ -49,20 +45,16 @@ def load():
 def reload(data):
     for name, path in DATA_FILES.items():
         with path.open("w", encoding="utf-8") as f:
-            json.dump(
-                data[name],
-                f,
-                ensure_ascii=False,
-                indent=4
-            )
+            json.dump(data[name], f, ensure_ascii=False, indent=4)
 
 
 # =========================================================
 # Spotify / ReccoBeats 데이터 병합
 # =========================================================
 
-def combine(spotify_raw_data, reccobeats_raw_data):
-    combine_raw_data =[]
+
+def combine(fail_track, spotify_raw_data, reccobeats_raw_data):
+    combine_raw_data = []
 
     for track in spotify_raw_data:
         if not track:
@@ -71,123 +63,128 @@ def combine(spotify_raw_data, reccobeats_raw_data):
         if track["spotify_id"] in reccobeats_raw_data:
             track.update(reccobeats_raw_data[track["spotify_id"]])
             combine_raw_data.append(track)
-        
 
-    return combine_raw_data
+        else:
+            fail_track.append(
+                {"location": "reccobeats", "track": track["track"], "error": "no data"}
+            )
 
+    return combine_raw_data, fail_track
 
 # =========================================================
-# 음악 메타데이터 수집
+# api
 # =========================================================
-def spotify_search(query, token):
+
+
+def spotify_api(query, token):
     try:
         spotify_result = spotify.search(query, token)
-    except (Exception) as error:
-        raise Etlerror("spotify", query, error)
+    except Exception:
+        raise
 
     return spotify_result
 
-def make(query, token):
-    raw_data = []
 
-    spotify_raw_data = []
-
-    # Spotify: 곡 검색 및 기본 메타데이터 수집
-    try:
-        spotify_result = spotify.search(query, token)
-    except (Exception) as error:
-        raise Etlerror("spotify", query, error)
-
-
-    data = spotify.match(query, spotify_result)
-    spotify.append(data, spotify_raw_data)
-
-    time.sleep(SPOTIFY_ACCESS_TIME_LIMIT)
-
-    # ReccoBeats: BPM 및 음계 관련 데이터 수집
+def reccobeats_api(spotify_raw_data):
     try:
         reccobeats_raw_data = reccobeats.search(spotify_raw_data)
-    except(Exception) as error:
-        raise Etlerror("lastfm", query, error)
-    
-    combine_raw_data = combine(spotify_raw_data, reccobeats_raw_data)
+    except Exception:
+        raise
 
-    # Discogs 우선 검색, 실패 시 Last.fm으로 장르 보완
-    for data in combine_raw_data:
-        if not data:
-            continue
+    return reccobeats_raw_data
 
-        try:
-            genre = discogs.search(data["artist"], data["track"])
-        except(Exception):
-            raise Etlerror("discongs", query, error)
 
-        if not genre:
-            genre = lastfm.search(data["artist"], data["track"])
+def discogs_api(track):
+    try:
+        discogs_raw_data = discogs.search(track["artist"], track["track"])
+    except:
+        raise
 
-        data["genre"] = genre
+    return discogs_raw_data
 
-        time.sleep(1)
 
-    raw_data.extend(combine_raw_data)
+def lastfm_api(track):
+    try:
+        lastfm_raw_data = lastfm.search(track["artist"], track["track"])
+    except:
+        raise
 
-    return raw_data
+    return lastfm_raw_data
 
 
 # =========================================================
 # 필수 메타데이터 검증
 # =========================================================
 
-def clean_raw_data(metadatas):
-    required_keys = [
-        "spotify_id",
-        "artist",
-        "track",
-        "tempo",
-        "key",
-        "mode",
-        "genre"
-    ]
 
-    cleaned = []
+# def clean_raw_data(metadatas):
+#     required_keys = ["spotify_id", "artist", "track", "tempo", "key", "mode", "genre"]
 
-    for metadata in metadatas:
-        if not metadata:
+#     cleaned = []
+
+#     for metadata in metadatas:
+#         if not metadata:
+#             continue
+
+#         if not all(key in metadata for key in required_keys):
+#             continue
+
+#         if not metadata["spotify_id"]:
+#             continue
+
+#         if not metadata["artist"]:
+#             continue
+
+#         if not metadata["track"]:
+#             continue
+
+#         if metadata["tempo"] is None:
+#             continue
+
+#         if metadata["key"] is None or metadata["key"] == "":
+#             continue
+
+#         if metadata["mode"] is None:
+#             continue
+
+#         if not metadata["genre"]:
+#             continue
+
+#         cleaned.append(metadata)
+
+#     return cleaned
+
+
+# =========================================================
+# Spotify ID 기준으로 중복 데이터 제거
+# =========================================================
+
+
+def eliminate_duplicate(data, raw_data):
+
+    eliminate_duplicate_raw_data = []
+    for track in raw_data:
+        spotify_id = track["spotify_id"]
+
+        if spotify_id in data["collected_spotify_id"]:
             continue
 
-        if not all(key in metadata for key in required_keys):
-            continue
+        eliminate_duplicate_raw_data.append(track)
+        data["collected_spotify_id"][spotify_id] = True
 
-        if not metadata["spotify_id"]:
-            continue
+        # 가수 + 곡명 기준 검색용 매핑 갱신
+        normalized_title = normalize(track["artist"] + track["track"])
 
-        if not metadata["artist"]:
-            continue
+        data["collected_track_title"][normalized_title] = True
 
-        if not metadata["track"]:
-            continue
+        data["collected_track_and_spotify_id"][normalized_title] = spotify_id
 
-        if metadata["tempo"] is None:
-            continue
-
-        if metadata["key"] is None or metadata["key"] == "":
-            continue
-
-        if metadata["mode"] is None:
-            continue
-
-        if not metadata["genre"]:
-            continue
-
-        cleaned.append(metadata)
-
-    return cleaned
+    return eliminate_duplicate_raw_data
 
 
 # =========================================================
 # Extract 메인 로직
 # =========================================================
-
 def extract():
     # 기존 JSON 데이터 불러오기
     data = load()
@@ -204,50 +201,114 @@ def extract():
         if not queries:
             break
 
-        batch = queries[0 : 10]
+        batch = queries[0:10]
 
-        batch_data = []
+
+        # spotify관련 api 및 전처리
+        spotify_raw_data = []
         for track in batch:
             token = spotify.get_access_token()
 
-            try:    
-                spotify_result = spotify_search(track, token)
-                spotify_data = spotify.match(track, spotify_result)
-            except:
+            try:
+                spotify_result = spotify_api(track, token)
+            except Etlerror as err:
                 print("예외 발생 : track 보존")
-                fail_track.append(track)
+                fail_track.append(
+                    {
+                        "location": err.location,
+                        "track": err.track,
+                        "error": err.error,
+                    }
+                )
+                continue
 
-        del queries[0 : 10]
-        raw_data.extend(batch_data)
-        
-    eliminate_duplicate_raw_data = []
-    # Spotify ID 기준으로 중복 데이터 제거
-    for metadata in raw_data:
-        spotify_id = metadata["spotify_id"]
+            # spotify에서 반환된 유사곡들 중 가장 유사도가 높은 곡 하나 특정
+            spotify_track = spotify.match(track, spotify_result)
 
-        if spotify_id in data["collected_spotify_id"]:
+            # 특정된 곡을 spotify_raw_data에 넣어 보관
+            spotify.append(spotify_track, spotify_raw_data)
+
+
+
+        # reccobeats관련 api 및 전처리
+        try:
+            reccobeats_raw_data = reccobeats_api(spotify_raw_data)
+        except Etlerror as err:
+
+            location = err.location
+            error = err.error
+
+            for track in err.track:
+                fail_track.append(
+                    {
+                        "location": location,
+                        "track": track,
+                        "error": error,
+                    }
+            )
+            
+            del queries[0:10]
             continue
 
-        eliminate_duplicate_raw_data.append(metadata)
-        data["collected_spotify_id"][spotify_id] = True
-
-        # 가수 + 곡명 기준 검색용 매핑 갱신
-        normalized_title = normalize(
-            metadata["artist"] + metadata["track"]
+        # spotify_raw_data와 reccobeats_raw_data를 combine
+        combine_raw_data, fail_track = combine(
+            fail_track, spotify_raw_data, reccobeats_raw_data
         )
 
-        data["collected_track_title"][normalized_title] = True
 
-        data["collected_track_and_spotify_id"][
-            normalized_title
-        ] = spotify_id
+
+
+        # 장르 수집을 위한 discogs, lastfm api및 전처리
+        for track in combine_raw_data:
+            if not track:
+                continue
+
+            try:
+                discogs_raw_data = discogs_api(track)
+            except Etlerror as err:
+                print("예외 발생 : track 보존")
+                fail_track.append(
+                    {
+                        "location": err.location,
+                        "track": err.track,
+                        "error": err.error,
+                    }
+                )
+
+            if not discogs_raw_data:
+                try:
+                    lastfm_raw_data = lastfm_api(track)
+                except Etlerror as err:
+                    print("예외 발생 : track 보존")
+                    fail_track.append(
+                        {
+                            "location": err.location,
+                            "track": err.track,
+                            "error": err.error,
+                        }
+                    )
+
+            if discogs_raw_data:
+                track["genre"] = discogs_raw_data
+            else:
+                if lastfm_raw_data:
+                    track["genre"] = lastfm_raw_data
+                else:
+                    track["genre"] = []
+
+        del queries[0:10]
+        raw_data.extend(combine_raw_data)
+
+        time.sleep(SPOTIFY_ACCESS_TIME_LIMIT)
+
+    # Spotify ID 기준으로 중복 데이터 제거
+    eliminate_duplicate_raw_data = eliminate_duplicate(data, raw_data)
 
     # 기존 Raw Data에 신규 데이터 추가
     data["raw_data"].extend(eliminate_duplicate_raw_data)
 
     # 검색에 실패한 데이터 저장
     data["failed_data"].extend(fail_track)
-    
 
     # 변경된 JSON 데이터 저장
     reload(data)
