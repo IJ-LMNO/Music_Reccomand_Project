@@ -35,17 +35,14 @@ def search(raw_data):
             )
 
             batch_return_value = res.json()
-
         except Exception as error:
-            print("ReccoBeats 오류:", repr(error))
             raise
 
         if "content" in batch_return_value:
             for track in batch_return_value["content"]:
                 return_value[track["href"].split("/track/")[1]] = track
         else:
-            #content가 없는 경우의 리턴처리: 추후 작성 에정
-            pass
+            return None
 
     return return_value
 ##============================================================================

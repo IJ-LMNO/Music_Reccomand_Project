@@ -47,7 +47,7 @@ def get_access_token():
 
 ## 스포티파이에서 노래 검색======================================================================
 ##============================================================================
-def search(query, batch, token, limit=10):
+def search(query, token, limit=10):
     try:
         res = requests.get(
             "https://api.spotify.com/v1/search",
@@ -63,23 +63,19 @@ def search(query, batch, token, limit=10):
         )
 
     # 네트워크 연결 오류 및 Timeout
-    except requests.exceptions.RequestException as error:
-        batch.append(query)
-        print(f"Spotify 연결 오류: {error}")
-        return None
+    except requests.exceptions.RequestException:
+        raise
+    
 
     # 정상 응답
     if res.status_code == 200:
         try:
             return res.json()
         except ValueError:
-            batch.append(query)
-            print("Spotify JSON 응답 오류")
-            return None
+            raise
 
     # API 호출 제한
     elif res.status_code == 429:
-        batch.append(query)
 
         try:
             wait_time = max(1, int(res.headers.get("Retry-After", 10)))
@@ -94,14 +90,11 @@ def search(query, batch, token, limit=10):
 
     # Spotify 서버 오류
     elif 500 <= res.status_code < 600:
-        batch.append(query)
-        print(f"Spotify 서버 오류: {res.status_code}")
-        return None
+        raise
 
     # 그 외 HTTP 오류는 원인 확인 필요
     else:
-        res.raise_for_status()
-        raise RuntimeError(f"예상하지 못한 응답: {res.status_code}")
+        raise
 ##============================================================================
 ##============================================================================
 

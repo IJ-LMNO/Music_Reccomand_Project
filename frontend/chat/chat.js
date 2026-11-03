@@ -5,8 +5,8 @@
     // 추후 FastAPI 추천 서비스의 API 경로로 변경한다. (예: "/api/chat/messages")
     // API는 {conversation_id, message}를 받고 {reply, playlist} 형태의 JSON을 응답한다고 가정한다.
     // 실제 백엔드 계약이 정해지면 sendMessageToServer()의 요청·응답 필드를 일치시켜야 한다.
-    const CHAT_MODE_SONG_ENDPOINT = "http://localhost:8000/chat/song";
-    const CHAT_MODE_SENTENCE_ENDPOINT = "http://localhost:8000/chat/sentence";
+    const BASE_ENDPOINT = "http://localhost:8000/chat";
+
 
     // 2. 이 HTML 단독 실행 시에도 대화 전환을 확인하도록 브라우저에만 저장한다.
     // 제출용 로그인 세션/서버 저장 기능과는 무관하다.
@@ -265,14 +265,7 @@
 
     //서버와의 통신을 담당하는 비동기 함수
     async function telemetry(conversationId, message) {
-        let endpoint = null
-
-        if (inputMode == "song"){
-            endpoint = CHAT_MODE_SONG_ENDPOINT
-        }
-        else{
-            endpoint = CHAT_MODE_SENTENCE_ENDPOINT
-        }
+        let endpoint = BASE_ENDPOINT + `\${}`
     
         if (endpoint ==null){
             //에러코드 발생
