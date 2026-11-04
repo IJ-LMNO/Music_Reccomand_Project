@@ -11,40 +11,49 @@ load_dotenv()
 API_KEY = os.getenv("LASTFM")
 BASE_DIR = Path(__file__).resolve().parent.parent
 SEEN_ARTISTS= BASE_DIR / "data" / "extract" / "seen_artists.json"
-SEEN_TRACKS = BASE_DIR / "data" / "extract" / "seen_tracks.json"
+COLLECTED_TRACKS = BASE_DIR / "data" / "extract" / "collected_track_title.json"
 NEW_TRACKS = BASE_DIR / "data" / "extract" / "new_tracks.json"
-PAGE = BASE_DIR / "data" / "extract" / "page.json"
+COUNTRY_PAGE = BASE_DIR / "data" / "extract" / "country_page.json"
 
 
 def load():
     with open(SEEN_ARTISTS, "r", encoding="utf-8") as seen_artists,\
-    open(SEEN_TRACKS, "r", encoding="utf-8") as seen_tracks,\
+    open(COLLECTED_TRACKS, "r", encoding="utf-8") as collected_tracks,\
     open(NEW_TRACKS,"r", encoding="utf-8") as new_tracks,\
-    open(PAGE, "r", encoding="utf-8") as page:
+    open(COUNTRY_PAGE, "r", encoding="utf-8") as country_page:
         seen_artists = json.load(seen_artists)
-        seen_tracks = json.load(seen_tracks)
+        collected_tracks = json.load(collected_tracks)
         new_tracks = json.load(new_tracks)
-        page = json.load(page)
+        country_page = json.load(country_page)
 
-    return seen_artists, seen_tracks, new_tracks, page
+    return seen_artists, collected_tracks, new_tracks, country_page
 
 
-def search_artist(api_key, seen_artists, page, limit = 10):
+def decied_page(country_page):
+    country = min(country_page, key = country_page.get)
+    page = country_page[country]
+
+    return country, page
+
+
+def search_artist(api_key, seen_artists, country_page, limit = 10):
     new_artist = []
     url = "https://ws.audioscrobbler.com/2.0/"
 
+    country, page = decied_page(country_page)
     res = requests.get(
         url,
         params={
-            "method": "chart.gettopartists",
+            "method": "geo.gettopartists",
+            "country" : country,
             "api_key": api_key,
             "format": "json",
             "limit": limit,
-            "page": page["page"]
+            "page": page
         }
     )
 
-    artists = res.json()["artists"]["artist"]
+    artists = res.json()["topartists"]["artist"]
 
     for artist in artists:
         if normalize(artist["name"]) in seen_artists:
@@ -56,7 +65,7 @@ def search_artist(api_key, seen_artists, page, limit = 10):
 
 
 
-def search_tracks(api_key, new_artists, seen_tracks, limit = 10):
+def search_tracks(api_key, new_artists, collected_tracks, limit = 10):
     new_artist_and_tracks = {}
 
     for artist in new_artists:
@@ -89,7 +98,7 @@ def search_tracks(api_key, new_artists, seen_tracks, limit = 10):
         tracks = data["toptracks"]["track"]
 
         for track in tracks:
-            if normalize(str(artist + track["name"])) in seen_tracks:
+            if normalize(str(artist + track["name"])) in collected_tracks:
                 continue
             artist_track.append(track["name"])
 
@@ -100,28 +109,28 @@ def search_tracks(api_key, new_artists, seen_tracks, limit = 10):
     return new_artist_and_tracks
 
 
-def reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks, page):
+def reload(new_artists_and_tracks, seen_artists, collected_tracks, new_tracks, country_page):
     for artist, tracks in new_artists_and_tracks.items():
         seen_artists[normalize(artist)] = True
 
         for track in tracks:
-            seen_tracks[normalize(artist + track)] = True
-            new_tracks.append(normalize(artist + track))
+            key = normalize(artist + track)
 
-    page["page"] += 1
+            if key not in collected_tracks and key not in new_tracks:
+                new_tracks.append(key)
+
+    country, _ = decied_page(country_page)
+    country_page[country] += 1
     
 
     with open(SEEN_ARTISTS, "w", encoding="utf-8") as f:
         json.dump(seen_artists, f, ensure_ascii=False, indent=4)
 
-    with open(SEEN_TRACKS, "w", encoding="utf-8") as f:
-        json.dump(seen_tracks, f, ensure_ascii=False, indent=4)
-
     with open(NEW_TRACKS, "w", encoding="utf-8") as f:
         json.dump(new_tracks, f, ensure_ascii=False, indent=4)
 
-    with open(PAGE, "w", encoding="utf-8") as f:
-        json.dump(page, f, ensure_ascii=False, indent=4)
+    with open(COUNTRY_PAGE, "w", encoding="utf-8") as f:
+        json.dump(country_page, f, ensure_ascii=False, indent=4)
 
 
     
@@ -129,12 +138,12 @@ def reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks, page):
         
 
 def collect():
-    seen_artists, seen_tracks, new_tracks, page = load()
+    seen_artists, collected_tracks, new_tracks, country_page = load()
 
-    new_artists = search_artist(API_KEY, seen_artists, page)
-    new_artists_and_tracks = search_tracks(API_KEY, new_artists, seen_tracks)
+    new_artists = search_artist(API_KEY, seen_artists, country_page)
+    new_artists_and_tracks = search_tracks(API_KEY, new_artists, collected_tracks)
 
-    reload(new_artists_and_tracks, seen_artists, seen_tracks, new_tracks, page)
+    reload(new_artists_and_tracks, seen_artists, collected_tracks, new_tracks, country_page)
 
 
 if __name__ == "__main__":

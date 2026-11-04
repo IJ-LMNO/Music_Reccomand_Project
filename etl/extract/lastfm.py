@@ -5,7 +5,7 @@ from common.etlerror import Etlerror
 
 
 ##============================================================================
-##============================================================================
+##====================================================================W========
 load_dotenv()
 API_KEY = os.getenv("LASTFM")
 ##============================================================================
@@ -31,8 +31,10 @@ def search(artist, track, limit=10):
     except Exception as err:
         raise Etlerror(location="lastfm", track = track, error=err)
 
-
-    tags = res.json()["toptags"]["tag"]
+    try:
+        tags = res.json()["toptags"]["tag"]
+    except Exception as err:
+        raise Etlerror(location="lastfm", track = track, error=err)
 
     if not tags:
         raise Etlerror(location="lastfm", track = track, error="no data")

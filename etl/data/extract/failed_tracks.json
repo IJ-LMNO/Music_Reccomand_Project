@@ -1,3 +1,102 @@
 [
-    
+    {
+        "location": "discogs",
+        "track": "3500 (feat. Future & 2 Chainz)",
+        "error": "no data"
+    },
+    {
+        "location": "discogs",
+        "track": "90210 (feat. Kacy Hill)",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Vogue",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "4 Minutes (feat. Justin Timberlake & Timbaland)",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "My Kind of Woman",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "For the First Time",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Freaking Out the Neighborhood",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Moonlight on the River",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "No Other Heart",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Still Beating",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Watching Him Fade Away",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Salad Days",
+        "error": "no data"
+    },
+    {
+        "location": "discogs",
+        "track": "R.I.P.",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Grenade",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "The Lazy Song",
+        "error": "no data"
+    },
+    {
+        "location": "reccobeats",
+        "track": "Marry You",
+        "error": "no data"
+    },
+    {
+        "location": "discogs",
+        "track": "Say It Ain't So - Original Mix",
+        "error": "no data"
+    },
+    {
+        "location": "discogs",
+        "track": "WAIT FOR U (feat. Drake & Tems)",
+        "error": "no data"
+    },
+    {
+        "location": "discogs",
+        "track": "Life Is Good (feat. Drake)",
+        "error": "no data"
+    },
+    {
+        "location": "discogs",
+        "track": "Low Life (feat. The Weeknd)",
+        "error": "no data"
+    }
 ]

@@ -33,14 +33,17 @@ def search(artist, track):
     except Exception as err:
         raise Etlerror(location="discogs", track = track, error= err)
 
-    
-    data = res.json()
+    try:
+        data = res.json()
+    except Exception as err:
+        print(data)
+        raise Etlerror(location="discogs", track=track, error = err)
 
     # 검색 결과 없음
     if "results" not in data or not data["results"]:
          raise Etlerror(location="discogs", track = track, error="no data")
 
-    
+
     release = data["results"][0]
 
     # genre
