@@ -85,14 +85,14 @@ def filter(low_bpm_bucket, equal_bpm_bucket, high_bpm_bucket, min_required_track
     return output_data
 
 # 입력곡의 BPM 구간을 기준으로 유사한 템포의 후보곡을 선별하는 레이어
-def layer(input_track, count = 1):
+def layer(input_track, count = 30):
     low_bpm_bucket, equal_bpm_bucket, high_bpm_bucket = load(input_track)
 
-    # 자기 자신을 후보에서 먼저 제거
-    # equal_bpm_bucket = [
-    #     track for track in equal_bpm_bucket
-    #     if track["spotify_id"] != input_track["spotify_id"]
-    # ]
+    #자기 자신을 후보에서 먼저 제거
+    equal_bpm_bucket = [
+        track for track in equal_bpm_bucket
+        if track["spotify_id"] != input_track["spotify_id"]
+    ]
 
     # 같은 bpm에 맞는 데이터셋 선택
     after_filtering = filter(low_bpm_bucket, equal_bpm_bucket, high_bpm_bucket, count)

@@ -5,7 +5,7 @@
     // 추후 FastAPI 추천 서비스의 API 경로로 변경한다. (예: "/api/chat/messages")
     // API는 {conversation_id, message}를 받고 {reply, playlist} 형태의 JSON을 응답한다고 가정한다.
     // 실제 백엔드 계약이 정해지면 sendMessageToServer()의 요청·응답 필드를 일치시켜야 한다.
-    const BASE_ENDPOINT = "http://localhost:8000/chat";
+    const BASE_ENDPOINT = "http://192.168.131.128:8000/";
 
 
     // 2. 이 HTML 단독 실행 시에도 대화 전환을 확인하도록 브라우저에만 저장한다.
@@ -170,15 +170,43 @@
             label.className = "message-label";
             label.textContent = user ? "나" : "Melo";
             
+
             const bubble = document.createElement("div");
             bubble.className = "message-bubble";
-            bubble.textContent = String(message.text ?? "");
-            
-            group.append(label, bubble);
 
-            console.log("message.text:", message.text); 
-            console.log("type:", typeof message.text);      
+            console.log("answer : ", message.answer)
+            console.log("response_message:", message.text);
+            console.log("isArray:", Array.isArray(message.text));
+            if (message.answer === true) {
+
+                const button = document.createElement("button")
+                const playlist = message.text;
+
+                bubble.textContent = playlist.map(track => `${track.track}`).join("\n\n");
+
+                button.type = "button"
+                button.className ="add-playlist"
+                button.textContent = "플레이리스트에 추가"
+
+                button.addEventListener("click", () => {
+
+                const conversation = current();
+                if (!conversation) return;
+
+                
+                conversation.playlist.push(...playlist);
+                renderPlaylist(conversation);
+
+                });
+                
+                group.append(label, bubble, button)
+            } else {
+                bubble.textContent = String(message.text ?? "");
+
+                group.append(label, bubble);
+            }
             
+        
             if (!user) {
                 const avatar = document.createElement("div");
                 avatar.className = "message-avatar";
@@ -226,13 +254,10 @@
             
             const name = document.createElement("div");
             name.className = "track-name";
-            name.textContent = track.title ?? "제목 없음";
+            name.textContent = track.track ?? "제목 없음";
             
-            const artist = document.createElement("div");
-            artist.className = "track-artist";
-            artist.textContent = track.artist ?? "아티스트 미상";
             
-            info.append(name, artist);
+            info.append(name);
             item.append(art, info);
             trackList.append(item);
         });
@@ -263,8 +288,9 @@
             toastTimer = setTimeout(() => toast.classList.remove("show"), 3500);
     }
 
+
     async function telemetry(conversationId, message, url) {
-        const endpoint = `${BASE_ENDPOINT}/${url}`;
+        const endpoint = `${BASE_ENDPOINT}${url}`;
 
         try {
             const response = await fetch(endpoint, {
@@ -287,15 +313,24 @@
             showToast("백엔드 요청 중 에러 발생");
             throw error;
         }
+
     }
 
     async function sendMessageToServer(conversationId, message) {
         let response = null;
+        let track_info = null
 
         // 중복 곡 검색
-        const track_info = await telemetry(conversationId, message, "check");
+        try{
+            track_info = await telemetry(conversationId, message, "check");
+        }
+        catch(_){
+            showToast("노래를 찾을 수 없습니다")
+        }
+            
 
         if (track_info.length > 1) {
+            // 입력한 곡에 대한 중복곡이 있는 경우
             input.style.display = "none";
 
             const textarea_button = document.createElement("div");
@@ -332,28 +367,35 @@
             input.before(textarea_button);
 
         } else {
-            response = await telemetry(conversationId, message, inputMode);
-
-            // 여기서 response를 화면에 반영
+            // 입력한 곡에 대한 중복 곡이 없는 경우
+            response = await telemetry(conversationId, track_info[0], inputMode);
         }
 
-            
+
+
             // API 결과가 비동기로 도착했을 때도 요청한 대화에 붙여야 한다.
             const target = conversations.find(item => item.id === conversationId);
             if (!target) return;
             
 
-            if (data) target.messages.push({
-                role: "assistant", 
-                text: data.map(
-                    item => item.artist + " - " + item.track
-                ).join("\n")
-            });
-            if (Array.isArray(data)) target.playlist = data.map(
-                    item => item.artist + " - " + item.track
-                ).join("\n");
+            const response_message = []
+            let num = 1;
+            for(const track of response){
+                response_message.push({
+                    "num" :  num,
+                    "track" : `${track.artist} - ${track.track}`
+                })
 
-            console.log(target.messages)
+                num += 1
+            }
+
+
+            target.messages.push({
+                role: "assistant",
+                answer : true,
+                text : response_message
+            });
+
             
             save();
             render();
@@ -383,7 +425,7 @@
     
             updateComposer();
     
-            if (!CHAT_ENDPOINT) showToast("대화는 저장됐어요. 추천 서버는 아직 연결되지 않았습니다.");
+            if (!BASE_ENDPOINT) showToast("대화는 저장됐어요. 추천 서버는 아직 연결되지 않았습니다.");
     
             else sendMessageToServer(conversation.id, text);
     

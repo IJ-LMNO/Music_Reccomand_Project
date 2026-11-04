@@ -590,6 +590,7 @@ a {
     gap: 10px;
     min-height: 0;
     overflow-y: auto;
+    flex: 1 1 0;
 }
 
 .track-empty {
@@ -694,6 +695,8 @@ a {
         bottom: 0;
         width: min(310px, 90vw);
         box-shadow: var(--shadow);
+        flex-direction: column;
+        overflow: hidden;
     }
 
     .playlist-panel.open {
@@ -863,4 +866,27 @@ a {
 .input-mode-switch .mode-option {
     flex: 1;
     min-width: 0;
+}
+
+.add-playlist {
+    margin-top: 10px;
+    padding: 9px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-playlist:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+.add-playlist:active {
+    transform: translateY(0);
 }

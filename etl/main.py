@@ -1,7 +1,7 @@
 from extract.auto_collector import collect
-from extract.main import extract as extract_main
-from transform.transform_main import main as transform_main
-from load.load_main import main as load_main
+from extract.main import extract
+from etl.transform.main import transform
+from etl.load.main import load
 
 
 def main():
@@ -9,18 +9,18 @@ def main():
         collect()
 
         # Extract
-        if not extract_main():
+        if not extract():
             print("Extract에서 오류 발생 : ETL 종료")
             return
 
         # Transform
-        if not transform_main():
+        if not transform():
             print("Transform에서 오류 발생 : ETL 종료")
             return
 
         # Load
         try:
-            load_main()
+            load()
         except Exception as error:
             print(f"Load에서 오류 발생 : {error}")
             return

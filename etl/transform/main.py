@@ -4,7 +4,7 @@ import transform.processing_to_spotify_id_json as spotify_id
 
 from multiprocessing import Pool
 
-def main():
+def transform():
     clean_data.processing()
 
     with Pool(processes= 2)as pool:

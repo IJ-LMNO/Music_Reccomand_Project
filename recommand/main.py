@@ -39,10 +39,10 @@ def recommend(input_track):
     return after_chord
 
 
-@app.post("/chat/song")
-async def chat(request : Request):
+
+@app.post("/check")
+async def check(request : Request):
     data = await request.json()
-    after_recommend = []
     result = None
 
     with connect.cursor() as cur:
@@ -55,20 +55,26 @@ async def chat(request : Request):
                 raise HTTPException(
                     status_code=404,
                     detail="에러 발생"
-                )   
-
-            #같은 노래가 있어서 result가 여러개 리턴될 경우 곡 특정
-            if(len(result) > 1):
-                return result
+                )  
 
 
         except Exception as err:
             print(err)
 
-        #recommend에 들어가는 노래는 한 곡으로 특정된 상황
-        after_recommend = recommend(result)
 
-        return after_recommend
+
+    return result
+
+
+@app.post("/song")
+async def chat(request : Request):
+    data = await request.json()
+    after_recommend = []
+
+    #recommend에 들어가는 노래는 한 곡으로 특정된 상황
+    after_recommend = recommend(data["message"])
+
+    return after_recommend
 
         
 

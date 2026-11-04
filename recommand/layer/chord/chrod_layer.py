@@ -229,7 +229,7 @@ def comparison(
     return comparison_value / comparison_weight
 
 # layer main
-def layer(input_track, after_genre_layer, selected_ratio = 0.3, count = 1, key_penalty=1, mode_penalty=1):
+def layer(input_track, after_genre_layer, selected_ratio = 0.3, count = 10, key_penalty=1, mode_penalty=1):
     track = input_track # 입력된 곡
     after_genre_track = after_genre_layer # genre 계층을 통과한 곡들을
     ratio = selected_ratio
