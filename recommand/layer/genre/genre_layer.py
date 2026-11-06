@@ -9,10 +9,10 @@ def load():
     return genre_toconomy_mapping
 
 # BPM 레이어를 통과한 후보곡 중 입력곡과 장르가 유사한 곡을 선별하는 레이어
-def layer(input_track, after_bpm_layer, count  = 20, selected_ratio = 0.3):
+def layer(input_track, after_bpm_layer, count):
     track_data = input_track # 입력된 곡
     input_data = after_bpm_layer # bpm 계층을 통과한 곡들을 저장한 list
-    ratio = [0.7, selected_ratio]
+    ratio = [0.7, 0.3]
     min_required_tracks = count
 
 
@@ -23,7 +23,6 @@ def layer(input_track, after_bpm_layer, count  = 20, selected_ratio = 0.3):
     # 입력곡의 장르를 세부 장르 집합으로 변환
     specific_genre_track_data = []
     for genre in list(track_genre):
-        print(genre)
         if genre in genre_toconomy_mapping:
             specific_genre_track_data.extend(genre_toconomy_mapping[genre])
     specific_genre_track_data = set(specific_genre_track_data)
@@ -36,7 +35,6 @@ def layer(input_track, after_bpm_layer, count  = 20, selected_ratio = 0.3):
     input_data_idx = 0
     for track in input_data:
 
-        print("genre :", track["genre"])
 
         input_track_genre = json.loads(track["genre"])
         # 각 후보곡의 장르를 세부 장르 집합으로 변환
@@ -48,9 +46,7 @@ def layer(input_track, after_bpm_layer, count  = 20, selected_ratio = 0.3):
 
         # 입력곡 장르와 후보곡 장르의 교집합 비율 계산
         input_genre = set(specific_genre_input_data_track)
-        print("specific_genre_input_data_track : ", specific_genre_input_data_track)
         track_genre = set(specific_genre_track_data)
-        print("specific_genre_track_data : ", specific_genre_track_data)
 
         denominator = len(input_genre | track_genre)
         numerator = len(input_genre & track_genre)
@@ -92,6 +88,9 @@ def layer(input_track, after_bpm_layer, count  = 20, selected_ratio = 0.3):
     output_data = []
     for info in selected_tracks:
         idx = info[1]
+
+        input_data[idx]["genre_similarity"] = info[0]
+
         output_data.append(input_data[idx]) 
 
     return output_data

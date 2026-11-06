@@ -85,7 +85,7 @@ def filter(low_bpm_bucket, equal_bpm_bucket, high_bpm_bucket, min_required_track
     return output_data
 
 # 입력곡의 BPM 구간을 기준으로 유사한 템포의 후보곡을 선별하는 레이어
-def layer(input_track, count = 30):
+def layer(input_track, count):
     low_bpm_bucket, equal_bpm_bucket, high_bpm_bucket = load(input_track)
 
     #자기 자신을 후보에서 먼저 제거

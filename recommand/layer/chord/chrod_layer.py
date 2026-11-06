@@ -228,11 +228,14 @@ def comparison(
 
     return comparison_value / comparison_weight
 
+
+def penalty():
+    pass
+
 # layer main
-def layer(input_track, after_genre_layer, selected_ratio = 0.3, count = 10, key_penalty=1, mode_penalty=1):
+def layer(input_track, after_genre_layer, count):
     track = input_track # 입력된 곡
     after_genre_track = after_genre_layer # genre 계층을 통과한 곡들을
-    ratio = selected_ratio
     min_required_tracks = count
 
     output_data = []
@@ -260,6 +263,8 @@ def layer(input_track, after_genre_layer, selected_ratio = 0.3, count = 10, key_
     comparison_result_data = sorted(after_comparision, key=lambda x: x[1])
 
     for info in comparison_result_data[0 : min_required_tracks]:
+
+        after_genre_layer[info[0]]["chord_similarity"] = info[1]
         output_data.append(after_genre_layer[info[0]])
 
     return output_data

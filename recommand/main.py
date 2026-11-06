@@ -30,13 +30,52 @@ connect = pymysql.connect(
     cursorclass=pymysql.cursors.DictCursor
 )
 
+setting_value = {
+    "recommendcount": 10, 
+    "chordpenalty": 50, 
+    "genrepenalty": 50
+}
+
 def recommend(input_track):
     #recommend에 들어온 input_track은 동일한 곡명이 여러개 있을 경우 하나로 특정해서 들어온 상태로 가정
-    after_bpm = bpm(input_track)
-    after_genre = genre(input_track, after_bpm)
-    after_chord = chord(input_track, after_genre)
+    after_bpm = bpm(input_track, 
+    setting_value["recommendcount"] * 5
+    )
+
+    after_genre = genre(
+        input_track,
+        after_bpm,
+        setting_value["recommendcount"] * 4,
+    )
+
+    after_chord = chord(
+        input_track,
+        after_genre,
+        setting_value["recommendcount"] *3,
+    )
 
     return after_chord
+
+
+@app.post("/setting")
+async def setting(request : Request):
+    data = await request.json()
+
+    if  data:
+        message = data["message"]
+
+
+        setting_value["recommendcount"] = message["recommendCount"]
+        setting_value["chordpenalty"] = message["chordPenalty"]
+        setting_value["genrePenalty"] = message["genrePenalty"]
+
+
+        return True
+    else:
+        return False
+
+    
+
 
 
 
