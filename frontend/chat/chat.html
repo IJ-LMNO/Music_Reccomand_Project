@@ -115,10 +115,93 @@
                     <textarea id="messageInput" rows="1" maxlength="2000" placeholder="원하는 분위기나 노래를 말해 주세요..."
                         aria-label="메시지 입력" required></textarea>
 
-                    <!-- 전송 버튼 -->
-                    <button class="send-button" id="sendButton" type="submit" aria-label="메시지 보내기" disabled>
-                        ➤
-                    </button>
+                    <div class="input-actions">
+                        <!-- 설정 버튼 -->
+                        <div class="setting-wrapper" id = "settingWrapper">
+
+                            <button class="settings-button" id="settingsButton" type="button" aria-label="추천 설정">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 7h9m4 0h3M4 17h3m4 0h9" />
+                                    <circle cx="15" cy="7" r="2" />
+                                    <circle cx="9" cy="17" r="2" />
+                                </svg>
+                            </button>
+
+                            <!-- 추천 설정 팝업 -->
+                            <div class="settings-panel" id="settingsPanel">
+                            
+                                <h3>추천 설정</h3>
+                            
+                                <!-- 추천 곡 수 -->
+                                <div class="settings-section">
+                                    <h4>추천 곡 수</h4>
+                            
+                                    <div class="settings-radio-group">
+                                        <label>
+                                            <input type="radio" name="recommendCount" value="5">
+                                            5곡
+                                        </label>
+                            
+                                        <label>
+                                            <input type="radio" name="recommendCount" value="10" checked>
+                                            10곡
+                                        </label>
+                            
+                                        <label>
+                                            <input type="radio" name="recommendCount" value="20">
+                                            20곡
+                                        </label>
+                                    </div>
+                                </div>
+                            
+                                <!-- 코드 페널티 -->
+                                <div class="settings-section">
+                                    <div class="settings-label">
+                                        <h4>코드 페널티</h4>
+                                        <span id="chordValue">20%</span>
+                                    </div>
+                            
+                                    <input type="range" id="chordInput" min="0" max="50" value="20" step="10">
+                                </div>
+                            
+                                <!-- 장르 페널티 -->
+                                <div class="settings-section">
+                                    <div class="settings-label">
+                                        <h4>장르 페널티</h4>
+                                        <span id="genreValue">20%</span>
+                                    </div>
+                            
+                                    <input type="range" id="genreInput" min="0" max="50" value="20" step="10">
+                                </div>
+
+                                <!-- 검색한 곡 제외 -->
+                                <div class="settings-section">
+                                    <label class="settings-toggle-row" for="removeOneself">
+                                        <span class="settings-toggle-text">검색한 곡 제외</span>
+                                
+                                        <span class="settings-pill-toggle">
+                                            <input type="checkbox" id="removeOneself" checked>
+                                            <span class="settings-pill-track"></span>
+                                        </span>
+                                    </label>
+                                </div>
+                            
+                                <!-- 설정 완료 -->
+                                <button type="button" class="settings-done" id = "settingButton">
+                                    설정 완료
+                                </button>
+                            
+                            </div>
+                            </div>
+
+                    
+                        <!-- 전송 버튼 -->
+                        <button class="send-button" id="sendButton" type="submit" aria-label="메시지 보내기" disabled>
+                            ➤
+                        </button>
+                    </div>
+
 
                 </form>
 

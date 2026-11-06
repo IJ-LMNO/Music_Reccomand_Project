@@ -1,4 +1,13 @@
-/* 1. 공통 색상·글꼴·기본 레이아웃 */
+/* HTML 구조에 맞춘 chat.css
+ * 원본 선택자와 선언을 모두 보존하고 UI 영역별로 재배치했습니다.
+ * 중복 규칙은 같은 영역에서 원래 순서로 유지하여 최종 값을 보존합니다.
+ * 동적으로 생성될 수 있는 대화·메시지·곡 목록 관련 스타일도 유지합니다.
+ */
+
+/* ==================================================
+ * 01. 공통 — 색상 변수, 기본 글꼴, 초기화 및 포커스
+ * ================================================== */
+
 :root {
     --canvas: #faf9f7;
     --surface: #ffffff;
@@ -51,6 +60,14 @@ a {
     text-decoration: none;
 }
 
+/* ==================================================
+ * 02. 전체 화면 — .overlay 및 3열 .app 레이아웃
+ * ================================================== */
+
+.overlay {
+    display: none;
+}
+
 .app {
     display: grid;
     grid-template-columns: 264px minmax(0, 1fr) 278px;
@@ -58,7 +75,10 @@ a {
     min-height: 540px;
 }
 
-/* 2. 왼쪽 사이드바: 대화 생성·탐색·전환 */
+/* ==================================================
+ * 03. 왼쪽 사이드바 — 브랜드 → 새 대화 → 대화 목록 → 계정
+ * ================================================== */
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -215,7 +235,10 @@ a {
     color: #a6a0aa;
 }
 
-/* 3. 본문: 채팅 헤더, 메시지 영역, 하단 입력창 */
+/* ==================================================
+ * 04. 중앙 채팅 — main 및 상단 헤더
+ * ================================================== */
+
 .main {
     display: flex;
     flex-direction: column;
@@ -290,6 +313,10 @@ a {
 .playlist-toggle {
     display: none;
 }
+
+/* ==================================================
+ * 05. 채팅 출력 — #chatScroll > #chatContent 및 동적 콘텐츠
+ * ================================================== */
 
 .chat-scroll {
     flex: 1;
@@ -433,6 +460,33 @@ a {
     text-align: right;
 }
 
+.add-playlist {
+    margin-top: 10px;
+    padding: 9px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-playlist:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+}
+
+.add-playlist:active {
+    transform: translateY(0);
+}
+
+/* ==================================================
+ * 06. 하단 입력 영역 — .composer-wrap > form#messageForm
+ * ================================================== */
+
 .composer-wrap {
     padding: 11px 30px 23px;
     background: linear-gradient(to bottom, rgba(250, 249, 247, 0), var(--canvas) 23%);
@@ -451,9 +505,97 @@ a {
     box-shadow: var(--shadow);
 }
 
+/* 중복 규칙 보존 — align-items: center 및 gap: 10px가 최종 적용됩니다. */
+
+.composer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .composer:focus-within {
     border-color: #ada1f5;
 }
+
+/* ==================================================
+ * 06-1. 곡 / 문장 전환 — #inputModeSwitch
+ * ================================================== */
+
+.input-mode-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100px;
+    height: 38px;
+    padding: 3px;
+    border-radius: 20px;
+    background: #f0eef8;
+}
+
+/* 중복 규칙 보존 — 기존 재선언 및 flex-direction, box-sizing 명시를 보존합니다. */
+
+.input-mode-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    width: 100px;
+    height: 38px;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #f0eef8;
+}
+
+.mode-slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: calc((100% - 6px) / 2);
+    height: calc(100% - 6px);
+    border-radius: 17px;
+    background: #c8c0e6;
+    transition: transform 0.25s ease;
+    pointer-events: none;
+}
+
+.input-mode-switch:has([data-mode="song"].active) .mode-slider {
+    transform: translateX(0);
+}
+
+.input-mode-switch:has([data-mode="sentence"].active) .mode-slider {
+    transform: translateX(100%);
+}
+
+.mode-option {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #77718f;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.mode-option.active {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.input-mode-switch .mode-option {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ==================================================
+ * 06-2. 메시지 입력 — textarea#messageInput
+ * ================================================== */
 
 .composer textarea {
     width: 100%;
@@ -472,6 +614,292 @@ a {
 .composer textarea::placeholder {
     color: #a19ca7;
 }
+
+.composer #messageInput {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ==================================================
+ * 06-3. 버튼 영역 — .input-actions > #settingWrapper
+ * ================================================== */
+
+.input-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting-wrapper {
+    position: relative;
+}
+
+.settings-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 16px;
+    background: #F0EDF7;
+    color: #8D82B5;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.settings-button:hover {
+    background: #DDD6ED;
+    color: #6F619B;
+}
+
+/* ==================================================
+ * 06-4. 추천 설정창 — #settingsPanel 및 active 표시 상태
+ * ================================================== */
+
+
+.setting-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* 버튼과 팝업 사이의 투명한 연결 영역 */
+.settings-panel::before {
+    content: "";
+    position: absolute;
+
+    bottom: -8px;
+    left: 0;
+
+    width: 100%;
+    height: 8px;
+}
+
+
+.settings-panel {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    z-index: 100;
+
+    width: 320px;
+    padding: 24px;
+
+    background: #ffffff;
+    color: #22212a;
+
+    border: 1px solid #e8e2f0;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 40px rgba(60, 45, 100, 0.12);
+}
+
+/* 설정창 활성화 */
+.settings-panel.active {
+    display: block;
+}
+
+
+
+.settings-panel h3 {
+    margin: 0 0 22px;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #302a40;
+}
+
+
+
+.settings-section {
+    margin-bottom: 24px;
+}
+
+.settings-section h4 {
+    margin: 0 0 12px;
+
+    font-size: 13px;
+    font-weight: 600;
+    color: #77718f;
+}
+
+
+
+.settings-radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.settings-radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 13px;
+    color: #4b4657;
+
+    cursor: pointer;
+}
+
+.settings-radio-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+
+    accent-color: #8e7de0;
+    cursor: pointer;
+}
+
+
+
+
+.settings-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.settings-label h4 {
+    margin: 0;
+}
+
+.settings-label span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #8e7de0;
+}
+
+
+
+
+.settings-section input[type="range"] {
+    display: block;
+    width: 100%;
+    height: 6px;
+    margin: 0;
+
+    accent-color: #a99be2;
+    cursor: pointer;
+}
+
+
+
+.settings-done {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #c8c0e6;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.settings-done:hover {
+    background: #a99be2;
+}
+
+.settings-panel.active {
+    display: block;
+}
+
+/* 검색한 곡 제외 - 설정 행 */
+#settingsPanel .settings-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* 기존 설정 라벨과 동일한 스타일 */
+#settingsPanel .settings-toggle-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7b7293;
+}
+
+/* 타원형 토글 영역 */
+#settingsPanel .settings-pill-toggle {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+/* 기본 체크박스 숨기기 */
+#settingsPanel .settings-pill-toggle input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* 토글 배경 */
+#settingsPanel .settings-pill-track {
+    position: absolute;
+    inset: 0;
+    background: #e5e1ee;
+    border-radius: 999px;
+    pointer-events: none;
+    transition: background 0.25s ease;
+}
+
+/* 내부 동그란 버튼 */
+#settingsPanel .settings-pill-track::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease;
+}
+
+/* 활성화된 토글 배경 */
+#settingsPanel .settings-pill-toggle input:checked+.settings-pill-track {
+    background: #a995e8;
+}
+
+/* 활성화 시 내부 버튼 오른쪽으로 이동 */
+#settingsPanel .settings-pill-toggle input:checked+.settings-pill-track::before {
+    transform: translateX(20px);
+}
+
+/* 키보드 포커스 */
+#settingsPanel .settings-pill-toggle input:focus-visible+.settings-pill-track {
+    outline: 2px solid #a995e8;
+    outline-offset: 3px;
+}
+
+
+/* 설정창 내부 HTML 순서:
+ * h3 → .settings-section (추천 곡 수 / 코드 페널티 / 장르 페널티)
+ * .settings-radio-group → .settings-label 및 range 입력 → .settings-done
+ * 위 내부 요소에는 원본의 별도 CSS가 없어 기존 상속 및 브라우저 기본 스타일을 유지합니다.
+ */
+
+/* ==================================================
+ * 06-5. 전송 버튼 및 폼 아래 입력 안내
+ * ================================================== */
 
 .send-button {
     flex: none;
@@ -502,7 +930,10 @@ a {
     color: #a39eaa;
 }
 
-/* 4. 오른쪽 패널: 현재 대화의 플레이리스트 상태 */
+/* ==================================================
+ * 07. 오른쪽 플레이리스트 — 제목 → 카드 → 곡 목록 → 안내
+ * ================================================== */
+
 .playlist-panel {
     display: flex;
     flex-direction: column;
@@ -652,6 +1083,10 @@ a {
     line-height: 1.6;
 }
 
+/* ==================================================
+ * 08. 알림 메시지 — #toast 및 show 표시 상태
+ * ================================================== */
+
 .toast {
     position: fixed;
     z-index: 8;
@@ -676,11 +1111,10 @@ a {
     transform: translateX(-50%) translateY(0);
 }
 
-.overlay {
-    display: none;
-}
+/* ==================================================
+ * 09. 반응형 — 태블릿 1100px 이하 / 모바일 720px 이하
+ * ================================================== */
 
-/* 5. 좁은 화면에서는 플레이리스트 패널·대화 목록을 접었다 펼침 */
 @media (max-width: 1100px) {
     .app {
         grid-template-columns: 246px minmax(0, 1fr);
@@ -706,6 +1140,7 @@ a {
     .playlist-toggle {
         display: inline-flex;
     }
+
 }
 
 @media (max-width: 720px) {
@@ -779,114 +1214,4 @@ a {
         margin-bottom: 22px;
     }
 
-}
-
-.composer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* 곡 / 문장 전환 버튼 */
-.input-mode-switch {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    width: 100px;
-    height: 38px;
-    padding: 3px;
-    border-radius: 20px;
-    background: #f0eef8;
-}
-
-/* 움직이는 슬라이더 */
-.mode-slider {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: calc((100% - 6px) / 2);
-    height: calc(100% - 6px);
-    border-radius: 17px;
-    background: #c8c0e6;
-    transition: transform 0.25s ease;
-    pointer-events: none;
-}
-
-/* 선택 모드가 곡일 때 */
-.input-mode-switch:has([data-mode="song"].active) .mode-slider {
-    transform: translateX(0);
-}
-
-/* 선택 모드가 문장일 때 */
-.input-mode-switch:has([data-mode="sentence"].active) .mode-slider {
-    transform: translateX(100%);
-}
-
-/* 두 선택 버튼 */
-.mode-option {
-    position: relative;
-    z-index: 1;
-    flex: 1;
-    height: 100%;
-    border: none;
-    background: transparent;
-    color: #77718f;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: color 0.2s ease;
-}
-
-.mode-option.active {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-/* 입력창이 남은 공간 사용 */
-.composer #messageInput {
-    flex: 1;
-    min-width: 0;
-}
-
-.input-mode-switch {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 100px;
-    height: 38px;
-    padding: 3px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    background: #f0eef8;
-}
-
-.input-mode-switch .mode-option {
-    flex: 1;
-    min-width: 0;
-}
-
-.add-playlist {
-    margin-top: 10px;
-    padding: 9px 16px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    background: #ffffff;
-    color: #374151;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.add-playlist:hover {
-    background: #f3f4f6;
-    border-color: #9ca3af;
-    transform: translateY(-1px);
-}
-
-.add-playlist:active {
-    transform: translateY(0);
 }

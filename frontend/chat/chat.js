@@ -24,6 +24,137 @@
     let toastTimer;
     let inputMode = "sentence";
 
+    const recommendationSettings = {
+        recommendCount: 10,
+        chordPenalty: 50,
+        genrePenalty: 50,
+        remove_oneself : true
+    };
+
+    // 새로운 채팅창에 대한 객체 생성
+    function makeConversation() {
+      return {
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`, 
+        title: "새 플레이리스트",
+        messages: [], 
+        playlist: [],
+        search : [] };
+    }
+
+    function readSavedChats() {
+      try {
+        const result = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        return Array.isArray(result) ? result.filter(item => item && item.id && Array.isArray(item.messages)) : [];
+      } catch (_) {
+        // 저장 데이터가 손상되었거나 읽을 수 없으면 빈 목록으로 시작한다.
+        return [];
+      }
+    }
+
+    let conversations = readSavedChats();
+    const current = () => conversations.find(item => item.id === activeId);
+    let activeId = localStorage.getItem(ACTIVE_KEY);
+
+
+
+
+
+    if (conversations.length === 0){
+        conversations = [makeConversation()]
+    }
+
+    if (!conversations.some(item => item.id === activeId)) {
+        activeId = conversations[0].id;
+    }
+
+    function save() {
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(conversations));
+            localStorage.setItem(ACTIVE_KEY, activeId);
+        } catch (_) {
+            showToast("브라우저 저장 공간을 사용할 수 없습니다.");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    function setting(){
+        const setting_wrapper = $("#settingWrapper")
+        const setting_panel = $("#settingsPanel")
+
+        const radioGroup = $(".settings-radio-group")
+
+        const genreValue = $("#genreValue")
+        const chordValue = $("#chordValue")
+
+        const genreInput = $("#genreInput")
+        const chordInput = $("#chordInput")
+
+        const settingButton = $("#settingButton")
+        const removeOneself = document.querySelector("#removeOneself");
+
+
+        radioGroup.addEventListener("change", (event) => {
+            if (event.target.name === "recommendCount") {
+                recommendationSettings.recommendCount =
+                    Number(event.target.value);
+            }
+        });
+
+
+        genreInput.addEventListener("input", (event)=>{
+            const newGenreValue = event.target.value
+
+            genreValue.textContent = newGenreValue+"%"
+            recommendationSettings.genrePenalty  = Number(newGenreValue)
+        })
+
+        chordInput.addEventListener("input", (event)=>{
+            const newChordValue = event.target.value
+
+            chordValue.textContent = newChordValue+"%"
+            recommendationSettings.chordPenalty = Number(newChordValue)
+        })
+
+
+        setting_wrapper.addEventListener("mouseenter", () => {
+            setting_panel.classList.add("active");
+
+        });
+
+        setting_wrapper.addEventListener("mouseleave", () => {
+            setting_panel.classList.remove("active");
+        });
+
+        settingButton.addEventListener("click", async () => {
+            const res = await telemetry(null , recommendationSettings, "setting")
+
+            if(res === true){
+                showToast("설정 성공")
+            }
+            else{
+                showToast("설정 실패")
+            }
+
+        })
+
+        removeOneself.addEventListener("change", () => {
+            recommendationSettings.remove_oneself = removeOneself.checked;
+        });
+    }
+
+    setting()
+
+
+
     function setupModeSwitch() {
 
         buttons.forEach((button) => {
@@ -46,49 +177,6 @@
 
     setupModeSwitch();
 
-
-    // 새로운 채팅창에 대한 객체 생성
-    function makeConversation() {
-      return {
-        id: `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`, 
-        title: "새 플레이리스트", 
-        messages: [], 
-        playlist: [] };
-    }
-
-
-    //
-    function readSavedChats() {
-      try {
-        const result = JSON.parse(localStorage.getItem(STORAGE_KEY));
-        return Array.isArray(result) ? result.filter(item => item && item.id && Array.isArray(item.messages)) : [];
-      } catch (_) {
-        // 저장 데이터가 손상되었거나 읽을 수 없으면 빈 목록으로 시작한다.
-        return [];
-      }
-    }
-
-    let conversations = readSavedChats();
-    if (conversations.length === 0){
-        conversations = [makeConversation()]
-    }
-
-    let activeId = localStorage.getItem(ACTIVE_KEY);
-    if (!conversations.some(item => item.id === activeId)) {
-        activeId = conversations[0].id;
-    }
-    const current = () => conversations.find(item => item.id === activeId);
-
-    function save() {
-        try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(conversations));
-            localStorage.setItem(ACTIVE_KEY, activeId);
-        } catch (_) {
-            showToast("브라우저 저장 공간을 사용할 수 없습니다.");
-        }
-    }
-
-    // 3. 안전한 DOM 조작: 사용자 메시지를 innerHTML로 해석하지 않고 textContent로 출력한다.
     // 왼쪽 sidebar에 대한 함수
     function renderSidebar() {
         list.replaceChildren();
@@ -174,15 +262,14 @@
             const bubble = document.createElement("div");
             bubble.className = "message-bubble";
 
-            console.log("answer : ", message.answer)
-            console.log("response_message:", message.text);
-            console.log("isArray:", Array.isArray(message.text));
-            if (message.answer === true) {
+            if (message.role === "assistant") {
 
                 const button = document.createElement("button")
-                const playlist = message.text;
+                const cur_playlist = message.text.answer;
 
-                bubble.textContent = playlist.map(track => `${track.track}`).join("\n\n");
+
+
+                bubble.textContent = cur_playlist.map(track => `${track.artist} - ${track.track}`).join("\n\n");
 
                 button.type = "button"
                 button.className ="add-playlist"
@@ -190,12 +277,20 @@
 
                 button.addEventListener("click", () => {
 
-                const conversation = current();
-                if (!conversation) return;
+                    const conversation = current();
+                    if (!conversation) return;
 
-                
-                conversation.playlist.push(...playlist);
-                renderPlaylist(conversation);
+                    
+                    //기본적으로 플레이리스트에 있는 중복은 제거한 후 render으로 넘김
+                    // 거기서 remove_oneself에 따라 다음 렌더링부터 검색한 곡을 플리에서 제거할지 선택
+                    const filteredPlaylist = cur_playlist.filter(track =>
+                        !conversation.playlist.some(
+                            item => item.spotify_id === track.spotify_id
+                        )
+                    )
+
+                    conversation.playlist.push(...filteredPlaylist);
+                    renderPlaylist(conversation);
 
                 });
                 
@@ -223,8 +318,22 @@
 
     //오른쪽 sidebar
     function renderPlaylist(conversation) {
-        const tracks = Array.isArray(conversation.playlist) ? conversation.playlist : [];
-        
+        const playlist = Array.isArray(conversation.playlist) ? conversation.playlist : [];
+        const searchIds = new Set(conversation.search.map(track => track.spotify_id))
+
+        let tracks = [];
+     
+        if (recommendationSettings.remove_oneself === true) {
+            tracks = playlist.filter(
+                track => !searchIds.has(track.spotify_id)
+            );
+        } else {
+            tracks = [...playlist, ...conversation.search]
+        }
+
+        console.log(tracks)
+        console.log(conversation.search)
+
         $("#playlistTitle").textContent = conversation.title;
         $("#trackCount").textContent = `♫ ${tracks.length}곡 수록`;
         $("#trackCountSmall").textContent = `${tracks.length} TRACKS`;
@@ -289,7 +398,7 @@
     }
 
 
-    async function telemetry(conversationId, message, url) {
+    async function telemetry(conversationId = null, message, url) {
         const endpoint = `${BASE_ENDPOINT}${url}`;
 
         try {
@@ -318,7 +427,11 @@
 
     async function sendMessageToServer(conversationId, message) {
         let response = null;
-        let track_info = null
+        let track_info = null;
+        const messagePair ={
+            "question" : null,
+            "answer" : null
+        }
 
         // 중복 곡 검색
         try{
@@ -327,7 +440,7 @@
         catch(_){
             showToast("노래를 찾을 수 없습니다")
         }
-            
+
 
         if (track_info.length > 1) {
             // 입력한 곡에 대한 중복곡이 있는 경우
@@ -370,35 +483,33 @@
             // 입력한 곡에 대한 중복 곡이 없는 경우
             response = await telemetry(conversationId, track_info[0], inputMode);
         }
+        messagePair.question = response
 
 
+        // API 결과가 비동기로 도착했을 때도 요청한 대화에 붙여야 한다.
+        const target = conversations.find(item => item.id === conversationId);
+        if (!target) return;
 
-            // API 결과가 비동기로 도착했을 때도 요청한 대화에 붙여야 한다.
-            const target = conversations.find(item => item.id === conversationId);
-            if (!target) return;
-            
+        if (!target.search.some(track => track.spotify_id === track_info[0].spotify_id)) {
+            target.search.push(track_info[0]);
+        }
 
-            const response_message = []
-            let num = 1;
-            for(const track of response){
-                response_message.push({
-                    "num" :  num,
-                    "track" : `${track.artist} - ${track.track}`
-                })
+        const response_message = []
+        for(const track of response){
+            response_message.push(track)
 
-                num += 1
-            }
+        }
 
 
-            target.messages.push({
-                role: "assistant",
-                answer : true,
-                text : response_message
-            });
+        messagePair.answer = response_message
+        target.messages.push({
+            role : "assistant",
+            text : messagePair
+        })
 
-            
-            save();
-            render();
+        
+        save();
+        render();
     }
 
     function updateComposer() {
@@ -414,6 +525,7 @@
     
             if (!text) return;
             const conversation = current();
+            
             conversation.messages.push({role: "user", text });
         
             if (conversation.messages.length === 1) conversation.title = text.length > 24 ? text.slice(0, 24) + "…" : text;
@@ -501,3 +613,5 @@
     save();
     render();
     updateComposer();
+
+    
